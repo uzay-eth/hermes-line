@@ -1,0 +1,11 @@
+test_N21_a_named_agent_after_a_transfer_rings_directly (test_r27_new_party.RealDetectorN21Tests.test_N21_a_named_agent_after_a_transfer_rings_directly) ... ok
+test_N21_question_budget_one_per_20_seconds_four_per_call (test_r27_new_party.RealDetectorN21Tests.test_N21_question_budget_one_per_20_seconds_four_per_call) ... ok
+test_N21_restricted_task_also_confirms (test_r27_new_party.RealDetectorN21Tests.test_N21_restricted_task_also_confirms) ... ok
+test_N21_unnamed_human_after_a_human_only_cue (test_r27_new_party.RealDetectorN21Tests.test_N21_unnamed_human_after_a_human_only_cue) ... ok
+test_N21_unnamed_human_after_a_transfer (test_r27_new_party.RealDetectorN21Tests.test_N21_unnamed_human_after_a_transfer) ... ok
+test_N21_unnamed_human_after_hold_music (test_r27_new_party.RealDetectorN21Tests.test_N21_unnamed_human_after_hold_music) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 12.238s
+
+OK

@@ -1,0 +1,1 @@
+{"android17_otp_protection_expected": true, "detail": "READ_SMS query accepted", "device": {"android": "17", "model": "Pixel 10 Pro XL", "sdk": "37", "security_patch": "2026-10-05", "serial_tail": "00P3"}, "probe": "check", "status": "ok"}

@@ -1,0 +1,13 @@
+{
+  "_note": "Synthetic inbox. Offsets are minutes after T0 (2026-11-05T00:00:00Z); tests build date_ms = T0 + minute*60000. Numbers use the reserved 555-01xx range; every code is invented.",
+  "messages": [
+    {"id": "101", "address": "ACME",          "minute": 1,  "body": "Your ACME verification code is 482915. Do not share it."},
+    {"id": "102", "address": "+15550100123",  "minute": 2,  "body": "Hey, are we still on for lunch at 12:30?"},
+    {"id": "103", "address": "32665",         "minute": 3,  "body": "G-739104 is your Google verification code."},
+    {"id": "104", "address": "ACME",          "minute": 6,  "body": "Your ACME verification code is 650318. Do not share it."},
+    {"id": "105", "address": "EXAMPLEBANK",   "minute": 7,  "body": "Your code is 111222. Backup code: 333444"},
+    {"id": "106", "address": "OTHERCO",       "minute": 8,  "body": "Your OTHERCO code is 905512"},
+    {"id": "107", "address": "ACME",          "minute": 30, "body": "Your ACME verification code is 275306. Do not share it."},
+    {"id": "108", "address": "ACME",          "minute": 31, "body": "Thanks for verifying! Your order 77881234 is on its way."}
+  ]
+}

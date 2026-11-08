@@ -1,0 +1,1 @@
+PASS: real PluginManager load; one no-op tool; bundled skill; HTTP health; WS prompt/text; unload closes listener and removes tool

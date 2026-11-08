@@ -1,0 +1,2 @@
+otp-delay: waiting for owner step: no device attached (nothing was read)
+otp-delay: wrote /Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_zqpdfgyuza-1/hermes-line/evidence/sms/otp-delay-20261105T184714Z.json

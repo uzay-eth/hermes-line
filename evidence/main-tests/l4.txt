@@ -1,0 +1,175 @@
+.........................................................../Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:99: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmps_f3mpsc/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, os.listdir(d)[0])))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+./Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:170: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpi_45melp/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, os.listdir(d)[0])))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+./Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:67: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp_rrao0j5/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, files[0]))) if files else None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+../Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpqfl1hg22/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpb3ay8mm0/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpjt7o8ty6/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpyg9rtsvn/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp9fkmqtpm/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpv63v12hz/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpatl_69o_/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpfvvm8kcy/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpot20kit6/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp_i8lda2b/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpeu_zlftx/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp7r8taia2/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmptkx0hpan/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpo8ap2kwo/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpv2pqyss1/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp8nvsd5ze/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmplq7j84bu/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp_zzdzwsp/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpd4ko5fnb/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpnfmwcn7g/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpfmf2saqm/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpgekmqnvp/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp1c9c_0gu/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp6u30kfq3/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpkan_nesi/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmprfyej2nz/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmph50mmm0u/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpyn1_918q/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpt8nuv4z2/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp5aeamav4/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp3gexav8d/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpn3dm94dv/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpunczxp0y/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp9ai_p5s8/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpex756gi7/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpanpykgdh/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp9yljk7l2/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpbs4vm3s3/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpuc7tri45/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp7o8joxjh/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp4vmnhw00/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpmnzngn8q/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpzv0ezdl3/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpkw8cs6cm/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp395bxvnh/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:133: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpvx_t0oxd/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+./Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:67: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpid220hdj/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, files[0]))) if files else None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+./Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:152: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpf8yv6dwv/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  (m,) = json.load(open(os.path.join(d, os.listdir(d)[0])))["messages"]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+./Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:67: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpd8xtqriv/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, files[0]))) if files else None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+./Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:67: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpq2j0o1ng/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, files[0]))) if files else None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+./Users/mac/Projects/hermes-line/tests/l4/test_live_otp_delay.py:67: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpsptymsqv/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, files[0]))) if files else None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+.usage: python -m unittest [-h] [--minutes MINUTES] [--interval INTERVAL]
+                          [--lookback-minutes LOOKBACK_MINUTES]
+                          [--serial SERIAL] [--out-dir OUT_DIR]
+python -m unittest: error: --minutes must be in (0, 1440] and --interval in [0.5, 60]
+usage: python -m unittest [-h] [--minutes MINUTES] [--interval INTERVAL]
+                          [--lookback-minutes LOOKBACK_MINUTES]
+                          [--serial SERIAL] [--out-dir OUT_DIR]
+python -m unittest: error: --minutes must be in (0, 1440] and --interval in [0.5, 60]
+...........................................................................................................................................................................................................................
+----------------------------------------------------------------------
+Ran 288 tests in 4.536s
+
+OK

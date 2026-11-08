@@ -1,0 +1,206 @@
+hermes home for the run: /Users/mac/.hermes
+{
+ "agent_construction_ms": [
+  808.3
+ ],
+ "turns": [
+  {
+   "usage": {
+    "inputTokens": 4,
+    "outputTokens": 58,
+    "totalTokens": 26951
+   },
+   "turn": 1,
+   "kind": "cold",
+   "first_text_ms": 833.6,
+   "full_ms": 1705.8,
+   "chars": 141
+  },
+  {
+   "usage": {
+    "cachedReadTokens": 26889,
+    "inputTokens": 8,
+    "outputTokens": 91,
+    "totalTokens": 53954
+   },
+   "turn": 2,
+   "kind": "warm",
+   "first_text_ms": 802.2,
+   "full_ms": 1353.7,
+   "chars": 68
+  },
+  {
+   "usage": {
+    "cachedReadTokens": 53855,
+    "inputTokens": 12,
+    "outputTokens": 99,
+    "totalTokens": 80976
+   },
+   "turn": 3,
+   "kind": "warm",
+   "first_text_ms": 652.0,
+   "full_ms": 1139.3,
+   "chars": 20
+  },
+  {
+   "usage": {
+    "cachedReadTokens": 80865,
+    "inputTokens": 16,
+    "outputTokens": 111,
+    "totalTokens": 108030
+   },
+   "turn": 4,
+   "kind": "warm",
+   "first_text_ms": 874.1,
+   "full_ms": 1361.9,
+   "chars": 27
+  },
+  {
+   "usage": {
+    "cachedReadTokens": 107903,
+    "inputTokens": 20,
+    "outputTokens": 137,
+    "totalTokens": 135135
+   },
+   "turn": 5,
+   "kind": "warm",
+   "first_text_ms": 621.2,
+   "full_ms": 1260.7,
+   "chars": 58
+  },
+  {
+   "usage": {
+    "cachedReadTokens": 134978,
+    "inputTokens": 24,
+    "outputTokens": 146,
+    "totalTokens": 162265
+   },
+   "turn": 6,
+   "kind": "warm",
+   "first_text_ms": 604.3,
+   "full_ms": 1160.0,
+   "chars": 15
+  },
+  {
+   "usage": {
+    "cachedReadTokens": 162095,
+    "inputTokens": 28,
+    "outputTokens": 163,
+    "totalTokens": 189433
+   },
+   "turn": 7,
+   "kind": "warm",
+   "first_text_ms": 833.0,
+   "full_ms": 1363.8,
+   "chars": 45
+  },
+  {
+   "usage": {
+    "cachedReadTokens": 189242,
+    "inputTokens": 32,
+    "outputTokens": 247,
+    "totalTokens": 216712
+   },
+   "turn": 8,
+   "kind": "warm",
+   "first_text_ms": 1989.1,
+   "full_ms": 2034.0,
+   "chars": 171
+  },
+  {
+   "usage": {
+    "cachedReadTokens": 216433,
+    "inputTokens": 36,
+    "outputTokens": 336,
+    "totalTokens": 244111
+   },
+   "turn": 9,
+   "kind": "warm",
+   "first_text_ms": 2343.9,
+   "full_ms": 2425.5,
+   "chars": 113
+  },
+  {
+   "usage": {
+    "cachedReadTokens": 243739,
+    "inputTokens": 40,
+    "outputTokens": 445,
+    "totalTokens": 271637
+   },
+   "turn": 10,
+   "kind": "warm",
+   "first_text_ms": 2957.2,
+   "full_ms": 3029.9,
+   "chars": 121
+  },
+  {
+   "usage": {
+    "cachedReadTokens": 271152,
+    "inputTokens": 44,
+    "outputTokens": 469,
+    "totalTokens": 299205
+   },
+   "turn": 11,
+   "kind": "warm",
+   "first_text_ms": 1052.4,
+   "full_ms": 1618.4,
+   "chars": 53
+  },
+  {
+   "usage": {
+    "cachedReadTokens": 298692,
+    "inputTokens": 48,
+    "outputTokens": 488,
+    "totalTokens": 326820
+   },
+   "turn": 12,
+   "kind": "warm",
+   "first_text_ms": 639.9,
+   "full_ms": 1213.0,
+   "chars": 36
+  },
+  {
+   "usage": {
+    "cachedReadTokens": 326284,
+    "inputTokens": 52,
+    "outputTokens": 501,
+    "totalTokens": 354470
+   },
+   "turn": 13,
+   "kind": "warm",
+   "first_text_ms": 869.7,
+   "full_ms": 1370.6,
+   "chars": 22
+  },
+  {
+   "usage": {
+    "cachedReadTokens": 353917,
+    "inputTokens": 56,
+    "outputTokens": 517,
+    "totalTokens": 382163
+   },
+   "turn": 14,
+   "kind": "warm",
+   "first_text_ms": 783.9,
+   "full_ms": 1321.0,
+   "chars": 28
+  }
+ ],
+ "warm_stats": {
+  "n": 13,
+  "first_text_ms": {
+   "p50": 833.0,
+   "p90": 2343.9,
+   "min": 604.3,
+   "max": 2957.2
+  },
+  "full_ms": {
+   "p50": 1361.9,
+   "p90": 2425.5,
+   "min": 1139.3,
+   "max": 3029.9
+  }
+ },
+ "final_state": "agent_talking",
+ "in_call_tool_context": []
+}

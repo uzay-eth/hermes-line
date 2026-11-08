@@ -1,0 +1,134 @@
+test_affirmative_without_recent_question_cannot_confirm (test_hold_affirmative.HoldAffirmativeTests) ... ok
+test_shared_yes_after_question_and_intervening_greeting (test_hold_affirmative.HoldAffirmativeTests) ... 
+======================================================================
+FAIL: test_shared_yes_after_question_and_intervening_greeting (test_hold_affirmative.HoldAffirmativeTests) (intervening=True, reply="Yes, I'm a live person.")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_hold_affirmative.py", line 19, in test_shared_yes_after_question_and_intervening_greeting
+    self.assertTrue(r.label=='human' or 'possible_new_party' in r.evidence,r)
+AssertionError: False is not true : Detection(label='hold_message', confidence='medium', evidence=('queue speech without person cues', "Yes, I'm a live person."))
+
+======================================================================
+FAIL: test_shared_yes_after_question_and_intervening_greeting (test_hold_affirmative.HoldAffirmativeTests) (intervening=True, reply='Yes, this is Dana.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_hold_affirmative.py", line 19, in test_shared_yes_after_question_and_intervening_greeting
+    self.assertTrue(r.label=='human' or 'possible_new_party' in r.evidence,r)
+AssertionError: False is not true : Detection(label='hold_message', confidence='medium', evidence=('queue speech without person cues', 'Yes, this is Dana.'))
+
+======================================================================
+FAIL: test_shared_yes_after_question_and_intervening_greeting (test_hold_affirmative.HoldAffirmativeTests) (intervening=True, reply='i am a live agent')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_hold_affirmative.py", line 19, in test_shared_yes_after_question_and_intervening_greeting
+    self.assertTrue(r.label=='human' or 'possible_new_party' in r.evidence,r)
+AssertionError: False is not true : Detection(label='hold_message', confidence='medium', evidence=('queue speech without person cues', 'i am a live agent'))
+
+======================================================================
+FAIL: test_shared_yes_after_question_and_intervening_greeting (test_hold_affirmative.HoldAffirmativeTests) (intervening=True, reply='i am a real person')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_hold_affirmative.py", line 19, in test_shared_yes_after_question_and_intervening_greeting
+    self.assertTrue(r.label=='human' or 'possible_new_party' in r.evidence,r)
+AssertionError: False is not true : Detection(label='hold_message', confidence='medium', evidence=('queue speech without person cues', 'i am a real person'))
+
+======================================================================
+FAIL: test_shared_yes_after_question_and_intervening_greeting (test_hold_affirmative.HoldAffirmativeTests) (intervening=True, reply='i m a real person')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_hold_affirmative.py", line 19, in test_shared_yes_after_question_and_intervening_greeting
+    self.assertTrue(r.label=='human' or 'possible_new_party' in r.evidence,r)
+AssertionError: False is not true : Detection(label='hold_message', confidence='medium', evidence=('queue speech without person cues', 'i m a real person'))
+
+======================================================================
+FAIL: test_shared_yes_after_question_and_intervening_greeting (test_hold_affirmative.HoldAffirmativeTests) (intervening=True, reply='speaking')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_hold_affirmative.py", line 19, in test_shared_yes_after_question_and_intervening_greeting
+    self.assertTrue(r.label=='human' or 'possible_new_party' in r.evidence,r)
+AssertionError: False is not true : Detection(label='hold_message', confidence='medium', evidence=('queue speech without person cues', 'speaking'))
+
+======================================================================
+FAIL: test_shared_yes_after_question_and_intervening_greeting (test_hold_affirmative.HoldAffirmativeTests) (intervening=True, reply='this is a real person')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_hold_affirmative.py", line 19, in test_shared_yes_after_question_and_intervening_greeting
+    self.assertTrue(r.label=='human' or 'possible_new_party' in r.evidence,r)
+AssertionError: False is not true : Detection(label='hold_message', confidence='medium', evidence=('queue speech without person cues', 'this is a real person'))
+
+======================================================================
+FAIL: test_shared_yes_after_question_and_intervening_greeting (test_hold_affirmative.HoldAffirmativeTests) (intervening=True, reply='yeah')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_hold_affirmative.py", line 19, in test_shared_yes_after_question_and_intervening_greeting
+    self.assertTrue(r.label=='human' or 'possible_new_party' in r.evidence,r)
+AssertionError: False is not true : Detection(label='hold_message', confidence='medium', evidence=('queue speech without person cues', 'yeah'))
+
+======================================================================
+FAIL: test_shared_yes_after_question_and_intervening_greeting (test_hold_affirmative.HoldAffirmativeTests) (intervening=True, reply='yeah it s me')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_hold_affirmative.py", line 19, in test_shared_yes_after_question_and_intervening_greeting
+    self.assertTrue(r.label=='human' or 'possible_new_party' in r.evidence,r)
+AssertionError: False is not true : Detection(label='hold_message', confidence='medium', evidence=('queue speech without person cues', 'yeah it s me'))
+
+======================================================================
+FAIL: test_shared_yes_after_question_and_intervening_greeting (test_hold_affirmative.HoldAffirmativeTests) (intervening=True, reply='yep')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_hold_affirmative.py", line 19, in test_shared_yes_after_question_and_intervening_greeting
+    self.assertTrue(r.label=='human' or 'possible_new_party' in r.evidence,r)
+AssertionError: False is not true : Detection(label='hold_message', confidence='medium', evidence=('queue speech without person cues', 'yep'))
+
+======================================================================
+FAIL: test_shared_yes_after_question_and_intervening_greeting (test_hold_affirmative.HoldAffirmativeTests) (intervening=True, reply='yes')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_hold_affirmative.py", line 19, in test_shared_yes_after_question_and_intervening_greeting
+    self.assertTrue(r.label=='human' or 'possible_new_party' in r.evidence,r)
+AssertionError: False is not true : Detection(label='hold_message', confidence='medium', evidence=('queue speech without person cues', 'yes'))
+
+======================================================================
+FAIL: test_shared_yes_after_question_and_intervening_greeting (test_hold_affirmative.HoldAffirmativeTests) (intervening=True, reply='yes i am')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_hold_affirmative.py", line 19, in test_shared_yes_after_question_and_intervening_greeting
+    self.assertTrue(r.label=='human' or 'possible_new_party' in r.evidence,r)
+AssertionError: False is not true : Detection(label='hold_message', confidence='medium', evidence=('queue speech without person cues', 'yes i am'))
+
+======================================================================
+FAIL: test_shared_yes_after_question_and_intervening_greeting (test_hold_affirmative.HoldAffirmativeTests) (intervening=True, reply='yes i am a live person')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_hold_affirmative.py", line 19, in test_shared_yes_after_question_and_intervening_greeting
+    self.assertTrue(r.label=='human' or 'possible_new_party' in r.evidence,r)
+AssertionError: False is not true : Detection(label='hold_message', confidence='medium', evidence=('queue speech without person cues', 'yes i am a live person'))
+
+======================================================================
+FAIL: test_shared_yes_after_question_and_intervening_greeting (test_hold_affirmative.HoldAffirmativeTests) (intervening=True, reply='yes i m a live person')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_hold_affirmative.py", line 19, in test_shared_yes_after_question_and_intervening_greeting
+    self.assertTrue(r.label=='human' or 'possible_new_party' in r.evidence,r)
+AssertionError: False is not true : Detection(label='hold_message', confidence='medium', evidence=('queue speech without person cues', 'yes i m a live person'))
+
+======================================================================
+FAIL: test_shared_yes_after_question_and_intervening_greeting (test_hold_affirmative.HoldAffirmativeTests) (intervening=True, reply='yes speaking')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_hold_affirmative.py", line 20, in test_shared_yes_after_question_and_intervening_greeting
+    if gap:self.assertNotEqual(r.label,'human')
+AssertionError: 'human' == 'human'
+
+======================================================================
+FAIL: test_shared_yes_after_question_and_intervening_greeting (test_hold_affirmative.HoldAffirmativeTests) (intervening=True, reply='yes you are speaking to a live agent')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_hold_affirmative.py", line 19, in test_shared_yes_after_question_and_intervening_greeting
+    self.assertTrue(r.label=='human' or 'possible_new_party' in r.evidence,r)
+AssertionError: False is not true : Detection(label='hold_message', confidence='medium', evidence=('queue speech without person cues', 'yes you are speaking to a live agent'))
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.012s
+
+FAILED (failures=16)

@@ -1,0 +1,577 @@
+test_call_marker_is_the_contract_text (tests.l4.test_contract.ContractSurface.test_call_marker_is_the_contract_text) ... ok
+test_names_the_contract_promises (tests.l4.test_contract.ContractSurface.test_names_the_contract_promises) ... ok
+test_release_otp_signature (tests.l4.test_contract.ContractSurface.test_release_otp_signature) ... ok
+test_sources_share_one_interface (tests.l4.test_contract.ContractSurface.test_sources_share_one_interface) ... ok
+test_stub_consent_store_is_gone (tests.l4.test_contract.ContractSurface.test_stub_consent_store_is_gone) ... ok
+test_binding_is_json_clean_and_key_order_free (tests.l4.test_contract.RealConsentStore.test_binding_is_json_clean_and_key_order_free) ... ok
+test_mismatch_is_false_and_spends_the_token (tests.l4.test_contract.RealConsentStore.test_mismatch_is_false_and_spends_the_token)
+L2 semantics: any consume that finds the token spends it. L4 therefore consumes only when a ... ok
+test_single_use_and_expiry (tests.l4.test_contract.RealConsentStore.test_single_use_and_expiry) ... ok
+test_ttl_limit_is_the_stores (tests.l4.test_contract.RealConsentStore.test_ttl_limit_is_the_stores) ... ok
+test_call (tests.l4.test_core_integration.RealCore.test_call) ... ok
+test_fill (tests.l4.test_core_integration.RealCore.test_fill) ... ok
+test_dispatch_shape_and_echo_is_dropped (tests.l4.test_delivery.BrowserSink.test_dispatch_shape_and_echo_is_dropped) ... ok
+test_failures (tests.l4.test_delivery.BrowserSink.test_failures) ... ok
+test_call_destination_rules (tests.l4.test_delivery.Destinations.test_call_destination_rules) ... ok
+test_direct_construction_cannot_bypass_normalisation (tests.l4.test_delivery.Destinations.test_direct_construction_cannot_bypass_normalisation) ... ok
+test_origin_normalisation_and_rules (tests.l4.test_delivery.Destinations.test_origin_normalisation_and_rules) ... ok
+test_prompt_and_log_text (tests.l4.test_delivery.Destinations.test_prompt_and_log_text) ... ok
+test_a_task_approved_for_a_call_cannot_fill (tests.l4.test_delivery.FillDestination.test_a_task_approved_for_a_call_cannot_fill) ... ok
+test_look_alike_origins_do_not_match (tests.l4.test_delivery.FillDestination.test_look_alike_origins_do_not_match) ... ok
+test_origin_is_rechecked_on_a_retry_from_the_sealed_slot (tests.l4.test_delivery.FillDestination.test_origin_is_rechecked_on_a_retry_from_the_sealed_slot) ... ok
+test_probe_parses_browser_console_and_normalises (tests.l4.test_delivery.FillDestination.test_probe_parses_browser_console_and_normalises) ... ok
+test_token_issued_for_another_destination_is_rejected (tests.l4.test_delivery.FillDestination.test_token_issued_for_another_destination_is_rejected)
+Same sender and window, but the owner approved a different site: the binding differs. ... ok
+test_unreadable_origin_fails_closed (tests.l4.test_delivery.FillDestination.test_unreadable_origin_fails_closed) ... ok
+test_wrong_site_releases_nothing_and_keeps_consent (tests.l4.test_delivery.FillDestination.test_wrong_site_releases_nothing_and_keeps_consent) ... ok
+test_bad_requests (tests.l4.test_delivery.SealedFill.test_bad_requests) ... ok
+test_fill_types_the_code_and_reports_no_code (tests.l4.test_delivery.SealedFill.test_fill_types_the_code_and_reports_no_code) ... ok
+test_no_consent_no_fill (tests.l4.test_delivery.SealedFill.test_no_consent_no_fill) ... ok
+test_no_sink_configured_is_disabled (tests.l4.test_delivery.SealedFill.test_no_sink_configured_is_disabled) ... ok
+test_non_release_statuses_never_touch_the_sink (tests.l4.test_delivery.SealedFill.test_non_release_statuses_never_touch_the_sink) ... ok
+test_per_character_boxes (tests.l4.test_delivery.SealedFill.test_per_character_boxes) ... ok
+test_released_code_is_scrubbed_from_everything_afterwards (tests.l4.test_delivery.SealedFill.test_released_code_is_scrubbed_from_everything_afterwards) ... ok
+test_sink_failure_allows_a_retry_without_a_new_sms_or_approval (tests.l4.test_delivery.SealedFill.test_sink_failure_allows_a_retry_without_a_new_sms_or_approval) ... ok
+test_slot_expires (tests.l4.test_delivery.SealedFill.test_slot_expires) ... ok
+test_slot_has_a_fill_budget (tests.l4.test_delivery.SealedFill.test_slot_has_a_fill_budget) ... ok
+test_wrong_number_of_boxes_keeps_the_slot_and_needs_no_new_consent (tests.l4.test_delivery.SealedFill.test_wrong_number_of_boxes_keeps_the_slot_and_needs_no_new_consent) ... ok
+test_a_call_sink_that_raises_is_a_failed_delivery_and_logs_no_code (tests.l4.test_delivery.ToCall.test_a_call_sink_that_raises_is_a_failed_delivery_and_logs_no_code) ... ok
+test_bad_requests (tests.l4.test_delivery.ToCall.test_bad_requests) ... ok
+test_call_not_ready_keeps_the_sealed_code_for_a_retry (tests.l4.test_delivery.ToCall.test_call_not_ready_keeps_the_sealed_code_for_a_retry) ... ok
+test_dtmf_and_speak_hand_a_secret_to_the_call (tests.l4.test_delivery.ToCall.test_dtmf_and_speak_hand_a_secret_to_the_call) ... ok
+test_dtmf_needs_digits_and_keeps_the_slot (tests.l4.test_delivery.ToCall.test_dtmf_needs_digits_and_keeps_the_slot) ... ok
+test_engine_stub_matches_the_contract_and_sends_nothing (tests.l4.test_delivery.ToCall.test_engine_stub_matches_the_contract_and_sends_nothing) ... ok
+test_live_counterpart_must_be_the_approved_party (tests.l4.test_delivery.ToCall.test_live_counterpart_must_be_the_approved_party) ... ok
+test_other_call_id_or_task_kind_is_refused_before_release (tests.l4.test_delivery.ToCall.test_other_call_id_or_task_kind_is_refused_before_release) ... ok
+test_token_for_another_call_is_rejected (tests.l4.test_delivery.ToCall.test_token_for_another_call_is_rejected) ... ok
+test_code_goes_to_the_call_and_nowhere_else (tests.l4.test_hooks.CallEndToEnd.test_code_goes_to_the_call_and_nowhere_else) ... ok
+test_handler_validates_arguments (tests.l4.test_hooks.CallEndToEnd.test_handler_validates_arguments) ... ok
+test_wrong_call_is_refused (tests.l4.test_hooks.CallEndToEnd.test_wrong_call_is_refused) ... ok
+test_hooks_accept_any_extra_kwargs (tests.l4.test_hooks.HookUnits.test_hooks_accept_any_extra_kwargs) ... ok
+test_llm_output_hook_contract (tests.l4.test_hooks.HookUnits.test_llm_output_hook_contract) ... ok
+test_tool_result_hook_contract (tests.l4.test_hooks.HookUnits.test_tool_result_hook_contract) ... ok
+test_no_cleartext_tool_exists_anywhere (tests.l4.test_hooks.Registration.test_no_cleartext_tool_exists_anywhere) ... ok
+test_registers_the_two_sealed_tools_and_two_hooks (tests.l4.test_hooks.Registration.test_registers_the_two_sealed_tools_and_two_hooks) ... ok
+test_schemas_offer_no_way_to_pass_a_token_or_a_sender (tests.l4.test_hooks.Registration.test_schemas_offer_no_way_to_pass_a_token_or_a_sender) ... ok
+test_extra_model_supplied_token_is_ignored (tests.l4.test_hooks.SealedEndToEnd.test_extra_model_supplied_token_is_ignored) ... ok
+test_handler_exception_is_reported_without_its_message (tests.l4.test_hooks.SealedEndToEnd.test_handler_exception_is_reported_without_its_message) ... ok
+test_handler_rejects_bad_arguments_without_a_traceback (tests.l4.test_hooks.SealedEndToEnd.test_handler_rejects_bad_arguments_without_a_traceback) ... ok
+test_model_never_sees_the_code_and_core_never_stores_it (tests.l4.test_hooks.SealedEndToEnd.test_model_never_sees_the_code_and_core_never_stores_it) ... ok
+test_no_consent_lookup_means_no_release (tests.l4.test_hooks.SealedEndToEnd.test_no_consent_lookup_means_no_release) ... ok
+test_unrelated_results_are_returned_untouched (tests.l4.test_hooks.SealedEndToEnd.test_unrelated_results_are_returned_untouched) ... ok
+test_dry_run_defaults_to_a_temporary_directory (tests.l4.test_latency_probe.ReaderDryRun.test_dry_run_defaults_to_a_temporary_directory) ... ok
+test_dry_run_end_to_end (tests.l4.test_latency_probe.ReaderDryRun.test_dry_run_end_to_end) ... ok
+test_the_reader_never_unwraps_a_body (tests.l4.test_latency_probe.ReaderDryRun.test_the_reader_never_unwraps_a_body) ... ok
+test_a_failed_send_stops_the_wait (tests.l4.test_latency_probe.ReaderProbe.test_a_failed_send_stops_the_wait) ... ok
+test_a_probe_already_in_the_inbox_is_found_and_flagged (tests.l4.test_latency_probe.ReaderProbe.test_a_probe_already_in_the_inbox_is_found_and_flagged) ... ok
+test_bad_nonce_is_refused (tests.l4.test_latency_probe.ReaderProbe.test_bad_nonce_is_refused) ... ok
+test_drops_during_a_probe_run_are_still_logged (tests.l4.test_latency_probe.ReaderProbe.test_drops_during_a_probe_run_are_still_logged) ... ok
+test_no_ready_file_when_the_phone_is_not_there (tests.l4.test_latency_probe.ReaderProbe.test_no_ready_file_when_the_phone_is_not_there) ... ok
+test_ready_file_after_the_baseline_and_removed_at_the_end (tests.l4.test_latency_probe.ReaderProbe.test_ready_file_after_the_baseline_and_removed_at_the_end) ... ok
+test_send_phone_and_plugin_times_are_joined (tests.l4.test_latency_probe.ReaderProbe.test_send_phone_and_plugin_times_are_joined) ... ok
+test_the_body_is_masked_except_the_nonce (tests.l4.test_latency_probe.ReaderProbe.test_the_body_is_masked_except_the_nonce) ... ok
+test_the_nonce_must_be_a_whole_token (tests.l4.test_latency_probe.ReaderProbe.test_the_nonce_must_be_a_whole_token) ... ok
+test_the_run_stops_once_the_send_record_is_final (tests.l4.test_latency_probe.ReaderProbe.test_the_run_stops_once_the_send_record_is_final) ... ok
+test_without_a_final_record_it_lingers_then_stops (tests.l4.test_latency_probe.ReaderProbe.test_without_a_final_record_it_lingers_then_stops) ... ok
+test_without_a_nonce_the_r8_output_is_unchanged (tests.l4.test_latency_probe.ReaderProbe.test_without_a_nonce_the_r8_output_is_unchanged) ... ok
+test_any_destination_but_the_fi_line_is_refused_before_any_request (tests.l4.test_latency_probe.SenderRefuses.test_any_destination_but_the_fi_line_is_refused_before_any_request) ... ok
+test_bad_nonces_are_refused (tests.l4.test_latency_probe.SenderRefuses.test_bad_nonces_are_refused) ... ok
+test_balance_floor (tests.l4.test_latency_probe.SenderRefuses.test_balance_floor) ... ok
+test_cli_needs_the_coordinator_flag_to_send (tests.l4.test_latency_probe.SenderRefuses.test_cli_needs_the_coordinator_flag_to_send) ... ok
+test_cli_refusal_is_exit_2 (tests.l4.test_latency_probe.SenderRefuses.test_cli_refusal_is_exit_2) ... ok
+test_sender_must_be_the_stored_plugin_line (tests.l4.test_latency_probe.SenderRefuses.test_sender_must_be_the_stored_plugin_line) ... ok
+test_a_malformed_sid_is_never_put_in_a_url (tests.l4.test_latency_probe.SenderSends.test_a_malformed_sid_is_never_put_in_a_url) ... ok
+test_a_second_probe_within_15_minutes_is_refused (tests.l4.test_latency_probe.SenderSends.test_a_second_probe_within_15_minutes_is_refused) ... ok
+test_dry_run_makes_no_request_and_writes_nothing (tests.l4.test_latency_probe.SenderSends.test_dry_run_makes_no_request_and_writes_nothing) ... ok
+test_exactly_one_message_to_fi_with_the_probe_text_then_read_only_status (tests.l4.test_latency_probe.SenderSends.test_exactly_one_message_to_fi_with_the_probe_text_then_read_only_status) ... ok
+test_network_error_is_unknown_outcome_never_retried_and_blocks_new_probes (tests.l4.test_latency_probe.SenderSends.test_network_error_is_unknown_outcome_never_retried_and_blocks_new_probes) ... ok
+test_numbers_masked_and_no_credentials_in_record_or_output (tests.l4.test_latency_probe.SenderSends.test_numbers_masked_and_no_credentials_in_record_or_output) ... ok
+test_probe_text_never_looks_like_a_code (tests.l4.test_latency_probe.SenderSends.test_probe_text_never_looks_like_a_code) ... ok
+test_same_nonce_twice_sends_once (tests.l4.test_latency_probe.SenderSends.test_same_nonce_twice_sends_once) ... ok
+test_twilio_refusal_is_recorded_and_not_retried (tests.l4.test_latency_probe.SenderSends.test_twilio_refusal_is_recorded_and_not_retried) ... ok
+test_undelivered_is_exit_6 (tests.l4.test_latency_probe.SenderSends.test_undelivered_is_exit_6) ... ok
+test_no_reader_no_send (tests.l4.test_latency_probe.SenderWaitsForReader.test_no_reader_no_send) ... ok
+test_ready_reader_gets_the_probe (tests.l4.test_latency_probe.SenderWaitsForReader.test_ready_reader_gets_the_probe) ... ok
+test_stale_or_dead_or_other_nonce_reader_is_not_ready (tests.l4.test_latency_probe.SenderWaitsForReader.test_stale_or_dead_or_other_nonce_reader_is_not_ready) ... ok
+test_a_new_code_message_gets_lags_and_flags (tests.l4.test_live_otp_delay.Basics.test_a_new_code_message_gets_lags_and_flags) ... /Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:77: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp2vussl10/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, files[0]))) if files else None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_a_poll_is_one_plugin_fetch_and_extra_queries_only_for_new_messages (tests.l4.test_live_otp_delay.Basics.test_a_poll_is_one_plugin_fetch_and_extra_queries_only_for_new_messages)
+Latency: no devices/getprop per poll, and the date_sent metadata query runs once per new message. ... /Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:77: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpjt6kk4ul/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, files[0]))) if files else None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_android17_hold_shows_as_a_large_lag (tests.l4.test_live_otp_delay.Basics.test_android17_hold_shows_as_a_large_lag)
+The provider withholds the OTP message for 3 min (stand-in for 3 h): it appears late, lag measured from `date`. ... /Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:77: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpr80rc38r/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, files[0]))) if files else None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_baseline_messages_are_not_reported (tests.l4.test_live_otp_delay.Basics.test_baseline_messages_are_not_reported) ... /Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:77: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpr1d6z18i/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, files[0]))) if files else None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_every_remote_command_is_read_only (tests.l4.test_live_otp_delay.Basics.test_every_remote_command_is_read_only) ... /Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:77: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpgfmkopdy/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, files[0]))) if files else None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_nothing_unmasked_in_output_or_json (tests.l4.test_live_otp_delay.Basics.test_nothing_unmasked_in_output_or_json) ... /Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp96lp5yf9/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp6m7sjiec/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpeglxegtf/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp2ju7v7l0/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpcylyr5z8/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpa2sncjoe/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmptpatzlym/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpuijqsmwm/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp302f4e4h/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpxflwrz9e/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpyk4dl4wl/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp25efs6af/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpa8yghbqz/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpvcw26ypi/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp7spqjjqp/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpblumcvcv/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpaf4vsxvx/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp8upcw9jw/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmph54miij3/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpxr01tqjs/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmprt58sl9a/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpw0joga5v/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp9l1mbtq9/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpu8v_wacm/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp07rlwtv1/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpl2wrxtfy/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmprey65e02/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp48t2_pqz/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpcs8fqmsa/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpdet8pr47/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpq43ooxmq/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpix2qsbcj/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpny9_de05/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpyseammlh/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpwsurhl71/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpidewtwh4/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmprfyrxn0t/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpv7veblw6/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmphpqpk4ev/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp1a6e7n6v/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpm8aaulox/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp6q5z3dvh/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp2wpk0a5i/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpvit48n15/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp5jx0ogk1/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:137: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpamw4tiss/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  blob = out.getvalue() + open(os.path.join(d, os.listdir(d)[0])).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_phone_clock_skew_is_estimated_and_applied (tests.l4.test_live_otp_delay.Basics.test_phone_clock_skew_is_estimated_and_applied) ... /Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:77: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp5nj0j75n/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, files[0]))) if files else None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_plain_message_is_not_code_like (tests.l4.test_live_otp_delay.Basics.test_plain_message_is_not_code_like) ... /Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:77: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmps5ywxlya/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, files[0]))) if files else None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_a_malformed_reply_is_a_drop_not_a_crash (tests.l4.test_live_otp_delay.Drops.test_a_malformed_reply_is_a_drop_not_a_crash) ... /Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:77: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp59bfveh_/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, files[0]))) if files else None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_permission_refused_mid_run_stops (tests.l4.test_live_otp_delay.Drops.test_permission_refused_mid_run_stops) ... /Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:77: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmptd2nzy1j/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, files[0]))) if files else None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_phone_asleep_for_the_whole_run_after_check_is_never_reachable (tests.l4.test_live_otp_delay.Drops.test_phone_asleep_for_the_whole_run_after_check_is_never_reachable) ... /Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:77: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpv4e107y8/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, files[0]))) if files else None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_usb_style_drop_is_logged_and_the_run_survives (tests.l4.test_live_otp_delay.Drops.test_usb_style_drop_is_logged_and_the_run_survives) ... /Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:77: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpuirjm5le/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, files[0]))) if files else None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_wireless_reconnects_are_logged (tests.l4.test_live_otp_delay.Drops.test_wireless_reconnects_are_logged) ... /Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:77: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp_rktdvk3/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, files[0]))) if files else None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_no_device_is_waiting_and_reads_nothing (tests.l4.test_live_otp_delay.OwnerSteps.test_no_device_is_waiting_and_reads_nothing) ... /Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:77: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpcak9v9v1/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, files[0]))) if files else None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_permission_refused_is_exit_4 (tests.l4.test_live_otp_delay.OwnerSteps.test_permission_refused_is_exit_4) ... /Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:77: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmp0iqyciiz/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, files[0]))) if files else None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_unauthorized_stops_and_says_what_to_do (tests.l4.test_live_otp_delay.OwnerSteps.test_unauthorized_stops_and_says_what_to_do) ... /Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:77: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpxjz6ziww/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, files[0]))) if files else None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_wireless_not_advertised_is_waiting_for_the_owner (tests.l4.test_live_otp_delay.OwnerSteps.test_wireless_not_advertised_is_waiting_for_the_owner) ... /Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_y57sdtb67b-1/hermes-line/tests/l4/test_live_otp_delay.py:77: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/tmpgtnsdm9d/otp-delay-20261105T010000Z.json' mode='r' encoding='UTF-8'>
+  doc = json.load(open(os.path.join(d, files[0]))) if files else None
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_cli_rejects_silly_arguments (tests.l4.test_live_otp_delay.ParseMeta.test_cli_rejects_silly_arguments) ... usage: python -m unittest [-h] [--minutes MINUTES] [--interval INTERVAL]
+                          [--lookback-minutes LOOKBACK_MINUTES]
+                          [--serial SERIAL] [--out-dir OUT_DIR]
+                          [--probe-nonce PROBE_NONCE]
+                          [--send-record SEND_RECORD] [--linger LINGER]
+                          [--dry-run]
+python -m unittest: error: --minutes must be in (0, 1440] and --interval in [0.5, 60]
+usage: python -m unittest [-h] [--minutes MINUTES] [--interval INTERVAL]
+                          [--lookback-minutes LOOKBACK_MINUTES]
+                          [--serial SERIAL] [--out-dir OUT_DIR]
+                          [--probe-nonce PROBE_NONCE]
+                          [--send-record SEND_RECORD] [--linger LINGER]
+                          [--dry-run]
+python -m unittest: error: --minutes must be in (0, 1440] and --interval in [0.5, 60]
+ok
+test_malformed_or_forged_rows_are_refused_without_echo (tests.l4.test_live_otp_delay.ParseMeta.test_malformed_or_forged_rows_are_refused_without_echo) ... ok
+test_rows (tests.l4.test_live_otp_delay.ParseMeta.test_rows) ... ok
+test_bad_format_args_do_not_crash_logging (tests.l4.test_masking.LogMaskingTests.test_bad_format_args_do_not_crash_logging) ... ok
+test_filter_masks_message_and_args (tests.l4.test_masking.LogMaskingTests.test_filter_masks_message_and_args) ... ok
+test_handler_level_covers_child_loggers (tests.l4.test_masking.LogMaskingTests.test_handler_level_covers_child_loggers) ... ok
+test_install_is_idempotent (tests.l4.test_masking.LogMaskingTests.test_install_is_idempotent) ... ok
+test_alnum_codes (tests.l4.test_masking.MaskCodesTests.test_alnum_codes) ... ok
+test_codes_are_replaced_and_context_stays (tests.l4.test_masking.MaskCodesTests.test_codes_are_replaced_and_context_stays) ... ok
+test_every_planted_code_is_masked_in_every_case (tests.l4.test_masking.MaskCodesTests.test_every_planted_code_is_masked_in_every_case) ... ok
+test_known_limit_letter_only_code_is_not_masked (tests.l4.test_masking.MaskCodesTests.test_known_limit_letter_only_code_is_not_masked) ... ok
+test_length_is_hidden (tests.l4.test_masking.MaskCodesTests.test_length_is_hidden) ... ok
+test_obfuscated_digits (tests.l4.test_masking.MaskCodesTests.test_obfuscated_digits) ... ok
+test_phone_numbers_and_dates_are_masked_too (tests.l4.test_masking.MaskCodesTests.test_phone_numbers_and_dates_are_masked_too) ... ok
+test_small_numbers_and_words_survive (tests.l4.test_masking.MaskCodesTests.test_small_numbers_and_words_survive) ... ok
+test_body_str_is_wrapped_automatically (tests.l4.test_masking.MessageSurfaceTests.test_body_str_is_wrapped_automatically) ... ok
+test_message_repr_and_summary_have_no_body (tests.l4.test_masking.MessageSurfaceTests.test_message_repr_and_summary_have_no_body) ... ok
+test_empty (tests.l4.test_masking.RedactAllTests.test_empty) ... ok
+test_nothing_of_the_original_survives_in_any_language (tests.l4.test_masking.RedactAllTests.test_nothing_of_the_original_survives_in_any_language) ... ok
+test_shape_only (tests.l4.test_masking.RedactAllTests.test_shape_only) ... ok
+test_truncation (tests.l4.test_masking.RedactAllTests.test_truncation) ... ok
+test_equality_and_bool (tests.l4.test_masking.SecretTextTests.test_equality_and_bool) ... ok
+test_every_formatting_path_is_redacted (tests.l4.test_masking.SecretTextTests.test_every_formatting_path_is_redacted) ... ok
+test_immutable_and_typed (tests.l4.test_masking.SecretTextTests.test_immutable_and_typed) ... ok
+test_no_serialisation (tests.l4.test_masking.SecretTextTests.test_no_serialisation) ... ok
+test_reveal_is_the_only_way_out (tests.l4.test_masking.SecretTextTests.test_reveal_is_the_only_way_out) ... ok
+test_empty_and_tiny (tests.l4.test_masking.SenderMaskTests.test_empty_and_tiny) ... ok
+test_phone_and_alnum (tests.l4.test_masking.SenderMaskTests.test_phone_and_alnum) ... ok
+test_short_codes_stay_readable (tests.l4.test_masking.SenderMaskTests.test_short_codes_stay_readable) ... ok
+test_a_resend_wins_over_the_earlier_code (tests.l4.test_matching.MatcherDecisions.test_a_resend_wins_over_the_earlier_code) ... ok
+test_ambiguous_never_releases (tests.l4.test_matching.MatcherDecisions.test_ambiguous_never_releases) ... ok
+test_ambiguous_newer_message_blocks_older_code (tests.l4.test_matching.MatcherDecisions.test_ambiguous_newer_message_blocks_older_code) ... ok
+test_clock_skew_widens_the_start_only (tests.l4.test_matching.MatcherDecisions.test_clock_skew_widens_the_start_only) ... ok
+test_expired_when_window_closed_and_nothing_found (tests.l4.test_matching.MatcherDecisions.test_expired_when_window_closed_and_nothing_found) ... ok
+test_in_window_message_without_code (tests.l4.test_matching.MatcherDecisions.test_in_window_message_without_code) ... ok
+test_log_line_has_no_content (tests.l4.test_matching.MatcherDecisions.test_log_line_has_no_content) ... ok
+test_other_senders_codes_are_not_considered (tests.l4.test_matching.MatcherDecisions.test_other_senders_codes_are_not_considered) ... ok
+test_release_is_the_only_unmasked_path (tests.l4.test_matching.MatcherDecisions.test_release_is_the_only_unmasked_path) ... ok
+test_release_newest_matching_code (tests.l4.test_matching.MatcherDecisions.test_release_newest_matching_code) ... ok
+test_short_code_sender (tests.l4.test_matching.MatcherDecisions.test_short_code_sender) ... ok
+test_single_use (tests.l4.test_matching.MatcherDecisions.test_single_use) ... ok
+test_used_set_can_be_shared_across_tasks (tests.l4.test_matching.MatcherDecisions.test_used_set_can_be_shared_across_tasks) ... ok
+test_window_end_is_hard (tests.l4.test_matching.MatcherDecisions.test_window_end_is_hard) ... ok
+test_window_start_end (tests.l4.test_matching.MatcherDecisions.test_window_start_end) ... ok
+test_wrong_sender_never_releases (tests.l4.test_matching.MatcherDecisions.test_wrong_sender_never_releases) ... ok
+test_android17_style_delay_times_out_without_release (tests.l4.test_matching.PollingTests.test_android17_style_delay_times_out_without_release)
+A provider that withholds OTP messages for 3h looks like 'nothing arrived'. ... ok
+test_code_arrives_while_polling (tests.l4.test_matching.PollingTests.test_code_arrives_while_polling) ... ok
+test_persistent_source_error_is_raised_for_fallback (tests.l4.test_matching.PollingTests.test_persistent_source_error_is_raised_for_fallback) ... ok
+test_transient_source_errors_are_retried (tests.l4.test_matching.PollingTests.test_transient_source_errors_are_retried) ... ok
+test_window_close_stops_polling_before_timeout (tests.l4.test_matching.PollingTests.test_window_close_stops_polling_before_timeout) ... ok
+test_forms (tests.l4.test_matching.SenderNormalisation.test_forms) ... ok
+test_lookalike_senders_do_not_match (tests.l4.test_matching.SenderNormalisation.test_lookalike_senders_do_not_match) ... ok
+test_rule_matching (tests.l4.test_matching.SenderNormalisation.test_rule_matching) ... ok
+test_no_planted_code_appears_anywhere (tests.l4.test_no_leak.LeakSweep.test_no_planted_code_appears_anywhere) ... ok
+test_no_cleartext_tool_in_the_plugin (tests.l4.test_no_leak.RevealAudit.test_no_cleartext_tool_in_the_plugin) ... ok
+test_no_file_writes_in_library (tests.l4.test_no_leak.RevealAudit.test_no_file_writes_in_library) ... ok
+test_no_print_or_stdout_in_library (tests.l4.test_no_leak.RevealAudit.test_no_print_or_stdout_in_library) ... ok
+test_release_is_the_only_code_reveal (tests.l4.test_no_leak.RevealAudit.test_release_is_the_only_code_reveal) ... ok
+test_reveal_call_sites (tests.l4.test_no_leak.RevealAudit.test_reveal_call_sites) ... ok
+test_sink_is_the_only_reveal_in_delivery (tests.l4.test_no_leak.RevealAudit.test_sink_is_the_only_reveal_in_delivery) ... ok
+test_mask_codes_still_masks_in_a_long_body (tests.l4.test_otp.AdversarialInput.test_mask_codes_still_masks_in_a_long_body) ... ok
+test_overlong_body_yields_no_code (tests.l4.test_otp.AdversarialInput.test_overlong_body_yields_no_code) ... ok
+test_worst_case_time_is_bounded (tests.l4.test_otp.AdversarialInput.test_worst_case_time_is_bounded) ... ok
+test_cases (tests.l4.test_otp.OtpCaseTable.test_cases) ... ok
+test_accepts_secrettext_and_str (tests.l4.test_otp.OtpDetails.test_accepts_secrettext_and_str) ... ok
+test_ambiguity_has_no_primary_but_lists_both (tests.l4.test_otp.OtpDetails.test_ambiguity_has_no_primary_but_lists_both) ... ok
+test_candidate_repr_never_shows_value (tests.l4.test_otp.OtpDetails.test_candidate_repr_never_shows_value) ... ok
+test_kinds (tests.l4.test_otp.OtpDetails.test_kinds) ... ok
+test_printed_form_kept_for_prefixed_and_grouped (tests.l4.test_otp.OtpDetails.test_printed_form_kept_for_prefixed_and_grouped) ... ok
+test_reasons_never_contain_content (tests.l4.test_otp.OtpDetails.test_reasons_never_contain_content) ... ok
+test_regexes_are_linear_enough (tests.l4.test_otp.OtpDetails.test_regexes_are_linear_enough) ... ok
+test_threshold_is_a_real_gate (tests.l4.test_otp.OtpDetails.test_threshold_is_a_real_gate) ... ok
+test_very_long_body_does_not_blow_up (tests.l4.test_otp.OtpDetails.test_very_long_body_does_not_blow_up) ... ok
+test_call_filter_off (tests.l4.test_paths.PipelineSweep.test_call_filter_off) ... ok
+test_call_filter_on (tests.l4.test_paths.PipelineSweep.test_call_filter_on) ... ok
+test_fill_filter_off (tests.l4.test_paths.PipelineSweep.test_fill_filter_off) ... ok
+test_fill_filter_on (tests.l4.test_paths.PipelineSweep.test_fill_filter_on) ... ok
+test_probe_inbox_has_no_code_or_body (tests.l4.test_paths.ProbeOutput.test_probe_inbox_has_no_code_or_body) ... ok
+test_adb_error_paths_do_not_echo_output (tests.l4.test_paths.SourceErrorText.test_adb_error_paths_do_not_echo_output) ... ok
+test_gateway_error_paths_do_not_echo_body (tests.l4.test_paths.SourceErrorText.test_gateway_error_paths_do_not_echo_body) ... ok
+test_business_number_equal_to_a_received_code_is_masked (tests.l4.test_paths.TranscriptText.test_business_number_equal_to_a_received_code_is_masked) ... ok
+test_call_speech_stays_readable (tests.l4.test_paths.TranscriptText.test_call_speech_stays_readable)
+Round 3: a booking, a date, a flight or a confirmation number is not a verification code. ... ok
+test_code_shaped_tokens_are_masked_before_any_release (tests.l4.test_paths.TranscriptText.test_code_shaped_tokens_are_masked_before_any_release) ... ok
+test_contract_mask_tokens (tests.l4.test_paths.TranscriptText.test_contract_mask_tokens) ... ok
+test_letter_only_code_is_masked_once_released_and_not_before (tests.l4.test_paths.TranscriptText.test_letter_only_code_is_masked_once_released_and_not_before) ... ok
+test_log_filter_scrubs_released_values_in_free_text (tests.l4.test_paths.TranscriptText.test_log_filter_scrubs_released_values_in_free_text) ... ok
+test_logs_stay_strict (tests.l4.test_paths.TranscriptText.test_logs_stay_strict) ... ok
+test_mixed_call_sentence (tests.l4.test_paths.TranscriptText.test_mixed_call_sentence) ... ok
+test_released_code_in_every_spelling (tests.l4.test_paths.TranscriptText.test_released_code_in_every_spelling) ... ok
+test_scrub_time_is_bounded_on_large_and_hostile_results (tests.l4.test_paths.TranscriptText.test_scrub_time_is_bounded_on_large_and_hostile_results) ... ok
+test_scrubber_expires_and_is_bounded (tests.l4.test_paths.TranscriptText.test_scrubber_expires_and_is_bounded) ... ok
+test_too_short_or_too_long_values_are_not_registered (tests.l4.test_paths.TranscriptText.test_too_short_or_too_long_values_are_not_registered) ... ok
+test_check_flag_off_on_android16 (tests.l4.test_probe.ProbeTests.test_check_flag_off_on_android16) ... ok
+test_check_ok_reports_android17_flag (tests.l4.test_probe.ProbeTests.test_check_ok_reports_android17_flag) ... ok
+test_describe_is_the_only_message_to_output_path (tests.l4.test_probe.ProbeTests.test_describe_is_the_only_message_to_output_path) ... ok
+test_inbox_output_is_masked (tests.l4.test_probe.ProbeTests.test_inbox_output_is_masked) ... ok
+test_inbox_respects_window_and_limit (tests.l4.test_probe.ProbeTests.test_inbox_respects_window_and_limit) ... ok
+test_inbox_without_device_is_waiting (tests.l4.test_probe.ProbeTests.test_inbox_without_device_is_waiting) ... ok
+test_no_device_is_waiting_for_owner_step (tests.l4.test_probe.ProbeTests.test_no_device_is_waiting_for_owner_step) ... ok
+test_permission_refused_exit_4 (tests.l4.test_probe.ProbeTests.test_permission_refused_exit_4) ... ok
+test_shape_is_short_and_shape_only (tests.l4.test_probe.ProbeTests.test_shape_is_short_and_shape_only) ... ok
+test_unauthorized_is_waiting_for_owner_step (tests.l4.test_probe.ProbeTests.test_unauthorized_is_waiting_for_owner_step) ... ok
+test_watch_measures_visibility_lag (tests.l4.test_probe.ProbeTests.test_watch_measures_visibility_lag)
+A plain message shows up fast; an OTP-shaped one only after the provider releases it. ... ok
+test_bf_browser_fill_is_off_by_default_and_the_tool_is_not_registered (tests.l4.test_r1_fixes.BF_BrowserFill.test_bf_browser_fill_is_off_by_default_and_the_tool_is_not_registered) ... ok
+test_bf_origin_changed_right_after_typing_reports_it_and_burns_the_slot (tests.l4.test_r1_fixes.BF_BrowserFill.test_bf_origin_changed_right_after_typing_reports_it_and_burns_the_slot) ... ok
+test_bf_origin_changed_right_before_typing_types_nothing_and_keeps_the_sealed_code (tests.l4.test_r1_fixes.BF_BrowserFill.test_bf_origin_changed_right_before_typing_types_nothing_and_keeps_the_sealed_code) ... ok
+test_bf_origin_changes_between_boxes_stops_typing (tests.l4.test_r1_fixes.BF_BrowserFill.test_bf_origin_changes_between_boxes_stops_typing) ... ok
+test_bf_origin_unreadable_after_typing_counts_as_changed (tests.l4.test_r1_fixes.BF_BrowserFill.test_bf_origin_unreadable_after_typing_counts_as_changed) ... ok
+test_bf_stable_origin_fills_and_probes_around_the_typing (tests.l4.test_r1_fixes.BF_BrowserFill.test_bf_stable_origin_fills_and_probes_around_the_typing) ... ok
+test_h1_call_to_call_replacement_does_not_send_the_old_code (tests.l4.test_r1_fixes.H1_RetainedSlot.test_h1_call_to_call_replacement_does_not_send_the_old_code) ... ok
+test_h1_concurrent_replacement_stress_never_types_into_an_unapproved_site (tests.l4.test_r1_fixes.H1_RetainedSlot.test_h1_concurrent_replacement_stress_never_types_into_an_unapproved_site) ... ok
+test_h1_concurrent_replacement_waits_for_an_in_flight_delivery (tests.l4.test_r1_fixes.H1_RetainedSlot.test_h1_concurrent_replacement_waits_for_an_in_flight_delivery)
+Validation and delivery are one step against replacement: the replacement cannot land between them. ... ok
+test_h1_fill_to_call_replacement_does_not_send_the_old_code (tests.l4.test_r1_fixes.H1_RetainedSlot.test_h1_fill_to_call_replacement_does_not_send_the_old_code) ... ok
+test_h1_fill_to_fill_replacement_does_not_move_the_old_code (tests.l4.test_r1_fixes.H1_RetainedSlot.test_h1_fill_to_fill_replacement_does_not_move_the_old_code) ... ok
+test_h1_fill_to_fill_replacement_even_without_the_eager_listener (tests.l4.test_r1_fixes.H1_RetainedSlot.test_h1_fill_to_fill_replacement_even_without_the_eager_listener) ... ok
+test_h1_idempotent_registration_keeps_generation_and_slot (tests.l4.test_r1_fixes.H1_RetainedSlot.test_h1_idempotent_registration_keeps_generation_and_slot) ... ok
+test_h1_identical_terms_after_forget_are_a_new_generation_and_drop_the_slot (tests.l4.test_r1_fixes.H1_RetainedSlot.test_h1_identical_terms_after_forget_are_a_new_generation_and_drop_the_slot) ... ok
+test_h1_replacement_during_the_pre_typing_probe_cannot_redirect_the_code (tests.l4.test_r1_fixes.H1_RetainedSlot.test_h1_replacement_during_the_pre_typing_probe_cannot_redirect_the_code)
+The retry is blocked in its pre-typing origin probe; a replacement started now must queue behind it. ... ok
+test_h1_replacement_while_the_phone_is_being_read_is_refused_at_commit (tests.l4.test_r1_fixes.H1_RetainedSlot.test_h1_replacement_while_the_phone_is_being_read_is_refused_at_commit)
+The approval is replaced after the dry-run match but before consent is spent: nothing is released. ... ok
+test_h1_revocation_drops_the_slot_and_blocks_retry (tests.l4.test_r1_fixes.H1_RetainedSlot.test_h1_revocation_drops_the_slot_and_blocks_retry) ... ok
+test_h1_slot_binding_covers_sender_and_window_not_only_destination (tests.l4.test_r1_fixes.H1_RetainedSlot.test_h1_slot_binding_covers_sender_and_window_not_only_destination)
+Same destination, different sender/window: still a different approval. ... ok
+test_m1_call_target_checks_the_generation_too (tests.l4.test_r1_fixes.M1_ApprovalGeneration.test_m1_call_target_checks_the_generation_too) ... ok
+test_m1_release_otp_contract_entry_takes_the_generation (tests.l4.test_r1_fixes.M1_ApprovalGeneration.test_m1_release_otp_contract_entry_takes_the_generation) ... ok
+test_m1_release_refuses_a_generation_that_is_not_the_registered_one (tests.l4.test_r1_fixes.M1_ApprovalGeneration.test_m1_release_refuses_a_generation_that_is_not_the_registered_one) ... ok
+test_m1_slot_generation_must_match_the_pending_one (tests.l4.test_r1_fixes.M1_ApprovalGeneration.test_m1_slot_generation_must_match_the_pending_one) ... ok
+test_m1_tool_handlers_pass_the_engines_pending_generation (tests.l4.test_r1_fixes.M1_ApprovalGeneration.test_m1_tool_handlers_pass_the_engines_pending_generation) ... ok
+test_n1_a_missing_generation_is_refused_by_the_call_sink (tests.l4.test_r1_fixes.N1_CallSinkDoesNotHoldTheGate.test_n1_a_missing_generation_is_refused_by_the_call_sink) ... ok
+test_n1_a_retry_passes_the_slots_generation_and_never_a_newer_one (tests.l4.test_r1_fixes.N1_CallSinkDoesNotHoldTheGate.test_n1_a_retry_passes_the_slots_generation_and_never_a_newer_one) ... ok
+test_n1_a_sink_that_cannot_take_the_generation_is_refused_and_nothing_is_released (tests.l4.test_r1_fixes.N1_CallSinkDoesNotHoldTheGate.test_n1_a_sink_that_cannot_take_the_generation_is_refused_and_nothing_is_released) ... ok
+test_n1_a_sink_that_needs_a_second_thread_to_take_the_gate_completes (tests.l4.test_r1_fixes.N1_CallSinkDoesNotHoldTheGate.test_n1_a_sink_that_needs_a_second_thread_to_take_the_gate_completes) ... ok
+test_n1_browser_fill_still_serializes_against_replacement (tests.l4.test_r1_fixes.N1_CallSinkDoesNotHoldTheGate.test_n1_browser_fill_still_serializes_against_replacement)
+Browser locking is separate and unchanged: the gate is held across the (worker-thread) browser sink. ... ok
+test_n1_legacy_wrapper_replacement_interleaving_sends_nothing (tests.l4.test_r1_fixes.N1_CallSinkDoesNotHoldTheGate.test_n1_legacy_wrapper_replacement_interleaving_sends_nothing)
+The R1-delta2 reproduction: a legacy wrapper pauses after validation, the approval is replaced, the wrapper ... ok
+test_n1_replacement_during_the_send_keeps_the_newer_approvals_slot (tests.l4.test_r1_fixes.N1_CallSinkDoesNotHoldTheGate.test_n1_replacement_during_the_send_keeps_the_newer_approvals_slot)
+A send in flight finishes after the approval was replaced and a newer slot exists: only its own slot goes. ... ok
+test_n1_the_approval_generation_is_passed_to_the_sink (tests.l4.test_r1_fixes.N1_CallSinkDoesNotHoldTheGate.test_n1_the_approval_generation_is_passed_to_the_sink) ... ok
+test_n1_the_gate_is_free_while_the_sink_runs (tests.l4.test_r1_fixes.N1_CallSinkDoesNotHoldTheGate.test_n1_the_gate_is_free_while_the_sink_runs) ... ok
+test_audit_events_carry_status_only (tests.l4.test_service.AuditAndLogs.test_audit_events_carry_status_only) ... ok
+test_a_task_without_a_destination_cannot_be_registered_or_bound (tests.l4.test_service.DestinationBinding.test_a_task_without_a_destination_cannot_be_registered_or_bound) ... ok
+test_a_token_for_another_destination_never_releases (tests.l4.test_service.DestinationBinding.test_a_token_for_another_destination_never_releases) ... ok
+test_approval_prompt_shows_sender_window_and_destination (tests.l4.test_service.DestinationBinding.test_approval_prompt_shows_sender_window_and_destination) ... ok
+test_binding_carries_the_destination (tests.l4.test_service.DestinationBinding.test_binding_carries_the_destination) ... ok
+test_task_cannot_be_reregistered_with_another_destination (tests.l4.test_service.DestinationBinding.test_task_cannot_be_reregistered_with_another_destination) ... ok
+test_a_fast_read_still_waits_out_the_interval (tests.l4.test_service.PollingInterval.test_a_fast_read_still_waits_out_the_interval) ... ok
+test_a_slow_read_is_not_followed_by_another_full_wait (tests.l4.test_service.PollingInterval.test_a_slow_read_is_not_followed_by_another_full_wait) ... ok
+test_a_message_used_between_peek_and_commit_is_not_released_and_consent_is_kept (tests.l4.test_service.RaceAtCommit.test_a_message_used_between_peek_and_commit_is_not_released_and_consent_is_kept)
+Two callers with different tokens both see RELEASE in the dry run; the lock decides. ... ok
+test_a_registered_task_cannot_be_widened (tests.l4.test_service.Registry.test_a_registered_task_cannot_be_widened) ... ok
+test_binding_is_canonical (tests.l4.test_service.Registry.test_binding_is_canonical) ... ok
+test_degenerate_tasks_are_refused (tests.l4.test_service.Registry.test_degenerate_tasks_are_refused) ... ok
+test_hostile_task_ids_are_not_echoed (tests.l4.test_service.Registry.test_hostile_task_ids_are_not_echoed) ... ok
+test_unknown_task (tests.l4.test_service.Registry.test_unknown_task) ... ok
+test_contract_entry_point (tests.l4.test_service.ReleaseHappyPath.test_contract_entry_point) ... ok
+test_release_returns_secret_and_spends_consent (tests.l4.test_service.ReleaseHappyPath.test_release_returns_secret_and_spends_consent) ... ok
+test_a_plain_add_contains_object_is_enough_and_gets_message_keys_only (tests.l4.test_service.ReleasedStoreInterface.test_a_plain_add_contains_object_is_enough_and_gets_message_keys_only) ... ok
+test_default_store_is_l1s_module_now_that_l1_is_merged (tests.l4.test_service.ReleasedStoreInterface.test_default_store_is_l1s_module_now_that_l1_is_merged)
+L1's `line.store.released_otps` exists in the tree since the L1 merge, so `default_store()` returns it ... ok
+test_imports_are_package_relative (tests.l4.test_service.ReleasedStoreInterface.test_imports_are_package_relative)
+Under Hermes the plugin is not importable as top-level `line`: load it under another package name. ... ok
+test_store_that_cannot_be_read_means_nothing_is_released_and_consent_is_kept (tests.l4.test_service.ReleasedStoreInterface.test_store_that_cannot_be_read_means_nothing_is_released_and_consent_is_kept) ... ok
+test_store_that_cannot_record_means_nothing_is_released (tests.l4.test_service.ReleasedStoreInterface.test_store_that_cannot_record_means_nothing_is_released) ... ok
+test_released_message_stays_used_across_tasks (tests.l4.test_service.Replay.test_released_message_stays_used_across_tasks) ... ok
+test_replaying_a_used_token_for_another_task_fails (tests.l4.test_service.Replay.test_replaying_a_used_token_for_another_task_fails) ... ok
+test_same_message_cannot_release_twice_with_fresh_consent (tests.l4.test_service.Replay.test_same_message_cannot_release_twice_with_fresh_consent) ... ok
+test_shared_released_store_survives_a_service_restart (tests.l4.test_service.Replay.test_shared_released_store_survives_a_service_restart) ... ok
+test_broken_consent_store_fails_closed (tests.l4.test_service.SingleUseConsent.test_broken_consent_store_fails_closed) ... ok
+test_concurrent_callers_release_once (tests.l4.test_service.SingleUseConsent.test_concurrent_callers_release_once) ... ok
+test_expired_consent (tests.l4.test_service.SingleUseConsent.test_expired_consent) ... ok
+test_missing_or_garbage_token (tests.l4.test_service.SingleUseConsent.test_missing_or_garbage_token) ... ok
+test_missing_token_does_not_read_the_phone (tests.l4.test_service.SingleUseConsent.test_missing_token_does_not_read_the_phone) ... ok
+test_new_approval_releases_the_resend (tests.l4.test_service.SingleUseConsent.test_new_approval_releases_the_resend) ... ok
+test_token_bound_to_a_narrower_approval_is_rejected (tests.l4.test_service.SingleUseConsent.test_token_bound_to_a_narrower_approval_is_rejected)
+Owner approved sender OTHER; the registered task also lists ACME: binding mismatch. ... ok
+test_token_cannot_release_a_resend (tests.l4.test_service.SingleUseConsent.test_token_cannot_release_a_resend) ... ok
+test_token_for_another_task_or_action_is_rejected (tests.l4.test_service.SingleUseConsent.test_token_for_another_task_or_action_is_rejected) ... ok
+test_waiting_does_not_burn_consent (tests.l4.test_service.SingleUseConsent.test_waiting_does_not_burn_consent) ... ok
+test_audit_hook_failure_does_not_change_the_outcome (tests.l4.test_service.SourceFailures.test_audit_hook_failure_does_not_change_the_outcome) ... ok
+test_unreadable_phone_is_a_status_not_a_leak (tests.l4.test_service.SourceFailures.test_unreadable_phone_is_a_status_not_a_leak) ... ok
+test_newer_ambiguous_message_blocks_an_older_clean_code (tests.l4.test_service.TwoCodes.test_newer_ambiguous_message_blocks_an_older_clean_code) ... ok
+test_two_competing_codes_in_one_message_never_release (tests.l4.test_service.TwoCodes.test_two_competing_codes_in_one_message_never_release) ... ok
+test_two_messages_newest_wins_and_older_stays_unreleased_for_replay (tests.l4.test_service.TwoCodes.test_two_messages_newest_wins_and_older_stays_unreleased_for_replay) ... ok
+test_lookalike_sender_and_phone_number_form (tests.l4.test_service.WrongSender.test_lookalike_sender_and_phone_number_form) ... ok
+test_other_sender_never_releases_and_keeps_consent (tests.l4.test_service.WrongSender.test_other_sender_never_releases_and_keeps_consent) ... ok
+test_phone_sender_spelling_variants_match (tests.l4.test_service.WrongSender.test_phone_sender_spelling_variants_match) ... ok
+test_wrong_sender_with_two_senders_approved_only_in_rules (tests.l4.test_service.WrongSender.test_wrong_sender_with_two_senders_approved_only_in_rules) ... ok
+test_message_after_window_is_ignored (tests.l4.test_service.WrongWindow.test_message_after_window_is_ignored) ... ok
+test_message_before_window_is_ignored (tests.l4.test_service.WrongWindow.test_message_before_window_is_ignored) ... ok
+test_message_just_inside_clock_skew_is_accepted (tests.l4.test_service.WrongWindow.test_message_just_inside_clock_skew_is_accepted) ... ok
+test_no_release_once_the_window_closed_even_for_an_in_window_message (tests.l4.test_service.WrongWindow.test_no_release_once_the_window_closed_even_for_an_in_window_message) ... ok
+test_provider_that_withholds_otp_messages_times_out_without_release (tests.l4.test_service.WrongWindow.test_provider_that_withholds_otp_messages_times_out_without_release)
+Android 17 style delay: the code is invisible for hours, so nothing is released. ... ok
+test_window_closing_while_waiting (tests.l4.test_service.WrongWindow.test_window_closing_while_waiting) ... ok
+test_a_body_with_real_crlf_is_kept_when_lengths_agree (tests.l4.test_sources.AdbParsing.test_a_body_with_real_crlf_is_kept_when_lengths_agree) ... ok
+test_crlf_output_from_an_adb_that_translates_line_endings (tests.l4.test_sources.AdbParsing.test_crlf_output_from_an_adb_that_translates_line_endings) ... ok
+test_forged_address_cannot_split_the_row (tests.l4.test_sources.AdbParsing.test_forged_address_cannot_split_the_row) ... ok
+test_forged_row_inside_body_is_just_data (tests.l4.test_sources.AdbParsing.test_forged_row_inside_body_is_just_data)
+Length-prefixed rows: a body that looks like further rows cannot create or swallow a message. ... ok
+test_garbage_raises_without_echoing_content (tests.l4.test_sources.AdbParsing.test_garbage_raises_without_echoing_content) ... ok
+test_multiline_body_and_commas_in_body (tests.l4.test_sources.AdbParsing.test_multiline_body_and_commas_in_body) ... ok
+test_null_values_and_empty_result (tests.l4.test_sources.AdbParsing.test_null_values_and_empty_result) ... ok
+test_output_that_disagrees_with_the_reported_lengths_is_refused (tests.l4.test_sources.AdbParsing.test_output_that_disagrees_with_the_reported_lengths_is_refused) ... ok
+test_simple_rows (tests.l4.test_sources.AdbParsing.test_simple_rows) ... ok
+test_where_builder (tests.l4.test_sources.AdbParsing.test_where_builder) ... ok
+test_a_configured_serial_that_is_not_attached_is_an_error_never_the_other_device (tests.l4.test_sources.AdbSourceBehaviour.test_a_configured_serial_that_is_not_attached_is_an_error_never_the_other_device) ... ok
+test_address_filter_is_client_side_and_normalised (tests.l4.test_sources.AdbSourceBehaviour.test_address_filter_is_client_side_and_normalised) ... ok
+test_address_filter_on_device_when_enabled (tests.l4.test_sources.AdbSourceBehaviour.test_address_filter_on_device_when_enabled) ... ok
+test_body_that_looks_like_an_error_is_still_data (tests.l4.test_sources.AdbSourceBehaviour.test_body_that_looks_like_an_error_is_still_data) ... ok
+test_check_ok_reports_device_facts_and_reads_no_message (tests.l4.test_sources.AdbSourceBehaviour.test_check_ok_reports_device_facts_and_reads_no_message) ... ok
+test_fetch_filters_and_orders (tests.l4.test_sources.AdbSourceBehaviour.test_fetch_filters_and_orders) ... ok
+test_forged_row_inside_body_creates_no_extra_message (tests.l4.test_sources.AdbSourceBehaviour.test_forged_row_inside_body_creates_no_extra_message) ... ok
+test_limit (tests.l4.test_sources.AdbSourceBehaviour.test_limit) ... ok
+test_no_device (tests.l4.test_sources.AdbSourceBehaviour.test_no_device) ... ok
+test_offline_device (tests.l4.test_sources.AdbSourceBehaviour.test_offline_device) ... ok
+test_one_adb_invocation_per_fetch (tests.l4.test_sources.AdbSourceBehaviour.test_one_adb_invocation_per_fetch)
+Latency: a `content query` costs seconds of phone-side start-up, so a fetch is exactly one adb shell. ... ok
+test_only_read_only_remote_verbs (tests.l4.test_sources.AdbSourceBehaviour.test_only_read_only_remote_verbs) ... ok
+test_permission_denied_is_classified (tests.l4.test_sources.AdbSourceBehaviour.test_permission_denied_is_classified) ... ok
+test_remote_command_shape_and_quoting (tests.l4.test_sources.AdbSourceBehaviour.test_remote_command_shape_and_quoting) ... ok
+test_serial_is_passed_through (tests.l4.test_sources.AdbSourceBehaviour.test_serial_is_passed_through) ... ok
+test_tampered_output_is_refused (tests.l4.test_sources.AdbSourceBehaviour.test_tampered_output_is_refused) ... ok
+test_timeout_maps_to_device_unavailable (tests.l4.test_sources.AdbSourceBehaviour.test_timeout_maps_to_device_unavailable) ... ok
+test_unauthorized_device (tests.l4.test_sources.AdbSourceBehaviour.test_unauthorized_device) ... ok
+test_user_flag (tests.l4.test_sources.AdbSourceBehaviour.test_user_flag) ... ok
+test_apply_filters_stable_newest_first (tests.l4.test_sources.FixtureSourceTests.test_apply_filters_stable_newest_first) ... ok
+test_filters (tests.l4.test_sources.FixtureSourceTests.test_filters) ... ok
+test_visibility_delay (tests.l4.test_sources.FixtureSourceTests.test_visibility_delay) ... ok
+test_check_reads_no_message (tests.l4.test_sources.GatewayTests.test_check_reads_no_message) ... ok
+test_credentials_never_in_repr (tests.l4.test_sources.GatewayTests.test_credentials_never_in_repr) ... ok
+test_fetch_maps_fields_and_builds_request (tests.l4.test_sources.GatewayTests.test_fetch_maps_fields_and_builds_request) ... ok
+test_http_errors (tests.l4.test_sources.GatewayTests.test_http_errors) ... ok
+test_limit_is_clamped (tests.l4.test_sources.GatewayTests.test_limit_is_clamped) ... ok
+test_malformed_payloads (tests.l4.test_sources.GatewayTests.test_malformed_payloads) ... ok
+test_url_rules (tests.l4.test_sources.GatewayTests.test_url_rules) ... ok
+test_a_timeout_on_a_network_target_also_recovers (tests.l4.test_sources.WirelessRecovery.test_a_timeout_on_a_network_target_also_recovers) ... ok
+test_another_phone_advertised_is_not_adopted (tests.l4.test_sources.WirelessRecovery.test_another_phone_advertised_is_not_adopted) ... ok
+test_connect_argument_is_validated (tests.l4.test_sources.WirelessRecovery.test_connect_argument_is_validated) ... ok
+test_connect_failure_is_phone_unreachable (tests.l4.test_sources.WirelessRecovery.test_connect_failure_is_phone_unreachable) ... ok
+test_connected_but_still_failing_is_unreachable_and_bounded_to_one_reconnect (tests.l4.test_sources.WirelessRecovery.test_connected_but_still_failing_is_unreachable_and_bounded_to_one_reconnect) ... ok
+test_hostport_serial_reconnects_without_mdns (tests.l4.test_sources.WirelessRecovery.test_hostport_serial_reconnects_without_mdns) ... ok
+test_no_silent_empty_result_on_failure (tests.l4.test_sources.WirelessRecovery.test_no_silent_empty_result_on_failure) ... ok
+test_not_advertised_is_a_specific_error (tests.l4.test_sources.WirelessRecovery.test_not_advertised_is_a_specific_error) ... ok
+test_not_found_triggers_mdns_connect_and_one_retry (tests.l4.test_sources.WirelessRecovery.test_not_found_triggers_mdns_connect_and_one_retry) ... ok
+test_permission_denied_is_not_retried (tests.l4.test_sources.WirelessRecovery.test_permission_denied_is_not_retried) ... ok
+test_the_learned_route_is_used_until_it_fails (tests.l4.test_sources.WirelessRecovery.test_the_learned_route_is_used_until_it_fails) ... ok
+test_the_reconnect_budget_is_enforced (tests.l4.test_sources.WirelessRecovery.test_the_reconnect_budget_is_enforced) ... ok
+test_unauthorized_wireless_is_not_retried_and_says_what_to_do (tests.l4.test_sources.WirelessRecovery.test_unauthorized_wireless_is_not_retried_and_says_what_to_do) ... ok
+test_usb_serial_never_runs_mdns_or_connect (tests.l4.test_sources.WirelessRecovery.test_usb_serial_never_runs_mdns_or_connect) ... ok
+test_mdns_list_parsing_ignores_junk (tests.l4.test_sources.WirelessTargets.test_mdns_list_parsing_ignores_junk) ... ok
+test_serial_kinds (tests.l4.test_sources.WirelessTargets.test_serial_kinds) ... ok
+test_the_mdns_name_is_passed_with_the_service_suffix (tests.l4.test_sources.WirelessTargets.test_the_mdns_name_is_passed_with_the_service_suffix) ... ok
+
+----------------------------------------------------------------------
+Ran 351 tests in 4.342s
+
+OK

@@ -1,0 +1,140 @@
+............................................................................................................../Users/mac/Projects/hermes-line/tests/l1/test_r12_live2.py:119: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/acp-r12-kzfj0gq_.jsonl' mode='r' encoding='UTF-8'>
+  return [json.loads(l)["text"] for l in open(log)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+......................................................F..............................F..F.................................................................................................................FFFF..F......F...........................................................................................
+======================================================================
+FAIL: test_R16c_a_spoken_menu_reply_cannot_carry_a_name_or_number (test_r16c_fallback_question.InfoOnlyMenuTests.test_R16c_a_spoken_menu_reply_cannot_carry_a_name_or_number)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/Projects/hermes-line/tests/l1/test_r16c_fallback_question.py", line 183, in test_R16c_a_spoken_menu_reply_cannot_carry_a_name_or_number
+    wait_for(lambda: "restricted_action_blocked" in [e["kind"] for e in line.store.events(req["call_id"])])
+  File "/Users/mac/Projects/hermes-line/tests/l1/harness.py", line 53, in wait_for
+    raise AssertionError(f"timed out waiting for {what}")
+AssertionError: timed out waiting for condition
+
+======================================================================
+FAIL: test_R16c_a_spoken_menu_reply_cannot_carry_a_name_or_number (test_r16c_fallback_question.InfoOnlyMenuTests.test_R16c_a_spoken_menu_reply_cannot_carry_a_name_or_number)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/Projects/hermes-line/tests/l1/test_r16c_fallback_question.py", line 183, in test_R16c_a_spoken_menu_reply_cannot_carry_a_name_or_number
+    wait_for(lambda: "restricted_action_blocked" in [e["kind"] for e in line.store.events(req["call_id"])])
+  File "/Users/mac/Projects/hermes-line/tests/l1/harness.py", line 53, in wait_for
+    raise AssertionError(f"timed out waiting for {what}")
+AssertionError: timed out waiting for condition
+
+======================================================================
+FAIL: test_N16_probe1_a_callback_offer_never_gets_a_spoken_yes (test_r18_menu_gate.ProbeInvertedTests.test_N16_probe1_a_callback_offer_never_gets_a_spoken_yes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/Projects/hermes-line/tests/l1/test_r18_menu_gate.py", line 34, in test_N16_probe1_a_callback_offer_never_gets_a_spoken_yes
+    wait_for(lambda: "restricted_action_blocked" in kinds(line, req["call_id"]), what="blocked")
+  File "/Users/mac/Projects/hermes-line/tests/l1/harness.py", line 53, in wait_for
+    raise AssertionError(f"timed out waiting for {what}")
+AssertionError: timed out waiting for blocked
+
+======================================================================
+FAIL: test_R23_information_only_agent (test_r23_silence_first.ReviewerCasesThroughDetectionTests.test_R23_information_only_agent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/Projects/hermes-line/tests/l1/test_r23_silence_first.py", line 78, in test_R23_information_only_agent
+    self.run_word(True, "agent")
+  File "/Users/mac/Projects/hermes-line/tests/l1/test_r23_silence_first.py", line 70, in run_word
+    wait_for(lambda: len([e for e in line.store.events(req["call_id"])
+  File "/Users/mac/Projects/hermes-line/tests/l1/harness.py", line 53, in wait_for
+    raise AssertionError(f"timed out waiting for {what}")
+AssertionError: timed out waiting for We can ring you back. Select an option. blocked
+
+======================================================================
+FAIL: test_R23_information_only_representative (test_r23_silence_first.ReviewerCasesThroughDetectionTests.test_R23_information_only_representative)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/Projects/hermes-line/tests/l1/test_r23_silence_first.py", line 81, in test_R23_information_only_representative
+    self.run_word(True, "representative")
+  File "/Users/mac/Projects/hermes-line/tests/l1/test_r23_silence_first.py", line 70, in run_word
+    wait_for(lambda: len([e for e in line.store.events(req["call_id"])
+  File "/Users/mac/Projects/hermes-line/tests/l1/harness.py", line 53, in wait_for
+    raise AssertionError(f"timed out waiting for {what}")
+AssertionError: timed out waiting for We can ring you back. Select an option. blocked
+
+======================================================================
+FAIL: test_R23_restricted_agent (test_r23_silence_first.ReviewerCasesThroughDetectionTests.test_R23_restricted_agent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/Projects/hermes-line/tests/l1/test_r23_silence_first.py", line 84, in test_R23_restricted_agent
+    self.run_word(False, "agent")
+  File "/Users/mac/Projects/hermes-line/tests/l1/test_r23_silence_first.py", line 70, in run_word
+    wait_for(lambda: len([e for e in line.store.events(req["call_id"])
+  File "/Users/mac/Projects/hermes-line/tests/l1/harness.py", line 53, in wait_for
+    raise AssertionError(f"timed out waiting for {what}")
+AssertionError: timed out waiting for We can ring you back. Select an option. blocked
+
+======================================================================
+FAIL: test_R23_restricted_representative (test_r23_silence_first.ReviewerCasesThroughDetectionTests.test_R23_restricted_representative)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/Projects/hermes-line/tests/l1/test_r23_silence_first.py", line 87, in test_R23_restricted_representative
+    self.run_word(False, "representative")
+  File "/Users/mac/Projects/hermes-line/tests/l1/test_r23_silence_first.py", line 70, in run_word
+    wait_for(lambda: len([e for e in line.store.events(req["call_id"])
+  File "/Users/mac/Projects/hermes-line/tests/l1/harness.py", line 53, in wait_for
+    raise AssertionError(f"timed out waiting for {what}")
+AssertionError: timed out waiting for We can ring you back. Select an option. blocked
+
+======================================================================
+FAIL: test_R23_reviewer_no_option_callback_fixture (test_r23_silence_first.ReviewerFixtureTests.test_R23_reviewer_no_option_callback_fixture)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/Projects/hermes-line/tests/l1/test_r23_silence_first.py", line 174, in test_R23_reviewer_no_option_callback_fixture
+    rows = self.run_fixture("callback_no_options.py")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Projects/hermes-line/tests/l1/test_r23_silence_first.py", line 163, in run_fixture
+    self.assertEqual(out.returncode, 0, out.stderr[-2000:])
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "/Users/mac/Projects/hermes-line/tests/l1/r1d21/callback_no_options.py", line 15, in <module>
+    asyncio.run(main())
+  File "/Users/mac/.local/share/uv/python/cpython-3.11-macos-aarch64-none/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/mac/.local/share/uv/python/cpython-3.11-macos-aarch64-none/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.local/share/uv/python/cpython-3.11-macos-aarch64-none/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/mac/Projects/hermes-line/tests/l1/r1d21/callback_no_options.py", line 10, in main
+    assert detection.label=='ivr',detection
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Detection(label='automated_assistant', confidence='high', evidence=('We can ring you back. Select an option.',))
+
+
+======================================================================
+FAIL: test_R24_other_reviewer_fixtures_all_pass (test_r24_fully_positive.ReviewerFixtureTests.test_R24_other_reviewer_fixtures_all_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/Projects/hermes-line/tests/l1/test_r24_fully_positive.py", line 138, in test_R24_other_reviewer_fixtures_all_pass
+    rows = self.run_fixture(name)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Projects/hermes-line/tests/l1/test_r24_fully_positive.py", line 123, in run_fixture
+    self.assertEqual(out.returncode, 0, out.stderr[-2000:])
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "/Users/mac/Projects/hermes-line/tests/l1/r1d22/callback_no_options_r23.py", line 15, in <module>
+    asyncio.run(main())
+  File "/Users/mac/.local/share/uv/python/cpython-3.11-macos-aarch64-none/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/mac/.local/share/uv/python/cpython-3.11-macos-aarch64-none/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/.local/share/uv/python/cpython-3.11-macos-aarch64-none/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/mac/Projects/hermes-line/tests/l1/r1d22/callback_no_options_r23.py", line 10, in main
+    assert detection.label=='ivr',detection
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Detection(label='automated_assistant', confidence='high', evidence=('We can ring you back. Select an option.',))
+
+
+----------------------------------------------------------------------
+Ran 417 tests in 418.414s
+
+FAILED (failures=9)

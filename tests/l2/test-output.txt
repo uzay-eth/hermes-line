@@ -1,0 +1,53 @@
+test_bad_evidence_and_noncontingent (test_detect.DetectTests) ... ok
+test_bounded_memory (test_detect.DetectTests) ... ok
+test_confirmation_explicit (test_detect.DetectTests) ... ok
+test_contextual_model_human (test_detect.DetectTests) ... ok
+test_hello_alone_never_human (test_detect.DetectTests) ... ok
+test_invalid_model (test_detect.DetectTests) ... ok
+test_invalid_or_oversized_text (test_detect.DetectTests) ... ok
+test_malformed_utterance_fails_closed (test_detect.DetectTests) ... ok
+test_model_called_only_once_for_repeated_unknown (test_detect.DetectTests) ... ok
+test_model_exception (test_detect.DetectTests) ... ok
+test_no_amd_or_duration_only_confirmation (test_detect.DetectTests) ... ok
+test_no_confirmation_no_human (test_detect.DetectTests) ... ok
+test_no_human_replay_on_new_id (test_detect.DetectTests) ... ok
+test_partial_final_replacement (test_detect.DetectTests) ... ok
+test_recorded_hello_rules_precede_model (test_detect.DetectTests) ... ok
+test_repeated_novel_recording (test_detect.DetectTests) ... ok
+test_rules_voicemail_ivr_hold (test_detect.DetectTests) ... ok
+test_silence_partial_and_owner (test_detect.DetectTests) ... ok
+test_stale_confirmation (test_detect.DetectTests) ... ok
+test_uncertain_model_never_human (test_detect.DetectTests) ... ok
+test_capacity_and_expiry_pruning (test_policy.ConsentTests) ... ok
+test_concurrent_consume_one_winner (test_policy.ConsentTests) ... ok
+test_expiry_at_boundary (test_policy.ConsentTests) ... ok
+test_expiry_before_boundary (test_policy.ConsentTests) ... ok
+test_invalid_token_and_binding (test_policy.ConsentTests) ... ok
+test_invalid_ttl (test_policy.ConsentTests) ... ok
+test_mismatches_burn_token (test_policy.ConsentTests) ... ok
+test_restart_revokes (test_policy.ConsentTests) ... ok
+test_single_use (test_policy.ConsentTests) ... ok
+test_snapshot_and_key_order (test_policy.ConsentTests) ... ok
+test_allowlist_is_exact (test_policy.DestinationTests) ... ok
+test_canonical_approved (test_policy.DestinationTests) ... ok
+test_empty_allowlist_denies (test_policy.DestinationTests) ... ok
+test_hard_denies_survive_settings_bypass (test_policy.DestinationTests) ... ok
+test_no_suffix_emergency_false_block (test_policy.DestinationTests) ... ok
+test_rejected_paths_do_not_invoke_fake_provider (test_policy.DestinationTests) ... ok
+test_s2_rejection_shapes (test_policy.DestinationTests) ... ok
+test_daytime_window_and_disabled (test_policy.SettingsTests) ... ok
+test_defaults (test_policy.SettingsTests) ... ok
+test_dst_fold_and_gap (test_policy.SettingsTests) ... ok
+test_invalid_settings (test_policy.SettingsTests) ... ok
+test_naive_time_rejected (test_policy.SettingsTests) ... ok
+test_quiet_boundaries_and_timezone (test_policy.SettingsTests) ... ok
+test_settings_snapshot (test_policy.SettingsTests) ... ok
+test_manifest_splits_and_no_script_leakage (test_simulation.SimulationTests) ... ok
+test_unconfirmed_short_human_remains_a_reported_miss (test_simulation.SimulationTests) ... ok
+test_virtual_soak_duration (test_simulation.SimulationTests) ... ok
+test_zero_false_human_release_gate (test_simulation.SimulationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 48 tests in 0.097s
+
+OK

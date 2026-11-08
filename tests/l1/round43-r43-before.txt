@@ -1,0 +1,124 @@
+test_R43_bot_replies_that_start_with_yes_never_ring (test_r43_hilton_yes.HiltonReplayTests.test_R43_bot_replies_that_start_with_yes_never_ring) ... ok
+test_R43_fixture_is_the_recorded_call (test_r43_hilton_yes.HiltonReplayTests.test_R43_fixture_is_the_recorded_call) ... ok
+test_R43_no_owner_answer_sends_the_fallback_question_to_the_person (test_r43_hilton_yes.HiltonReplayTests.test_R43_no_owner_answer_sends_the_fallback_question_to_the_person) ... FAIL
+test_R43_unclear_reply_gets_the_reask_then_i_m_a_live_person_rings (test_r43_hilton_yes.HiltonReplayTests.test_R43_unclear_reply_gets_the_reask_then_i_m_a_live_person_rings) ... FAIL
+test_R43_yes_with_a_question_rings_and_speaks_within_4_s (test_r43_hilton_yes.HiltonReplayTests.test_R43_yes_with_a_question_rings_and_speaks_within_4_s) ... FAIL
+test_R43b_call_2_replies_ring (test_r43_hilton_yes.HiltonReplayTests.test_R43b_call_2_replies_ring) ... 
+  test_R43b_call_2_replies_ring (test_r43_hilton_yes.HiltonReplayTests.test_R43b_call_2_replies_ring) (reply='Yes. You are speaking with the live person. Yes. Indeed.') ... FAIL
+  test_R43b_call_2_replies_ring (test_r43_hilton_yes.HiltonReplayTests.test_R43b_call_2_replies_ring) (reply='You are speaking to a live person. How can I help you?') ... FAIL
+  test_R43b_call_2_replies_ring (test_r43_hilton_yes.HiltonReplayTests.test_R43b_call_2_replies_ring) (reply='Yes. You are speaking with a live person. How can I help?') ... FAIL
+test_R43c_greetings_or_closings_alone_never_ring (test_r43_hilton_yes.HiltonReplayTests.test_R43c_greetings_or_closings_alone_never_ring) ... FAIL
+test_R43c_no_long_silence_while_the_owner_rings (test_r43_hilton_yes.HiltonReplayTests.test_R43c_no_long_silence_while_the_owner_rings) ... FAIL
+test_R43c_the_call_2_menu_never_rings (test_r43_hilton_yes.HiltonReplayTests.test_R43c_the_call_2_menu_never_rings) ... ok
+test_R43c_two_human_like_unclear_replies_ring_after_the_second_question (test_r43_hilton_yes.HiltonReplayTests.test_R43c_two_human_like_unclear_replies_ring_after_the_second_question) ... FAIL
+
+======================================================================
+FAIL: test_R43_no_owner_answer_sends_the_fallback_question_to_the_person (test_r43_hilton_yes.HiltonReplayTests.test_R43_no_owner_answer_sends_the_fallback_question_to_the_person)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/test_r43_hilton_yes.py", line 105, in test_R43_no_owner_answer_sends_the_fallback_question_to_the_person
+    wait_for(lambda: owner_rings(line), timeout=4)
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/harness.py", line 53, in wait_for
+    raise AssertionError(f"timed out waiting for {what}")
+AssertionError: timed out waiting for condition
+
+======================================================================
+FAIL: test_R43_unclear_reply_gets_the_reask_then_i_m_a_live_person_rings (test_r43_hilton_yes.HiltonReplayTests.test_R43_unclear_reply_gets_the_reask_then_i_m_a_live_person_rings)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/test_r43_hilton_yes.py", line 117, in test_R43_unclear_reply_gets_the_reask_then_i_m_a_live_person_rings
+    relay.wait_text(REASK_LINE, timeout=4)
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/harness.py", line 360, in wait_text
+    wait_for(lambda: needle in self.spoken(), timeout, what=f"relay text {needle!r} in {self.spoken()!r}")
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/harness.py", line 53, in wait_for
+    raise AssertionError(f"timed out waiting for {what}")
+AssertionError: timed out waiting for relay text "Sorry, I didn't catch that. Am I speaking with a live person?" in 'Hi, this is Hermes, an AI assistant calling for Sam. Am I speaking with a live person?'
+
+======================================================================
+FAIL: test_R43_yes_with_a_question_rings_and_speaks_within_4_s (test_r43_hilton_yes.HiltonReplayTests.test_R43_yes_with_a_question_rings_and_speaks_within_4_s)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/test_r43_hilton_yes.py", line 90, in test_R43_yes_with_a_question_rings_and_speaks_within_4_s
+    relay.wait_text(connecting, timeout=4)
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/harness.py", line 360, in wait_text
+    wait_for(lambda: needle in self.spoken(), timeout, what=f"relay text {needle!r} in {self.spoken()!r}")
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/harness.py", line 53, in wait_for
+    raise AssertionError(f"timed out waiting for {what}")
+AssertionError: timed out waiting for relay text 'Thank you. Please hold for just a moment while I connect Sam.' in 'Hi, this is Hermes, an AI assistant calling for Sam. Am I speaking with a live person?'
+
+======================================================================
+FAIL: test_R43b_call_2_replies_ring (test_r43_hilton_yes.HiltonReplayTests.test_R43b_call_2_replies_ring) (reply='Yes. You are speaking with the live person. Yes. Indeed.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/test_r43_hilton_yes.py", line 138, in test_R43b_call_2_replies_ring
+    relay.wait_text(CONNECTING_LINE.format(owner=line.cfg.owner_name), timeout=4)
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/harness.py", line 360, in wait_text
+    wait_for(lambda: needle in self.spoken(), timeout, what=f"relay text {needle!r} in {self.spoken()!r}")
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/harness.py", line 53, in wait_for
+    raise AssertionError(f"timed out waiting for {what}")
+AssertionError: timed out waiting for relay text 'Thank you. Please hold for just a moment while I connect Sam.' in 'Hi, this is Hermes, an AI assistant calling for Sam. Am I speaking with a live person?'
+
+======================================================================
+FAIL: test_R43b_call_2_replies_ring (test_r43_hilton_yes.HiltonReplayTests.test_R43b_call_2_replies_ring) (reply='You are speaking to a live person. How can I help you?')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/test_r43_hilton_yes.py", line 138, in test_R43b_call_2_replies_ring
+    relay.wait_text(CONNECTING_LINE.format(owner=line.cfg.owner_name), timeout=4)
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/harness.py", line 360, in wait_text
+    wait_for(lambda: needle in self.spoken(), timeout, what=f"relay text {needle!r} in {self.spoken()!r}")
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/harness.py", line 53, in wait_for
+    raise AssertionError(f"timed out waiting for {what}")
+AssertionError: timed out waiting for relay text 'Thank you. Please hold for just a moment while I connect Sam.' in 'Hi, this is Hermes, an AI assistant calling for Sam. Am I speaking with a live person?'
+
+======================================================================
+FAIL: test_R43b_call_2_replies_ring (test_r43_hilton_yes.HiltonReplayTests.test_R43b_call_2_replies_ring) (reply='Yes. You are speaking with a live person. How can I help?')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/test_r43_hilton_yes.py", line 138, in test_R43b_call_2_replies_ring
+    relay.wait_text(CONNECTING_LINE.format(owner=line.cfg.owner_name), timeout=4)
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/harness.py", line 360, in wait_text
+    wait_for(lambda: needle in self.spoken(), timeout, what=f"relay text {needle!r} in {self.spoken()!r}")
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/harness.py", line 53, in wait_for
+    raise AssertionError(f"timed out waiting for {what}")
+AssertionError: timed out waiting for relay text 'Thank you. Please hold for just a moment while I connect Sam.' in 'Hi, this is Hermes, an AI assistant calling for Sam. Am I speaking with a live person?'
+
+======================================================================
+FAIL: test_R43c_greetings_or_closings_alone_never_ring (test_r43_hilton_yes.HiltonReplayTests.test_R43c_greetings_or_closings_alone_never_ring)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/test_r43_hilton_yes.py", line 160, in test_R43c_greetings_or_closings_alone_never_ring
+    relay.wait_text(REASK_LINE, timeout=4)
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/harness.py", line 360, in wait_text
+    wait_for(lambda: needle in self.spoken(), timeout, what=f"relay text {needle!r} in {self.spoken()!r}")
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/harness.py", line 53, in wait_for
+    raise AssertionError(f"timed out waiting for {what}")
+AssertionError: timed out waiting for relay text "Sorry, I didn't catch that. Am I speaking with a live person?" in 'Hi, this is Hermes, an AI assistant calling for Sam. Am I speaking with a live person?'
+
+======================================================================
+FAIL: test_R43c_no_long_silence_while_the_owner_rings (test_r43_hilton_yes.HiltonReplayTests.test_R43c_no_long_silence_while_the_owner_rings)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/test_r43_hilton_yes.py", line 187, in test_R43c_no_long_silence_while_the_owner_rings
+    relay.wait_text(connecting, timeout=4)
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/harness.py", line 360, in wait_text
+    wait_for(lambda: needle in self.spoken(), timeout, what=f"relay text {needle!r} in {self.spoken()!r}")
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/harness.py", line 53, in wait_for
+    raise AssertionError(f"timed out waiting for {what}")
+AssertionError: timed out waiting for relay text 'Thank you. Please hold for just a moment while I connect Sam.' in 'Hi, this is Hermes, an AI assistant calling for Sam. Am I speaking with a live person?'
+
+======================================================================
+FAIL: test_R43c_two_human_like_unclear_replies_ring_after_the_second_question (test_r43_hilton_yes.HiltonReplayTests.test_R43c_two_human_like_unclear_replies_ring_after_the_second_question)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/test_r43_hilton_yes.py", line 147, in test_R43c_two_human_like_unclear_replies_ring_after_the_second_question
+    relay.wait_text(REASK_LINE, timeout=4)
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/harness.py", line 360, in wait_text
+    wait_for(lambda: needle in self.spoken(), timeout, what=f"relay text {needle!r} in {self.spoken()!r}")
+  File "/Users/mac/.hermes/cache/scratch/hermes-line-before/tests/l1/harness.py", line 53, in wait_for
+    raise AssertionError(f"timed out waiting for {what}")
+AssertionError: timed out waiting for relay text "Sorry, I didn't catch that. Am I speaking with a live person?" in 'Hi, this is Hermes, an AI assistant calling for Sam. Am I speaking with a live person?'
+
+----------------------------------------------------------------------
+Ran 10 tests in 139.739s
+
+FAILED (failures=9)

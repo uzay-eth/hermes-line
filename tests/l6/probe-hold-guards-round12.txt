@@ -1,0 +1,3 @@
+{"hold_recovery": "completed"}
+N18: unresolved intent survives cleanup; fresh recovery finds and ends the accepted call
+N19: stop during balance read refuses dispatch; cleanup drains worker; no live fake leg

@@ -1,0 +1,1489 @@
+{
+  "call": {
+    "id": "call_d4c0d44472b144c5",
+    "task_id": "task_cd7c2c529cf4482a",
+    "task_title": "Delta reservations (hold-line test)",
+    "direction": "outbound",
+    "counterpart_masked": "+1 800-\u2022\u2022\u2022-1212",
+    "state": "failed",
+    "started_at": "2026-11-06T22:01:32.656+00:00",
+    "state_since": "2026-11-06T22:46:16.557+00:00",
+    "duration_s": 2683,
+    "mode": "owner",
+    "transcript": [
+      {
+        "seq": 1,
+        "speaker": "hermes",
+        "text": "Hi, this is Hermes, an AI assistant calling on behalf of Can. This call is not recorded.",
+        "ts": "2026-11-06T22:01:33.319+00:00"
+      },
+      {
+        "seq": 2,
+        "speaker": "business",
+        "text": "Thanks for calling. I",
+        "ts": "2026-11-06T22:01:37.973+00:00"
+      },
+      {
+        "seq": 3,
+        "speaker": "hermes",
+        "text": "Hi, this is Hermes, an AI assistant calling for Can. Am I speaking with a live person?",
+        "ts": "2026-11-06T22:01:40.474+00:00"
+      },
+      {
+        "seq": 4,
+        "speaker": "business",
+        "text": "No. You're speaking with Delta's automated virtual assistant.",
+        "ts": "2026-11-06T22:01:55.486+00:00"
+      },
+      {
+        "seq": 5,
+        "speaker": "business",
+        "text": "How can I help with your known traveler number today?",
+        "ts": "2026-11-06T22:01:58.532+00:00"
+      },
+      {
+        "seq": 6,
+        "speaker": "hermes",
+        "text": "Agent.",
+        "ts": "2026-11-06T22:01:59.773+00:00"
+      },
+      {
+        "seq": 7,
+        "speaker": "business",
+        "text": "I'll transfer your call now.",
+        "ts": "2026-11-06T22:02:07.755+00:00"
+      },
+      {
+        "seq": 8,
+        "speaker": "business",
+        "text": "The current phone wait time is 45 minutes.",
+        "ts": "2026-11-06T22:02:13.664+00:00"
+      },
+      {
+        "seq": 9,
+        "speaker": "business",
+        "text": "Instead of waiting on hold, you can message with a representative for faster service where the wait time is 0 minutes.",
+        "ts": "2026-11-06T22:02:19.821+00:00"
+      },
+      {
+        "seq": 10,
+        "speaker": "business",
+        "text": "Please say yes, and we'll send a message to your phone.",
+        "ts": "2026-11-06T22:02:22.802+00:00"
+      },
+      {
+        "seq": 11,
+        "speaker": "business",
+        "text": "Or you can say, no. Thanks.",
+        "ts": "2026-11-06T22:02:25.140+00:00"
+      },
+      {
+        "seq": 12,
+        "speaker": "business",
+        "text": "Sorry. Can you please repeat that?",
+        "ts": "2026-11-06T22:02:31.388+00:00"
+      },
+      {
+        "seq": 13,
+        "speaker": "business",
+        "text": "Sorry. Can you please repeat that?",
+        "ts": "2026-11-06T22:02:37.673+00:00"
+      },
+      {
+        "seq": 14,
+        "speaker": "business",
+        "text": "Sorry. Can you please repeat that?",
+        "ts": "2026-11-06T22:02:43.907+00:00"
+      },
+      {
+        "seq": 15,
+        "speaker": "business",
+        "text": "Sorry. I could not understand.",
+        "ts": "2026-11-06T22:02:50.331+00:00"
+      },
+      {
+        "seq": 16,
+        "speaker": "business",
+        "text": "To help improve our service, please stay on the line at the end of your call for a 1 question survey.",
+        "ts": "2026-11-06T22:02:55.785+00:00"
+      },
+      {
+        "seq": 17,
+        "speaker": "business",
+        "text": "As a SkyMiles member, for every mile you fly with us in main cabin or above, you earn miles towards exciting rewards, including flights, upgrades, and more.",
+        "ts": "2026-11-06T22:05:06.290+00:00"
+      },
+      {
+        "seq": 18,
+        "speaker": "business",
+        "text": "You have the flexibility to book award flights with no blackout giving you the freedom to travel when it suits you best.",
+        "ts": "2026-11-06T22:05:12.783+00:00"
+      },
+      {
+        "seq": 19,
+        "speaker": "business",
+        "text": "And with our extensive network of partners, your options are endless.",
+        "ts": "2026-11-06T22:05:17.077+00:00"
+      },
+      {
+        "seq": 20,
+        "speaker": "business",
+        "text": "Need assistance on the go?",
+        "ts": "2026-11-06T22:07:20.090+00:00"
+      },
+      {
+        "seq": 21,
+        "speaker": "business",
+        "text": "You can now message a Delta representative via delta.com slash need help.",
+        "ts": "2026-11-06T22:07:24.864+00:00"
+      },
+      {
+        "seq": 22,
+        "speaker": "business",
+        "text": "Or by clicking the message us button in the more section of the FlyDelta app.",
+        "ts": "2026-11-06T22:07:28.925+00:00"
+      },
+      {
+        "seq": 23,
+        "speaker": "business",
+        "text": "When redeeming your companion certificate, make sure to book well in advance to maximize redemption opportunities.",
+        "ts": "2026-11-06T22:09:36.404+00:00"
+      },
+      {
+        "seq": 24,
+        "speaker": "business",
+        "text": "Booking your companion certificate further in advance will help the probability of finding your desired itinerary.",
+        "ts": "2026-11-06T22:09:42.609+00:00"
+      },
+      {
+        "seq": 25,
+        "speaker": "business",
+        "text": "For quicker service, please have your confirmation number, ticket number, or SkyMiles number ready.",
+        "ts": "2026-11-06T22:11:52.135+00:00"
+      },
+      {
+        "seq": 26,
+        "speaker": "business",
+        "text": "You can find this information in the Fly Delta app and delta.com under my trips, or in your confirmation email?",
+        "ts": "2026-11-06T22:11:58.733+00:00"
+      },
+      {
+        "seq": 27,
+        "speaker": "business",
+        "text": "Can",
+        "ts": "2026-11-06T22:12:09.081+00:00"
+      },
+      {
+        "seq": 28,
+        "speaker": "business",
+        "text": "Free Wi Fi for SkyMiles members is now available on most domestic flights.",
+        "ts": "2026-11-06T22:14:07.203+00:00"
+      },
+      {
+        "seq": 29,
+        "speaker": "business",
+        "text": "Enjoy streaming, browsing, messaging, and more.",
+        "ts": "2026-11-06T22:14:10.972+00:00"
+      },
+      {
+        "seq": 30,
+        "speaker": "business",
+        "text": "From takeoff to touchdown.",
+        "ts": "2026-11-06T22:14:12.803+00:00"
+      },
+      {
+        "seq": 31,
+        "speaker": "business",
+        "text": "Visit delta.com/wifi to learn more.",
+        "ts": "2026-11-06T22:14:16.334+00:00"
+      },
+      {
+        "seq": 32,
+        "speaker": "business",
+        "text": "Available for new message.",
+        "ts": "2026-11-06T22:16:19.976+00:00"
+      },
+      {
+        "seq": 33,
+        "speaker": "business",
+        "text": "Available for new message.",
+        "ts": "2026-11-06T22:18:23.294+00:00"
+      },
+      {
+        "seq": 34,
+        "speaker": "business",
+        "text": "Looking for more ways to use your miles?",
+        "ts": "2026-11-06T22:20:27.394+00:00"
+      },
+      {
+        "seq": 35,
+        "speaker": "business",
+        "text": "SkyMiles members can use miles for travel on Delta or our partners, seat upgrades, drink purchases, Delta Vacations packages, and much more.",
+        "ts": "2026-11-06T22:20:36.758+00:00"
+      },
+      {
+        "seq": 36,
+        "speaker": "business",
+        "text": "Have your travel plans been impacted by a serious communicable disease?",
+        "ts": "2026-11-06T22:22:45.366+00:00"
+      },
+      {
+        "seq": 37,
+        "speaker": "business",
+        "text": "You may be eligible to cancel your ticket and travel another time.",
+        "ts": "2026-11-06T22:22:49.170+00:00"
+      },
+      {
+        "seq": 38,
+        "speaker": "business",
+        "text": "Please visit delta.com/refund-form for more information.",
+        "ts": "2026-11-06T22:22:53.928+00:00"
+      },
+      {
+        "seq": 39,
+        "speaker": "business",
+        "text": "Eligibility restrictions and fees may apply.",
+        "ts": "2026-11-06T22:22:56.986+00:00"
+      },
+      {
+        "seq": 40,
+        "speaker": "business",
+        "text": "As a SkyMiles member, for every mile you fly with us in main cabin or above, you earn miles towards exciting rewards, including flights, upgrade and more.",
+        "ts": "2026-11-06T22:25:06.950+00:00"
+      },
+      {
+        "seq": 41,
+        "speaker": "business",
+        "text": "You have the flexibility to book award flights with no blackout giving you the freedom to travel when it suits you best.",
+        "ts": "2026-11-06T22:25:13.450+00:00"
+      },
+      {
+        "seq": 42,
+        "speaker": "business",
+        "text": "And with our extensive network of partners, your options are endless.",
+        "ts": "2026-11-06T22:25:17.644+00:00"
+      },
+      {
+        "seq": 43,
+        "speaker": "business",
+        "text": "Need assistance on the go?",
+        "ts": "2026-11-06T22:27:20.836+00:00"
+      },
+      {
+        "seq": 44,
+        "speaker": "business",
+        "text": "You can now message a Delta representative via delta.com slash need help.",
+        "ts": "2026-11-06T22:27:25.549+00:00"
+      },
+      {
+        "seq": 45,
+        "speaker": "business",
+        "text": "Or by clicking the message us button in the more section of the FlyDelta app.",
+        "ts": "2026-11-06T22:27:29.701+00:00"
+      },
+      {
+        "seq": 46,
+        "speaker": "business",
+        "text": "When redeeming your companion certificate, make sure to book well in advance to maximize redemption opportunities.",
+        "ts": "2026-11-06T22:29:37.097+00:00"
+      },
+      {
+        "seq": 47,
+        "speaker": "business",
+        "text": "Booking your companion certificate further in advance will help increase the probability of finding your desired itinerary.",
+        "ts": "2026-11-06T22:29:43.416+00:00"
+      },
+      {
+        "seq": 48,
+        "speaker": "business",
+        "text": "For quicker service, please have your confirmation number, ticket number, or SkyMiles number ready.",
+        "ts": "2026-11-06T22:31:52.980+00:00"
+      },
+      {
+        "seq": 49,
+        "speaker": "business",
+        "text": "You can find this information in the Fly Delta app and delta.com under my trips, or in your confirmation email?",
+        "ts": "2026-11-06T22:31:59.444+00:00"
+      },
+      {
+        "seq": 50,
+        "speaker": "business",
+        "text": "Can",
+        "ts": "2026-11-06T22:32:09.792+00:00"
+      },
+      {
+        "seq": 51,
+        "speaker": "business",
+        "text": "Free Wi Fi for SkyMiles member is now available on most domestic flights.",
+        "ts": "2026-11-06T22:34:08.140+00:00"
+      },
+      {
+        "seq": 52,
+        "speaker": "business",
+        "text": "Enjoy streaming, browsing, messaging, and more.",
+        "ts": "2026-11-06T22:34:12.039+00:00"
+      },
+      {
+        "seq": 53,
+        "speaker": "business",
+        "text": "From takeoff to touchdown.",
+        "ts": "2026-11-06T22:34:13.665+00:00"
+      },
+      {
+        "seq": 54,
+        "speaker": "business",
+        "text": "Visit delta dot com slash Wi Fi to learn more.",
+        "ts": "2026-11-06T22:34:17.151+00:00"
+      },
+      {
+        "seq": 55,
+        "speaker": "business",
+        "text": "Available for new message.",
+        "ts": "2026-11-06T22:36:20.762+00:00"
+      },
+      {
+        "seq": 56,
+        "speaker": "business",
+        "text": "Available for new message.",
+        "ts": "2026-11-06T22:38:24.045+00:00"
+      },
+      {
+        "seq": 57,
+        "speaker": "business",
+        "text": "Looking for more ways to use your miles?",
+        "ts": "2026-11-06T22:40:28.143+00:00"
+      },
+      {
+        "seq": 58,
+        "speaker": "business",
+        "text": "SkyMiles members can use miles for travel on Delta or our partners, seat upgrades, drink purchases, Delta Vacations packages, and much more.",
+        "ts": "2026-11-06T22:40:37.601+00:00"
+      },
+      {
+        "seq": 59,
+        "speaker": "business",
+        "text": "Have your travel plans been impacted by a serious communicable disease?",
+        "ts": "2026-11-06T22:42:46.143+00:00"
+      },
+      {
+        "seq": 60,
+        "speaker": "business",
+        "text": "You may be eligible to cancel your ticket and travel another time.",
+        "ts": "2026-11-06T22:42:49.932+00:00"
+      },
+      {
+        "seq": 61,
+        "speaker": "business",
+        "text": "Please visit delta.com/refund-form for more information.",
+        "ts": "2026-11-06T22:42:54.674+00:00"
+      },
+      {
+        "seq": 62,
+        "speaker": "business",
+        "text": "Eligibility restrictions and fees may apply.",
+        "ts": "2026-11-06T22:42:57.727+00:00"
+      },
+      {
+        "seq": 63,
+        "speaker": "business",
+        "text": "A SkyMiles member, for every mile you fly with us in main cabin or above, you earn miles towards exciting rewards, including flights, upgrades, and more.",
+        "ts": "2026-11-06T22:45:07.642+00:00"
+      },
+      {
+        "seq": 64,
+        "speaker": "business",
+        "text": "You have the flexibility to book award flights with no blackout giving you the freedom to travel when it suits you best.",
+        "ts": "2026-11-06T22:45:14.154+00:00"
+      },
+      {
+        "seq": 65,
+        "speaker": "business",
+        "text": "And with our extensive network of partners, your options are endless.",
+        "ts": "2026-11-06T22:45:18.379+00:00"
+      }
+    ],
+    "summary": "No person reached; the call reached the maximum length after 44 min 43 s. Hermes Line: Call ended at the maximum call length (+1 800-\u2022\u2022\u2022-1212, \"Delta reservations (hold-line test)\", 44m43s). On the call: They: \"From takeoff to touchdown.\" / They: \"Visit delta dot com slash Wi Fi to learn more.\" / They: \"Available for new message.\" / They: \"Looking for more ways to use your miles?\" / They: \"SkyMiles members can use miles for travel on Delta or our partners, seat upgrades, drink purchases, Delta Vacations packages, and much more.\" / They: \"Have your travel plans been impacted by a serious communicable disease?\" / They: \"You may be eligible to cancel your ticket and travel another time.\" / They: \"Please visit delta.com/refund-form for more information.\" / They: \"Eligibility restrictions and fees may apply.\" / They: \"A SkyMiles member, for every mile you fly with us in main cabin or above, you earn miles towards exciting rewards, including flights, upgrades, and more.\" / They: \"You have the flexibility to book award flights with no blackout giving you the freedom to travel when it suits you best.\" / They: \"And with our extensive network of partners, your options are endless.\".",
+    "end_reason": "max_duration",
+    "revision": 78,
+    "control_revision": 76,
+    "phases": [
+      {
+        "phase": "dialing",
+        "since": "2026-11-06T22:01:14.765+00:00"
+      },
+      {
+        "phase": "assistant",
+        "since": "2026-11-06T22:01:55.487+00:00"
+      },
+      {
+        "phase": "hold",
+        "since": "2026-11-06T22:02:07.757+00:00"
+      },
+      {
+        "phase": "assistant",
+        "since": "2026-11-06T22:02:19.824+00:00"
+      },
+      {
+        "phase": "hold",
+        "since": "2026-11-06T22:02:31.390+00:00"
+      },
+      {
+        "phase": "ended",
+        "since": "2026-11-06T22:46:16.557+00:00"
+      }
+    ]
+  },
+  "CallSID": "Delta run 4",
+  "events": [
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "task_options",
+      "data": {
+        "owner_ring_timeout_s": 20,
+        "fallback_question": "What is the checked-bag fee for a domestic economy ticket?",
+        "intro_names": [
+          "Delta",
+          "Delta Air Lines"
+        ],
+        "ivr_category": "baggage"
+      },
+      "ts": 1794002474.760233
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "dialing",
+      "data": {
+        "to": "+1 800-\u2022\u2022\u2022-1212"
+      },
+      "ts": 1794002490.173292
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "relay_connected",
+      "data": {
+        "reconnects": 0
+      },
+      "ts": 1794002493.02779
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794002495.54941
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect_slow",
+      "data": {},
+      "ts": 1794002500.473621
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "live_person_question_sent",
+      "data": {
+        "count": 1
+      },
+      "ts": 1794002500.474215
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "automated_assistant",
+        "confidence": "high"
+      },
+      "ts": 1794002515.4867399
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "bot_label_seen",
+      "data": {},
+      "ts": 1794002515.4869492
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "assistant_declared",
+      "data": {
+        "by": "detector"
+      },
+      "ts": 1794002515.487046
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "state",
+      "data": {
+        "frm": "dialing",
+        "to": "ivr",
+        "why": "automated assistant"
+      },
+      "ts": 1794002515.487374
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "speech_superseded",
+      "data": {
+        "what": "Representative."
+      },
+      "ts": 1794002518.591914
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "automated_assistant",
+        "confidence": "high"
+      },
+      "ts": 1794002518.697164
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "ivr_action",
+      "data": {
+        "state": "automated_assistant",
+        "phrase_id": "agent"
+      },
+      "ts": 1794002519.774818
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794002527.756512
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "assistant_phrases_paused",
+      "data": {
+        "why": "hold"
+      },
+      "ts": 1794002527.756924
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "state",
+      "data": {
+        "frm": "ivr",
+        "to": "on_hold",
+        "why": "hold message"
+      },
+      "ts": 1794002527.757941
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794002533.667148
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "automated_assistant",
+        "confidence": "high"
+      },
+      "ts": 1794002539.823267
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "assistant_phrases_resumed",
+      "data": {},
+      "ts": 1794002539.823741
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "state",
+      "data": {
+        "frm": "on_hold",
+        "to": "ivr",
+        "why": "automated assistant"
+      },
+      "ts": 1794002539.824525
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "ivr_action_skipped",
+      "data": {
+        "state": "automated_assistant",
+        "why": "callback, payment or change wording"
+      },
+      "ts": 1794002539.824867
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "automated_assistant",
+        "confidence": "high"
+      },
+      "ts": 1794002542.804287
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "ivr_action_skipped",
+      "data": {
+        "state": "automated_assistant",
+        "why": "callback, payment or change wording"
+      },
+      "ts": 1794002542.805008
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "automated_assistant",
+        "confidence": "high"
+      },
+      "ts": 1794002545.142626
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "ivr_action_skipped",
+      "data": {
+        "state": "automated_assistant",
+        "why": "callback, payment or change wording"
+      },
+      "ts": 1794002545.1431098
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794002551.389788
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "assistant_phrases_paused",
+      "data": {
+        "why": "hold"
+      },
+      "ts": 1794002551.389997
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "state",
+      "data": {
+        "frm": "ivr",
+        "to": "on_hold",
+        "why": "hold message"
+      },
+      "ts": 1794002551.390285
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794002557.678293
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794002563.908027
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794002570.333521
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794002575.787196
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794002706.292823
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794002712.784637
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794002717.0799181
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794002840.091466
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794002844.8658838
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794002848.925976
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794002976.406059
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794002982.610501
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794003112.136935
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794003118.734997
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794003129.083317
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794003247.2050402
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794003250.973783
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794003252.8047218
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794003256.335658
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794003379.976958
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794003503.295818
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794003627.395592
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794003636.759617
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794003765.370476
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794003769.1712818
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794003773.930152
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794003776.987818
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794003906.95255
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794003913.451659
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794003917.646629
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794004040.8390222
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794004045.551295
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794004049.702614
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794004177.098992
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794004183.417889
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794004312.981942
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794004319.4456608
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794004329.793918
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794004448.143383
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794004452.0418298
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794004453.668449
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794004457.154575
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794004580.764257
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794004704.046315
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794004828.146653
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794004837.6060002
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794004966.145813
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794004969.935031
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794004974.6790888
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794004977.7305129
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794005107.644728
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794005114.157635
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794005118.384727
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "max_duration",
+      "data": {},
+      "ts": 1794005176.1162171
+    },
+    {
+      "call_id": "call_d4c0d44472b144c5",
+      "task_id": "task_cd7c2c529cf4482a",
+      "kind": "ended",
+      "data": {
+        "state": "failed",
+        "reason": "max_duration"
+      },
+      "ts": 1794005176.5583072
+    }
+  ],
+  "provider": {
+    "sid": "Delta run 4",
+    "duration": "2684",
+    "status": "completed",
+    "price": "-0.63000",
+    "price_unit": "USD",
+    "read_at": 1794005178.900136
+  },
+  "balance_before": {
+    "usd": "13.33456",
+    "at": 1794002452.5357969
+  },
+  "balance_after": null,
+  "provider_legs": [
+    {
+      "sid": "Delta run 4",
+      "duration": "2684",
+      "status": "completed",
+      "price": "-0.63000",
+      "price_unit": "USD",
+      "read_at": 1794005178.900136
+    }
+  ],
+  "hold_report": {
+    "dry": false,
+    "outcome": "max_duration",
+    "call_outcome": "max_duration",
+    "cleanup_failures": [],
+    "rates": {
+      "business": "0.0210",
+      "relay": "0.1050",
+      "owner": "0.0210",
+      "conference": "0.00270"
+    },
+    "rate_basis": "Voice number Pricing API x1.5 (business); S2 x1.5 (owner/Relay/conference)",
+    "balance_reads": [
+      {
+        "at": 1794002452.535779,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794002489.299629,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794002550.790608,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794002611.863629,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794002673.2314398,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794002733.86862,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794002795.560439,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794002856.028688,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794002916.69571,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794002977.134124,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794003037.734046,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794003098.343723,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794003159.090545,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794003219.63668,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794003280.6433952,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794003341.1443572,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794003401.9892101,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794003462.7287722,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794003523.287727,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794003583.927297,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794003644.693007,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794003705.338742,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794003765.904886,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794003826.407786,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794003887.121034,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794003947.716258,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794004008.497432,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794004069.008696,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794004129.542079,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794004190.297766,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794004251.200356,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794004311.916646,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794004372.6943429,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794004433.778326,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794004494.61632,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794004555.2984588,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794004615.841602,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794004676.6907039,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794004737.457945,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794004798.120302,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794004859.02736,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794004919.5433831,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794004980.122568,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794005040.807921,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794005101.4185889,
+        "usd": "13.33456"
+      },
+      {
+        "at": 1794005162.11788,
+        "usd": "13.33456"
+      }
+    ],
+    "conservative_cost_usd": "6.85800",
+    "cost_basis": "conservative estimate, separate from Twilio billing",
+    "metrics": {
+      "menu_s": 12.270566940307617,
+      "hold_s": null,
+      "transcript_to_human_s": null,
+      "bridge_s": null,
+      "false_human_count": null,
+      "false_human_basis": "requires independent operator annotation",
+      "human_assumed_count": 0
+    }
+  }
+}

@@ -1,0 +1,12 @@
+test_down_still_cleans_up_if_personal_number_file_disappears (test_personal_numbers.PersonalNumberTests.test_down_still_cleans_up_if_personal_number_file_disappears) ... ok
+test_harness_and_coordinator_share_fixture_and_allow_exact_two_only (test_personal_numbers.PersonalNumberTests.test_harness_and_coordinator_share_fixture_and_allow_exact_two_only) ... ok
+test_line_loader_missing_invalid_and_valid (test_personal_numbers.PersonalNumberTests.test_line_loader_missing_invalid_and_valid) ... ok
+test_loader_exact_shape_permissions_missing_and_safe_errors (test_personal_numbers.PersonalNumberTests.test_loader_exact_shape_permissions_missing_and_safe_errors) ... ok
+test_probe_fixture_only_fi_and_missing_file_refused_before_provider_io (test_personal_numbers.PersonalNumberTests.test_probe_fixture_only_fi_and_missing_file_refused_before_provider_io) ... ok
+test_scanner_every_format_paths_counts_only_and_zero_after_masking (test_personal_numbers.PersonalNumberTests.test_scanner_every_format_paths_counts_only_and_zero_after_masking) ... ok
+test_scanner_missing_configuration_clear_message_no_scan (test_personal_numbers.PersonalNumberTests.test_scanner_missing_configuration_clear_message_no_scan) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.017s
+
+OK

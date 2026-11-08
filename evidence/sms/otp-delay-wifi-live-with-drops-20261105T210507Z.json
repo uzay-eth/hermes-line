@@ -1,0 +1,124 @@
+{
+  "android17_otp_protection_expected": true,
+  "bodies_or_codes_recorded": false,
+  "clock_skew_s_estimate": -0.7,
+  "device": {
+    "android": "17",
+    "model": "Pixel 10 Pro XL",
+    "sdk": "37",
+    "security_patch": "2026-10-05",
+    "serial_tail": "kDjp",
+    "transport": "wifi"
+  },
+  "ended_utc": "2026-11-05T21:08:12.900Z",
+  "events": [
+    {
+      "event": "reconnect_attempt",
+      "reason": "adb exited with status 255",
+      "t": "2026-11-05T21:06:24.955Z"
+    },
+    {
+      "detail": "DeviceUnavailable: paired device not advertised on the network (wireless debugging is off, or the phone is asleep or on another Wi-Fi)",
+      "event": "drop",
+      "fetch_ms": 11797.3,
+      "t": "2026-11-05T21:06:24.987Z"
+    },
+    {
+      "down_s": 14.4,
+      "event": "recovered",
+      "fetch_ms": 1585.0,
+      "t": "2026-11-05T21:06:27.582Z"
+    },
+    {
+      "event": "reconnect_attempt",
+      "reason": "adb timed out after 15s",
+      "t": "2026-11-05T21:07:06.476Z"
+    },
+    {
+      "detail": "DeviceUnavailable: paired device not advertised on the network (wireless debugging is off, or the phone is asleep or on another Wi-Fi)",
+      "event": "drop",
+      "fetch_ms": 15048.6,
+      "t": "2026-11-05T21:07:06.509Z"
+    },
+    {
+      "event": "reconnect_attempt",
+      "reason": "device not found",
+      "t": "2026-11-05T21:07:07.555Z"
+    },
+    {
+      "event": "reconnect_attempt",
+      "reason": "device not found",
+      "t": "2026-11-05T21:07:08.622Z"
+    },
+    {
+      "event": "reconnect_attempt",
+      "reason": "device not found",
+      "t": "2026-11-05T21:07:09.689Z"
+    },
+    {
+      "down_s": 20.6,
+      "event": "recovered",
+      "fetch_ms": 1351.0,
+      "t": "2026-11-05T21:07:12.067Z"
+    }
+  ],
+  "fetch_ms_all": [
+    5151.5,
+    3057.7,
+    5356.1,
+    5358.9,
+    5274.4,
+    9494.4,
+    13492.6,
+    3267.7,
+    11797.3,
+    1585.0,
+    1382.2,
+    1491.4,
+    4298.2,
+    11676.5,
+    15048.6,
+    57.2,
+    56.6,
+    57.3,
+    1351.0,
+    1566.3,
+    1418.8,
+    4536.5,
+    4731.1,
+    3533.5,
+    4581.4,
+    5773.6,
+    5316.6,
+    5768.2,
+    4855.1,
+    7666.2
+  ],
+  "interval_s": 1.0,
+  "lookback_min": 240.0,
+  "messages": [],
+  "minutes": 3.0,
+  "plugin_read_latency_ms": {
+    "max": 13492.6,
+    "median": 4731.1,
+    "min": 1351.0,
+    "n": 25,
+    "p90": 9494.4
+  },
+  "polls": 30,
+  "reachability": {
+    "drops": 2,
+    "failed_polls": 5,
+    "longest_down_s": 20.6,
+    "ok_polls": 25,
+    "polls": 30,
+    "reconnect_attempts": 5,
+    "reconnects_ok": 0,
+    "recoveries": 2
+  },
+  "read_only": true,
+  "started_utc": "2026-11-05T21:05:07.886Z",
+  "status": "ok",
+  "tool": "tests/l4/live/otp_delay.py",
+  "verdict_hint": "no new message arrived during the run: nothing to conclude about the Android 17 delay"
+}

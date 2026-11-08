@@ -1,0 +1,20 @@
+test_N4_each_call_gets_its_own_server_identity (test_r9_delta4.N4FullScopeTests.test_N4_each_call_gets_its_own_server_identity) ... ok
+test_N4_hidden_or_extra_scope_dials_nobody (test_r9_delta4.N4FullScopeTests.test_N4_hidden_or_extra_scope_dials_nobody) ... ok
+test_N4_reviewer_probe_unrelated_tool_hidden_behind_the_bridge_is_refused (test_r9_delta4.N4FullScopeTests.test_N4_reviewer_probe_unrelated_tool_hidden_behind_the_bridge_is_refused)
+probe_rule12.py: Hermes's own assemble_tool_defs + /tools formatter on our call tool plus an unrelated ... ok
+test_N5_a_call_cancelled_during_startup_dials_nothing (test_r9_delta4.N5FinalGateAfterStartupTests.test_N5_a_call_cancelled_during_startup_dials_nothing) ... ok
+test_N5_consent_is_consumed_once_and_never_reminted (test_r9_delta4.N5FinalGateAfterStartupTests.test_N5_consent_is_consumed_once_and_never_reminted) ... ok
+test_N5_destination_blocked_during_agent_startup_dials_nothing (test_r9_delta4.N5FinalGateAfterStartupTests.test_N5_destination_blocked_during_agent_startup_dials_nothing) ... ok
+test_N5_precheck_refuses_before_starting_any_agent (test_r9_delta4.N5FinalGateAfterStartupTests.test_N5_precheck_refuses_before_starting_any_agent) ... ok
+test_N5_quiet_hours_boundary_crossed_during_agent_startup_dials_nothing (test_r9_delta4.N5FinalGateAfterStartupTests.test_N5_quiet_hours_boundary_crossed_during_agent_startup_dials_nothing) ... ok
+test_N6_ask_bearer_reaches_no_call_tool (test_r9_delta4.N6AuxiliarySessionTests.test_N6_ask_bearer_reaches_no_call_tool) ... ok
+test_N6_detector_session_gets_its_own_empty_frozen_server_and_is_checked_first (test_r9_delta4.N6AuxiliarySessionTests.test_N6_detector_session_gets_its_own_empty_frozen_server_and_is_checked_first) ... ok
+test_N6_profile_drift_between_primary_and_detector_session_sends_no_caller_text (test_r9_delta4.N6AuxiliarySessionTests.test_N6_profile_drift_between_primary_and_detector_session_sends_no_caller_text)
+Primary session restricted, the later detector session gets a full profile: no caller text reaches it. ... ok
+test_N6_reviewer_protocol_fixture_checks_every_session_before_caller_text (test_r9_delta4.N6AuxiliarySessionTests.test_N6_reviewer_protocol_fixture_checks_every_session_before_caller_text)
+probe_rule12.py's second part: every session is checked before a question is sent to it. ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 2.665s
+
+OK

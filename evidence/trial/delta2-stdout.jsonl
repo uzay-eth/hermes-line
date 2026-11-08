@@ -1,0 +1,6 @@
+{"at": 1793929019.89073, "event": "business_dialing", "sid": "[Delta run 2]"}
+{"at": 1793929037.5460851, "event": "human_detected"}
+{"at": 1793929038.739844, "event": "owner_ring", "sid": "[SID withheld]"}
+{"at": 1793929058.7500648, "event": "fallback_question"}
+{"at": 1793929082.617698, "event": "ended", "outcome": "completed"}
+{"evidence": "evidence/trial/call_2243b7f205194ab5"}

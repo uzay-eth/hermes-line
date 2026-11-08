@@ -1,0 +1,98 @@
+{
+  "what": "latency theories, real hermes acp + scratch gateway + slowed fixture model",
+  "model_first_delay_s": 2.5,
+  "model_chunk_delay_s": 0.4,
+  "label": "fixed-slow",
+  "runs": [
+    {
+      "direction": "outbound",
+      "latency_s": {
+        "normal": [
+          3.11,
+          2.59
+        ],
+        "barge_in": [
+          2.98
+        ],
+        "finish": 5.14
+      },
+      "model_tool_calls": [
+        "mcp__editor_hl_dac4dbc6_161aced8__hermes_line_call_finish"
+      ],
+      "turn_events": [
+        {
+          "first_text_ms": 3097.665250003047,
+          "full_ms": 5615.3,
+          "interrupted": false
+        },
+        {
+          "first_text_ms": 2570.9242500015534,
+          "full_ms": 5054.9,
+          "interrupted": false
+        },
+        {
+          "first_text_ms": null,
+          "full_ms": 1714.5,
+          "interrupted": true
+        },
+        {
+          "first_text_ms": 2561.4147079977556,
+          "full_ms": 5039.4,
+          "interrupted": false
+        },
+        {
+          "first_text_ms": 5130.63775000046,
+          "full_ms": 5964.0,
+          "interrupted": false
+        }
+      ],
+      "barge_ins": 1,
+      "first_prompt_chars": 2057
+    },
+    {
+      "direction": "inbound",
+      "latency_s": {
+        "normal": [
+          2.63,
+          2.57
+        ],
+        "barge_in": [
+          2.89
+        ],
+        "finish": 5.1
+      },
+      "model_tool_calls": [
+        "mcp__editor_hl_08f93dda_476ff631__hermes_line_call_finish"
+      ],
+      "turn_events": [
+        {
+          "first_text_ms": 2611.8296250060666,
+          "full_ms": 5160.1,
+          "interrupted": false
+        },
+        {
+          "first_text_ms": 2557.680416997755,
+          "full_ms": 5052.4,
+          "interrupted": false
+        },
+        {
+          "first_text_ms": null,
+          "full_ms": 1646.1,
+          "interrupted": true
+        },
+        {
+          "first_text_ms": 2547.8434590040706,
+          "full_ms": 5049.8,
+          "interrupted": false
+        },
+        {
+          "first_text_ms": 5088.662832997215,
+          "full_ms": 5944.2,
+          "interrupted": false
+        }
+      ],
+      "barge_ins": 1,
+      "first_prompt_chars": 2057
+    }
+  ]
+}

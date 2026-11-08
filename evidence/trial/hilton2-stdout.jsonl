@@ -1,0 +1,11 @@
+{"at": 1794123347.2410188, "event": "business_dialing", "sid": "[Hilton call 2 leg]"}
+{"at": 1794123367.689714, "detection_state": "automated_assistant", "event": "assistant_phrase", "phrase_id": "no_general"}
+{"at": 1794123379.6781209, "count": 2, "event": "new_party_question"}
+{"at": 1794123460.037531, "count": 3, "event": "new_party_question"}
+{"at": 1794123496.728705, "count": 4, "event": "new_party_question"}
+{"at": 1794123641.6853151, "count": 5, "event": "new_party_question"}
+{"at": 1794123689.460843, "count": 6, "event": "new_party_question"}
+{"at": 1794123954.918297, "count": 8, "event": "new_party_question"}
+{"at": 1794123970.194308, "event": "ended", "outcome": "KeyboardInterrupt"}
+{"evidence": "evidence/trial/call_94932d5a13a94ed4"}
+{"error": "KeyboardInterrupt", "ok": false, "run_dir": "/Users/mac/.hermes/cache/scratch/hermes-line-trial/hold-7df01418f4394225900fc1260f1f2e95"}

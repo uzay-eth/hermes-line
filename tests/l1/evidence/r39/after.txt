@@ -1,0 +1,13 @@
+# Round 39 replay tests after the change, final code (2026-11-06T18:17Z); main 620cdf9 with L2 round 10; expected to PASS
+test_R39_four_per_segment_a_new_segment_after_120_s_of_hold_twelve_per_call (test_r39_hold_queue.BudgetUnitTests.test_R39_four_per_segment_a_new_segment_after_120_s_of_hold_twelve_per_call) ... ok
+test_R39_phrases_only_on_a_fresh_automated_assistant_label_and_not_in_hold (test_r39_hold_queue.BudgetUnitTests.test_R39_phrases_only_on_a_fresh_automated_assistant_label_and_not_in_hold) ... ok
+test_R39_a_clear_yes_labelled_hold_message_rings_only_after_our_question (test_r39_hold_queue.HoldLabelledYesTests.test_R39_a_clear_yes_labelled_hold_message_rings_only_after_our_question) ... ok
+test_R39_real_detector_replay (test_r39_hold_queue.RealDetectorReplayTests.test_R39_real_detector_replay)
+The same replay through the real detector (L2 on main at the time of the run). ... ok
+test_R39_the_message_offer_is_unsafe (test_r39_hold_queue.UnsafeOfferTests.test_R39_the_message_offer_is_unsafe) ... ok
+test_R39_no_phrase_into_the_hold_queue_and_the_agent_at_minute_23_rings (test_r39_hold_queue.WorstCaseReplayTests.test_R39_no_phrase_into_the_hold_queue_and_the_agent_at_minute_23_rings) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 139.469s
+
+OK

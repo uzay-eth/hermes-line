@@ -1,0 +1,36 @@
+Offline test run by lane L7, round 4: L1, L2, L4 and L5 on main 0b4143c merged into the L7 branch; L3 and L6 re-run after merging main bb66bdd (no plugin code changed in between). 2026-11-06. No network, no Twilio, no phone.
+
+== tests/l1
+Ran 535 tests in 829.093s
+OK
+
+== tests/l2
+Ran 130 tests in 0.856s
+OK
+
+== tests/l3
+ℹ tests 66
+ℹ suites 7
+ℹ pass 66
+ℹ fail 0
+(re-run after merging main bb66bdd, which added tests/l3/live.test.mjs)
+
+== tests/l4
+Ran 317 tests in 4.315s
+OK
+
+== tests/l5
+Ran 88 tests in 19.124s
+OK
+
+== tests/l6
+Ran 111 tests
+OK
+(re-run after merging main bb66bdd)
+
+Total: 1247 (L1 535, L2 130, L3 66, L4 317, L5 88, L6 111)
+
+Commands:
+  PYTHONDONTWRITEBYTECODE=1 <hermes venv python> -B -m unittest discover -s tests/l1   (also l5, l6; l4 with -t .)
+  PYTHONPATH=plugin python3 -B -m unittest discover -s tests/l2
+  node --test tests/l3/pane.test.mjs tests/l3/browser.test.mjs tests/l3/live.test.mjs

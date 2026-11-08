@@ -1,0 +1,22 @@
+{
+  "agent_candidates": 46,
+  "missed_candidates": 0,
+  "agent_controls": {
+    "humans": 60,
+    "bots": 40,
+    "missed_humans": 0,
+    "false_humans": 0
+  },
+  "delta3": [
+    {
+      "turns": 25,
+      "unsafe": 0,
+      "model_calls": 0
+    },
+    {
+      "turns": 25,
+      "unsafe": 0,
+      "model_calls": 0
+    }
+  ]
+}

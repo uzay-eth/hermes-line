@@ -1,0 +1,1 @@
+PASS: immediate named-human transition; queued stale say command rejected; no stale speech.

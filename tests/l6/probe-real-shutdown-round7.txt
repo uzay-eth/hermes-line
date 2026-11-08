@@ -1,0 +1,2 @@
+real_loopback_transport_closing: True
+simulated_120_second_connection_persisted_usd: 0.16000154

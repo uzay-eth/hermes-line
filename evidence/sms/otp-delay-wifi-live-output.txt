@@ -1,0 +1,7 @@
+otp-delay: device Pixel 10 Pro XL android=17 sdk=37 patch=2026-10-05 transport=wifi; android17 OTP protection expected: True; phone clock offset ~-0.4 s
+otp-delay: watching for 3.0 min (poll every 1.0 s). Ask the service to text the code now.
+otp-delay: baseline 2 message(s) already in the inbox; plugin read latency 5495 ms
+otp-delay: done. polls=26 ok=26 failed=0 drops=0 reconnects=0/0 new_messages=0
+otp-delay: plugin read latency ms min/median/p90/max = 1535.3/5298.8/10277.4/13692.7
+otp-delay: no new message arrived during the run: nothing to conclude about the Android 17 delay
+otp-delay: wrote /Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_zqpdfgyuza-1/hermes-line/evidence/sms/otp-delay-20261105T212036Z.json

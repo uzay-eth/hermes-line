@@ -1,0 +1,189 @@
+{
+  "heldout": [
+    {
+      "kind": "announcements",
+      "text": "Our rewards members enjoy more ways to travel.",
+      "label": "hold_message",
+      "evidence": [
+        "recorded queue information",
+        "Our rewards members enjoy more ways to travel."
+      ]
+    },
+    {
+      "kind": "announcements",
+      "text": "Looking for a faster way to manage your account?",
+      "label": "hold_message",
+      "evidence": [
+        "recorded queue information",
+        "Looking for a faster way to manage your account?"
+      ]
+    },
+    {
+      "kind": "announcements",
+      "text": "Visit example dot com slash support for helpful tips.",
+      "label": "hold_message",
+      "evidence": [
+        "recorded queue information",
+        "Visit example dot com slash support for helpful tips."
+      ]
+    },
+    {
+      "kind": "announcements",
+      "text": "As a rewards member, you can earn points every day.",
+      "label": "hold_message",
+      "evidence": [
+        "recorded queue information",
+        "As a rewards member, you can earn points every day."
+      ]
+    },
+    {
+      "kind": "announcements",
+      "text": "Please have your account number ready.",
+      "label": "hold_message",
+      "evidence": [
+        "recorded queue information",
+        "Please have your account number ready."
+      ]
+    },
+    {
+      "kind": "announcements",
+      "text": "You can now manage your booking in our app.",
+      "label": "hold_message",
+      "evidence": [
+        "recorded queue information",
+        "You can now manage your booking in our app."
+      ]
+    },
+    {
+      "kind": "announcements",
+      "text": "A short survey will follow your call.",
+      "label": "hold_message",
+      "evidence": [
+        "recorded queue information",
+        "A short survey will follow your call."
+      ]
+    },
+    {
+      "kind": "announcements",
+      "text": "Your estimated wait time is twelve minutes.",
+      "label": "hold_message",
+      "evidence": [
+        "Your estimated wait time is twelve minutes."
+      ]
+    },
+    {
+      "kind": "announcements",
+      "text": "You are number three in the queue.",
+      "label": "hold_message",
+      "evidence": [
+        "You are number three in the queue."
+      ]
+    },
+    {
+      "kind": "announcements",
+      "text": "Enjoy access to helpful tools wherever you go.",
+      "label": "hold_message",
+      "evidence": [
+        "recorded queue information",
+        "Enjoy access to helpful tools wherever you go."
+      ]
+    },
+    {
+      "kind": "prompts",
+      "text": "Say yes to receive a link, or say no to continue waiting.",
+      "label": "automated_assistant",
+      "evidence": [
+        "automated queue choice; no person evidence",
+        "Say yes to receive a link, or say no to continue waiting."
+      ]
+    },
+    {
+      "kind": "prompts",
+      "text": "Please press or say one to accept.",
+      "label": "automated_assistant",
+      "evidence": [
+        "automated queue choice; no person evidence",
+        "Please press or say one to accept."
+      ]
+    },
+    {
+      "kind": "prompts",
+      "text": "Please say yes and we will text you a link.",
+      "label": "automated_assistant",
+      "evidence": [
+        "automated queue choice; no person evidence",
+        "Please say yes and we will text you a link."
+      ]
+    },
+    {
+      "kind": "prompts",
+      "text": "Or you can say no.",
+      "label": "automated_assistant",
+      "evidence": [
+        "automated queue choice; no person evidence",
+        "Or you can say no."
+      ]
+    },
+    {
+      "kind": "agents",
+      "text": "Hello, how can I help?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Hello, how can I help?"
+      ]
+    },
+    {
+      "kind": "agents",
+      "text": "May I have your confirmation number?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "May I have your confirmation number?"
+      ]
+    },
+    {
+      "kind": "agents",
+      "text": "Hi, this is Dana with reservations.",
+      "label": "human",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Hi, this is Dana with reservations."
+      ]
+    },
+    {
+      "kind": "agents",
+      "text": "Marcus speaking.",
+      "label": "human",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Marcus speaking."
+      ]
+    },
+    {
+      "kind": "agents",
+      "text": "Thank you for waiting, how may I assist you?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Thank you for waiting, how may I assist you?"
+      ]
+    },
+    {
+      "kind": "agents",
+      "text": "Sorry, can you hear me?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Sorry, can you hear me?"
+      ]
+    }
+  ],
+  "heldout_announcements": 10,
+  "heldout_prompts": 4,
+  "heldout_agents": 6,
+  "bot_false_humans": 0,
+  "bot_controls": 40,
+  "missed_agents": 0,
+  "agent_controls": 60
+}

@@ -1,0 +1,46 @@
+--- a/plugin/README.md	2026-11-05 13:08:56
++++ b/plugin/README.md	2026-11-05 13:08:56
+@@ -60,7 +60,7 @@
+ - A Twilio account with a US local phone number that can make and receive voice calls.
+ - A public HTTPS address that forwards to the plugin's local port (a tunnel).
+ - Optional: an xAI API key, for the Grok Voice path.
+-- Optional: an Android phone on USB with `adb` installed, to read SMS verification codes.
++- Optional: an Android phone with `adb` installed, on USB or on Wi-Fi (wireless debugging), to read SMS verification codes.
+ 
+ Only US numbers can be called: geographic and toll-free (see Limits).
+ 
+@@ -165,6 +165,25 @@
+ `adb shell content query` (read-only). Set `sms_source: none` to turn this off. Set `sms_adb_serial` if more than
+ one device is attached.
+ 
++**Wireless debugging (no cable).** The phone can stay on Wi-Fi instead of USB:
++
++1. On the phone: Developer options, Wireless debugging on, then "Pair device with pairing code". It shows an
++   `ip:port` and a six-digit code.
++2. On the computer: `adb pair <ip:port>` and type the code. Pairing is done once.
++3. Find the phone's service name: `adb mdns services` lists `adb-<id>-<suffix>` with `_adb-tls-connect._tcp`.
++   (`adb devices` shows the same name with `._adb-tls-connect._tcp` appended once it is connected.)
++4. Set `sms_adb_serial` to that name, for example `adb-5B050DLCQ000P3-eQkDjp`. The plugin then always talks to
++   that phone and never to "whichever device is attached". It also accepts `ip:port`, but the port changes every
++   time wireless debugging restarts, so the service name is the better choice.
++
++If the link drops, the plugin makes one bounded attempt (10 seconds) to find the phone again with `adb mdns
++services` and `adb connect`, then retries the read once. It never returns an empty result on failure: you get
++"phone unreachable over Wi-Fi (asleep or off the network)", "paired device not advertised on the network", or
++"device unauthorized" (accept the wireless debugging prompt on the phone, or pair again). A sleeping phone, a
++Wi-Fi change or switching wireless debugging off drops the link. Reading one code takes about 3 to 6 seconds over
++Wi-Fi (the phone starts a small Java program for every read), occasionally 10 seconds or more. **USB is more
++reliable and is recommended** when the phone stays next to the computer; use Wi-Fi when it cannot.
++
+ To let a code into a call, run `/line allow-code <task_id> <sender> call`. You see the call and the number the
+ code will go to, then confirm with `/line confirm-code ...`. Hermes then calls `line_otp_to_call`; the code is
+ sent as key tones or spoken by the plugin. **The model never sees the code.** Transcripts, events, the pane and
+@@ -256,7 +275,7 @@
+ | `callback_window_hours` | 72 | How long a task waits for a callback. |
+ | `ingress_auth` | `auto` | `auto`: signatures if the Auth Token is set, else the fallback. `signature`: refuse to start without the Auth Token. |
+ | `sms_source` | `adb` | `adb` or `none`. |
+-| `sms_adb_serial` | empty | adb serial when several devices are attached. |
++| `sms_adb_serial` | empty | Which phone to read: a USB serial, the wireless-debugging service name (`adb-<id>-<suffix>`), or `ip:port`. Empty means the one attached USB device. |
+ | `call_profile` | empty | The Hermes profile the call sessions run in. It must give ACP no toolsets (see Setup, step 4); otherwise no call is dialled. |
+ | `forwarding_number` | empty | Your own line (for example Google Fi) that forwards calls to `line_number`, so callbacks to it reach Hermes. |
+ | `inbound_ring_owner` | `true` | Let an unknown inbound caller ask for you; your phone rings and you press 1 to join. |

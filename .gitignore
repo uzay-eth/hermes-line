@@ -1,0 +1,9 @@
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+/graft/
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+*.secret
+evidence/private/

@@ -1,0 +1,24 @@
+{
+ "min_minutes": 60,
+ "credentials": [
+  {
+   "where": "pool[0]",
+   "source": "manual:hermes_pkce",
+   "auth_type": "oauth",
+   "has_refresh": true,
+   "minutes_left": 371.9,
+   "last_status": "ok",
+   "ok": true
+  },
+  {
+   "where": "pool[1]",
+   "source": "manual:hermes_pkce",
+   "auth_type": "oauth",
+   "has_refresh": true,
+   "minutes_left": 371.9,
+   "last_status": "ok",
+   "ok": true
+  }
+ ],
+ "go": true
+}

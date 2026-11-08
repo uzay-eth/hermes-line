@@ -1,0 +1,213 @@
+{
+  "call": {
+    "id": "call_9fda11b071df4fea",
+    "task_id": "task_4fd0c97e55ce4987",
+    "task_title": "Attended owner trial",
+    "direction": "outbound",
+    "counterpart_masked": "[owner phone (Spectrum)]",
+    "state": "ended",
+    "started_at": "2026-11-05T18:52:58.466+00:00",
+    "state_since": "2026-11-05T18:53:41.969+00:00",
+    "duration_s": 43,
+    "mode": "agent",
+    "transcript": [
+      {
+        "seq": 1,
+        "speaker": "hermes",
+        "text": "Hi, this is Hermes, an AI assistant calling on behalf of Can. This call is not recorded.",
+        "ts": "2026-11-05T18:52:59.306+00:00"
+      },
+      {
+        "seq": 2,
+        "speaker": "business",
+        "text": "Hi. How are you?",
+        "ts": "2026-11-05T18:53:08.385+00:00"
+      },
+      {
+        "seq": 3,
+        "speaker": "hermes",
+        "text": "Hi Can, I'm doing well, thanks for asking. Just so you know, I'm Hermes, an AI assistant, and this is a test call on your Hermes Line. How are you doing today?",
+        "ts": "2026-11-05T18:53:11.526+00:00"
+      },
+      {
+        "seq": 4,
+        "speaker": "business",
+        "text": "Anything?",
+        "ts": "2026-11-05T18:53:12.895+00:00"
+      },
+      {
+        "seq": 5,
+        "speaker": "hermes",
+        "text": "Sorry, yes, I'm here. I'm Hermes, an AI assistant calling for you, and this is a test of your Hermes Line. Can you hear me clearly?",
+        "ts": "2026-11-05T18:53:15.332+00:00"
+      },
+      {
+        "seq": 6,
+        "speaker": "business",
+        "text": "Yeah. I can clear hear you clearly.",
+        "ts": "2026-11-05T18:53:26.520+00:00"
+      },
+      {
+        "seq": 7,
+        "speaker": "hermes",
+        "text": "Great, glad the line is working well. That wraps up the test, thanks Can, and have a good day. Goodbye!",
+        "ts": "2026-11-05T18:53:33.960+00:00"
+      },
+      {
+        "seq": 8,
+        "speaker": "business",
+        "text": "Stuff.",
+        "ts": "2026-11-05T18:53:40.464+00:00"
+      }
+    ],
+    "summary": "Hermes Line: Call completed ([owner phone (Spectrum)], \"Attended owner trial\", 0m43s). Attended owner trial with Can: disclosed AI assistant identity, recovered after an interruption, Can confirmed he hears the line clearly. Ended politely.",
+    "end_reason": "completed",
+    "revision": 19,
+    "control_revision": 17
+  },
+  "CallSID": "owner call 2",
+  "events": [
+    {
+      "call_id": "call_9fda11b071df4fea",
+      "task_id": "task_4fd0c97e55ce4987",
+      "kind": "dialing",
+      "data": {
+        "to": "[owner phone (Spectrum)]"
+      },
+      "ts": 1793904771.517633
+    },
+    {
+      "call_id": "call_9fda11b071df4fea",
+      "task_id": "task_4fd0c97e55ce4987",
+      "kind": "relay_connected",
+      "data": {
+        "reconnects": 0
+      },
+      "ts": 1793904779.0107431
+    },
+    {
+      "call_id": "call_9fda11b071df4fea",
+      "task_id": "task_4fd0c97e55ce4987",
+      "kind": "owner_self_test",
+      "data": {},
+      "ts": 1793904788.3880808
+    },
+    {
+      "call_id": "call_9fda11b071df4fea",
+      "task_id": "task_4fd0c97e55ce4987",
+      "kind": "state",
+      "data": {
+        "frm": "dialing",
+        "to": "human_detected",
+        "why": "live person confirmed"
+      },
+      "ts": 1793904788.389452
+    },
+    {
+      "call_id": "call_9fda11b071df4fea",
+      "task_id": "task_4fd0c97e55ce4987",
+      "kind": "state",
+      "data": {
+        "frm": "human_detected",
+        "to": "agent_talking",
+        "why": "agent completes the task"
+      },
+      "ts": 1793904788.39061
+    },
+    {
+      "call_id": "call_9fda11b071df4fea",
+      "task_id": "task_4fd0c97e55ce4987",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 2015.3356250011711,
+        "full_ms": 3134.7,
+        "interrupted": false
+      },
+      "ts": 1793904791.526498
+    },
+    {
+      "call_id": "call_9fda11b071df4fea",
+      "task_id": "task_4fd0c97e55ce4987",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1793904792.4299352
+    },
+    {
+      "call_id": "call_9fda11b071df4fea",
+      "task_id": "task_4fd0c97e55ce4987",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 1569.7787909957697,
+        "full_ms": 2435.3,
+        "interrupted": false
+      },
+      "ts": 1793904795.332841
+    },
+    {
+      "call_id": "call_9fda11b071df4fea",
+      "task_id": "task_4fd0c97e55ce4987",
+      "kind": "filler",
+      "data": {},
+      "ts": 1793904809.0228438
+    },
+    {
+      "call_id": "call_9fda11b071df4fea",
+      "task_id": "task_4fd0c97e55ce4987",
+      "kind": "filler",
+      "data": {},
+      "ts": 1793904811.523869
+    },
+    {
+      "call_id": "call_9fda11b071df4fea",
+      "task_id": "task_4fd0c97e55ce4987",
+      "kind": "finish_requested",
+      "data": {
+        "outcome": "done"
+      },
+      "ts": 1793904811.5378401
+    },
+    {
+      "call_id": "call_9fda11b071df4fea",
+      "task_id": "task_4fd0c97e55ce4987",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 7344.3086670013145,
+        "full_ms": 7438.1,
+        "interrupted": false
+      },
+      "ts": 1793904813.96031
+    },
+    {
+      "call_id": "call_9fda11b071df4fea",
+      "task_id": "task_4fd0c97e55ce4987",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1793904820.4653661
+    },
+    {
+      "call_id": "call_9fda11b071df4fea",
+      "task_id": "task_4fd0c97e55ce4987",
+      "kind": "ended",
+      "data": {
+        "state": "ended",
+        "reason": "completed"
+      },
+      "ts": 1793904821.970081
+    }
+  ],
+  "provider": {
+    "sid": "owner call 2",
+    "duration": "43",
+    "status": "completed",
+    "price": null,
+    "price_unit": "USD"
+  },
+  "balance_before": {
+    "usd": "13.82006",
+    "at": 1793904770.9662359
+  },
+  "balance_after": {
+    "usd": "13.82006",
+    "at": 1793904823.534283
+  }
+}

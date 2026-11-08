@@ -1,0 +1,14 @@
+{
+  "r27_before_tests": 20,
+  "full_after_tests": 452,
+  "full_after_failures": [
+    "test_r27_new_party.RealDetectorN21Tests.test_N21_question_budget_one_per_20_seconds_four_per_call"
+  ],
+  "r27_changed": [
+    {
+      "test": "test_r27_new_party.RealDetectorN21Tests.test_N21_question_budget_one_per_20_seconds_four_per_call",
+      "before": "ok",
+      "after": "FAIL"
+    }
+  ]
+}

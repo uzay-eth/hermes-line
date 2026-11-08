@@ -1,0 +1,6 @@
+{"at": 1793913460.766338, "event": "business_dialing", "sid": "[L6 round 10 hold test, business leg]"}
+{"at": 1793913460.8241532, "event": "human_detected"}
+{"at": 1793913460.8249888, "event": "owner_ring", "sid": "[L6 round 10 hold test, owner leg]"}
+{"at": 1793913460.9785442, "event": "fallback_question"}
+{"at": 1793913461.260936, "event": "ended", "outcome": "fallback_question_answered"}
+{"command": "hold", "dry": true, "engine_timeout_s": 0.15, "fallback_question": "What is the checked-bag fee for a domestic economy ticket?", "outcome": "fallback_question_answered", "provider": "fake; no external network", "provider_owner_timeout_s": 20, "report": "/Users/mac/.hermes/cache/scratch/hermes-line-trial/hold-d45381b2dcb74def987b803c4c20f90d/hold-report.json"}

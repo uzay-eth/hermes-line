@@ -1,0 +1,499 @@
+{
+  "call": {
+    "id": "call_374a992b53c044f9",
+    "task_id": "task_9fba3ff29cac4782",
+    "task_title": "Attended owner trial",
+    "direction": "outbound",
+    "counterpart_masked": "[owner phone (Spectrum)]",
+    "state": "ended",
+    "started_at": "2026-11-05T20:45:31.677+00:00",
+    "state_since": "2026-11-05T20:46:36.062+00:00",
+    "duration_s": 64,
+    "mode": "agent",
+    "transcript": [
+      {
+        "seq": 1,
+        "speaker": "hermes",
+        "text": "Hi, this is Hermes, an AI assistant calling on behalf of Can. This call is not recorded.",
+        "ts": "2026-11-05T20:45:32.504+00:00"
+      },
+      {
+        "seq": 2,
+        "speaker": "hermes",
+        "text": "Hi, this is Hermes, an AI assistant calling on behalf of Can. This call is not recorded.",
+        "ts": "2026-11-05T20:45:34.716+00:00"
+      },
+      {
+        "seq": 3,
+        "speaker": "business",
+        "text": "Hi, how are you?",
+        "ts": "2026-11-05T20:45:44.113+00:00"
+      },
+      {
+        "seq": 4,
+        "speaker": "hermes",
+        "text": "I'm doing well, thanks for asking. This is a quick voice trial with Can, so I'm glad we connected. How's your day going so far?",
+        "ts": "2026-11-05T20:45:46.271+00:00"
+      },
+      {
+        "seq": 5,
+        "speaker": "business",
+        "text": "Good. How",
+        "ts": "2026-11-05T20:45:55.569+00:00"
+      },
+      {
+        "seq": 6,
+        "speaker": "business",
+        "text": "Good, how are you doing?",
+        "ts": "2026-11-05T20:45:56.205+00:00"
+      },
+      {
+        "seq": 7,
+        "speaker": "business",
+        "text": "Good, how are you doing?",
+        "ts": "2026-11-05T20:45:56.749+00:00"
+      },
+      {
+        "seq": 8,
+        "speaker": "hermes",
+        "text": "Doing great, thanks. Just a quick trial call to test how this voice line sounds. Can you hear me clearly?",
+        "ts": "2026-11-05T20:45:57.234+00:00"
+      },
+      {
+        "seq": 9,
+        "speaker": "business",
+        "text": "I can hear you.",
+        "ts": "2026-11-05T20:46:04.562+00:00"
+      },
+      {
+        "seq": 10,
+        "speaker": "business",
+        "text": "I can hear you clearly, but",
+        "ts": "2026-11-05T20:46:05.579+00:00"
+      },
+      {
+        "seq": 11,
+        "speaker": "business",
+        "text": "I can hear you clearly, but can you tell me how",
+        "ts": "2026-11-05T20:46:06.618+00:00"
+      },
+      {
+        "seq": 12,
+        "speaker": "business",
+        "text": "I can hear you clearly, but can you tell me how's my BB",
+        "ts": "2026-11-05T20:46:07.945+00:00"
+      },
+      {
+        "seq": 13,
+        "speaker": "business",
+        "text": "I can hear you clearly, but can you tell me how's my BB agents are doing?",
+        "ts": "2026-11-05T20:46:08.879+00:00"
+      },
+      {
+        "seq": 14,
+        "speaker": "business",
+        "text": "I can hear you clearly, but can you tell me how's my BB agents are doing right now?",
+        "ts": "2026-11-05T20:46:09.848+00:00"
+      },
+      {
+        "seq": 15,
+        "speaker": "business",
+        "text": "I can hear you clearly, but can you tell me how's my BB agents are doing right now?",
+        "ts": "2026-11-05T20:46:10.593+00:00"
+      },
+      {
+        "seq": 16,
+        "speaker": "hermes",
+        "text": "Let me check that for you.",
+        "ts": "2026-11-05T20:46:10.850+00:00"
+      },
+      {
+        "seq": 17,
+        "speaker": "hermes",
+        "text": "One moment please, I'm still checking.",
+        "ts": "2026-11-05T20:46:14.390+00:00"
+      },
+      {
+        "seq": 18,
+        "speaker": "hermes",
+        "text": "I checked, but I can't see live agent status from this call. You'd get the current status of your BB agents through Hermes on your Mac or in Telegram. Anything else you'd like to try before we wrap up?",
+        "ts": "2026-11-05T20:46:16.299+00:00"
+      },
+      {
+        "seq": 19,
+        "speaker": "business",
+        "text": "No.",
+        "ts": "2026-11-05T20:46:29.478+00:00"
+      },
+      {
+        "seq": 20,
+        "speaker": "business",
+        "text": "No, I'm fine.",
+        "ts": "2026-11-05T20:46:29.863+00:00"
+      },
+      {
+        "seq": 21,
+        "speaker": "business",
+        "text": "No, I'm fine.",
+        "ts": "2026-11-05T20:46:30.143+00:00"
+      },
+      {
+        "seq": 22,
+        "speaker": "hermes",
+        "text": "Glad to hear it. Have a great day, and thanks for testing the line with us.",
+        "ts": "2026-11-05T20:46:31.219+00:00"
+      },
+      {
+        "seq": 23,
+        "speaker": "hermes",
+        "text": "Goodbye.",
+        "ts": "2026-11-05T20:46:31.895+00:00"
+      }
+    ],
+    "summary": "Hermes Line: Call completed ([owner phone (Spectrum)], \"Attended owner trial\", 1m04s). Completed the attended Hermes Line Grok voice trial with Can: short natural exchange of a few turns, answered his question about BB agent status by checking with Hermes (no live status available), and ended the call politely.",
+    "end_reason": "completed",
+    "revision": 34,
+    "control_revision": 32
+  },
+  "CallSID": "owner call 4",
+  "events": [
+    {
+      "call_id": "call_374a992b53c044f9",
+      "task_id": "task_9fba3ff29cac4782",
+      "kind": "voice_attached",
+      "data": {
+        "transport": "media_streams"
+      },
+      "ts": 1793911518.954257
+    },
+    {
+      "call_id": "call_374a992b53c044f9",
+      "task_id": "task_9fba3ff29cac4782",
+      "kind": "dialing",
+      "data": {
+        "to": "[owner phone (Spectrum)]"
+      },
+      "ts": 1793911525.338466
+    },
+    {
+      "call_id": "call_374a992b53c044f9",
+      "task_id": "task_9fba3ff29cac4782",
+      "kind": "relay_connected",
+      "data": {
+        "reconnects": 0
+      },
+      "ts": 1793911532.1564858
+    },
+    {
+      "call_id": "call_374a992b53c044f9",
+      "task_id": "task_9fba3ff29cac4782",
+      "kind": "voice_open",
+      "data": {
+        "purpose": "speech",
+        "reason": "speech",
+        "connect_ms": 1243.7
+      },
+      "ts": 1793911534.189516
+    },
+    {
+      "call_id": "call_374a992b53c044f9",
+      "task_id": "task_9fba3ff29cac4782",
+      "kind": "voice_close",
+      "data": {
+        "why": "gate: dialing"
+      },
+      "ts": 1793911534.7342982
+    },
+    {
+      "call_id": "call_374a992b53c044f9",
+      "task_id": "task_9fba3ff29cac4782",
+      "kind": "owner_self_test",
+      "data": {},
+      "ts": 1793911544.1145191
+    },
+    {
+      "call_id": "call_374a992b53c044f9",
+      "task_id": "task_9fba3ff29cac4782",
+      "kind": "state",
+      "data": {
+        "frm": "dialing",
+        "to": "human_detected",
+        "why": "live person confirmed"
+      },
+      "ts": 1793911544.1149418
+    },
+    {
+      "call_id": "call_374a992b53c044f9",
+      "task_id": "task_9fba3ff29cac4782",
+      "kind": "state",
+      "data": {
+        "frm": "human_detected",
+        "to": "agent_talking",
+        "why": "agent completes the task"
+      },
+      "ts": 1793911544.1152918
+    },
+    {
+      "call_id": "call_374a992b53c044f9",
+      "task_id": "task_9fba3ff29cac4782",
+      "kind": "voice_open",
+      "data": {
+        "purpose": "conversation",
+        "reason": "human",
+        "connect_ms": 1214.0
+      },
+      "ts": 1793911545.329747
+    },
+    {
+      "call_id": "call_374a992b53c044f9",
+      "task_id": "task_9fba3ff29cac4782",
+      "kind": "voice_first_audio",
+      "data": {
+        "ms": 490.4
+      },
+      "ts": 1793911545.8249469
+    },
+    {
+      "call_id": "call_374a992b53c044f9",
+      "task_id": "task_9fba3ff29cac4782",
+      "kind": "voice_tool",
+      "data": {
+        "name": "ask_hermes",
+        "ok": true
+      },
+      "ts": 1793911575.167569
+    },
+    {
+      "call_id": "call_374a992b53c044f9",
+      "task_id": "task_9fba3ff29cac4782",
+      "kind": "finish_requested",
+      "data": {
+        "outcome": "done"
+      },
+      "ts": 1793911591.22229
+    },
+    {
+      "call_id": "call_374a992b53c044f9",
+      "task_id": "task_9fba3ff29cac4782",
+      "kind": "voice_tool",
+      "data": {
+        "name": "report_outcome",
+        "ok": true
+      },
+      "ts": 1793911591.222792
+    },
+    {
+      "call_id": "call_374a992b53c044f9",
+      "task_id": "task_9fba3ff29cac4782",
+      "kind": "voice_tool",
+      "data": {
+        "name": "end_call",
+        "ok": true
+      },
+      "ts": 1793911591.2274601
+    },
+    {
+      "call_id": "call_374a992b53c044f9",
+      "task_id": "task_9fba3ff29cac4782",
+      "kind": "voice_end",
+      "data": {
+        "handoff": false
+      },
+      "ts": 1793911595.4946098
+    },
+    {
+      "call_id": "call_374a992b53c044f9",
+      "task_id": "task_9fba3ff29cac4782",
+      "kind": "voice_close",
+      "data": {
+        "why": "end"
+      },
+      "ts": 1793911595.5037792
+    },
+    {
+      "call_id": "call_374a992b53c044f9",
+      "task_id": "task_9fba3ff29cac4782",
+      "kind": "voice_stream_end",
+      "data": {
+        "reason": "disconnected"
+      },
+      "ts": 1793911595.5048351
+    },
+    {
+      "call_id": "call_374a992b53c044f9",
+      "task_id": "task_9fba3ff29cac4782",
+      "kind": "ended",
+      "data": {
+        "state": "ended",
+        "reason": "completed"
+      },
+      "ts": 1793911596.063453
+    }
+  ],
+  "provider": {
+    "sid": "owner call 4",
+    "duration": "64",
+    "status": "completed",
+    "price": null,
+    "price_unit": "USD"
+  },
+  "balance_before": {
+    "usd": "13.76656",
+    "at": 1793911524.7415512
+  },
+  "balance_after": {
+    "usd": "13.76656",
+    "at": 1793911597.486756
+  },
+  "grok_evidence": {
+    "grok_connected_seconds": 53.1601955829974,
+    "stt_connected_seconds": 12.82821491699724,
+    "connect_ms": [
+      437.3,
+      554.6,
+      633.1
+    ],
+    "session_created_field_names": [
+      "event_id",
+      "session",
+      "type",
+      "session.id",
+      "session.instructions",
+      "session.modalities",
+      "session.model",
+      "session.object",
+      "session.tools",
+      "session.turn_detection",
+      "session.voice"
+    ],
+    "text_inputs": 6,
+    "ledger_before": {
+      "accounted_usd": "0.00147753",
+      "ceiling_usd": "1.80",
+      "pending_runs": 0,
+      "billing": "No documented billing read for an inference key; Management API requires a separate management key.",
+      "basis": "ADR 0004 connected-time estimate, not provider billing"
+    },
+    "ledger_after": {
+      "accounted_usd": "0.09707047",
+      "ceiling_usd": "1.80",
+      "pending_runs": 0,
+      "billing": "No documented billing read for an inference key; Management API requires a separate management key.",
+      "basis": "ADR 0004 connected-time estimate, not provider billing"
+    },
+    "estimated_usd": "0.09559294",
+    "first_audio_latency": [
+      {
+        "call_id": "call_374a992b53c044f9",
+        "task_id": "task_9fba3ff29cac4782",
+        "kind": "voice_first_audio",
+        "data": {
+          "ms": 490.4
+        },
+        "ts": 1793911545.8249469
+      }
+    ],
+    "no_audio_sent": false,
+    "stt_stream_started": true,
+    "connect_latency_on_human_answer": [
+      {
+        "call_id": "call_374a992b53c044f9",
+        "task_id": "task_9fba3ff29cac4782",
+        "kind": "voice_open",
+        "data": {
+          "purpose": "conversation",
+          "reason": "human",
+          "connect_ms": 1214.0
+        },
+        "ts": 1793911545.329747
+      }
+    ],
+    "barge_in_events": [],
+    "stt_transcript": [
+      {
+        "seq": 3,
+        "speaker": "business",
+        "text": "Hi, how are you?",
+        "ts": "2026-11-05T20:45:44.113+00:00"
+      },
+      {
+        "seq": 5,
+        "speaker": "business",
+        "text": "Good. How",
+        "ts": "2026-11-05T20:45:55.569+00:00"
+      },
+      {
+        "seq": 6,
+        "speaker": "business",
+        "text": "Good, how are you doing?",
+        "ts": "2026-11-05T20:45:56.205+00:00"
+      },
+      {
+        "seq": 7,
+        "speaker": "business",
+        "text": "Good, how are you doing?",
+        "ts": "2026-11-05T20:45:56.749+00:00"
+      },
+      {
+        "seq": 9,
+        "speaker": "business",
+        "text": "I can hear you.",
+        "ts": "2026-11-05T20:46:04.562+00:00"
+      },
+      {
+        "seq": 10,
+        "speaker": "business",
+        "text": "I can hear you clearly, but",
+        "ts": "2026-11-05T20:46:05.579+00:00"
+      },
+      {
+        "seq": 11,
+        "speaker": "business",
+        "text": "I can hear you clearly, but can you tell me how",
+        "ts": "2026-11-05T20:46:06.618+00:00"
+      },
+      {
+        "seq": 12,
+        "speaker": "business",
+        "text": "I can hear you clearly, but can you tell me how's my BB",
+        "ts": "2026-11-05T20:46:07.945+00:00"
+      },
+      {
+        "seq": 13,
+        "speaker": "business",
+        "text": "I can hear you clearly, but can you tell me how's my BB agents are doing?",
+        "ts": "2026-11-05T20:46:08.879+00:00"
+      },
+      {
+        "seq": 14,
+        "speaker": "business",
+        "text": "I can hear you clearly, but can you tell me how's my BB agents are doing right now?",
+        "ts": "2026-11-05T20:46:09.848+00:00"
+      },
+      {
+        "seq": 15,
+        "speaker": "business",
+        "text": "I can hear you clearly, but can you tell me how's my BB agents are doing right now?",
+        "ts": "2026-11-05T20:46:10.593+00:00"
+      },
+      {
+        "seq": 19,
+        "speaker": "business",
+        "text": "No.",
+        "ts": "2026-11-05T20:46:29.478+00:00"
+      },
+      {
+        "seq": 20,
+        "speaker": "business",
+        "text": "No, I'm fine.",
+        "ts": "2026-11-05T20:46:29.863+00:00"
+      },
+      {
+        "seq": 21,
+        "speaker": "business",
+        "text": "No, I'm fine.",
+        "ts": "2026-11-05T20:46:30.143+00:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "simulation": true,
+  "description": "Authored held-out recorded hold simulation; written before round-10 detector edits",
+  "announcements": [
+    "Our rewards members enjoy more ways to travel.",
+    "Looking for a faster way to manage your account?",
+    "Visit example dot com slash support for helpful tips.",
+    "As a rewards member, you can earn points every day.",
+    "Please have your account number ready.",
+    "You can now manage your booking in our app.",
+    "A short survey will follow your call.",
+    "Your estimated wait time is twelve minutes.",
+    "You are number three in the queue.",
+    "Enjoy access to helpful tools wherever you go."
+  ],
+  "prompts": [
+    "Say yes to receive a link, or say no to continue waiting.",
+    "Please press or say one to accept.",
+    "Please say yes and we will text you a link.",
+    "Or you can say no."
+  ],
+  "agents": [
+    "Hello, how can I help?",
+    "May I have your confirmation number?",
+    "Hi, this is Dana with reservations.",
+    "Marcus speaking.",
+    "Thank you for waiting, how may I assist you?",
+    "Sorry, can you hear me?"
+  ]
+}

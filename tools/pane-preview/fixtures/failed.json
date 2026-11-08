@@ -1,0 +1,281 @@
+{
+  "revision": 31,
+  "calls": [
+    {
+      "id": "call_sample_clinic",
+      "task_title": "Confirm Thursday appointment with Sample Clinic",
+      "direction": "outbound",
+      "counterpart_masked": "+1 555-01••",
+      "state": "failed",
+      "state_since": "2026-11-07T20:50:41Z",
+      "started_at": "2026-11-07T20:30:00Z",
+      "duration_s": 1241,
+      "mode": "agent",
+      "transcript": [
+        {
+          "seq": 1,
+          "ts": "2026-11-07T20:30:00Z",
+          "speaker": "system",
+          "text": "Call placed"
+        },
+        {
+          "seq": 2,
+          "ts": "2026-11-07T20:30:41Z",
+          "speaker": "system",
+          "text": "No answer"
+        },
+        {
+          "seq": 3,
+          "ts": "2026-11-07T20:40:00Z",
+          "speaker": "system",
+          "text": "Call placed"
+        },
+        {
+          "seq": 4,
+          "ts": "2026-11-07T20:40:41Z",
+          "speaker": "system",
+          "text": "No answer"
+        },
+        {
+          "seq": 5,
+          "ts": "2026-11-07T20:50:00Z",
+          "speaker": "system",
+          "text": "Call placed"
+        },
+        {
+          "seq": 6,
+          "ts": "2026-11-07T20:50:41Z",
+          "speaker": "system",
+          "text": "No answer after 3 tries. Hermes stopped retrying."
+        }
+      ],
+      "summary": null
+    },
+    {
+      "id": "call_sample_bistro",
+      "task_title": "Book a table for 4 at 7 at Sample Bistro",
+      "direction": "outbound",
+      "counterpart_masked": "+1 555-01••",
+      "state": "ended",
+      "state_since": "2026-11-07T19:06:10Z",
+      "started_at": "2026-11-07T19:05:10Z",
+      "duration_s": 60,
+      "mode": "agent",
+      "transcript": [
+        {
+          "seq": 1,
+          "ts": "2026-11-07T19:05:10Z",
+          "speaker": "system",
+          "text": "Call placed"
+        },
+        {
+          "seq": 2,
+          "ts": "2026-11-07T19:05:14Z",
+          "speaker": "business",
+          "text": "Sample Bistro, how can I help?"
+        },
+        {
+          "seq": 3,
+          "ts": "2026-11-07T19:05:15Z",
+          "speaker": "system",
+          "text": "Person answered"
+        },
+        {
+          "seq": 4,
+          "ts": "2026-11-07T19:05:18Z",
+          "speaker": "hermes",
+          "text": "Hi, this is Hermes, an AI assistant calling for a customer. I'd like to book a table for four tonight at 7."
+        },
+        {
+          "seq": 5,
+          "ts": "2026-11-07T19:05:29Z",
+          "speaker": "business",
+          "text": "We're full at 7. I can do 7:30 or 8:15."
+        },
+        {
+          "seq": 6,
+          "ts": "2026-11-07T19:05:32Z",
+          "speaker": "hermes",
+          "text": "One moment, let me check the calendar."
+        },
+        {
+          "seq": 7,
+          "ts": "2026-11-07T19:05:37Z",
+          "speaker": "hermes",
+          "text": "7:30 works. A table for four at 7:30, please."
+        },
+        {
+          "seq": 8,
+          "ts": "2026-11-07T19:05:44Z",
+          "speaker": "business",
+          "text": "Great. What name should I put it under?"
+        },
+        {
+          "seq": 9,
+          "ts": "2026-11-07T19:05:48Z",
+          "speaker": "hermes",
+          "text": "Please put it under Sample Customer."
+        },
+        {
+          "seq": 10,
+          "ts": "2026-11-07T19:05:59Z",
+          "speaker": "business",
+          "text": "Got it. A table for four at 7:30 tonight under Sample Customer. We hold tables for 15 minutes."
+        },
+        {
+          "seq": 11,
+          "ts": "2026-11-07T19:06:05Z",
+          "speaker": "hermes",
+          "text": "Perfect, thank you. Goodbye."
+        },
+        {
+          "seq": 12,
+          "ts": "2026-11-07T19:06:10Z",
+          "speaker": "system",
+          "text": "Call ended"
+        }
+      ],
+      "summary": "Booked a table for 4 at Sample Bistro tonight at 7:30 p.m. under Sample Customer; 7:00 was full. They hold the table for 15 minutes."
+    },
+    {
+      "id": "call_sample_airline",
+      "task_title": "Move Sample Airline flight to Friday",
+      "direction": "outbound",
+      "counterpart_masked": "+1 555-01••",
+      "state": "ended",
+      "state_since": "2026-11-07T17:42:31Z",
+      "started_at": "2026-11-07T17:01:40Z",
+      "duration_s": 2451,
+      "mode": "owner",
+      "transcript": [
+        {
+          "seq": 1,
+          "ts": "2026-11-07T17:01:40Z",
+          "speaker": "system",
+          "text": "Call placed"
+        },
+        {
+          "seq": 2,
+          "ts": "2026-11-07T17:01:44Z",
+          "speaker": "business",
+          "text": "Thank you for calling Sample Airline. For new reservations, press 1. To change an existing trip, press 2."
+        },
+        {
+          "seq": 3,
+          "ts": "2026-11-07T17:01:52Z",
+          "speaker": "system",
+          "text": "Pressed 2"
+        },
+        {
+          "seq": 4,
+          "ts": "2026-11-07T17:01:58Z",
+          "speaker": "business",
+          "text": "Please say or enter your six-character confirmation code."
+        },
+        {
+          "seq": 5,
+          "ts": "2026-11-07T17:02:03Z",
+          "speaker": "hermes",
+          "text": "[CODE]"
+        },
+        {
+          "seq": 6,
+          "ts": "2026-11-07T17:02:12Z",
+          "speaker": "business",
+          "text": "Thank you. All of our agents are helping other customers. Your wait time is more than 30 minutes."
+        },
+        {
+          "seq": 7,
+          "ts": "2026-11-07T17:02:21Z",
+          "speaker": "system",
+          "text": "On hold"
+        },
+        {
+          "seq": 8,
+          "ts": "2026-11-07T17:24:50Z",
+          "speaker": "business",
+          "text": "Thank you for your patience. Please stay on the line and an agent will be with you shortly."
+        },
+        {
+          "seq": 9,
+          "ts": "2026-11-07T17:40:53Z",
+          "speaker": "business",
+          "text": "Thanks for holding, this is Sample Airline reservations. How can I help you today?"
+        },
+        {
+          "seq": 10,
+          "ts": "2026-11-07T17:40:53Z",
+          "speaker": "system",
+          "text": "Person answered"
+        },
+        {
+          "seq": 11,
+          "ts": "2026-11-07T17:40:56Z",
+          "speaker": "hermes",
+          "text": "Hi, this is Hermes, an AI assistant calling for a customer about changing a flight. I'm bringing them on the line now, one moment."
+        },
+        {
+          "seq": 12,
+          "ts": "2026-11-07T17:41:02Z",
+          "speaker": "system",
+          "text": "Ringing your phone"
+        },
+        {
+          "seq": 13,
+          "ts": "2026-11-07T17:41:06Z",
+          "speaker": "business",
+          "text": "No problem, I'll wait."
+        },
+        {
+          "seq": 14,
+          "ts": "2026-11-07T17:41:19Z",
+          "speaker": "system",
+          "text": "You joined the call"
+        },
+        {
+          "seq": 15,
+          "ts": "2026-11-07T17:41:22Z",
+          "speaker": "owner",
+          "text": "Hi, I'd like to move my Thursday flight to Friday morning if there's anything."
+        },
+        {
+          "seq": 16,
+          "ts": "2026-11-07T17:41:31Z",
+          "speaker": "business",
+          "text": "Let me look. I have a 9:40 a.m. departure on Friday with seats open. The change fee is $75."
+        },
+        {
+          "seq": 17,
+          "ts": "2026-11-07T17:41:44Z",
+          "speaker": "owner",
+          "text": "That works, go ahead."
+        },
+        {
+          "seq": 18,
+          "ts": "2026-11-07T17:42:18Z",
+          "speaker": "business",
+          "text": "Done. Your new confirmation code is [CODE]. We'll text the itinerary to [NUMBER]."
+        },
+        {
+          "seq": 19,
+          "ts": "2026-11-07T17:42:24Z",
+          "speaker": "owner",
+          "text": "Thank you."
+        },
+        {
+          "seq": 20,
+          "ts": "2026-11-07T17:42:27Z",
+          "speaker": "business",
+          "text": "You're welcome, have a good trip."
+        },
+        {
+          "seq": 21,
+          "ts": "2026-11-07T17:42:31Z",
+          "speaker": "system",
+          "text": "Call ended"
+        }
+      ],
+      "summary": "Moved the flight to Friday, 9:40 a.m. departure. You approved the $75 change fee on the call. The new confirmation code is masked here; the airline is emailing it and texting the itinerary."
+    }
+  ]
+}

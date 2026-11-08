@@ -1,0 +1,99 @@
+{
+  "DELTA_PRE": [
+    [
+      "You're speaking with Delta's virtual assistant.",
+      "business"
+    ],
+    [
+      "Not a live person.",
+      "business"
+    ],
+    [
+      "I'll transfer your call now.",
+      "business"
+    ],
+    [
+      "The current phone wait time is 23 minutes.",
+      "business"
+    ],
+    [
+      "As a SkyMiles member, you earn miles towards exciting rewards.",
+      "business"
+    ]
+  ],
+  "PLAIN_PRE": [
+    [
+      "Please hold.",
+      "business"
+    ],
+    [
+      "[music]",
+      "business"
+    ]
+  ],
+  "AGENTS": [
+    "Thank you for your patience, how can I help you?",
+    "Good morning, thank you for calling Delta, how can I help?",
+    "Delta reservations, how may I help you?",
+    "Sorry about the wait time, how can I help you today?",
+    "Sorry for the long wait, how can I help?",
+    "Thanks for holding, my name is Sarah, how can I help?",
+    "Can I get your confirmation number?",
+    "What's your confirmation number?",
+    "Good afternoon.",
+    "Yes, hello?",
+    "Hi, thanks for holding, please have your confirmation number ready.",
+    "Hi, I see you're looking for help with a refund.",
+    "Delta, this is Mark.",
+    "This is Mark with Delta, how can I help you?",
+    "Hey there, thanks for waiting.",
+    "Thank you for calling Delta Air Lines, this is Kim speaking, how may I help you?",
+    "Hello, you've reached Delta reservations, my name is Jo.",
+    "Okay, how can I help you?",
+    "Hello?",
+    "Who am I speaking with?",
+    "Can you hear me?",
+    "Reservations, this is Ana."
+  ],
+  "REPLIES": [
+    "Yes.",
+    "Yes, I'm a live person.",
+    "Uh, yes.",
+    "Yeah, I'm here.",
+    "Yes, how can I help you?",
+    "I am."
+  ],
+  "simulation": true,
+  "description": "Recorded hold simulation: reviewer R2 delta 1 authored openers copied read only, not real-call recordings",
+  "disconnect": "I'm not hearing anything, I'll disconnect now.",
+  "SEQUENCES": [
+    [
+      "Thank you for calling Delta, my name is [NAME], how can I help you?"
+    ],
+    [
+      "Thank you for calling Delta.",
+      "My name is [NAME], how can I help?"
+    ],
+    [
+      "Thanks for calling Delta, this is Kim. Can I have your confirmation number?"
+    ],
+    [
+      "Delta Air Lines, this is [NAME], how may I help you?"
+    ],
+    [
+      "Good evening, this is Kim with Delta."
+    ],
+    [
+      "Thank you for your patience, how can I help you?",
+      "Hello? Are you there?"
+    ],
+    [
+      "Can I get your confirmation number?",
+      "Hello?"
+    ],
+    [
+      "Thank you for your patience, how can I help you?",
+      "I'm not hearing anything, I'll disconnect now."
+    ]
+  ]
+}

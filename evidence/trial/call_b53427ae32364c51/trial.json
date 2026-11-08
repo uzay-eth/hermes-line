@@ -1,0 +1,1308 @@
+{
+  "call": {
+    "id": "call_b53427ae32364c51",
+    "task_id": "task_954ac4904f63478c",
+    "task_title": "Hilton Reservations (bridge-call test)",
+    "direction": "outbound",
+    "counterpart_masked": "[Hilton Reservations]",
+    "state": "failed",
+    "started_at": "2026-11-08T07:31:59.405+00:00",
+    "state_since": "2026-11-08T07:34:53.919+00:00",
+    "duration_s": 174,
+    "mode": "owner",
+    "transcript": [
+      {
+        "seq": 1,
+        "speaker": "hermes",
+        "text": "Hi, this is Hermes, an AI assistant calling on behalf of Can. This call is not recorded.",
+        "ts": "2026-11-08T07:31:59.923+00:00"
+      },
+      {
+        "seq": 2,
+        "speaker": "business",
+        "text": "Hi.",
+        "ts": "2026-11-08T07:32:03.115+00:00"
+      },
+      {
+        "seq": 3,
+        "speaker": "business",
+        "text": "Thanks for calling Hilton Hotels.",
+        "ts": "2026-11-08T07:32:05.516+00:00"
+      },
+      {
+        "seq": 4,
+        "speaker": "hermes",
+        "text": "Hi, this is Hermes, an AI assistant calling for Can. Am I speaking with a live person?",
+        "ts": "2026-11-08T07:32:08.018+00:00"
+      },
+      {
+        "seq": 5,
+        "speaker": "business",
+        "text": "How can I help?",
+        "ts": "2026-11-08T07:32:14.087+00:00"
+      },
+      {
+        "seq": 6,
+        "speaker": "business",
+        "text": "To book a new reservation, say new reservation or press 1.",
+        "ts": "2026-11-08T07:32:18.192+00:00"
+      },
+      {
+        "seq": 7,
+        "speaker": "business",
+        "text": "To retrieve your Hilton Honors number, say find Hilton Honors number or press 2.",
+        "ts": "2026-11-08T07:32:23.245+00:00"
+      },
+      {
+        "seq": 8,
+        "speaker": "business",
+        "text": "For account related issues, say account help or press 3.",
+        "ts": "2026-11-08T07:32:27.118+00:00"
+      },
+      {
+        "seq": 9,
+        "speaker": "business",
+        "text": "To report a billing issue, say billing issue or press 4.",
+        "ts": "2026-11-08T07:32:31.135+00:00"
+      },
+      {
+        "seq": 10,
+        "speaker": "business",
+        "text": "To enroll for Hilton Honors, say enroll in Honors or press 5.",
+        "ts": "2026-11-08T07:32:35.403+00:00"
+      },
+      {
+        "seq": 11,
+        "speaker": "business",
+        "text": "If you have an upcoming reservation, you can say reconfirm, cancel, modify ask a question, or press 6.",
+        "ts": "2026-11-08T07:32:42.691+00:00"
+      },
+      {
+        "seq": 12,
+        "speaker": "business",
+        "text": "If you're calling about a previous stay, you can say things like copy of my hotel receipt, give feedback, or press 7.",
+        "ts": "2026-11-08T07:32:49.787+00:00"
+      },
+      {
+        "seq": 13,
+        "speaker": "business",
+        "text": "Otherwise, you can say I'm calling about something else or press 8.",
+        "ts": "2026-11-08T07:32:54.234+00:00"
+      },
+      {
+        "seq": 14,
+        "speaker": "business",
+        "text": "Sorry. I didn't catch that.",
+        "ts": "2026-11-08T07:33:00.604+00:00"
+      },
+      {
+        "seq": 15,
+        "speaker": "business",
+        "text": "To book a new reservation, say new reservation or press 1.",
+        "ts": "2026-11-08T07:33:04.632+00:00"
+      },
+      {
+        "seq": 16,
+        "speaker": "business",
+        "text": "To retrieve your Hilton Honors number, say find Hilton Honors number or 2.",
+        "ts": "2026-11-08T07:33:09.711+00:00"
+      },
+      {
+        "seq": 17,
+        "speaker": "business",
+        "text": "For account related issues, say account help or press 3.",
+        "ts": "2026-11-08T07:33:13.682+00:00"
+      },
+      {
+        "seq": 18,
+        "speaker": "business",
+        "text": "To report a billing issue, say billing issue or press 4.",
+        "ts": "2026-11-08T07:33:17.532+00:00"
+      },
+      {
+        "seq": 19,
+        "speaker": "business",
+        "text": "To enroll for Hilton Honors, say enroll in Honors or press 5.",
+        "ts": "2026-11-08T07:33:21.827+00:00"
+      },
+      {
+        "seq": 20,
+        "speaker": "business",
+        "text": "If you have an upcoming reservation, you can say reconfirm, cancel, modify, ask a question, or press 6.",
+        "ts": "2026-11-08T07:33:29.137+00:00"
+      },
+      {
+        "seq": 21,
+        "speaker": "business",
+        "text": "If you're calling about a previous stay, you can say things like copy of my hotel receipt, give feedback, or press 7.",
+        "ts": "2026-11-08T07:33:36.176+00:00"
+      },
+      {
+        "seq": 22,
+        "speaker": "business",
+        "text": "Otherwise, you can say I'm calling about something else or press 8.",
+        "ts": "2026-11-08T07:33:40.666+00:00"
+      },
+      {
+        "seq": 23,
+        "speaker": "business",
+        "text": "Sorry. I didn't catch that.",
+        "ts": "2026-11-08T07:33:46.992+00:00"
+      },
+      {
+        "seq": 24,
+        "speaker": "business",
+        "text": "To book a new reservation, say new reservation or press 1.",
+        "ts": "2026-11-08T07:33:50.993+00:00"
+      },
+      {
+        "seq": 25,
+        "speaker": "business",
+        "text": "To retrieve your Hilton Honors number, say find Hilton Honors number or press 2.",
+        "ts": "2026-11-08T07:33:55.988+00:00"
+      },
+      {
+        "seq": 26,
+        "speaker": "business",
+        "text": "For account related issues, say account help or press 3.",
+        "ts": "2026-11-08T07:33:59.988+00:00"
+      },
+      {
+        "seq": 27,
+        "speaker": "business",
+        "text": "To report a billing issue, say billing issue or press 4.",
+        "ts": "2026-11-08T07:34:03.870+00:00"
+      },
+      {
+        "seq": 28,
+        "speaker": "business",
+        "text": "To enroll for Hilton Honors, say enroll in Honors or press 5.",
+        "ts": "2026-11-08T07:34:08.159+00:00"
+      },
+      {
+        "seq": 29,
+        "speaker": "business",
+        "text": "If you have an upcoming reservation, you can say reconfirm, cancel, modify, ask a question, or press 6.",
+        "ts": "2026-11-08T07:34:15.512+00:00"
+      },
+      {
+        "seq": 30,
+        "speaker": "business",
+        "text": "If you're calling about a previous stay, you can say things like copy of my hotel receipt, give feedback, or press 7.",
+        "ts": "2026-11-08T07:34:22.529+00:00"
+      },
+      {
+        "seq": 31,
+        "speaker": "business",
+        "text": "Otherwise, you can say I'm calling about something else or press 8.",
+        "ts": "2026-11-08T07:34:27.040+00:00"
+      },
+      {
+        "seq": 32,
+        "speaker": "business",
+        "text": "Are you still there?",
+        "ts": "2026-11-08T07:34:33.393+00:00"
+      },
+      {
+        "seq": 33,
+        "speaker": "business",
+        "text": "Say yes or press 1 to continue on to an agent.",
+        "ts": "2026-11-08T07:34:36.740+00:00"
+      },
+      {
+        "seq": 34,
+        "speaker": "business",
+        "text": "Are you still there?",
+        "ts": "2026-11-08T07:34:42.266+00:00"
+      },
+      {
+        "seq": 35,
+        "speaker": "business",
+        "text": "Say yes or press 1 to continue on to an agent.",
+        "ts": "2026-11-08T07:34:45.616+00:00"
+      },
+      {
+        "seq": 36,
+        "speaker": "business",
+        "text": "Thank you for calling.",
+        "ts": "2026-11-08T07:34:51.272+00:00"
+      },
+      {
+        "seq": 37,
+        "speaker": "hermes",
+        "text": "Representative.",
+        "ts": "2026-11-08T07:34:52.211+00:00"
+      },
+      {
+        "seq": 38,
+        "speaker": "business",
+        "text": "Goodbye.",
+        "ts": "2026-11-08T07:34:52.401+00:00"
+      },
+      {
+        "seq": 39,
+        "speaker": "hermes",
+        "text": "Representative.",
+        "ts": "2026-11-08T07:34:53.624+00:00"
+      }
+    ],
+    "summary": "No person reached; Hilton's automated assistant ended the call after 2 min 54 s. Hermes Line: The other side hung up ([Hilton Reservations], \"Hilton Reservations (bridge-call test)\", 2m54s). On the call: They: \"To enroll for Hilton Honors, say enroll in Honors or press 5.\" / They: \"If you have an upcoming reservation, you can say reconfirm, cancel, modify, ask a question, or press 6.\" / They: \"If you're calling about a previous stay, you can say things like copy of my hotel receipt, give feedback, or press 7.\" / They: \"Otherwise, you can say I'm calling about something else or press 8.\" / They: \"Are you still there?\" / They: \"Say yes or press 1 to continue on to an agent.\" / They: \"Are you still there?\" / They: \"Say yes or press 1 to continue on to an agent.\" / They: \"Thank you for calling.\" / Hermes: \"Representative.\" / They: \"Goodbye.\" / Hermes: \"Representative.\".",
+    "end_reason": "business_hangup",
+    "revision": 49,
+    "control_revision": 47,
+    "phases": [
+      {
+        "phase": "dialing",
+        "since": "2026-11-08T07:31:53.224+00:00"
+      },
+      {
+        "phase": "menu",
+        "since": "2026-11-08T07:32:18.199+00:00"
+      },
+      {
+        "phase": "ended",
+        "since": "2026-11-08T07:34:53.919+00:00"
+      }
+    ]
+  },
+  "CallSID": "[Hilton call 2 attempt 1 CA id]",
+  "events": [
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "task_options",
+      "data": {
+        "owner_ring_timeout_s": 20,
+        "fallback_question": "What is the usual nightly rate for a standard room at a Hilton in Reno, Nevada, next Friday?",
+        "intro_names": [
+          "Hilton",
+          "Hilton Honors"
+        ],
+        "ivr_category": "reservations"
+      },
+      "ts": 1794123113.2233589
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "dialing",
+      "data": {
+        "to": "[Hilton Reservations]"
+      },
+      "ts": 1794123117.348831
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "relay_connected",
+      "data": {
+        "reconnects": 0
+      },
+      "ts": 1794123119.713272
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794123123.114625
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "unknown",
+        "confidence": "low"
+      },
+      "ts": 1794123123.117622
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "speech_superseded",
+      "data": {
+        "what": "Hi, this is Hermes, an AI assistant call"
+      },
+      "ts": 1794123125.5638368
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect_slow",
+      "data": {},
+      "ts": 1794123128.0180118
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "live_person_question_sent",
+      "data": {
+        "count": 1
+      },
+      "ts": 1794123128.018608
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "human",
+        "confidence": "high"
+      },
+      "ts": 1794123134.088768
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "human_label_not_confirmed",
+      "data": {
+        "why": "no clear yes to the pending live-person question"
+      },
+      "ts": 1794123134.089043
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123138.1953301
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "state",
+      "data": {
+        "frm": "dialing",
+        "to": "ivr",
+        "why": "ivr prompt"
+      },
+      "ts": 1794123138.199717
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "restricted_action_blocked",
+      "data": {
+        "via": "dtmf",
+        "why": "the menu has text that is not a known harmless intro, hold line or option: nothing is sent for it",
+        "callback_offer": false
+      },
+      "ts": 1794123142.304988
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123143.245986
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794123143.24613
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 4848.097832989879,
+        "full_ms": 6278.1,
+        "interrupted": true
+      },
+      "ts": 1794123144.478297
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123147.119752
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794123147.119912
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 1794.3557079997845,
+        "full_ms": 3030.5,
+        "interrupted": true
+      },
+      "ts": 1794123147.509242
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 1143.564832978882,
+        "full_ms": 2396.8,
+        "interrupted": false
+      },
+      "ts": 1794123149.906504
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123151.136048
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 1051.0927920113318,
+        "full_ms": 2276.3,
+        "interrupted": false
+      },
+      "ts": 1794123153.4127629
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123155.403706
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 1049.8319999896921,
+        "full_ms": 2289.2,
+        "interrupted": false
+      },
+      "ts": 1794123157.6932962
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123162.692109
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 1946.4006659691222,
+        "full_ms": 3275.0,
+        "interrupted": false
+      },
+      "ts": 1794123165.967469
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123169.7876961
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 1205.1619999692775,
+        "full_ms": 2461.8,
+        "interrupted": false
+      },
+      "ts": 1794123172.249774
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123174.2355871
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "restricted_action_blocked",
+      "data": {
+        "via": "dtmf",
+        "why": "this menu is a callback offer: nothing is sent for it",
+        "callback_offer": true
+      },
+      "ts": 1794123177.476631
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "restricted_action_blocked",
+      "data": {
+        "via": "speech",
+        "why": "this menu is a callback offer: nothing is sent for it",
+        "callback_offer": true
+      },
+      "ts": 1794123182.064332
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 5897.2116250079125,
+        "full_ms": 7828.2,
+        "interrupted": false
+      },
+      "ts": 1794123182.064508
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect_slow",
+      "data": {},
+      "ts": 1794123183.105438
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high",
+        "late": true
+      },
+      "ts": 1794123183.333753
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123184.635204
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794123184.635413
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "speech_superseded",
+      "data": {
+        "what": "Sorry, am I speaking with a live person?"
+      },
+      "ts": 1794123184.651278
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": null,
+        "full_ms": 2819.9,
+        "interrupted": true
+      },
+      "ts": 1794123186.154551
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "automated_assistant",
+        "confidence": "high"
+      },
+      "ts": 1794123189.71227
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "bot_label_seen",
+      "data": {},
+      "ts": 1794123189.712385
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "assistant_declared",
+      "data": {
+        "by": "detector"
+      },
+      "ts": 1794123189.712476
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "restricted_action_blocked",
+      "data": {
+        "via": "dtmf",
+        "why": "the menu did not announce the key 1 as an option",
+        "callback_offer": false
+      },
+      "ts": 1794123189.882943
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123193.683407
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794123193.683628
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "speech_superseded",
+      "data": {
+        "what": "Agent."
+      },
+      "ts": 1794123193.6953468
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 6923.807375016622,
+        "full_ms": 8723.3,
+        "interrupted": true
+      },
+      "ts": 1794123194.878272
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123197.532897
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794123197.533043
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": null,
+        "full_ms": 4195.7,
+        "interrupted": true
+      },
+      "ts": 1794123199.074389
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123201.8301702
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794123201.831038
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": null,
+        "full_ms": 4137.6,
+        "interrupted": true
+      },
+      "ts": 1794123203.212357
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 1022.0732080051675,
+        "full_ms": 2279.4,
+        "interrupted": false
+      },
+      "ts": 1794123205.492071
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123209.138769
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 1304.9944170052186,
+        "full_ms": 2490.7,
+        "interrupted": false
+      },
+      "ts": 1794123211.630072
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123216.177451
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 1216.187332989648,
+        "full_ms": 2586.2,
+        "interrupted": false
+      },
+      "ts": 1794123218.764118
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123220.667042
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "automated_assistant",
+        "confidence": "high"
+      },
+      "ts": 1794123226.9942558
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 7562.269709014799,
+        "full_ms": 8930.8,
+        "interrupted": false
+      },
+      "ts": 1794123229.5982459
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123230.99413
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "speech_superseded",
+      "data": {
+        "what": "Representative."
+      },
+      "ts": 1794123231.015363
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123235.990348
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794123235.99069
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": null,
+        "full_ms": 6331.2,
+        "interrupted": true
+      },
+      "ts": 1794123237.325761
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123239.990211
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794123239.990658
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": null,
+        "full_ms": 4161.2,
+        "interrupted": true
+      },
+      "ts": 1794123241.487396
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123243.8718631
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794123243.872295
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": null,
+        "full_ms": 3854.7,
+        "interrupted": true
+      },
+      "ts": 1794123245.342912
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123248.160486
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794123248.160696
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": null,
+        "full_ms": 4081.4,
+        "interrupted": true
+      },
+      "ts": 1794123249.424973
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "finish_refused",
+      "data": {
+        "outcome": "failed",
+        "state": "ivr"
+      },
+      "ts": 1794123254.5373209
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123255.51364
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794123255.513841
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": null,
+        "full_ms": 7518.6,
+        "interrupted": true
+      },
+      "ts": 1794123256.944269
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 3498.0630830395967,
+        "full_ms": 4788.1,
+        "interrupted": false
+      },
+      "ts": 1794123261.7331789
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123262.529731
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 1133.1735409912653,
+        "full_ms": 2568.9,
+        "interrupted": false
+      },
+      "ts": 1794123265.098971
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123267.040839
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 4429.249499982689,
+        "full_ms": 5805.2,
+        "interrupted": false
+      },
+      "ts": 1794123272.846378
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "automated_assistant",
+        "confidence": "high"
+      },
+      "ts": 1794123273.3969479
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123276.7414799
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "speech_superseded",
+      "data": {
+        "what": "Representative."
+      },
+      "ts": 1794123276.754792
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "restricted_action_blocked",
+      "data": {
+        "via": "speech",
+        "why": "the menu has the blocked word(s) \"yes\", \"continue\" (acceptance): nothing is sent for it",
+        "callback_offer": false
+      },
+      "ts": 1794123281.476021
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 3331.3507920247503,
+        "full_ms": 4734.0,
+        "interrupted": false
+      },
+      "ts": 1794123281.4765708
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "automated_assistant",
+        "confidence": "high"
+      },
+      "ts": 1794123282.2689128
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794123285.618921
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "speech_superseded",
+      "data": {
+        "what": "Representative."
+      },
+      "ts": 1794123285.6304371
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "automated_assistant",
+        "confidence": "high"
+      },
+      "ts": 1794123291.274891
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 5168.027665989939,
+        "full_ms": 6592.2,
+        "interrupted": false
+      },
+      "ts": 1794123292.212519
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794123292.40153
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "detect",
+      "data": {
+        "label": "automated_assistant",
+        "confidence": "high"
+      },
+      "ts": 1794123292.40293
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "speech_superseded",
+      "data": {
+        "what": "Representative."
+      },
+      "ts": 1794123292.446107
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "relay_lost",
+      "data": {},
+      "ts": 1794123293.036213
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "connect_after_hangup",
+      "data": {},
+      "ts": 1794123293.247494
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "ivr_action",
+      "data": {
+        "state": "automated_assistant",
+        "phrase_id": "representative"
+      },
+      "ts": 1794123293.625054
+    },
+    {
+      "call_id": "call_b53427ae32364c51",
+      "task_id": "task_954ac4904f63478c",
+      "kind": "ended",
+      "data": {
+        "state": "failed",
+        "reason": "business_hangup"
+      },
+      "ts": 1794123293.9195662
+    }
+  ],
+  "provider": {
+    "sid": "[Hilton call 2 attempt 1 CA id]",
+    "duration": "173",
+    "status": "completed",
+    "price": "-0.04200",
+    "price_unit": "USD",
+    "read_at": 1794123295.83901
+  },
+  "balance_before": {
+    "usd": "12.16006",
+    "at": 1794123106.356962
+  },
+  "balance_after": null,
+  "provider_legs": [
+    {
+      "sid": "[Hilton call 2 attempt 1 CA id]",
+      "duration": "173",
+      "status": "completed",
+      "price": "-0.04200",
+      "price_unit": "USD",
+      "read_at": 1794123295.83901
+    }
+  ],
+  "hold_report": {
+    "dry": false,
+    "outcome": "business_hangup",
+    "call_outcome": "business_hangup",
+    "cleanup_failures": [],
+    "rates": {
+      "business": "0.0210",
+      "relay": "0.1050",
+      "owner": "0.0210",
+      "conference": "0.00270"
+    },
+    "rate_basis": "Voice number Pricing API x1.5 (business); S2 x1.5 (owner/Relay/conference)",
+    "balance_reads": [
+      {
+        "at": 1794123106.356933,
+        "usd": "12.16006"
+      },
+      {
+        "at": 1794123116.976917,
+        "usd": "12.16006"
+      },
+      {
+        "at": 1794123177.510466,
+        "usd": "12.16006"
+      },
+      {
+        "at": 1794123237.9887779,
+        "usd": "12.16006"
+      }
+    ],
+    "conservative_cost_usd": "0.45720",
+    "cost_basis": "conservative estimate, separate from Twilio billing",
+    "metrics": {
+      "menu_s": null,
+      "hold_s": null,
+      "transcript_to_human_s": null,
+      "bridge_s": null,
+      "false_human_count": null,
+      "false_human_basis": "requires independent operator annotation",
+      "human_assumed_count": 0
+    }
+  }
+}

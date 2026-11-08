@@ -1,0 +1,16 @@
+............................................................................................................../Users/mac/Projects/hermes-line/tests/l1/test_r12_live2.py:119: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/acp-r12-ptpizt19.jsonl' mode='r' encoding='UTF-8'>
+  return [json.loads(l)["text"] for l in open(log)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+...........F......................................................................................................................................................................................................................................................................................................................................................................................................................................................
+======================================================================
+FAIL: test_N13_a_success_resets_the_streak_but_not_the_day_count (test_r13_owner_line.N13PinBudgetTests.test_N13_a_success_resets_the_streak_but_not_the_day_count)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/Projects/hermes-line/tests/l1/test_r13_owner_line.py", line 445, in test_N13_a_success_resets_the_streak_but_not_the_day_count
+    self.assertEqual(line.store._conn.execute("SELECT COUNT(*) FROM owner_auth_failures").fetchone()[0], 4)
+AssertionError: 3 != 4
+
+----------------------------------------------------------------------
+Ran 560 tests in 1501.393s
+
+FAILED (failures=1)

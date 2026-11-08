@@ -1,0 +1,25 @@
+............................................................................................................../Users/mac/Projects/hermes-line/tests/l1/test_r12_live2.py:119: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/bl/rf3j_x9d3cj1870xpb7330zm0000gp/T/acp-r12-p92_yhsd.jsonl' mode='r' encoding='UTF-8'>
+  return [json.loads(l)["text"] for l in open(log)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+....................................................F....................................................................................................................................................................................
+======================================================================
+FAIL: test_R16a_screening_prompt_is_answered_at_once_then_the_caller_is_greeted (test_r16b_screening_notes.ScreeningTests.test_R16a_screening_prompt_is_answered_at_once_then_the_caller_is_greeted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/Projects/hermes-line/tests/l1/test_r16b_screening_notes.py", line 49, in test_R16a_screening_prompt_is_answered_at_once_then_the_caller_is_greeted
+    self.assertEqual(relay.texts(), [])  # nothing was said over the prompt
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ["Hi, you've reached Sam's line. This is H[36 chars]lp?"] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+"Hi, you've reached Sam's line. This is Hermes, an AI assistant. How can I help?"
+
++ []
+- ["Hi, you've reached Sam's line. This is Hermes, an AI assistant. How can I "
+-  'help?']
+
+----------------------------------------------------------------------
+Ran 343 tests in 232.064s
+
+FAILED (failures=1)

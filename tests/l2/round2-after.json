@@ -1,0 +1,2578 @@
+[
+  {
+    "split": "train",
+    "mode": "no model",
+    "sha256": "a615561cb3904c13775e2bd9a1345f51d9364b7ce6f96e8d0ca828f7fbaf0b7f",
+    "streams": 30,
+    "events": 36,
+    "matrix": {
+      "human": {
+        "human": 3,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 2
+      },
+      "hold_message": {
+        "human": 0,
+        "hold_message": 10,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "ivr": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 5,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "voicemail": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 5,
+        "unknown": 0
+      },
+      "unknown": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 11
+      }
+    },
+    "false_human": 0,
+    "negative_events": 31,
+    "false_human_rate": 0.0,
+    "missed_human_events": 2,
+    "missed_human_episodes": 2,
+    "human_episodes": 5,
+    "unknown_fraction": 0.3611111111111111,
+    "negative_exposure_hours": 0.12361111111111112,
+    "false_per_negative_hour": 0.0,
+    "detection_delays_ms": [
+      0,
+      0,
+      0
+    ],
+    "model_calls": 0,
+    "predictions": [
+      [
+        "train-silence-1",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "train-silence-2",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "train-silence-3",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "train-silence-4",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "train-silence-5",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "train-hold_message-1",
+        "a",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "train-hold_message-1",
+        "b",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "train-hold_message-2",
+        "a",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "train-hold_message-2",
+        "b",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "train-hold_message-3",
+        "a",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "train-hold_message-3",
+        "b",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "train-hold_message-4",
+        "a",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "train-hold_message-4",
+        "b",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "train-hold_message-5",
+        "a",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "train-hold_message-5",
+        "b",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "train-ivr-1",
+        "a",
+        "ivr",
+        "ivr"
+      ],
+      [
+        "train-ivr-2",
+        "a",
+        "ivr",
+        "ivr"
+      ],
+      [
+        "train-ivr-3",
+        "a",
+        "ivr",
+        "ivr"
+      ],
+      [
+        "train-ivr-4",
+        "a",
+        "ivr",
+        "ivr"
+      ],
+      [
+        "train-ivr-5",
+        "a",
+        "ivr",
+        "ivr"
+      ],
+      [
+        "train-voicemail-1",
+        "g",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "train-voicemail-1",
+        "a",
+        "voicemail",
+        "voicemail"
+      ],
+      [
+        "train-voicemail-2",
+        "a",
+        "voicemail",
+        "voicemail"
+      ],
+      [
+        "train-voicemail-3",
+        "a",
+        "voicemail",
+        "voicemail"
+      ],
+      [
+        "train-voicemail-4",
+        "a",
+        "voicemail",
+        "voicemail"
+      ],
+      [
+        "train-voicemail-5",
+        "a",
+        "voicemail",
+        "voicemail"
+      ],
+      [
+        "train-human-1",
+        "a",
+        "human",
+        "unknown"
+      ],
+      [
+        "train-human-2",
+        "a",
+        "human",
+        "human"
+      ],
+      [
+        "train-human-3",
+        "a",
+        "human",
+        "human"
+      ],
+      [
+        "train-human-4",
+        "a",
+        "human",
+        "unknown"
+      ],
+      [
+        "train-human-5",
+        "a",
+        "human",
+        "human"
+      ],
+      [
+        "train-unknown-1",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "train-unknown-2",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "train-unknown-3",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "train-unknown-4",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "train-unknown-5",
+        "a",
+        "unknown",
+        "unknown"
+      ]
+    ]
+  },
+  {
+    "split": "train",
+    "mode": "fake model",
+    "sha256": "a615561cb3904c13775e2bd9a1345f51d9364b7ce6f96e8d0ca828f7fbaf0b7f",
+    "streams": 30,
+    "events": 36,
+    "matrix": {
+      "human": {
+        "human": 4,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 1
+      },
+      "hold_message": {
+        "human": 0,
+        "hold_message": 10,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "ivr": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 5,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "voicemail": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 5,
+        "unknown": 0
+      },
+      "unknown": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 11
+      }
+    },
+    "false_human": 0,
+    "negative_events": 31,
+    "false_human_rate": 0.0,
+    "missed_human_events": 1,
+    "missed_human_episodes": 1,
+    "human_episodes": 5,
+    "unknown_fraction": 0.3333333333333333,
+    "negative_exposure_hours": 0.12361111111111112,
+    "false_per_negative_hour": 0.0,
+    "detection_delays_ms": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "model_calls": 8,
+    "predictions": [
+      [
+        "train-silence-1",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "train-silence-2",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "train-silence-3",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "train-silence-4",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "train-silence-5",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "train-hold_message-1",
+        "a",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "train-hold_message-1",
+        "b",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "train-hold_message-2",
+        "a",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "train-hold_message-2",
+        "b",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "train-hold_message-3",
+        "a",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "train-hold_message-3",
+        "b",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "train-hold_message-4",
+        "a",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "train-hold_message-4",
+        "b",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "train-hold_message-5",
+        "a",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "train-hold_message-5",
+        "b",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "train-ivr-1",
+        "a",
+        "ivr",
+        "ivr"
+      ],
+      [
+        "train-ivr-2",
+        "a",
+        "ivr",
+        "ivr"
+      ],
+      [
+        "train-ivr-3",
+        "a",
+        "ivr",
+        "ivr"
+      ],
+      [
+        "train-ivr-4",
+        "a",
+        "ivr",
+        "ivr"
+      ],
+      [
+        "train-ivr-5",
+        "a",
+        "ivr",
+        "ivr"
+      ],
+      [
+        "train-voicemail-1",
+        "g",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "train-voicemail-1",
+        "a",
+        "voicemail",
+        "voicemail"
+      ],
+      [
+        "train-voicemail-2",
+        "a",
+        "voicemail",
+        "voicemail"
+      ],
+      [
+        "train-voicemail-3",
+        "a",
+        "voicemail",
+        "voicemail"
+      ],
+      [
+        "train-voicemail-4",
+        "a",
+        "voicemail",
+        "voicemail"
+      ],
+      [
+        "train-voicemail-5",
+        "a",
+        "voicemail",
+        "voicemail"
+      ],
+      [
+        "train-human-1",
+        "a",
+        "human",
+        "unknown"
+      ],
+      [
+        "train-human-2",
+        "a",
+        "human",
+        "human"
+      ],
+      [
+        "train-human-3",
+        "a",
+        "human",
+        "human"
+      ],
+      [
+        "train-human-4",
+        "a",
+        "human",
+        "human"
+      ],
+      [
+        "train-human-5",
+        "a",
+        "human",
+        "human"
+      ],
+      [
+        "train-unknown-1",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "train-unknown-2",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "train-unknown-3",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "train-unknown-4",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "train-unknown-5",
+        "a",
+        "unknown",
+        "unknown"
+      ]
+    ]
+  },
+  {
+    "split": "held-out",
+    "mode": "no model",
+    "sha256": "23388d08e432e1b85624d652b5e067ab4c4a486925fbdaa169e2171bd64efb7f",
+    "streams": 32,
+    "events": 38,
+    "matrix": {
+      "human": {
+        "human": 3,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 4
+      },
+      "hold_message": {
+        "human": 0,
+        "hold_message": 10,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "ivr": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 5,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "voicemail": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 5,
+        "unknown": 0
+      },
+      "unknown": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 11
+      }
+    },
+    "false_human": 0,
+    "negative_events": 31,
+    "false_human_rate": 0.0,
+    "missed_human_events": 4,
+    "missed_human_episodes": 4,
+    "human_episodes": 7,
+    "unknown_fraction": 0.39473684210526316,
+    "negative_exposure_hours": 0.1296761111111111,
+    "false_per_negative_hour": 0.0,
+    "detection_delays_ms": [
+      0,
+      0,
+      0
+    ],
+    "model_calls": 0,
+    "predictions": [
+      [
+        "held-out-silence-1",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-silence-2",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-silence-3",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-silence-4",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-silence-5",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-hold_message-1",
+        "a",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "held-out-hold_message-1",
+        "b",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "held-out-hold_message-2",
+        "a",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "held-out-hold_message-2",
+        "b",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "held-out-hold_message-3",
+        "a",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "held-out-hold_message-3",
+        "b",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "held-out-hold_message-4",
+        "a",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "held-out-hold_message-4",
+        "b",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "held-out-hold_message-5",
+        "a",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "held-out-hold_message-5",
+        "b",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "held-out-ivr-1",
+        "a",
+        "ivr",
+        "ivr"
+      ],
+      [
+        "held-out-ivr-2",
+        "a",
+        "ivr",
+        "ivr"
+      ],
+      [
+        "held-out-ivr-3",
+        "a",
+        "ivr",
+        "ivr"
+      ],
+      [
+        "held-out-ivr-4",
+        "a",
+        "ivr",
+        "ivr"
+      ],
+      [
+        "held-out-ivr-5",
+        "a",
+        "ivr",
+        "ivr"
+      ],
+      [
+        "held-out-voicemail-1",
+        "g",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-voicemail-1",
+        "a",
+        "voicemail",
+        "voicemail"
+      ],
+      [
+        "held-out-voicemail-2",
+        "a",
+        "voicemail",
+        "voicemail"
+      ],
+      [
+        "held-out-voicemail-3",
+        "a",
+        "voicemail",
+        "voicemail"
+      ],
+      [
+        "held-out-voicemail-4",
+        "a",
+        "voicemail",
+        "voicemail"
+      ],
+      [
+        "held-out-voicemail-5",
+        "a",
+        "voicemail",
+        "voicemail"
+      ],
+      [
+        "held-out-human-1",
+        "a",
+        "human",
+        "unknown"
+      ],
+      [
+        "held-out-human-2",
+        "a",
+        "human",
+        "human"
+      ],
+      [
+        "held-out-human-3",
+        "a",
+        "human",
+        "human"
+      ],
+      [
+        "held-out-human-4",
+        "a",
+        "human",
+        "unknown"
+      ],
+      [
+        "held-out-human-5",
+        "a",
+        "human",
+        "unknown"
+      ],
+      [
+        "held-out-unknown-1",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-unknown-2",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-unknown-3",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-unknown-4",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-unknown-5",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-live-disclosure-greeting",
+        "g",
+        "human",
+        "unknown"
+      ],
+      [
+        "held-out-live-confirmation-answer",
+        "a",
+        "human",
+        "human"
+      ]
+    ]
+  },
+  {
+    "split": "held-out",
+    "mode": "fake model",
+    "sha256": "23388d08e432e1b85624d652b5e067ab4c4a486925fbdaa169e2171bd64efb7f",
+    "streams": 32,
+    "events": 38,
+    "matrix": {
+      "human": {
+        "human": 5,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 2
+      },
+      "hold_message": {
+        "human": 0,
+        "hold_message": 10,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "ivr": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 5,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "voicemail": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 5,
+        "unknown": 0
+      },
+      "unknown": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 11
+      }
+    },
+    "false_human": 0,
+    "negative_events": 31,
+    "false_human_rate": 0.0,
+    "missed_human_events": 2,
+    "missed_human_episodes": 2,
+    "human_episodes": 7,
+    "unknown_fraction": 0.34210526315789475,
+    "negative_exposure_hours": 0.1296761111111111,
+    "false_per_negative_hour": 0.0,
+    "detection_delays_ms": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "model_calls": 10,
+    "predictions": [
+      [
+        "held-out-silence-1",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-silence-2",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-silence-3",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-silence-4",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-silence-5",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-hold_message-1",
+        "a",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "held-out-hold_message-1",
+        "b",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "held-out-hold_message-2",
+        "a",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "held-out-hold_message-2",
+        "b",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "held-out-hold_message-3",
+        "a",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "held-out-hold_message-3",
+        "b",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "held-out-hold_message-4",
+        "a",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "held-out-hold_message-4",
+        "b",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "held-out-hold_message-5",
+        "a",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "held-out-hold_message-5",
+        "b",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "held-out-ivr-1",
+        "a",
+        "ivr",
+        "ivr"
+      ],
+      [
+        "held-out-ivr-2",
+        "a",
+        "ivr",
+        "ivr"
+      ],
+      [
+        "held-out-ivr-3",
+        "a",
+        "ivr",
+        "ivr"
+      ],
+      [
+        "held-out-ivr-4",
+        "a",
+        "ivr",
+        "ivr"
+      ],
+      [
+        "held-out-ivr-5",
+        "a",
+        "ivr",
+        "ivr"
+      ],
+      [
+        "held-out-voicemail-1",
+        "g",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-voicemail-1",
+        "a",
+        "voicemail",
+        "voicemail"
+      ],
+      [
+        "held-out-voicemail-2",
+        "a",
+        "voicemail",
+        "voicemail"
+      ],
+      [
+        "held-out-voicemail-3",
+        "a",
+        "voicemail",
+        "voicemail"
+      ],
+      [
+        "held-out-voicemail-4",
+        "a",
+        "voicemail",
+        "voicemail"
+      ],
+      [
+        "held-out-voicemail-5",
+        "a",
+        "voicemail",
+        "voicemail"
+      ],
+      [
+        "held-out-human-1",
+        "a",
+        "human",
+        "unknown"
+      ],
+      [
+        "held-out-human-2",
+        "a",
+        "human",
+        "human"
+      ],
+      [
+        "held-out-human-3",
+        "a",
+        "human",
+        "human"
+      ],
+      [
+        "held-out-human-4",
+        "a",
+        "human",
+        "human"
+      ],
+      [
+        "held-out-human-5",
+        "a",
+        "human",
+        "human"
+      ],
+      [
+        "held-out-unknown-1",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-unknown-2",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-unknown-3",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-unknown-4",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-unknown-5",
+        "a",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "held-out-live-disclosure-greeting",
+        "g",
+        "human",
+        "unknown"
+      ],
+      [
+        "held-out-live-confirmation-answer",
+        "a",
+        "human",
+        "human"
+      ]
+    ]
+  },
+  {
+    "split": "soak",
+    "mode": "no model",
+    "sha256": "0ee819eb599f11d79c20ffefe1d7d7e68b7536fd1573c8e65ab143a7623fa85d",
+    "streams": 6,
+    "events": 110,
+    "matrix": {
+      "human": {
+        "human": 2,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 4
+      },
+      "hold_message": {
+        "human": 0,
+        "hold_message": 86,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "ivr": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "voicemail": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "unknown": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 18
+      }
+    },
+    "false_human": 0,
+    "negative_events": 104,
+    "false_human_rate": 0.0,
+    "missed_human_events": 4,
+    "missed_human_episodes": 1,
+    "human_episodes": 3,
+    "unknown_fraction": 0.2,
+    "negative_exposure_hours": 3.38375,
+    "false_per_negative_hour": 0.0,
+    "detection_delays_ms": [
+      2500,
+      2500
+    ],
+    "model_calls": 0,
+    "predictions": [
+      [
+        "soak-1",
+        "h0",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h2",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h4",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h6",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h8",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h10",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h12",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h14",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h16",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h18",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h20",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h22",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h24",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h26",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h28",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h30",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h32",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h34",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-2",
+        "h0",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h2",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h4",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h6",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h8",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h10",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h12",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h14",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h16",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h18",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h20",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h22",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h24",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h26",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h28",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h30",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h32",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h34",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-3",
+        "h0",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h2",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h4",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h6",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h8",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h10",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h12",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h14",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h16",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h18",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h20",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h22",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h24",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h26",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h28",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h30",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h32",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h34",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "mid-answer",
+        "human",
+        "unknown"
+      ],
+      [
+        "soak-4",
+        "h0",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h2",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h4",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h6",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h8",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h10",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h12",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h14",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h16",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h18",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h20",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h22",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h24",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h26",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h28",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h30",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h32",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h34",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h0",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h2",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h4",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h6",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h8",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h10",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h12",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h14",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h16",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h18",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h20",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h22",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h24",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h26",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h28",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h30",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "hello",
+        "human",
+        "unknown"
+      ],
+      [
+        "soak-5",
+        "answer",
+        "human",
+        "human"
+      ],
+      [
+        "soak-6",
+        "h0",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h2",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h4",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h6",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h8",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h10",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h12",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h14",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h16",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h18",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h20",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h22",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h24",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h26",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h28",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h30",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "hello",
+        "human",
+        "unknown"
+      ],
+      [
+        "soak-6",
+        "answer",
+        "human",
+        "human"
+      ],
+      [
+        "soak-6",
+        "answer",
+        "human",
+        "unknown"
+      ]
+    ]
+  },
+  {
+    "split": "soak",
+    "mode": "fake model",
+    "sha256": "0ee819eb599f11d79c20ffefe1d7d7e68b7536fd1573c8e65ab143a7623fa85d",
+    "streams": 6,
+    "events": 110,
+    "matrix": {
+      "human": {
+        "human": 3,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 3
+      },
+      "hold_message": {
+        "human": 0,
+        "hold_message": 86,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "ivr": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "voicemail": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "unknown": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 18
+      }
+    },
+    "false_human": 0,
+    "negative_events": 104,
+    "false_human_rate": 0.0,
+    "missed_human_events": 3,
+    "missed_human_episodes": 0,
+    "human_episodes": 3,
+    "unknown_fraction": 0.19090909090909092,
+    "negative_exposure_hours": 3.38375,
+    "false_per_negative_hour": 0.0,
+    "detection_delays_ms": [
+      0,
+      2500,
+      2500
+    ],
+    "model_calls": 3,
+    "predictions": [
+      [
+        "soak-1",
+        "h0",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h2",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h4",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h6",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h8",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h10",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h12",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h14",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h16",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h18",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h20",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h22",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h24",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h26",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h28",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h30",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h32",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-1",
+        "h34",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-2",
+        "h0",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h2",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h4",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h6",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h8",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h10",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h12",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h14",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h16",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h18",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h20",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h22",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h24",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h26",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h28",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h30",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h32",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-2",
+        "h34",
+        "unknown",
+        "unknown"
+      ],
+      [
+        "soak-3",
+        "h0",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h2",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h4",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h6",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h8",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h10",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h12",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h14",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h16",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h18",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h20",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h22",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h24",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h26",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h28",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h30",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h32",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "h34",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-3",
+        "mid-answer",
+        "human",
+        "human"
+      ],
+      [
+        "soak-4",
+        "h0",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h2",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h4",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h6",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h8",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h10",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h12",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h14",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h16",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h18",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h20",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h22",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h24",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h26",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h28",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h30",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h32",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-4",
+        "h34",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h0",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h2",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h4",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h6",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h8",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h10",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h12",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h14",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h16",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h18",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h20",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h22",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h24",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h26",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h28",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "h30",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-5",
+        "hello",
+        "human",
+        "unknown"
+      ],
+      [
+        "soak-5",
+        "answer",
+        "human",
+        "human"
+      ],
+      [
+        "soak-6",
+        "h0",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h2",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h4",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h6",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h8",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h10",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h12",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h14",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h16",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h18",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h20",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h22",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h24",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h26",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h28",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "h30",
+        "hold_message",
+        "hold_message"
+      ],
+      [
+        "soak-6",
+        "hello",
+        "human",
+        "unknown"
+      ],
+      [
+        "soak-6",
+        "answer",
+        "human",
+        "human"
+      ],
+      [
+        "soak-6",
+        "answer",
+        "human",
+        "unknown"
+      ]
+    ]
+  }
+]

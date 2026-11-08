@@ -1,0 +1,16 @@
+# Round 25: what each L1 test affected by L2 round 5 sends, through the real engine (I = information-only, R = restricted).
+# The model is scripted to reply with the unsafe word; 'sent' is every text/sendDigits frame the Relay received.
+I r16c spoken reply name/number | model: ABC 123 | sent: [['text', 'Agent.']] | [['ivr_action', {'state': 'automated_assistant', 'phrase_id': 'agent'}]]
+I r18 N16_probe1 callback yes | model: yes | sent: [] | [['ivr_action_skipped', {'state': 'automated_assistant', 'why': 'callback, payment or change wording'}]]
+I r23 reviewer case 1 | model: agent | sent: [] | [['ivr_action_skipped', {'state': 'automated_assistant', 'why': 'callback, payment or change wording'}]]
+I r23 reviewer case 2 | model: representative | sent: [] | [['ivr_action_skipped', {'state': 'automated_assistant', 'why': 'callback, payment or change wording'}]]
+I r23 reviewer case 3 | model: agent | sent: [] | [['restricted_action_blocked', {'why': 'this menu is a callback offer: nothing is sent for it'}]]
+I r23 reviewer case 4 | model: agent | sent: [['text', 'Representative.']] | [['ivr_action', {'state': 'automated_assistant', 'phrase_id': 'representative'}]]
+I r23 no-option fixture (ring) | model: representative | sent: [] | [['ivr_action_skipped', {'state': 'automated_assistant', 'why': 'callback, payment or change wording'}]]
+R r16c spoken reply name/number | model: ABC 123 | sent: [['text', 'Agent.']] | [['ivr_action', {'state': 'automated_assistant', 'phrase_id': 'agent'}]]
+R r18 N16_probe1 callback yes | model: yes | sent: [] | [['ivr_action_skipped', {'state': 'automated_assistant', 'why': 'callback, payment or change wording'}]]
+R r23 reviewer case 1 | model: agent | sent: [] | [['ivr_action_skipped', {'state': 'automated_assistant', 'why': 'callback, payment or change wording'}]]
+R r23 reviewer case 2 | model: representative | sent: [] | [['ivr_action_skipped', {'state': 'automated_assistant', 'why': 'callback, payment or change wording'}]]
+R r23 reviewer case 3 | model: agent | sent: [] | [['restricted_action_blocked', {'why': 'this menu is a callback offer: nothing is sent for it'}]]
+R r23 reviewer case 4 | model: agent | sent: [['text', 'Representative.']] | [['ivr_action', {'state': 'automated_assistant', 'phrase_id': 'representative'}]]
+R r23 no-option fixture (ring) | model: representative | sent: [] | [['ivr_action_skipped', {'state': 'automated_assistant', 'why': 'callback, payment or change wording'}]]

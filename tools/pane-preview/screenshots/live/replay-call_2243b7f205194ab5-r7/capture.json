@@ -1,0 +1,519 @@
+{
+  "label": "replay-call_2243b7f205194ab5",
+  "store": "replay",
+  "shots": [
+    {
+      "file": "tick-0001.png",
+      "kind": "tick",
+      "at": "2026-11-06T06:17:16.890Z",
+      "status": null,
+      "clock": null
+    },
+    {
+      "file": "state-01-dialing.png",
+      "kind": "state",
+      "at": "2026-11-06T06:17:26.884Z",
+      "status": "Dialing",
+      "clock": "0:08",
+      "state": "dialing",
+      "shownOnPane": true,
+      "mirroredAt": "2026-11-06T06:17:16.716Z"
+    },
+    {
+      "file": "tick-0002.png",
+      "kind": "tick",
+      "at": "2026-11-06T06:17:27.184Z",
+      "status": "Dialing",
+      "clock": "0:08"
+    },
+    {
+      "file": "tick-0003.png",
+      "kind": "tick",
+      "at": "2026-11-06T06:17:27.626Z",
+      "status": "Dialing",
+      "clock": "0:08"
+    },
+    {
+      "file": "tick-0004.png",
+      "kind": "tick",
+      "at": "2026-11-06T06:17:32.110Z",
+      "status": "Dialing",
+      "clock": "0:12"
+    },
+    {
+      "file": "state-02-human.png",
+      "kind": "state",
+      "at": "2026-11-06T06:17:35.131Z",
+      "status": "A person answered",
+      "clock": null,
+      "state": "human_detected",
+      "shownOnPane": true,
+      "mirroredAt": "2026-11-06T06:17:33.996Z"
+    },
+    {
+      "file": "state-03-owner-ring.png",
+      "kind": "state",
+      "at": "2026-11-06T06:17:37.291Z",
+      "status": "Ringing your phone",
+      "clock": null,
+      "state": "ringing_owner",
+      "shownOnPane": true,
+      "mirroredAt": "2026-11-06T06:17:35.017Z"
+    },
+    {
+      "file": "tick-0005.png",
+      "kind": "tick",
+      "at": "2026-11-06T06:17:37.615Z",
+      "status": "Ringing your phone",
+      "clock": null
+    },
+    {
+      "file": "tick-0006.png",
+      "kind": "tick",
+      "at": "2026-11-06T06:17:42.102Z",
+      "status": "Ringing your phone",
+      "clock": null
+    },
+    {
+      "file": "tick-0007.png",
+      "kind": "tick",
+      "at": "2026-11-06T06:17:46.994Z",
+      "status": "Ringing your phone",
+      "clock": null
+    },
+    {
+      "file": "tick-0008.png",
+      "kind": "tick",
+      "at": "2026-11-06T06:17:52.098Z",
+      "status": "Ringing your phone",
+      "clock": null
+    },
+    {
+      "file": "state-04-fallback-agent.png",
+      "kind": "state",
+      "at": "2026-11-06T06:17:56.172Z",
+      "status": "Hermes is talking",
+      "clock": "0:00",
+      "state": "agent_talking",
+      "shownOnPane": true,
+      "mirroredAt": "2026-11-06T06:17:54.859Z"
+    },
+    {
+      "file": "tick-0009.png",
+      "kind": "tick",
+      "at": "2026-11-06T06:17:56.902Z",
+      "status": "Hermes is talking",
+      "clock": "0:01"
+    },
+    {
+      "file": "tick-0010.png",
+      "kind": "tick",
+      "at": "2026-11-06T06:18:02.025Z",
+      "status": "Hermes is talking",
+      "clock": "0:06"
+    },
+    {
+      "file": "tick-0011.png",
+      "kind": "tick",
+      "at": "2026-11-06T06:18:07.126Z",
+      "status": "Hermes is talking",
+      "clock": "0:11"
+    },
+    {
+      "file": "tick-0012.png",
+      "kind": "tick",
+      "at": "2026-11-06T06:18:12.028Z",
+      "status": "Hermes is talking",
+      "clock": "0:16"
+    },
+    {
+      "file": "state-05-ended.png",
+      "kind": "state",
+      "at": "2026-11-06T06:18:18.326Z",
+      "status": "Call ended",
+      "clock": null,
+      "state": "ended",
+      "shownOnPane": true,
+      "mirroredAt": "2026-11-06T06:18:16.190Z"
+    },
+    {
+      "file": "tick-0013.png",
+      "kind": "tick",
+      "at": "2026-11-06T06:18:18.662Z",
+      "status": "Call ended",
+      "clock": null
+    },
+    {
+      "file": "tick-0014.png",
+      "kind": "tick",
+      "at": "2026-11-06T06:18:21.944Z",
+      "status": "Call ended",
+      "clock": null
+    }
+  ],
+  "log": [
+    {
+      "at": 1793945835907,
+      "replay": {
+        "replay": "started",
+        "call": "call_ad40e683e217416b",
+        "source_call": "call_2243b7f205194ab5",
+        "steps": 24
+      }
+    },
+    {
+      "at": 1793945836716,
+      "mirror": {
+        "event": "appeared",
+        "call": "call_ad40e683e217416b",
+        "state": "dialing",
+        "lines": 0,
+        "at": 1793945836.716413
+      }
+    },
+    {
+      "at": 1793945838381,
+      "replay": {
+        "replay": "started",
+        "at_offset": 2.46
+      }
+    },
+    {
+      "at": 1793945838753,
+      "mirror": {
+        "event": "update",
+        "call": "call_ad40e683e217416b",
+        "state": "dialing",
+        "lines": 0,
+        "at": 1793945838.752898
+      }
+    },
+    {
+      "at": 1793945839074,
+      "replay": {
+        "replay": "line",
+        "at_offset": 3.16
+      }
+    },
+    {
+      "at": 1793945839260,
+      "mirror": {
+        "event": "update",
+        "call": "call_ad40e683e217416b",
+        "state": "dialing",
+        "lines": 1,
+        "at": 1793945839.2599611
+      }
+    },
+    {
+      "at": 1793945843806,
+      "replay": {
+        "replay": "line",
+        "at_offset": 7.89
+      }
+    },
+    {
+      "at": 1793945843831,
+      "mirror": {
+        "event": "update",
+        "call": "call_ad40e683e217416b",
+        "state": "dialing",
+        "lines": 2,
+        "at": 1793945843.831681
+      }
+    },
+    {
+      "at": 1793945846303,
+      "replay": {
+        "replay": "line",
+        "at_offset": 10.39
+      }
+    },
+    {
+      "at": 1793945846383,
+      "mirror": {
+        "event": "update",
+        "call": "call_ad40e683e217416b",
+        "state": "dialing",
+        "lines": 3,
+        "at": 1793945846.3836968
+      }
+    },
+    {
+      "at": 1793945848149,
+      "replay": {
+        "replay": "line",
+        "at_offset": 12.24
+      }
+    },
+    {
+      "at": 1793945848415,
+      "mirror": {
+        "event": "update",
+        "call": "call_ad40e683e217416b",
+        "state": "dialing",
+        "lines": 4,
+        "at": 1793945848.415126
+      }
+    },
+    {
+      "at": 1793945850651,
+      "replay": {
+        "replay": "line",
+        "at_offset": 14.74
+      }
+    },
+    {
+      "at": 1793945850766,
+      "replay": {
+        "replay": "line",
+        "at_offset": 14.85
+      }
+    },
+    {
+      "at": 1793945850939,
+      "mirror": {
+        "event": "update",
+        "call": "call_ad40e683e217416b",
+        "state": "dialing",
+        "lines": 6,
+        "at": 1793945850.9393432
+      }
+    },
+    {
+      "at": 1793945853567,
+      "replay": {
+        "replay": "state",
+        "at_offset": 17.65
+      }
+    },
+    {
+      "at": 1793945853568,
+      "replay": {
+        "replay": "line",
+        "at_offset": 17.65
+      }
+    },
+    {
+      "at": 1793945853996,
+      "mirror": {
+        "event": "state",
+        "call": "call_ad40e683e217416b",
+        "state": "human_detected",
+        "lines": 7,
+        "at": 1793945853.9964359
+      }
+    },
+    {
+      "at": 1793945854760,
+      "replay": {
+        "replay": "line",
+        "at_offset": 18.85
+      }
+    },
+    {
+      "at": 1793945854760,
+      "replay": {
+        "replay": "state",
+        "at_offset": 18.85
+      }
+    },
+    {
+      "at": 1793945855130,
+      "mirror": {
+        "event": "state",
+        "call": "call_ad40e683e217416b",
+        "state": "ringing_owner",
+        "lines": 8,
+        "at": 1793945855.017477
+      }
+    },
+    {
+      "at": 1793945869605,
+      "replay": {
+        "replay": "line",
+        "at_offset": 33.69
+      }
+    },
+    {
+      "at": 1793945869606,
+      "replay": {
+        "replay": "line",
+        "at_offset": 33.69
+      }
+    },
+    {
+      "at": 1793945869773,
+      "mirror": {
+        "event": "update",
+        "call": "call_ad40e683e217416b",
+        "state": "ringing_owner",
+        "lines": 10,
+        "at": 1793945869.772789
+      }
+    },
+    {
+      "at": 1793945872405,
+      "replay": {
+        "replay": "line",
+        "at_offset": 36.49
+      }
+    },
+    {
+      "at": 1793945872836,
+      "mirror": {
+        "event": "update",
+        "call": "call_ad40e683e217416b",
+        "state": "ringing_owner",
+        "lines": 11,
+        "at": 1793945872.836256
+      }
+    },
+    {
+      "at": 1793945874764,
+      "replay": {
+        "replay": "line",
+        "at_offset": 38.85
+      }
+    },
+    {
+      "at": 1793945874765,
+      "replay": {
+        "replay": "line",
+        "at_offset": 38.85
+      }
+    },
+    {
+      "at": 1793945874765,
+      "replay": {
+        "replay": "state",
+        "at_offset": 38.85
+      }
+    },
+    {
+      "at": 1793945874859,
+      "mirror": {
+        "event": "state",
+        "call": "call_ad40e683e217416b",
+        "state": "agent_talking",
+        "lines": 13,
+        "at": 1793945874.8599029
+      }
+    },
+    {
+      "at": 1793945877120,
+      "replay": {
+        "replay": "line",
+        "at_offset": 41.21
+      }
+    },
+    {
+      "at": 1793945877384,
+      "mirror": {
+        "event": "update",
+        "call": "call_ad40e683e217416b",
+        "state": "agent_talking",
+        "lines": 14,
+        "at": 1793945877.383959
+      }
+    },
+    {
+      "at": 1793945879248,
+      "replay": {
+        "replay": "line",
+        "at_offset": 43.33
+      }
+    },
+    {
+      "at": 1793945879421,
+      "mirror": {
+        "event": "update",
+        "call": "call_ad40e683e217416b",
+        "state": "agent_talking",
+        "lines": 15,
+        "at": 1793945879.4211578
+      }
+    },
+    {
+      "at": 1793945883780,
+      "replay": {
+        "replay": "line",
+        "at_offset": 47.87
+      }
+    },
+    {
+      "at": 1793945883976,
+      "mirror": {
+        "event": "update",
+        "call": "call_ad40e683e217416b",
+        "state": "agent_talking",
+        "lines": 16,
+        "at": 1793945883.976213
+      }
+    },
+    {
+      "at": 1793945886510,
+      "replay": {
+        "replay": "line",
+        "at_offset": 50.59
+      }
+    },
+    {
+      "at": 1793945886510,
+      "replay": {
+        "replay": "line",
+        "at_offset": 50.59
+      }
+    },
+    {
+      "at": 1793945886522,
+      "mirror": {
+        "event": "update",
+        "call": "call_ad40e683e217416b",
+        "state": "agent_talking",
+        "lines": 18,
+        "at": 1793945886.522769
+      }
+    },
+    {
+      "at": 1793945889784,
+      "replay": {
+        "replay": "line",
+        "at_offset": 53.87
+      }
+    },
+    {
+      "at": 1793945890089,
+      "mirror": {
+        "event": "update",
+        "call": "call_ad40e683e217416b",
+        "state": "agent_talking",
+        "lines": 19,
+        "at": 1793945890.0891972
+      }
+    },
+    {
+      "at": 1793945895895,
+      "replay": {
+        "replay": "end",
+        "at_offset": 59.99
+      }
+    },
+    {
+      "at": 1793945895896,
+      "replay": {
+        "replay": "done"
+      }
+    },
+    {
+      "at": 1793945896190,
+      "mirror": {
+        "event": "state",
+        "call": "call_ad40e683e217416b",
+        "state": "ended",
+        "lines": 19,
+        "at": 1793945896.190667
+      }
+    }
+  ]
+}

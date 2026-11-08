@@ -1,0 +1,3 @@
+{"command": "listen", "line": "[the line]", "minutes": 8, "owner": "[owner phone (Spectrum)]", "ready": true}
+{"call_id": "call_94909a575a8941db", "command": "listen", "evidence": "evidence/trial/call_94909a575a8941db", "tunnel": "stopped"}
+exit 0

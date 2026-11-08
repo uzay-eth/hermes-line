@@ -1,0 +1,452 @@
+[
+  {
+    "mode": "no model",
+    "events": 25,
+    "matrix": {
+      "human": {
+        "human": 2,
+        "automated_assistant": 0,
+        "hold_music": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "automated_assistant": {
+        "human": 0,
+        "automated_assistant": 17,
+        "hold_music": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "hold_music": {
+        "human": 0,
+        "automated_assistant": 0,
+        "hold_music": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "hold_message": {
+        "human": 0,
+        "automated_assistant": 0,
+        "hold_music": 0,
+        "hold_message": 3,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "ivr": {
+        "human": 0,
+        "automated_assistant": 0,
+        "hold_music": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "voicemail": {
+        "human": 0,
+        "automated_assistant": 0,
+        "hold_music": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "unknown": {
+        "human": 0,
+        "automated_assistant": 0,
+        "hold_music": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 3
+      }
+    },
+    "false_humans": 0,
+    "missed_humans": 0,
+    "model_calls": 0,
+    "max_ms": 2.855458000000002,
+    "rows": [
+      {
+        "stream": "delta-run-1-masked",
+        "expected": "unknown",
+        "label": "unknown",
+        "latency_ms": 2.855458000000002
+      },
+      {
+        "stream": "delta-run-1-masked",
+        "expected": "unknown",
+        "label": "unknown",
+        "latency_ms": 0.06616699999999892
+      },
+      {
+        "stream": "delta-run-1-masked",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.05379200000000042
+      },
+      {
+        "stream": "delta-run-1-masked",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.13858300000000115
+      },
+      {
+        "stream": "delta-run-1-masked",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.15625000000000014
+      },
+      {
+        "stream": "delta-run-1-masked",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.08075000000000096
+      },
+      {
+        "stream": "delta-run-1-masked",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.08066699999999954
+      },
+      {
+        "stream": "delta-run-1-masked",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.01612499999999878
+      },
+      {
+        "stream": "utility virtual assistant",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.03500000000000031
+      },
+      {
+        "stream": "utility virtual assistant",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.03729200000000127
+      },
+      {
+        "stream": "utility virtual assistant",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.04741699999999752
+      },
+      {
+        "stream": "utility virtual assistant",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.05262500000000059
+      },
+      {
+        "stream": "utility virtual assistant",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.04483400000000054
+      },
+      {
+        "stream": "airline digital assistant",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.027332999999997443
+      },
+      {
+        "stream": "airline digital assistant",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.040416999999993986
+      },
+      {
+        "stream": "airline digital assistant",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.04450000000000287
+      },
+      {
+        "stream": "airline digital assistant",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.039833000000003005
+      },
+      {
+        "stream": "transfer to human",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.02358300000000063
+      },
+      {
+        "stream": "transfer to human",
+        "expected": "hold_message",
+        "label": "hold_message",
+        "latency_ms": 0.036541000000001045
+      },
+      {
+        "stream": "transfer to human",
+        "expected": "unknown",
+        "label": "unknown",
+        "latency_ms": 0.06641699999999917
+      },
+      {
+        "stream": "transfer to human",
+        "expected": "human",
+        "label": "human",
+        "latency_ms": 0.04574999999999718
+      },
+      {
+        "stream": "queue to human",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.02379100000000217
+      },
+      {
+        "stream": "queue to human",
+        "expected": "hold_message",
+        "label": "hold_message",
+        "latency_ms": 0.03770800000000435
+      },
+      {
+        "stream": "queue to human",
+        "expected": "hold_message",
+        "label": "hold_message",
+        "latency_ms": 0.036833000000000005
+      },
+      {
+        "stream": "queue to human",
+        "expected": "human",
+        "label": "human",
+        "latency_ms": 0.050415999999997574
+      }
+    ]
+  },
+  {
+    "mode": "overconfident fake",
+    "events": 25,
+    "matrix": {
+      "human": {
+        "human": 2,
+        "automated_assistant": 0,
+        "hold_music": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "automated_assistant": {
+        "human": 0,
+        "automated_assistant": 17,
+        "hold_music": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "hold_music": {
+        "human": 0,
+        "automated_assistant": 0,
+        "hold_music": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "hold_message": {
+        "human": 0,
+        "automated_assistant": 0,
+        "hold_music": 0,
+        "hold_message": 3,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "ivr": {
+        "human": 0,
+        "automated_assistant": 0,
+        "hold_music": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "voicemail": {
+        "human": 0,
+        "automated_assistant": 0,
+        "hold_music": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "unknown": {
+        "human": 0,
+        "automated_assistant": 0,
+        "hold_music": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 3
+      }
+    },
+    "false_humans": 0,
+    "missed_humans": 0,
+    "model_calls": 0,
+    "max_ms": 0.07333300000000181,
+    "rows": [
+      {
+        "stream": "delta-run-1-masked",
+        "expected": "unknown",
+        "label": "unknown",
+        "latency_ms": 0.03141699999999886
+      },
+      {
+        "stream": "delta-run-1-masked",
+        "expected": "unknown",
+        "label": "unknown",
+        "latency_ms": 0.046416999999999986
+      },
+      {
+        "stream": "delta-run-1-masked",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.03779200000000177
+      },
+      {
+        "stream": "delta-run-1-masked",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.04095800000000066
+      },
+      {
+        "stream": "delta-run-1-masked",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.0642500000000018
+      },
+      {
+        "stream": "delta-run-1-masked",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.07250000000000312
+      },
+      {
+        "stream": "delta-run-1-masked",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.07333300000000181
+      },
+      {
+        "stream": "delta-run-1-masked",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.015749999999994935
+      },
+      {
+        "stream": "utility virtual assistant",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.029000000000001247
+      },
+      {
+        "stream": "utility virtual assistant",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.0376659999999987
+      },
+      {
+        "stream": "utility virtual assistant",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.03929199999999633
+      },
+      {
+        "stream": "utility virtual assistant",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.044708999999996946
+      },
+      {
+        "stream": "utility virtual assistant",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.041625000000003465
+      },
+      {
+        "stream": "airline digital assistant",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.02487500000000059
+      },
+      {
+        "stream": "airline digital assistant",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.036833000000000005
+      },
+      {
+        "stream": "airline digital assistant",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.041540999999999106
+      },
+      {
+        "stream": "airline digital assistant",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.03729200000000127
+      },
+      {
+        "stream": "transfer to human",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.02112499999999684
+      },
+      {
+        "stream": "transfer to human",
+        "expected": "hold_message",
+        "label": "hold_message",
+        "latency_ms": 0.03470800000000135
+      },
+      {
+        "stream": "transfer to human",
+        "expected": "unknown",
+        "label": "unknown",
+        "latency_ms": 0.059834000000001664
+      },
+      {
+        "stream": "transfer to human",
+        "expected": "human",
+        "label": "human",
+        "latency_ms": 0.04304200000000008
+      },
+      {
+        "stream": "queue to human",
+        "expected": "automated_assistant",
+        "label": "automated_assistant",
+        "latency_ms": 0.022542000000000395
+      },
+      {
+        "stream": "queue to human",
+        "expected": "hold_message",
+        "label": "hold_message",
+        "latency_ms": 0.03575000000000106
+      },
+      {
+        "stream": "queue to human",
+        "expected": "hold_message",
+        "label": "hold_message",
+        "latency_ms": 0.03566700000000311
+      },
+      {
+        "stream": "queue to human",
+        "expected": "human",
+        "label": "human",
+        "latency_ms": 0.04408299999999338
+      }
+    ]
+  }
+]

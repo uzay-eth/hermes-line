@@ -1,0 +1,658 @@
+[
+  {
+    "theme": "light",
+    "scene": "on_hold",
+    "card": "#f4f4f5",
+    "tone": "waiting",
+    "rows": [
+      {
+        "kind": "text",
+        "sel": ".hlc-task-meta",
+        "ink": "#4a4d51",
+        "ratio": 7.76,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-heard-at",
+        "ink": "#4a4d51",
+        "ratio": 7.76,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"false\"] .hlc-label",
+        "ink": "#4a4d51",
+        "ratio": 7.76,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"true\"] .hlc-label",
+        "ink": "#2c2f34",
+        "ratio": 12.21,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-headline",
+        "ink": "#2c2f34",
+        "ratio": 12.21,
+        "need": 4.5
+      },
+      {
+        "kind": "segment",
+        "sel": "segment",
+        "ink": "#7c7f82",
+        "ratio": 3.65,
+        "need": 3
+      },
+      {
+        "kind": "segment",
+        "sel": "segment (live)",
+        "ink": "#0053fd",
+        "ratio": 5.23,
+        "need": 3
+      }
+    ]
+  },
+  {
+    "theme": "light",
+    "scene": "human_detected",
+    "card": "#dbe6fc",
+    "tone": "attention",
+    "rows": [
+      {
+        "kind": "text",
+        "sel": ".hlc-task-meta",
+        "ink": "#454a52",
+        "ratio": 7.1,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-quote-by",
+        "ink": "#454a52",
+        "ratio": 7.1,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-sub",
+        "ink": "#454a52",
+        "ratio": 7.1,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"false\"] .hlc-label",
+        "ink": "#454a52",
+        "ratio": 7.1,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"true\"] .hlc-label",
+        "ink": "#2a2e34",
+        "ratio": 10.78,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-headline",
+        "ink": "#0053fd",
+        "ratio": 4.56,
+        "need": 4.5
+      },
+      {
+        "kind": "segment",
+        "sel": "segment",
+        "ink": "#717985",
+        "ratio": 3.49,
+        "need": 3
+      },
+      {
+        "kind": "segment",
+        "sel": "segment (live)",
+        "ink": "#0053fd",
+        "ratio": 4.56,
+        "need": 3
+      }
+    ]
+  },
+  {
+    "theme": "light",
+    "scene": "ringing_owner",
+    "card": "#dbe6fc",
+    "tone": "attention",
+    "rows": [
+      {
+        "kind": "text",
+        "sel": ".hlc-task-meta",
+        "ink": "#454a52",
+        "ratio": 7.1,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-quote-by",
+        "ink": "#454a52",
+        "ratio": 7.1,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-sub",
+        "ink": "#454a52",
+        "ratio": 7.1,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"false\"] .hlc-label",
+        "ink": "#454a52",
+        "ratio": 7.1,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"true\"] .hlc-label",
+        "ink": "#2a2e34",
+        "ratio": 10.78,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-headline",
+        "ink": "#0053fd",
+        "ratio": 4.56,
+        "need": 4.5
+      },
+      {
+        "kind": "segment",
+        "sel": "segment",
+        "ink": "#717985",
+        "ratio": 3.49,
+        "need": 3
+      },
+      {
+        "kind": "segment",
+        "sel": "segment (live)",
+        "ink": "#0053fd",
+        "ratio": 4.56,
+        "need": 3
+      }
+    ]
+  },
+  {
+    "theme": "light",
+    "scene": "owner_connected",
+    "card": "#ecf1fc",
+    "tone": "active",
+    "rows": [
+      {
+        "kind": "text",
+        "sel": ".hlc-task-meta",
+        "ink": "#484c52",
+        "ratio": 7.62,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-sub",
+        "ink": "#484c52",
+        "ratio": 7.62,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"false\"] .hlc-label",
+        "ink": "#484c52",
+        "ratio": 7.62,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"true\"] .hlc-label",
+        "ink": "#2b2f34",
+        "ratio": 11.9,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-headline",
+        "ink": "#2b2f34",
+        "ratio": 11.9,
+        "need": 4.5
+      },
+      {
+        "kind": "segment",
+        "sel": "segment",
+        "ink": "#797e85",
+        "ratio": 3.62,
+        "need": 3
+      },
+      {
+        "kind": "segment",
+        "sel": "segment (live)",
+        "ink": "#0053fd",
+        "ratio": 5.09,
+        "need": 3
+      }
+    ]
+  },
+  {
+    "theme": "light",
+    "scene": "ended",
+    "card": "#f4f4f5",
+    "tone": "done",
+    "rows": [
+      {
+        "kind": "text",
+        "sel": ".hlc-task-meta",
+        "ink": "#4a4d51",
+        "ratio": 7.76,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-sub",
+        "ink": "#4a4d51",
+        "ratio": 7.76,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"false\"] .hlc-label",
+        "ink": "#4a4d51",
+        "ratio": 7.76,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-headline",
+        "ink": "#2c2f34",
+        "ratio": 12.21,
+        "need": 4.5
+      },
+      {
+        "kind": "segment",
+        "sel": "segment",
+        "ink": "#7c7f82",
+        "ratio": 3.65,
+        "need": 3
+      }
+    ]
+  },
+  {
+    "theme": "light",
+    "scene": "failed",
+    "card": "#f7ebef",
+    "tone": "failed",
+    "rows": [
+      {
+        "kind": "text",
+        "sel": ".hlc-task-meta",
+        "ink": "#4a4b50",
+        "ratio": 7.5,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-sub",
+        "ink": "#4a4b50",
+        "ratio": 7.5,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"false\"] .hlc-label",
+        "ink": "#4a4b50",
+        "ratio": 7.5,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-headline",
+        "ink": "#b22c50",
+        "ratio": 5.38,
+        "need": 4.5
+      },
+      {
+        "kind": "segment",
+        "sel": "segment",
+        "ink": "#7d7c7f",
+        "ratio": 3.59,
+        "need": 3
+      }
+    ]
+  },
+  {
+    "theme": "dark",
+    "scene": "on_hold",
+    "card": "#151619",
+    "tone": "waiting",
+    "rows": [
+      {
+        "kind": "text",
+        "sel": ".hlc-task-meta",
+        "ink": "#bcc2c7",
+        "ratio": 10.09,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-heard-at",
+        "ink": "#bcc2c7",
+        "ratio": 10.09,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"false\"] .hlc-label",
+        "ink": "#bcc2c7",
+        "ratio": 10.09,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"true\"] .hlc-label",
+        "ink": "#dae0e6",
+        "ratio": 13.67,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-headline",
+        "ink": "#dae0e6",
+        "ratio": 13.67,
+        "need": 4.5
+      },
+      {
+        "kind": "segment",
+        "sel": "segment",
+        "ink": "#8a8e93",
+        "ratio": 5.53,
+        "need": 3
+      },
+      {
+        "kind": "segment",
+        "sel": "segment (live)",
+        "ink": "#4a84fe",
+        "ratio": 5.21,
+        "need": 3
+      }
+    ]
+  },
+  {
+    "theme": "dark",
+    "scene": "human_detected",
+    "card": "#161e31",
+    "tone": "attention",
+    "rows": [
+      {
+        "kind": "text",
+        "sel": ".hlc-task-meta",
+        "ink": "#bcc4cb",
+        "ratio": 9.39,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-quote-by",
+        "ink": "#bcc4cb",
+        "ratio": 9.39,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-sub",
+        "ink": "#bcc4cb",
+        "ratio": 9.39,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"false\"] .hlc-label",
+        "ink": "#bcc4cb",
+        "ratio": 9.39,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"true\"] .hlc-label",
+        "ink": "#dae1e8",
+        "ratio": 12.57,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-headline",
+        "ink": "#4a84fe",
+        "ratio": 4.76,
+        "need": 4.5
+      },
+      {
+        "kind": "segment",
+        "sel": "segment",
+        "ink": "#8b929e",
+        "ratio": 5.3,
+        "need": 3
+      },
+      {
+        "kind": "segment",
+        "sel": "segment (live)",
+        "ink": "#4a84fe",
+        "ratio": 4.76,
+        "need": 3
+      }
+    ]
+  },
+  {
+    "theme": "dark",
+    "scene": "ringing_owner",
+    "card": "#161e31",
+    "tone": "attention",
+    "rows": [
+      {
+        "kind": "text",
+        "sel": ".hlc-task-meta",
+        "ink": "#bcc4cb",
+        "ratio": 9.39,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-quote-by",
+        "ink": "#bcc4cb",
+        "ratio": 9.39,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-sub",
+        "ink": "#bcc4cb",
+        "ratio": 9.39,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"false\"] .hlc-label",
+        "ink": "#bcc4cb",
+        "ratio": 9.39,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"true\"] .hlc-label",
+        "ink": "#dae1e8",
+        "ratio": 12.57,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-headline",
+        "ink": "#4a84fe",
+        "ratio": 4.76,
+        "need": 4.5
+      },
+      {
+        "kind": "segment",
+        "sel": "segment",
+        "ink": "#8b929e",
+        "ratio": 5.3,
+        "need": 3
+      },
+      {
+        "kind": "segment",
+        "sel": "segment (live)",
+        "ink": "#4a84fe",
+        "ratio": 4.76,
+        "need": 3
+      }
+    ]
+  },
+  {
+    "theme": "dark",
+    "scene": "owner_connected",
+    "card": "#111620",
+    "tone": "active",
+    "rows": [
+      {
+        "kind": "text",
+        "sel": ".hlc-task-meta",
+        "ink": "#bbc2c8",
+        "ratio": 10.06,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-sub",
+        "ink": "#bbc2c8",
+        "ratio": 10.06,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"false\"] .hlc-label",
+        "ink": "#bbc2c8",
+        "ratio": 10.06,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"true\"] .hlc-label",
+        "ink": "#d9e0e7",
+        "ratio": 13.63,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-headline",
+        "ink": "#d9e0e7",
+        "ratio": 13.63,
+        "need": 4.5
+      },
+      {
+        "kind": "segment",
+        "sel": "segment",
+        "ink": "#898f96",
+        "ratio": 5.52,
+        "need": 3
+      },
+      {
+        "kind": "segment",
+        "sel": "segment (live)",
+        "ink": "#4a84fe",
+        "ratio": 5.19,
+        "need": 3
+      }
+    ]
+  },
+  {
+    "theme": "dark",
+    "scene": "ended",
+    "card": "#151619",
+    "tone": "done",
+    "rows": [
+      {
+        "kind": "text",
+        "sel": ".hlc-task-meta",
+        "ink": "#bcc2c7",
+        "ratio": 10.09,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-sub",
+        "ink": "#bcc2c7",
+        "ratio": 10.09,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"false\"] .hlc-label",
+        "ink": "#bcc2c7",
+        "ratio": 10.09,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-headline",
+        "ink": "#dae0e6",
+        "ratio": 13.67,
+        "need": 4.5
+      },
+      {
+        "kind": "segment",
+        "sel": "segment",
+        "ink": "#8a8e93",
+        "ratio": 5.53,
+        "need": 3
+      }
+    ]
+  },
+  {
+    "theme": "dark",
+    "scene": "failed",
+    "card": "#1f151a",
+    "tone": "failed",
+    "rows": [
+      {
+        "kind": "text",
+        "sel": ".hlc-task-meta",
+        "ink": "#bec2c7",
+        "ratio": 9.94,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-sub",
+        "ink": "#bec2c7",
+        "ratio": 9.94,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"false\"] .hlc-label",
+        "ink": "#bec2c7",
+        "ratio": 9.94,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-headline",
+        "ink": "#e5758c",
+        "ratio": 6.14,
+        "need": 4.5
+      },
+      {
+        "kind": "segment",
+        "sel": "segment",
+        "ink": "#8f8e94",
+        "ratio": 5.48,
+        "need": 3
+      }
+    ]
+  }
+]

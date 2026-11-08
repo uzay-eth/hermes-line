@@ -1,0 +1,488 @@
+{
+  "what": "Hermes model route from HERMES_HOME config, fake ConversationRelay over loopback ingress; no STT/TTS/phone",
+  "driver": "acp",
+  "acp": {
+    "session_id": "local-7c40e1a5dc33d8a4a299de196119562f7cc162ed912db300edd99841086af2ec",
+    "title": {
+      "sent": "hermes-line latency test 2026-11-05 L1 round 3",
+      "reply": "Session title set: hermes-line latency test 2026-11-05 L1 round 3",
+      "error": null
+    }
+  },
+  "route": {
+    "model": "claude-opus-5-5",
+    "provider": "anthropic",
+    "reasoning_effort": "low",
+    "credential": "resolved by Hermes, never read by this script"
+  },
+  "safe_mode_env": "1",
+  "child_processes_after_first_turn": [
+    "python3.14"
+  ],
+  "machine": "arm64",
+  "os": "27.3",
+  "python": "3.14.9",
+  "agent_construction_ms": [
+    808.3
+  ],
+  "turns": [
+    {
+      "usage": {
+        "inputTokens": 4,
+        "outputTokens": 58,
+        "totalTokens": 26951
+      },
+      "turn": 1,
+      "kind": "cold",
+      "first_text_ms": 833.6,
+      "full_ms": 1705.8,
+      "chars": 141
+    },
+    {
+      "usage": {
+        "cachedReadTokens": 26889,
+        "inputTokens": 8,
+        "outputTokens": 91,
+        "totalTokens": 53954
+      },
+      "turn": 2,
+      "kind": "warm",
+      "first_text_ms": 802.2,
+      "full_ms": 1353.7,
+      "chars": 68
+    },
+    {
+      "usage": {
+        "cachedReadTokens": 53855,
+        "inputTokens": 12,
+        "outputTokens": 99,
+        "totalTokens": 80976
+      },
+      "turn": 3,
+      "kind": "warm",
+      "first_text_ms": 652.0,
+      "full_ms": 1139.3,
+      "chars": 20
+    },
+    {
+      "usage": {
+        "cachedReadTokens": 80865,
+        "inputTokens": 16,
+        "outputTokens": 111,
+        "totalTokens": 108030
+      },
+      "turn": 4,
+      "kind": "warm",
+      "first_text_ms": 874.1,
+      "full_ms": 1361.9,
+      "chars": 27
+    },
+    {
+      "usage": {
+        "cachedReadTokens": 107903,
+        "inputTokens": 20,
+        "outputTokens": 137,
+        "totalTokens": 135135
+      },
+      "turn": 5,
+      "kind": "warm",
+      "first_text_ms": 621.2,
+      "full_ms": 1260.7,
+      "chars": 58
+    },
+    {
+      "usage": {
+        "cachedReadTokens": 134978,
+        "inputTokens": 24,
+        "outputTokens": 146,
+        "totalTokens": 162265
+      },
+      "turn": 6,
+      "kind": "warm",
+      "first_text_ms": 604.3,
+      "full_ms": 1160.0,
+      "chars": 15
+    },
+    {
+      "usage": {
+        "cachedReadTokens": 162095,
+        "inputTokens": 28,
+        "outputTokens": 163,
+        "totalTokens": 189433
+      },
+      "turn": 7,
+      "kind": "warm",
+      "first_text_ms": 833.0,
+      "full_ms": 1363.8,
+      "chars": 45
+    },
+    {
+      "usage": {
+        "cachedReadTokens": 189242,
+        "inputTokens": 32,
+        "outputTokens": 247,
+        "totalTokens": 216712
+      },
+      "turn": 8,
+      "kind": "warm",
+      "first_text_ms": 1989.1,
+      "full_ms": 2034.0,
+      "chars": 171
+    },
+    {
+      "usage": {
+        "cachedReadTokens": 216433,
+        "inputTokens": 36,
+        "outputTokens": 336,
+        "totalTokens": 244111
+      },
+      "turn": 9,
+      "kind": "warm",
+      "first_text_ms": 2343.9,
+      "full_ms": 2425.5,
+      "chars": 113
+    },
+    {
+      "usage": {
+        "cachedReadTokens": 243739,
+        "inputTokens": 40,
+        "outputTokens": 445,
+        "totalTokens": 271637
+      },
+      "turn": 10,
+      "kind": "warm",
+      "first_text_ms": 2957.2,
+      "full_ms": 3029.9,
+      "chars": 121
+    },
+    {
+      "usage": {
+        "cachedReadTokens": 271152,
+        "inputTokens": 44,
+        "outputTokens": 469,
+        "totalTokens": 299205
+      },
+      "turn": 11,
+      "kind": "warm",
+      "first_text_ms": 1052.4,
+      "full_ms": 1618.4,
+      "chars": 53
+    },
+    {
+      "usage": {
+        "cachedReadTokens": 298692,
+        "inputTokens": 48,
+        "outputTokens": 488,
+        "totalTokens": 326820
+      },
+      "turn": 12,
+      "kind": "warm",
+      "first_text_ms": 639.9,
+      "full_ms": 1213.0,
+      "chars": 36
+    },
+    {
+      "usage": {
+        "cachedReadTokens": 326284,
+        "inputTokens": 52,
+        "outputTokens": 501,
+        "totalTokens": 354470
+      },
+      "turn": 13,
+      "kind": "warm",
+      "first_text_ms": 869.7,
+      "full_ms": 1370.6,
+      "chars": 22
+    },
+    {
+      "usage": {
+        "cachedReadTokens": 353917,
+        "inputTokens": 56,
+        "outputTokens": 517,
+        "totalTokens": 382163
+      },
+      "turn": 14,
+      "kind": "warm",
+      "first_text_ms": 783.9,
+      "full_ms": 1321.0,
+      "chars": 28
+    }
+  ],
+  "driver_turn_events": [
+    {
+      "first_text_ms": 828.3146249996207,
+      "full_ms": 1702.4,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 800.9946669990313,
+      "full_ms": 1351.7,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 648.8700420013629,
+      "full_ms": 1135.6,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 872.0811249986582,
+      "full_ms": 1359.4,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 619.471332998728,
+      "full_ms": 1254.9,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 601.9034169985389,
+      "full_ms": 1155.3,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 831.689999999071,
+      "full_ms": 1358.5,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 1987.8209169983165,
+      "full_ms": 2030.3,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 2342.09466700122,
+      "full_ms": 2422.7,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 2955.8739170006447,
+      "full_ms": 3026.0,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 1048.3443749999424,
+      "full_ms": 1616.4,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 638.2763749988953,
+      "full_ms": 1209.7,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 866.8944999990345,
+      "full_ms": 1365.7,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 781.481582998822,
+      "full_ms": 1318.7,
+      "interrupted": false
+    }
+  ],
+  "in_call_tool_context": [],
+  "final_state": "agent_talking",
+  "transcript": [
+    {
+      "seq": 1,
+      "speaker": "hermes",
+      "text": "Hi, this is Hermes, an AI assistant calling on behalf of Sam. This call is not recorded.",
+      "ts": 1793869047.643581
+    },
+    {
+      "seq": 2,
+      "speaker": "business",
+      "text": "Good evening, Sample Bistro, this is Mike speaking.",
+      "ts": 1793869047.643834
+    },
+    {
+      "seq": 3,
+      "speaker": "hermes",
+      "text": "Hi, this is Hermes, an AI assistant calling for Sam. Am I speaking with a live person?",
+      "ts": 1793869048.508644
+    },
+    {
+      "seq": 4,
+      "speaker": "business",
+      "text": "Yes, I am a real person",
+      "ts": 1793869048.517063
+    },
+    {
+      "seq": 5,
+      "speaker": "hermes",
+      "text": "Thanks! I'd like to book a table for four this Friday at 7 pm under the name Sam, indoors if possible. If 7 isn't available, 7:30 also works.",
+      "ts": 1793869050.221157
+    },
+    {
+      "seq": 6,
+      "speaker": "business",
+      "text": "Sure, what day and time were you thinking?",
+      "ts": 1793869050.2353878
+    },
+    {
+      "seq": 7,
+      "speaker": "hermes",
+      "text": "This Friday at 7 pm, for four people. If 7 is taken, 7:30 works too.",
+      "ts": 1793869051.5875998
+    },
+    {
+      "seq": 8,
+      "speaker": "business",
+      "text": "And for how many people?",
+      "ts": 1793869051.5890791
+    },
+    {
+      "seq": 9,
+      "speaker": "hermes",
+      "text": "Four people, please.",
+      "ts": 1793869052.725226
+    },
+    {
+      "seq": 10,
+      "speaker": "business",
+      "text": "Okay. What name should I put the reservation under?",
+      "ts": 1793869052.728499
+    },
+    {
+      "seq": 11,
+      "speaker": "hermes",
+      "text": "Under the name Sam, please.",
+      "ts": 1793869054.088356
+    },
+    {
+      "seq": 12,
+      "speaker": "business",
+      "text": "We're actually full at seven. Would seven thirty work instead?",
+      "ts": 1793869054.090394
+    },
+    {
+      "seq": 13,
+      "speaker": "hermes",
+      "text": "Yes, 7:30 works great. Indoor seating if possible, please.",
+      "ts": 1793869055.346346
+    },
+    {
+      "seq": 14,
+      "speaker": "business",
+      "text": "Great. Indoor or patio?",
+      "ts": 1793869055.351797
+    },
+    {
+      "seq": 15,
+      "speaker": "hermes",
+      "text": "Indoor, please.",
+      "ts": 1793869056.508221
+    },
+    {
+      "seq": 16,
+      "speaker": "business",
+      "text": "Any allergies or a special occasion we should know about?",
+      "ts": 1793869056.51145
+    },
+    {
+      "seq": 17,
+      "speaker": "hermes",
+      "text": "No allergies and no special occasion, thanks.",
+      "ts": 1793869057.87082
+    },
+    {
+      "seq": 18,
+      "speaker": "business",
+      "text": "Perfect. Can I get a phone number in case we need to reach you?",
+      "ts": 1793869057.875427
+    },
+    {
+      "seq": 19,
+      "speaker": "hermes",
+      "text": "I'm sorry, I can't give out a phone number, but Sam will call you if anything changes. Could you confirm the booking: four people, this Friday at 7:30, indoors, under Sam?",
+      "ts": 1793869059.906195
+    },
+    {
+      "seq": 20,
+      "speaker": "business",
+      "text": "Got it. Just so you know, we hold tables for fifteen minutes.",
+      "ts": 1793869059.909342
+    },
+    {
+      "seq": 21,
+      "speaker": "hermes",
+      "text": "Understood, fifteen minutes, thank you. So we're all set for four people this Friday at 7:30, indoors, under Sam?",
+      "ts": 1793869062.332476
+    },
+    {
+      "seq": 22,
+      "speaker": "business",
+      "text": "Is there anything else I can help with?",
+      "ts": 1793869062.334883
+    },
+    {
+      "seq": 23,
+      "speaker": "hermes",
+      "text": "No, that's everything. Thanks for booking four people this Friday at 7:30, indoors, under Sam. Have a great day, goodbye!",
+      "ts": 1793869065.3613691
+    },
+    {
+      "seq": 24,
+      "speaker": "business",
+      "text": "Do you need directions or parking information?",
+      "ts": 1793869065.365338
+    },
+    {
+      "seq": 25,
+      "speaker": "hermes",
+      "text": "No thanks, we're all set. Thank you so much, goodbye!",
+      "ts": 1793869066.982393
+    },
+    {
+      "seq": 26,
+      "speaker": "business",
+      "text": "Alright, you're all set for Friday at seven thirty for four.",
+      "ts": 1793869066.9835799
+    },
+    {
+      "seq": 27,
+      "speaker": "hermes",
+      "text": "Perfect, thank you so much. Goodbye!",
+      "ts": 1793869068.193995
+    },
+    {
+      "seq": 28,
+      "speaker": "business",
+      "text": "Sorry, could you repeat the name once more?",
+      "ts": 1793869068.196688
+    },
+    {
+      "seq": 29,
+      "speaker": "hermes",
+      "text": "Sure, the name is Sam.",
+      "ts": 1793869069.5634
+    },
+    {
+      "seq": 30,
+      "speaker": "business",
+      "text": "Thanks. We'll see you Friday. Have a good one!",
+      "ts": 1793869069.567347
+    },
+    {
+      "seq": 31,
+      "speaker": "hermes",
+      "text": "Thank you, you too. Goodbye!",
+      "ts": 1793869070.8865511
+    }
+  ],
+  "warm_stats": {
+    "n": 13,
+    "first_text_ms": {
+      "p50": 833.0,
+      "p90": 2343.9,
+      "min": 604.3,
+      "max": 2957.2
+    },
+    "full_ms": {
+      "p50": 1361.9,
+      "p90": 2425.5,
+      "min": 1139.3,
+      "max": 3029.9
+    }
+  }
+}

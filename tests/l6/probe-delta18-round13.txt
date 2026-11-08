@@ -1,0 +1,7 @@
+test_pre_attempt_candidate_inside_tolerance (__main__.Edge.test_pre_attempt_candidate_inside_tolerance) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.009s
+
+OK
+{"recovery": false, "marker": true, "actual_status": "in-progress", "different_call_created_delta": -1}

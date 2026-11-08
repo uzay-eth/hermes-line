@@ -1,0 +1,97 @@
+{
+  "rows": [
+    {
+      "text": "Thanks for calling. I'm Del",
+      "label": "automated_assistant",
+      "confidence": "medium",
+      "evidence": [
+        "bot-leaning truncated introduction; no personal identity",
+        "Thanks for calling. I'm Del"
+      ],
+      "ms": 0.8329579999999982
+    },
+    {
+      "text": "Hi, Hermes.",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hi, Hermes."
+      ],
+      "ms": 1.859375
+    },
+    {
+      "text": "What can I help you with today regarding Delta Travel?",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "brand-scoped routing question",
+        "What can I help you with today regarding Delta Travel?"
+      ],
+      "ms": 0.04175000000000012
+    },
+    {
+      "text": "I can't help with that.",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "I can't help with that."
+      ],
+      "ms": 0.32970800000000144
+    },
+    {
+      "text": "What can I help you with today regarding Delta travel?",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "brand-scoped routing question",
+        "What can I help you with today regarding Delta travel?"
+      ],
+      "ms": 0.038832999999998535
+    },
+    {
+      "text": "You're welcome.",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "You're welcome."
+      ],
+      "ms": 0.20654200000000053
+    },
+    {
+      "text": "What can",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "What can"
+      ],
+      "ms": 0.1938749999999996
+    },
+    {
+      "text": "no problem.",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "no problem."
+      ],
+      "ms": 0.18529200000000356
+    },
+    {
+      "text": "What do you need help with today for Delta Travel?",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "brand-scoped routing question",
+        "What do you need help with today for Delta Travel?"
+      ],
+      "ms": 0.03441600000000239
+    }
+  ],
+  "false_humans": 0,
+  "model_calls": 0,
+  "max_ms": 1.859375
+}

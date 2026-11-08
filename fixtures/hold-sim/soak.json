@@ -1,0 +1,1446 @@
+{
+  "version": 1,
+  "description": "recorded hold simulation; virtual clock, authored transcript only; no audio",
+  "streams": [
+    {
+      "id": "soak-1",
+      "simulation": true,
+      "scenario": "repeated announcements",
+      "duration_ms": 2100000,
+      "human_onset_ms": null,
+      "events": [
+        {
+          "at_ms": 0,
+          "type": "prompt",
+          "turn_id": "h0",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 120000,
+          "type": "prompt",
+          "turn_id": "h2",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 240000,
+          "type": "prompt",
+          "turn_id": "h4",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 360000,
+          "type": "prompt",
+          "turn_id": "h6",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 480000,
+          "type": "prompt",
+          "turn_id": "h8",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 600000,
+          "type": "prompt",
+          "turn_id": "h10",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 720000,
+          "type": "prompt",
+          "turn_id": "h12",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 840000,
+          "type": "prompt",
+          "turn_id": "h14",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 960000,
+          "type": "prompt",
+          "turn_id": "h16",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1080000,
+          "type": "prompt",
+          "turn_id": "h18",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1200000,
+          "type": "prompt",
+          "turn_id": "h20",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1320000,
+          "type": "prompt",
+          "turn_id": "h22",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1440000,
+          "type": "prompt",
+          "turn_id": "h24",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1560000,
+          "type": "prompt",
+          "turn_id": "h26",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1680000,
+          "type": "prompt",
+          "turn_id": "h28",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1800000,
+          "type": "prompt",
+          "turn_id": "h30",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1920000,
+          "type": "prompt",
+          "turn_id": "h32",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 2040000,
+          "type": "prompt",
+          "turn_id": "h34",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soak-2",
+      "simulation": true,
+      "scenario": "long silence",
+      "duration_ms": 2100000,
+      "human_onset_ms": null,
+      "events": [
+        {
+          "at_ms": 0,
+          "type": "prompt",
+          "turn_id": "h0",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 120000,
+          "type": "prompt",
+          "turn_id": "h2",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 240000,
+          "type": "prompt",
+          "turn_id": "h4",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 360000,
+          "type": "prompt",
+          "turn_id": "h6",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 480000,
+          "type": "prompt",
+          "turn_id": "h8",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 600000,
+          "type": "prompt",
+          "turn_id": "h10",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 720000,
+          "type": "prompt",
+          "turn_id": "h12",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 840000,
+          "type": "prompt",
+          "turn_id": "h14",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 960000,
+          "type": "prompt",
+          "turn_id": "h16",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1080000,
+          "type": "prompt",
+          "turn_id": "h18",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1200000,
+          "type": "prompt",
+          "turn_id": "h20",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1320000,
+          "type": "prompt",
+          "turn_id": "h22",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1440000,
+          "type": "prompt",
+          "turn_id": "h24",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1560000,
+          "type": "prompt",
+          "turn_id": "h26",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1680000,
+          "type": "prompt",
+          "turn_id": "h28",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1800000,
+          "type": "prompt",
+          "turn_id": "h30",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1920000,
+          "type": "prompt",
+          "turn_id": "h32",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 2040000,
+          "type": "prompt",
+          "turn_id": "h34",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soak-3",
+      "simulation": true,
+      "scenario": "speech over music",
+      "duration_ms": 2100000,
+      "human_onset_ms": 2041500,
+      "events": [
+        {
+          "at_ms": 0,
+          "type": "prompt",
+          "turn_id": "h0",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 500,
+          "type": "interrupt",
+          "turn_id": "cut",
+          "speaker": "business",
+          "text": "Please ho",
+          "last": false,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 120000,
+          "type": "prompt",
+          "turn_id": "h2",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 240000,
+          "type": "prompt",
+          "turn_id": "h4",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 360000,
+          "type": "prompt",
+          "turn_id": "h6",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 480000,
+          "type": "prompt",
+          "turn_id": "h8",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 600000,
+          "type": "prompt",
+          "turn_id": "h10",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 720000,
+          "type": "prompt",
+          "turn_id": "h12",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 840000,
+          "type": "prompt",
+          "turn_id": "h14",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 960000,
+          "type": "prompt",
+          "turn_id": "h16",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1080000,
+          "type": "prompt",
+          "turn_id": "h18",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1200000,
+          "type": "prompt",
+          "turn_id": "h20",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1320000,
+          "type": "prompt",
+          "turn_id": "h22",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1440000,
+          "type": "prompt",
+          "turn_id": "h24",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1560000,
+          "type": "prompt",
+          "turn_id": "h26",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1680000,
+          "type": "prompt",
+          "turn_id": "h28",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1800000,
+          "type": "prompt",
+          "turn_id": "h30",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1920000,
+          "type": "prompt",
+          "turn_id": "h32",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 2040000,
+          "type": "prompt",
+          "turn_id": "h34",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 2040001,
+          "type": "prompt",
+          "turn_id": "mid-q",
+          "speaker": "hermes",
+          "text": "Are you a live person?",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 2041500,
+          "type": "prompt",
+          "turn_id": "mid-answer",
+          "speaker": "business",
+          "text": "Please ho\u2014sorry, I can help with your request now.",
+          "last": true,
+          "label": "human",
+          "permissible_actions": [
+            "continue_listening",
+            "confirm_live_person_before_owner_ring"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soak-4",
+      "simulation": true,
+      "scenario": "recorded conversational hello",
+      "duration_ms": 2100000,
+      "human_onset_ms": null,
+      "events": [
+        {
+          "at_ms": 0,
+          "type": "prompt",
+          "turn_id": "h0",
+          "speaker": "business",
+          "text": "Hello, thanks for holding.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 120000,
+          "type": "prompt",
+          "turn_id": "h2",
+          "speaker": "business",
+          "text": "Hello, thanks for holding.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 240000,
+          "type": "prompt",
+          "turn_id": "h4",
+          "speaker": "business",
+          "text": "Hello, thanks for holding.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 360000,
+          "type": "prompt",
+          "turn_id": "h6",
+          "speaker": "business",
+          "text": "Hello, thanks for holding.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 480000,
+          "type": "prompt",
+          "turn_id": "h8",
+          "speaker": "business",
+          "text": "Hello, thanks for holding.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 600000,
+          "type": "prompt",
+          "turn_id": "h10",
+          "speaker": "business",
+          "text": "Hello, thanks for holding.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 720000,
+          "type": "prompt",
+          "turn_id": "h12",
+          "speaker": "business",
+          "text": "Hello, thanks for holding.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 840000,
+          "type": "prompt",
+          "turn_id": "h14",
+          "speaker": "business",
+          "text": "Hello, thanks for holding.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 960000,
+          "type": "prompt",
+          "turn_id": "h16",
+          "speaker": "business",
+          "text": "Hello, thanks for holding.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1080000,
+          "type": "prompt",
+          "turn_id": "h18",
+          "speaker": "business",
+          "text": "Hello, thanks for holding.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1200000,
+          "type": "prompt",
+          "turn_id": "h20",
+          "speaker": "business",
+          "text": "Hello, thanks for holding.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1320000,
+          "type": "prompt",
+          "turn_id": "h22",
+          "speaker": "business",
+          "text": "Hello, thanks for holding.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1440000,
+          "type": "prompt",
+          "turn_id": "h24",
+          "speaker": "business",
+          "text": "Hello, thanks for holding.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1560000,
+          "type": "prompt",
+          "turn_id": "h26",
+          "speaker": "business",
+          "text": "Hello, thanks for holding.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1680000,
+          "type": "prompt",
+          "turn_id": "h28",
+          "speaker": "business",
+          "text": "Hello, thanks for holding.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1800000,
+          "type": "prompt",
+          "turn_id": "h30",
+          "speaker": "business",
+          "text": "Hello, thanks for holding.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1920000,
+          "type": "prompt",
+          "turn_id": "h32",
+          "speaker": "business",
+          "text": "Hello, thanks for holding.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 2040000,
+          "type": "prompt",
+          "turn_id": "h34",
+          "speaker": "business",
+          "text": "Hello, thanks for holding.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soak-5",
+      "simulation": true,
+      "scenario": "late human",
+      "duration_ms": 2100000,
+      "human_onset_ms": 1920000,
+      "events": [
+        {
+          "at_ms": 0,
+          "type": "prompt",
+          "turn_id": "h0",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 120000,
+          "type": "prompt",
+          "turn_id": "h2",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 240000,
+          "type": "prompt",
+          "turn_id": "h4",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 360000,
+          "type": "prompt",
+          "turn_id": "h6",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 480000,
+          "type": "prompt",
+          "turn_id": "h8",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 600000,
+          "type": "prompt",
+          "turn_id": "h10",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 720000,
+          "type": "prompt",
+          "turn_id": "h12",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 840000,
+          "type": "prompt",
+          "turn_id": "h14",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 960000,
+          "type": "prompt",
+          "turn_id": "h16",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1080000,
+          "type": "prompt",
+          "turn_id": "h18",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1200000,
+          "type": "prompt",
+          "turn_id": "h20",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1320000,
+          "type": "prompt",
+          "turn_id": "h22",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1440000,
+          "type": "prompt",
+          "turn_id": "h24",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1560000,
+          "type": "prompt",
+          "turn_id": "h26",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1680000,
+          "type": "prompt",
+          "turn_id": "h28",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1800000,
+          "type": "prompt",
+          "turn_id": "h30",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1920000,
+          "type": "prompt",
+          "turn_id": "hello",
+          "speaker": "business",
+          "text": "Hello?",
+          "last": true,
+          "label": "human",
+          "permissible_actions": [
+            "continue_listening",
+            "confirm_live_person_before_owner_ring"
+          ]
+        },
+        {
+          "at_ms": 1921000,
+          "type": "prompt",
+          "turn_id": "confirm",
+          "speaker": "hermes",
+          "text": "Are you a live agent responding to my request?",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1922500,
+          "type": "prompt",
+          "turn_id": "answer",
+          "speaker": "business",
+          "text": "Yes, I am a live agent.",
+          "last": true,
+          "label": "human",
+          "permissible_actions": [
+            "continue_listening",
+            "confirm_live_person_before_owner_ring"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soak-6",
+      "simulation": true,
+      "scenario": "disconnect and replay",
+      "duration_ms": 2100000,
+      "human_onset_ms": 1920000,
+      "events": [
+        {
+          "at_ms": 0,
+          "type": "prompt",
+          "turn_id": "h0",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 120000,
+          "type": "prompt",
+          "turn_id": "h2",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 240000,
+          "type": "prompt",
+          "turn_id": "h4",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 360000,
+          "type": "prompt",
+          "turn_id": "h6",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 480000,
+          "type": "prompt",
+          "turn_id": "h8",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 600000,
+          "type": "prompt",
+          "turn_id": "h10",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 720000,
+          "type": "prompt",
+          "turn_id": "h12",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 840000,
+          "type": "prompt",
+          "turn_id": "h14",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 960000,
+          "type": "prompt",
+          "turn_id": "h16",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1080000,
+          "type": "prompt",
+          "turn_id": "h18",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1200000,
+          "type": "prompt",
+          "turn_id": "h20",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1320000,
+          "type": "prompt",
+          "turn_id": "h22",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1440000,
+          "type": "prompt",
+          "turn_id": "h24",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1560000,
+          "type": "prompt",
+          "turn_id": "h26",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1680000,
+          "type": "prompt",
+          "turn_id": "h28",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1800000,
+          "type": "prompt",
+          "turn_id": "h30",
+          "speaker": "business",
+          "text": "Please hold; all representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1920000,
+          "type": "prompt",
+          "turn_id": "hello",
+          "speaker": "business",
+          "text": "Hello?",
+          "last": true,
+          "label": "human",
+          "permissible_actions": [
+            "continue_listening",
+            "confirm_live_person_before_owner_ring"
+          ]
+        },
+        {
+          "at_ms": 1920100,
+          "type": "socket",
+          "turn_id": "reconnect",
+          "speaker": "system",
+          "text": "reconnected",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1921000,
+          "type": "prompt",
+          "turn_id": "confirm",
+          "speaker": "hermes",
+          "text": "Are you a live agent responding to my request?",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1922500,
+          "type": "prompt",
+          "turn_id": "answer",
+          "speaker": "business",
+          "text": "Yes, I am a live agent.",
+          "last": true,
+          "label": "human",
+          "permissible_actions": [
+            "continue_listening",
+            "confirm_live_person_before_owner_ring"
+          ]
+        },
+        {
+          "at_ms": 1922600,
+          "type": "prompt",
+          "turn_id": "answer",
+          "speaker": "business",
+          "text": "Yes, I am a live agent.",
+          "last": true,
+          "label": "human",
+          "permissible_actions": [
+            "continue_listening",
+            "confirm_live_person_before_owner_ring"
+          ]
+        }
+      ]
+    }
+  ]
+}

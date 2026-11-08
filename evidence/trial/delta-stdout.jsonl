@@ -1,0 +1,4 @@
+{"at": 1793920909.8910122, "event": "business_dialing", "sid": "[Delta run 1]"}
+{"at": 1793920982.099116, "event": "ended", "outcome": "completed"}
+{"evidence": "evidence/trial/call_b669b105d4774a49"}
+{"exit": 0}

@@ -1,0 +1,6 @@
+# Round 40 tests after the change (2026-11-06T19:02Z), main 86aa9dd merged; expected to PASS (L1 part 4b of the full run)
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 167.064s
+
+OK

@@ -1,0 +1,4 @@
+{"at": 1794123117.347271, "event": "business_dialing", "sid": "[Hilton call 2 attempt 1 leg]"}
+{"at": 1794123293.625215, "detection_state": "automated_assistant", "event": "assistant_phrase", "phrase_id": "representative"}
+{"at": 1794123295.401818, "event": "ended", "outcome": "business_hangup"}
+{"evidence": "evidence/trial/call_b53427ae32364c51"}

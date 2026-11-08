@@ -1,0 +1,512 @@
+[
+  {
+    "rows": [
+      {
+        "turn": "10",
+        "text": "I'll transfer your call now.",
+        "label": "hold_message",
+        "evidence": [
+          "transfer",
+          "I'll transfer your call now."
+        ],
+        "ms": 0.0839170000000028
+      },
+      {
+        "turn": "11",
+        "text": "The current phone wait time is 23 minutes.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "The current phone wait time is 23 minutes."
+        ],
+        "ms": 0.15025000000000455
+      },
+      {
+        "turn": "12",
+        "text": "Instead of waiting on hold, you can message with a representative for fast service where the wait time is 0 minutes.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Instead of waiting on hold, you can message with a representative for fast service where the wait time is 0 minutes."
+        ],
+        "ms": 0.17416600000000337
+      },
+      {
+        "turn": "13",
+        "text": "Please say yes, and we'll send a message to your phone.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Please say yes, and we'll send a message to your phone."
+        ],
+        "ms": 0.16170800000000346
+      },
+      {
+        "turn": "14",
+        "text": "Or you can say, no. Thanks.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Or you can say, no. Thanks."
+        ],
+        "ms": 0.1493750000000002
+      },
+      {
+        "turn": "16",
+        "text": "Sorry. Can you please repeat that?",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Sorry. Can you please repeat that?"
+        ],
+        "ms": 0.2142920000000048
+      },
+      {
+        "turn": "17",
+        "text": "Sorry. Can you please repeat that?",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Sorry. Can you please repeat that?"
+        ],
+        "ms": 0.2003340000000034
+      },
+      {
+        "turn": "18",
+        "text": "Sorry. Can you please repeat that?",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Sorry. Can you please repeat that?"
+        ],
+        "ms": 0.18016699999999497
+      },
+      {
+        "turn": "19",
+        "text": "Sorry. I could not understand.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Sorry. I could not understand."
+        ],
+        "ms": 0.16091700000000347
+      },
+      {
+        "turn": "20",
+        "text": "To help improve our service, please stay on the line at the end of your call for a 1 question survey.",
+        "label": "hold_message",
+        "evidence": [
+          "To help improve our service, please stay on the line at the end of your call for a 1 question survey."
+        ],
+        "ms": 0.1300000000000051
+      },
+      {
+        "turn": "21",
+        "text": "As a SkyMiles member, for every mile you fly with us in main cabin or above, you earn miles towards exciting rewards, including flights, upgrades, and more.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "As a SkyMiles member, for every mile you fly with us in main cabin or above, you earn miles towards exciting rewards, including flights, upgrades, and more."
+        ],
+        "ms": 0.21866699999999878
+      },
+      {
+        "turn": "22",
+        "text": "You have the flexibility to book award flights with no blackout giving you the freedom to travel when it suits you best.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "You have the flexibility to book award flights with no blackout giving you the freedom to travel when it suits you best."
+        ],
+        "ms": 0.2808749999999999
+      },
+      {
+        "turn": "23",
+        "text": "And with our extensive network of partners, your options are endless.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "And with our extensive network of partners, your options are endless."
+        ],
+        "ms": 0.26837500000000125
+      },
+      {
+        "turn": "25",
+        "text": "Need assistance on the go?",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Need assistance on the go?"
+        ],
+        "ms": 0.38033300000000353
+      },
+      {
+        "turn": "26",
+        "text": "You can now message a Delta representative via delta.com slash need help.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "You can now message a Delta representative via delta.com slash need help."
+        ],
+        "ms": 0.41141699999999726
+      },
+      {
+        "turn": "27",
+        "text": "Or by clicking the message us button in the more section of the FlyDelta app.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Or by clicking the message us button in the more section of the FlyDelta app."
+        ],
+        "ms": 0.4171250000000043
+      },
+      {
+        "turn": "29",
+        "text": "When redeeming your companion certificate, make sure to book well in advance to maximize redemption opportunities.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "When redeeming your companion certificate, make sure to book well in advance to maximize redemption opportunities."
+        ],
+        "ms": 0.4699579999999995
+      },
+      {
+        "turn": "30",
+        "text": "Booking your companion certificate further in advance will help the probability of finding your desired itinerary.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Booking your companion certificate further in advance will help the probability of finding your desired itinerary."
+        ],
+        "ms": 0.46416700000000144
+      },
+      {
+        "turn": "32",
+        "text": "For quicker service, please have your confirmation number, ticket number, or SkyMiles number ready.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "For quicker service, please have your confirmation number, ticket number, or SkyMiles number ready."
+        ],
+        "ms": 0.4572499999999993
+      },
+      {
+        "turn": "33",
+        "text": "You can find this information in the Fly Delta app and delta.com under my trips, or in your confirmation email?",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "You can find this information in the Fly Delta app and delta.com under my trips, or in your confirmation email?"
+        ],
+        "ms": 0.44766599999999934
+      },
+      {
+        "turn": "35",
+        "text": "Can",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Can"
+        ],
+        "ms": 0.3584160000000003
+      },
+      {
+        "turn": "37",
+        "text": "Free Wi Fi for SkyMiles members is now available on most domestic flights.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Free Wi Fi for SkyMiles members is now available on most domestic flights."
+        ],
+        "ms": 0.4062079999999982
+      },
+      {
+        "turn": "39",
+        "text": "Enjoy streaming, browsing, messaging, and more.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Enjoy streaming, browsing, messaging, and more."
+        ],
+        "ms": 0.3139589999999956
+      },
+      {
+        "turn": "40",
+        "text": "From takeoff to touchdown.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "From takeoff to touchdown."
+        ],
+        "ms": 0.3088340000000009
+      },
+      {
+        "turn": "41",
+        "text": "Visit delta.com/wifi to learn more.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Visit delta.com/wifi to learn more."
+        ],
+        "ms": 0.34216700000000433
+      }
+    ],
+    "unsafe": 23,
+    "model_calls": 0
+  },
+  {
+    "rows": [
+      {
+        "turn": "10",
+        "text": "I'll transfer your call now.",
+        "label": "hold_message",
+        "evidence": [
+          "transfer",
+          "I'll transfer your call now."
+        ],
+        "ms": 0.07462500000000177
+      },
+      {
+        "turn": "11",
+        "text": "The current phone wait time is 23 minutes.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "The current phone wait time is 23 minutes."
+        ],
+        "ms": 0.13858299999999768
+      },
+      {
+        "turn": "12",
+        "text": "Instead of waiting on hold, you can message with a representative for fast service where the wait time is 0 minutes.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Instead of waiting on hold, you can message with a representative for fast service where the wait time is 0 minutes."
+        ],
+        "ms": 0.163708999999998
+      },
+      {
+        "turn": "13",
+        "text": "Please say yes, and we'll send a message to your phone.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Please say yes, and we'll send a message to your phone."
+        ],
+        "ms": 0.15316699999999572
+      },
+      {
+        "turn": "14",
+        "text": "Or you can say, no. Thanks.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Or you can say, no. Thanks."
+        ],
+        "ms": 0.14170900000000375
+      },
+      {
+        "turn": "16",
+        "text": "Sorry. Can you please repeat that?",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Sorry. Can you please repeat that?"
+        ],
+        "ms": 0.19900000000000473
+      },
+      {
+        "turn": "17",
+        "text": "Sorry. Can you please repeat that?",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Sorry. Can you please repeat that?"
+        ],
+        "ms": 0.18604200000000432
+      },
+      {
+        "turn": "18",
+        "text": "Sorry. Can you please repeat that?",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Sorry. Can you please repeat that?"
+        ],
+        "ms": 0.1728750000000029
+      },
+      {
+        "turn": "19",
+        "text": "Sorry. I could not understand.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Sorry. I could not understand."
+        ],
+        "ms": 0.15245800000000115
+      },
+      {
+        "turn": "20",
+        "text": "To help improve our service, please stay on the line at the end of your call for a 1 question survey.",
+        "label": "hold_message",
+        "evidence": [
+          "To help improve our service, please stay on the line at the end of your call for a 1 question survey."
+        ],
+        "ms": 0.12645799999999596
+      },
+      {
+        "turn": "21",
+        "text": "As a SkyMiles member, for every mile you fly with us in main cabin or above, you earn miles towards exciting rewards, including flights, upgrades, and more.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "As a SkyMiles member, for every mile you fly with us in main cabin or above, you earn miles towards exciting rewards, including flights, upgrades, and more."
+        ],
+        "ms": 0.20074999999999954
+      },
+      {
+        "turn": "22",
+        "text": "You have the flexibility to book award flights with no blackout giving you the freedom to travel when it suits you best.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "You have the flexibility to book award flights with no blackout giving you the freedom to travel when it suits you best."
+        ],
+        "ms": 0.2735420000000016
+      },
+      {
+        "turn": "23",
+        "text": "And with our extensive network of partners, your options are endless.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "And with our extensive network of partners, your options are endless."
+        ],
+        "ms": 0.28550000000000103
+      },
+      {
+        "turn": "25",
+        "text": "Need assistance on the go?",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Need assistance on the go?"
+        ],
+        "ms": 0.3457080000000001
+      },
+      {
+        "turn": "26",
+        "text": "You can now message a Delta representative via delta.com slash need help.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "You can now message a Delta representative via delta.com slash need help."
+        ],
+        "ms": 0.3701670000000046
+      },
+      {
+        "turn": "27",
+        "text": "Or by clicking the message us button in the more section of the FlyDelta app.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Or by clicking the message us button in the more section of the FlyDelta app."
+        ],
+        "ms": 0.4305000000000003
+      },
+      {
+        "turn": "29",
+        "text": "When redeeming your companion certificate, make sure to book well in advance to maximize redemption opportunities.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "When redeeming your companion certificate, make sure to book well in advance to maximize redemption opportunities."
+        ],
+        "ms": 0.41445899999999897
+      },
+      {
+        "turn": "30",
+        "text": "Booking your companion certificate further in advance will help the probability of finding your desired itinerary.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Booking your companion certificate further in advance will help the probability of finding your desired itinerary."
+        ],
+        "ms": 0.46129100000000256
+      },
+      {
+        "turn": "32",
+        "text": "For quicker service, please have your confirmation number, ticket number, or SkyMiles number ready.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "For quicker service, please have your confirmation number, ticket number, or SkyMiles number ready."
+        ],
+        "ms": 0.43424999999999714
+      },
+      {
+        "turn": "33",
+        "text": "You can find this information in the Fly Delta app and delta.com under my trips, or in your confirmation email?",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "You can find this information in the Fly Delta app and delta.com under my trips, or in your confirmation email?"
+        ],
+        "ms": 0.3926669999999993
+      },
+      {
+        "turn": "35",
+        "text": "Can",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Can"
+        ],
+        "ms": 0.3665420000000044
+      },
+      {
+        "turn": "37",
+        "text": "Free Wi Fi for SkyMiles members is now available on most domestic flights.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Free Wi Fi for SkyMiles members is now available on most domestic flights."
+        ],
+        "ms": 0.4159160000000023
+      },
+      {
+        "turn": "39",
+        "text": "Enjoy streaming, browsing, messaging, and more.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Enjoy streaming, browsing, messaging, and more."
+        ],
+        "ms": 0.3784999999999969
+      },
+      {
+        "turn": "40",
+        "text": "From takeoff to touchdown.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "From takeoff to touchdown."
+        ],
+        "ms": 0.3015830000000011
+      },
+      {
+        "turn": "41",
+        "text": "Visit delta.com/wifi to learn more.",
+        "label": "unknown",
+        "evidence": [
+          "possible_new_party",
+          "Visit delta.com/wifi to learn more."
+        ],
+        "ms": 0.2835830000000039
+      }
+    ],
+    "unsafe": 23,
+    "model_calls": 1
+  }
+]

@@ -1,0 +1,52 @@
+KILLED   scrub hook disabled
+KILLED   llm hook disabled
+KILLED   fill result leaks code
+KILLED   consent never consumed
+KILLED   used set ignored
+KILLED   sender check removed
+KILLED   window check removed
+KILLED   log the code
+KILLED   slot kept after fill
+KILLED   scrub not registered on release
+KILLED   ambiguous released
+KILLED   binding from caller, window not enforced after close
+KILLED   sink error logged with exception text
+KILLED   origin check removed
+KILLED   unreadable origin allowed
+KILLED   destination left out of the consent binding
+KILLED   call_id check removed
+KILLED   call-approved task may fill
+KILLED   dtmf digit check removed
+KILLED   live counterpart ignored
+KILLED   store write failure ignored
+KILLED   H1 slot generation/binding checks removed (reuse + revalidate)
+KILLED   H1 eager invalidation on replacement removed
+KILLED   H1 delivery not serialized against replacement
+KILLED   H1 commit does not recheck the generation
+KILLED   M1 generation not compared at release
+KILLED   M1 unknown pending approval not refused
+KILLED   BF re-probe after typing removed
+KILLED   BF re-probe before typing removed
+KILLED   BF browser fill on by default
+KILLED   N1 gate held across the call sink
+KILLED   N1 generation not passed to the sink
+KILLED   N1 missing generation accepted
+KILLED   N1 sink capability not checked before release
+KILLED   N1 finished send drops any slot
+KILLED   W1 configured serial ignored (-s dropped)
+KILLED   W2 unlimited reconnects (no one-per-fetch bound)
+KILLED   W3 mdns match by prefix, any phone
+KILLED   W4 connect address not validated
+KILLED   W5 length check dropped
+KILLED   W6 unauthorized wireless retried
+KILLED   W7 poll interval not shortened by read time
+KILLED   P1 probe sent to any number
+KILLED   P2 probe sender not checked ([the line] / Bora)
+KILLED   P3 nonce reusable (no exclusive record)
+KILLED   P4 second probe within 15 min allowed
+KILLED   P5 probe sent before the reader is watching
+KILLED   P6 balance floor ignored
+KILLED   P7 unvalidated SID used in a URL
+KILLED   P8 reader matches the nonce inside other words
+KILLED   P9 reader keeps waiting after a failed send
+KILLED   P10 reader ready file not removed

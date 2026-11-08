@@ -1,0 +1,148 @@
+name: hermes-line
+version: "0.1.0"
+description: >-
+  A real phone line for Hermes. With your approval it calls a business, works the phone menu,
+  waits on hold, then bridges you in or finishes the task itself, and answers callbacks.
+author: Can Uzay
+license: MIT
+requires_hermes: ">=0.22.5"
+provides_tools:
+  - hermes_line_request_call
+  - hermes_line_call_status
+  - hermes_line_list_tasks
+  - hermes_line_say
+  - hermes_line_hang_up
+  - hermes_line_take_over
+  - hermes_line_call_press_digits
+  - hermes_line_call_finish
+  - hermes_line_call_bring_owner
+  - hermes_line_call_new_task
+  - line_otp_to_call
+provides_hooks:
+  - transform_tool_result
+  - transform_llm_output
+requires_env:
+  - name: HERMES_LINE_TWILIO_ACCOUNT_SID
+    description: "Twilio Account SID (AC...) of your own Twilio account"
+    url: "https://console.twilio.com/"
+    secret: true
+  - name: HERMES_LINE_TWILIO_API_KEY_SID
+    description: "Twilio API key SID (SK...) used to place and end calls"
+    url: "https://www.twilio.com/docs/iam/api-keys"
+    secret: true
+  - name: HERMES_LINE_TWILIO_API_KEY_SECRET
+    description: "Secret of that Twilio API key"
+    secret: true
+optional_env:
+  - name: HERMES_LINE_TWILIO_AUTH_TOKEN
+    description: >-
+      Twilio Auth Token (optional, preferred): webhooks are then verified by Twilio's request signature.
+      Without it Hermes Line uses a secret URL plus a Twilio API check of every call (see README).
+    secret: true
+  - name: XAI_API_KEY
+    description: "xAI API key for Grok Voice (optional; without it calls use ConversationRelay)"
+    url: "https://console.x.ai"
+    secret: true
+  - name: HERMES_LINE_OWNER_PIN
+    description: >-
+      Your 4-8 digit PIN for owner line mode (optional, experimental; off unless this is set). A call from owner_number is offered the PIN; once it
+      passes, you can ask Hermes on the phone to call a business for you. Without it, owner line mode is off.
+    secret: true
+python_dependencies:
+  - "uvicorn>=0.31.0,<1"
+  - "starlette>=0.40,<2"
+  - "websockets>=15,<16"
+config_schema:
+  enabled:
+    type: boolean
+    default: false
+    description: Run the call service (phone listener) in this Hermes process.
+  public_base_url:
+    type: string
+    default: ""
+    description: Public https origin of your tunnel to listen_host:listen_port, e.g. https://line.example.com
+  listen_host:
+    type: string
+    default: "127.0.0.1"
+  listen_port:
+    type: integer
+    default: 8788
+  line_key:
+    type: string
+    default: default
+  from_number:
+    type: string
+    default: ""
+    description: Caller ID for outbound calls (a Twilio number or a verified caller ID), E.164.
+  line_number:
+    type: string
+    default: ""
+    description: Your Twilio number that receives callbacks, E.164.
+  owner_number:
+    type: string
+    default: ""
+    description: Your own phone, rung to bridge you in. Must also be on policy.allowed_destinations.
+  owner_name:
+    type: string
+    default: the owner
+  forwarding_number:
+    type: string
+    default: ""
+    description: Your own line (for example Google Fi) that forwards calls to line_number, E.164. Callbacks to it reach Hermes.
+  inbound_ring_owner:
+    type: boolean
+    default: true
+    description: Let an unknown inbound caller ask for you; your phone rings and you press 1 to be connected.
+  inbound_screening_hold_s:
+    type: number
+    default: 6
+    description: With forwarding_number set, how long an inbound greeting waits for the carrier's screening prompt ("press 1 to take this call"), which the line answers itself (0-10 s, 0 is off).
+  owner_live_bridge:
+    type: boolean
+    default: false
+    description: Owner line mode. When you (PIN verified) ask for a call and say to put you through, the line dials while you stay on your call and joins you when a person answers, with no second call to your phone. Off, it dials after you hang up and rings you back.
+  reply_budget_s:
+    type: number
+    default: 2.5
+    description: Longest silence a person on the line hears before Hermes says something (0.5-3 s).
+  disclosure_text:
+    type: string
+    description: First line spoken on every outbound call; {owner} is replaced by owner_name.
+  ring_timeout_s:
+    type: integer
+    default: 30
+  owner_ring_timeout_s:
+    type: integer
+    default: 25
+  max_call_minutes:
+    type: integer
+    default: 90
+  callback_window_hours:
+    type: integer
+    default: 72
+  ingress_auth:
+    type: string
+    default: auto
+    description: >-
+      auto - verify Twilio webhooks by signature when HERMES_LINE_TWILIO_AUTH_TOKEN is set, else use the
+      secret-URL plus Twilio API check fallback; signature - refuse to start without the Auth Token.
+  sms_source:
+    type: string
+    default: adb
+    description: Where SMS verification codes are read from - adb (your Android phone over USB or Wi-Fi wireless debugging) or none.
+  sms_adb_serial:
+    type: string
+    default: ""
+    description: "Which phone to read SMS from: its USB serial, the wireless-debugging service name (adb-<id>-<suffix>, from adb mdns services), or ip:port. Empty means the one USB phone attached. When set, only that phone is used."
+  voice:
+    type: object
+    description: >-
+      Realtime voice path (line.voice.VoiceSettings) - transport auto|media_streams|conversation_relay, model,
+      conversation grok|hermes_text, timings. auto uses Grok Voice over Twilio Media Streams when XAI_API_KEY is
+      set and ConversationRelay otherwise.
+  policy:
+    type: object
+    description: >-
+      Safety policy (line.policy.Settings) - allowed_destinations, blocked_destinations (numbers never dialled,
+      default none), quiet hours, owner_timezone, disclosure_enabled, recording_enabled. Emergency, service-code
+      and non-US numbers are always blocked.

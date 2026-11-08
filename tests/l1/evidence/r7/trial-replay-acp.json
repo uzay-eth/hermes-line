@@ -1,0 +1,127 @@
+{
+  "what": "first live call transcript replayed through real hermes acp (scratch gateway, fixture model)",
+  "budget_s": 3.0,
+  "cases": [
+    {
+      "case": "business, fast model",
+      "owner_self_test": false,
+      "model_first_token_delay_s": 0.02,
+      "turns": [
+        {
+          "business": "Hi. How are you?",
+          "reply_latency_s": 0.991,
+          "hermes_said": "Hi, this is Hermes, an AI assistant calling for Can. Am I speaking with a live person?"
+        },
+        {
+          "business": "Yeah. It's me, Ken. But information you have about me?",
+          "reply_latency_s": 0.14,
+          "hermes_said": "Sorry, I didn't catch that. Am I speaking with a live person?"
+        }
+      ],
+      "events": [
+        "detect",
+        "detect"
+      ],
+      "detect": [
+        {
+          "label": "unknown",
+          "confidence": "low"
+        },
+        {
+          "label": "unknown",
+          "confidence": "low"
+        }
+      ],
+      "final_state_before_hangup": "dialing",
+      "status_callback_s": 0.002,
+      "status_callback_http": 204,
+      "summary": "Hermes Line: The other side hung up (+1 775-\u2022\u2022\u2022-0101, \"Attended owner trial\", 0m10s). Thank you, that works for us.",
+      "pass": true
+    },
+    {
+      "case": "business, model 4 s to first token",
+      "owner_self_test": false,
+      "model_first_token_delay_s": 4.0,
+      "turns": [
+        {
+          "business": "Hi. How are you?",
+          "reply_latency_s": 2.504,
+          "hermes_said": "Hi, this is Hermes, an AI assistant calling for Can. Am I speaking with a live person?"
+        },
+        {
+          "business": "Yeah. It's me, Ken. But information you have about me?",
+          "reply_latency_s": 2.51,
+          "hermes_said": "Sorry, I didn't catch that. Am I speaking with a live person?"
+        }
+      ],
+      "events": [
+        "detect_slow",
+        "detect_slow"
+      ],
+      "detect": [],
+      "final_state_before_hangup": "dialing",
+      "status_callback_s": 0.006,
+      "status_callback_http": 204,
+      "summary": "Hermes Line: The other side hung up (+1 775-\u2022\u2022\u2022-0101, \"Attended owner trial\", 0m16s). Thank you, that works for us.",
+      "pass": true
+    },
+    {
+      "case": "owner self-test, fast model",
+      "owner_self_test": true,
+      "model_first_token_delay_s": 0.02,
+      "turns": [
+        {
+          "business": "Hi. How are you?",
+          "reply_latency_s": 0.097,
+          "hermes_said": "Thank you, that works for us."
+        },
+        {
+          "business": "Yeah. It's me, Ken. But information you have about me?",
+          "reply_latency_s": 0.087,
+          "hermes_said": "Thank you, that works for us."
+        }
+      ],
+      "events": [
+        "owner_self_test",
+        "state",
+        "state"
+      ],
+      "detect": [],
+      "final_state_before_hangup": "agent_talking",
+      "status_callback_s": 0.007,
+      "status_callback_http": 204,
+      "summary": "Hermes Line: The other side hung up (+1 775-\u2022\u2022\u2022-0101, \"Attended owner trial\", 0m04s). Thank you, that works for us.",
+      "pass": true
+    },
+    {
+      "case": "owner self-test, model 4 s to first token",
+      "owner_self_test": true,
+      "model_first_token_delay_s": 4.0,
+      "turns": [
+        {
+          "business": "Hi. How are you?",
+          "reply_latency_s": 2.506,
+          "hermes_said": "One moment.Thank you, that works for us."
+        },
+        {
+          "business": "Yeah. It's me, Ken. But information you have about me?",
+          "reply_latency_s": 2.511,
+          "hermes_said": "One moment.Thank you, that works for us."
+        }
+      ],
+      "events": [
+        "owner_self_test",
+        "state",
+        "state",
+        "filler",
+        "filler"
+      ],
+      "detect": [],
+      "final_state_before_hangup": "agent_talking",
+      "status_callback_s": 0.006,
+      "status_callback_http": 204,
+      "summary": "Hermes Line: The other side hung up (+1 775-\u2022\u2022\u2022-0101, \"Attended owner trial\", 0m16s). Thank you, that works for us.",
+      "pass": true
+    }
+  ]
+}

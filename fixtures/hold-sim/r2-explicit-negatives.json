@@ -1,0 +1,74 @@
+{
+  "simulation": true,
+  "description": "Recorded hold simulation: 13 core probe3 negatives plus four additional probe4 negatives, copied read only from R2 recheck",
+  "rows": [
+    {
+      "text": "Thank you for calling. For reservations, press 1.",
+      "label": "ivr"
+    },
+    {
+      "text": "Hi, to receive a callback instead of waiting, press 1.",
+      "label": "ivr"
+    },
+    {
+      "text": "Thanks for waiting. Say yes and we'll text you a link.",
+      "label": "automated_assistant"
+    },
+    {
+      "text": "Hello, you've reached the SkyMiles desk. Please leave a message after the tone.",
+      "label": "voicemail"
+    },
+    {
+      "text": "Hi, this is Delta. Please leave your name and number after the beep.",
+      "label": "voicemail"
+    },
+    {
+      "text": "This is a recorded message. Please stay on the line.",
+      "label": "hold_message"
+    },
+    {
+      "text": "Thank you for holding. Please hold for the next available agent.",
+      "label": "hold_message"
+    },
+    {
+      "text": "Hello, your call is important to us. Please remain on the line.",
+      "label": "hold_message"
+    },
+    {
+      "text": "You will be speaking with an agent shortly.",
+      "label": "hold_message"
+    },
+    {
+      "text": "Thanks for calling, I'll transfer you to the next available agent.",
+      "label": "hold_message"
+    },
+    {
+      "text": "Thank you for holding. This call may be recorded for quality assurance.",
+      "label": "hold_message"
+    },
+    {
+      "text": "Hi, we can call you back when an agent is free. Press 1 to accept.",
+      "label": "ivr"
+    },
+    {
+      "text": "Hello! To hear these options again, press star.",
+      "label": "ivr"
+    },
+    {
+      "text": "Hi, you've reached Dana. Please leave a message after the tone.",
+      "label": "voicemail"
+    },
+    {
+      "text": "Hello, this is Mark. I'm not available, please leave a message.",
+      "label": "voicemail"
+    },
+    {
+      "text": "Hello, this is Kim with Delta, please leave your name and number and I will call you back.",
+      "label": "voicemail"
+    },
+    {
+      "text": "Hi, this is Delta reservations. Please press 1 for English.",
+      "label": "ivr"
+    }
+  ]
+}

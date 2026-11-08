@@ -1,0 +1,228 @@
+{
+  "simulation": true,
+  "description": "recorded hold simulation; self-authored airline-style transcripts, no verified real menu or audio",
+  "split": "held-out",
+  "events": [
+    {
+      "at_ms": 0,
+      "turn_id": "held-out-0",
+      "text": "Your call is important. We appreciate your patience.",
+      "label": "hold_message",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 3000,
+      "turn_id": "held-out-1",
+      "text": "Our representatives are helping other callers. Please stay on the line.",
+      "label": "hold_message",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 6000,
+      "turn_id": "held-out-2",
+      "text": "Hello, thanks for holding. Your estimated wait is twenty minutes.",
+      "label": "hold_message",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 9000,
+      "turn_id": "held-out-3",
+      "text": "Visit our website to manage your trip while you wait.",
+      "label": "hold_message",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 12000,
+      "turn_id": "held-out-4",
+      "text": "Say or enter your six character booking reference.",
+      "label": "automated_assistant",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 15000,
+      "turn_id": "held-out-5",
+      "text": "What is your SkyMiles number?",
+      "label": "automated_assistant",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 18000,
+      "turn_id": "held-out-6",
+      "text": "Press 1 to get a call back. To remain on the line press 2.",
+      "label": "ivr",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": true
+    },
+    {
+      "at_ms": 21000,
+      "turn_id": "held-out-7",
+      "text": "Would you like us to call you back?",
+      "label": "automated_assistant",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": true
+    },
+    {
+      "at_ms": 24000,
+      "turn_id": "held-out-8",
+      "text": "[instrumental music]",
+      "label": "hold_music",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 27000,
+      "turn_id": "held-out-9",
+      "text": "\u266a \u266b",
+      "label": "hold_music",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 30000,
+      "turn_id": "held-out-10",
+      "text": "oh mm ah",
+      "label": "unknown",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 33000,
+      "turn_id": "held-out-11",
+      "text": "Thank you thank you thank you",
+      "label": "unknown",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 36000,
+      "turn_id": "held-out-12",
+      "text": "",
+      "label": "unknown",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 38999,
+      "turn_id": "held-out-13-transfer",
+      "text": "Let me connect you with a representative.",
+      "label": "automated_assistant",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 39000,
+      "turn_id": "held-out-13",
+      "text": "Hello, this is Avery from Delta reservations, how may I help you today?",
+      "label": "human",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 41999,
+      "turn_id": "held-out-14-transfer",
+      "text": "Let me connect you with a representative.",
+      "label": "automated_assistant",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 42000,
+      "turn_id": "held-out-14",
+      "text": "Hi, I'm Jordan with the airline, how can I assist you?",
+      "label": "human",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    }
+  ]
+}

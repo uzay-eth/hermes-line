@@ -1,0 +1,6 @@
+test_real_detector_uses_unchanged_budget_controls (__main__.N23EngineProbe.test_real_detector_uses_unchanged_budget_controls) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 5.129s
+
+OK

@@ -1,0 +1,1436 @@
+{
+  "rows": [
+    {
+      "boundary": "[music]",
+      "truth": "agent",
+      "text": "My name is Alex. How can I help you?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "My name is Alex. How can I help you?"
+      ]
+    },
+    {
+      "boundary": "[music]",
+      "truth": "agent",
+      "text": "Hello, this is Dana. How can I help?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Hello, this is Dana. How can I help?"
+      ]
+    },
+    {
+      "boundary": "[music]",
+      "truth": "agent",
+      "text": "Dana speaking.",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Dana speaking."
+      ]
+    },
+    {
+      "boundary": "[music]",
+      "truth": "agent",
+      "text": "Hello, how can I help?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello, how can I help?"
+      ]
+    },
+    {
+      "boundary": "[music]",
+      "truth": "agent",
+      "text": "May I have your confirmation number?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "May I have your confirmation number?"
+      ]
+    },
+    {
+      "boundary": "[music]",
+      "truth": "agent",
+      "text": "Hello? Are you there?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello? Are you there?"
+      ]
+    },
+    {
+      "boundary": "[music]",
+      "truth": "agent",
+      "text": "Sorry, can you hear me?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Sorry, can you hear me?"
+      ]
+    },
+    {
+      "boundary": "[music]",
+      "truth": "bot",
+      "text": "Hi, I am Ava, your virtual assistant.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Hi, I am Ava, your virtual assistant."
+      ]
+    },
+    {
+      "boundary": "[music]",
+      "truth": "bot",
+      "text": "I'm not a live person.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I'm not a live person."
+      ]
+    },
+    {
+      "boundary": "[music]",
+      "truth": "bot",
+      "text": "Are you trying to add or update your known traveler number?",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Are you trying to add or update your known traveler number?"
+      ]
+    },
+    {
+      "boundary": "[music]",
+      "truth": "bot",
+      "text": "I can give you a moment if you need it.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I can give you a moment if you need it."
+      ]
+    },
+    {
+      "boundary": "Your call is important, please hold.",
+      "truth": "agent",
+      "text": "My name is Alex. How can I help you?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "My name is Alex. How can I help you?"
+      ]
+    },
+    {
+      "boundary": "Your call is important, please hold.",
+      "truth": "agent",
+      "text": "Hello, this is Dana. How can I help?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Hello, this is Dana. How can I help?"
+      ]
+    },
+    {
+      "boundary": "Your call is important, please hold.",
+      "truth": "agent",
+      "text": "Dana speaking.",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Dana speaking."
+      ]
+    },
+    {
+      "boundary": "Your call is important, please hold.",
+      "truth": "agent",
+      "text": "Hello, how can I help?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello, how can I help?"
+      ]
+    },
+    {
+      "boundary": "Your call is important, please hold.",
+      "truth": "agent",
+      "text": "May I have your confirmation number?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "May I have your confirmation number?"
+      ]
+    },
+    {
+      "boundary": "Your call is important, please hold.",
+      "truth": "agent",
+      "text": "Hello? Are you there?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello? Are you there?"
+      ]
+    },
+    {
+      "boundary": "Your call is important, please hold.",
+      "truth": "agent",
+      "text": "Sorry, can you hear me?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Sorry, can you hear me?"
+      ]
+    },
+    {
+      "boundary": "Your call is important, please hold.",
+      "truth": "bot",
+      "text": "Hi, I am Ava, your virtual assistant.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Hi, I am Ava, your virtual assistant."
+      ]
+    },
+    {
+      "boundary": "Your call is important, please hold.",
+      "truth": "bot",
+      "text": "I'm not a live person.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I'm not a live person."
+      ]
+    },
+    {
+      "boundary": "Your call is important, please hold.",
+      "truth": "bot",
+      "text": "Are you trying to add or update your known traveler number?",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Are you trying to add or update your known traveler number?"
+      ]
+    },
+    {
+      "boundary": "Your call is important, please hold.",
+      "truth": "bot",
+      "text": "I can give you a moment if you need it.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I can give you a moment if you need it."
+      ]
+    },
+    {
+      "boundary": "Let me connect you to an agent.",
+      "truth": "agent",
+      "text": "My name is Alex. How can I help you?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "My name is Alex. How can I help you?"
+      ]
+    },
+    {
+      "boundary": "Let me connect you to an agent.",
+      "truth": "agent",
+      "text": "Hello, this is Dana. How can I help?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Hello, this is Dana. How can I help?"
+      ]
+    },
+    {
+      "boundary": "Let me connect you to an agent.",
+      "truth": "agent",
+      "text": "Dana speaking.",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Dana speaking."
+      ]
+    },
+    {
+      "boundary": "Let me connect you to an agent.",
+      "truth": "agent",
+      "text": "Hello, how can I help?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello, how can I help?"
+      ]
+    },
+    {
+      "boundary": "Let me connect you to an agent.",
+      "truth": "agent",
+      "text": "May I have your confirmation number?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "May I have your confirmation number?"
+      ]
+    },
+    {
+      "boundary": "Let me connect you to an agent.",
+      "truth": "agent",
+      "text": "Hello? Are you there?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello? Are you there?"
+      ]
+    },
+    {
+      "boundary": "Let me connect you to an agent.",
+      "truth": "agent",
+      "text": "Sorry, can you hear me?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Sorry, can you hear me?"
+      ]
+    },
+    {
+      "boundary": "Let me connect you to an agent.",
+      "truth": "bot",
+      "text": "Hi, I am Ava, your virtual assistant.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Hi, I am Ava, your virtual assistant."
+      ]
+    },
+    {
+      "boundary": "Let me connect you to an agent.",
+      "truth": "bot",
+      "text": "I'm not a live person.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I'm not a live person."
+      ]
+    },
+    {
+      "boundary": "Let me connect you to an agent.",
+      "truth": "bot",
+      "text": "Are you trying to add or update your known traveler number?",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Are you trying to add or update your known traveler number?"
+      ]
+    },
+    {
+      "boundary": "Let me connect you to an agent.",
+      "truth": "bot",
+      "text": "I can give you a moment if you need it.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I can give you a moment if you need it."
+      ]
+    },
+    {
+      "boundary": "Transferring you to a representative.",
+      "truth": "agent",
+      "text": "My name is Alex. How can I help you?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "My name is Alex. How can I help you?"
+      ]
+    },
+    {
+      "boundary": "Transferring you to a representative.",
+      "truth": "agent",
+      "text": "Hello, this is Dana. How can I help?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Hello, this is Dana. How can I help?"
+      ]
+    },
+    {
+      "boundary": "Transferring you to a representative.",
+      "truth": "agent",
+      "text": "Dana speaking.",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Dana speaking."
+      ]
+    },
+    {
+      "boundary": "Transferring you to a representative.",
+      "truth": "agent",
+      "text": "Hello, how can I help?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello, how can I help?"
+      ]
+    },
+    {
+      "boundary": "Transferring you to a representative.",
+      "truth": "agent",
+      "text": "May I have your confirmation number?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "May I have your confirmation number?"
+      ]
+    },
+    {
+      "boundary": "Transferring you to a representative.",
+      "truth": "agent",
+      "text": "Hello? Are you there?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello? Are you there?"
+      ]
+    },
+    {
+      "boundary": "Transferring you to a representative.",
+      "truth": "agent",
+      "text": "Sorry, can you hear me?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Sorry, can you hear me?"
+      ]
+    },
+    {
+      "boundary": "Transferring you to a representative.",
+      "truth": "bot",
+      "text": "Hi, I am Ava, your virtual assistant.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Hi, I am Ava, your virtual assistant."
+      ]
+    },
+    {
+      "boundary": "Transferring you to a representative.",
+      "truth": "bot",
+      "text": "I'm not a live person.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I'm not a live person."
+      ]
+    },
+    {
+      "boundary": "Transferring you to a representative.",
+      "truth": "bot",
+      "text": "Are you trying to add or update your known traveler number?",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Are you trying to add or update your known traveler number?"
+      ]
+    },
+    {
+      "boundary": "Transferring you to a representative.",
+      "truth": "bot",
+      "text": "I can give you a moment if you need it.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I can give you a moment if you need it."
+      ]
+    },
+    {
+      "boundary": "Please hold while I transfer you to an agent.",
+      "truth": "agent",
+      "text": "My name is Alex. How can I help you?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "My name is Alex. How can I help you?"
+      ]
+    },
+    {
+      "boundary": "Please hold while I transfer you to an agent.",
+      "truth": "agent",
+      "text": "Hello, this is Dana. How can I help?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Hello, this is Dana. How can I help?"
+      ]
+    },
+    {
+      "boundary": "Please hold while I transfer you to an agent.",
+      "truth": "agent",
+      "text": "Dana speaking.",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Dana speaking."
+      ]
+    },
+    {
+      "boundary": "Please hold while I transfer you to an agent.",
+      "truth": "agent",
+      "text": "Hello, how can I help?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello, how can I help?"
+      ]
+    },
+    {
+      "boundary": "Please hold while I transfer you to an agent.",
+      "truth": "agent",
+      "text": "May I have your confirmation number?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "May I have your confirmation number?"
+      ]
+    },
+    {
+      "boundary": "Please hold while I transfer you to an agent.",
+      "truth": "agent",
+      "text": "Hello? Are you there?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello? Are you there?"
+      ]
+    },
+    {
+      "boundary": "Please hold while I transfer you to an agent.",
+      "truth": "agent",
+      "text": "Sorry, can you hear me?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Sorry, can you hear me?"
+      ]
+    },
+    {
+      "boundary": "Please hold while I transfer you to an agent.",
+      "truth": "bot",
+      "text": "Hi, I am Ava, your virtual assistant.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Hi, I am Ava, your virtual assistant."
+      ]
+    },
+    {
+      "boundary": "Please hold while I transfer you to an agent.",
+      "truth": "bot",
+      "text": "I'm not a live person.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I'm not a live person."
+      ]
+    },
+    {
+      "boundary": "Please hold while I transfer you to an agent.",
+      "truth": "bot",
+      "text": "Are you trying to add or update your known traveler number?",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Are you trying to add or update your known traveler number?"
+      ]
+    },
+    {
+      "boundary": "Please hold while I transfer you to an agent.",
+      "truth": "bot",
+      "text": "I can give you a moment if you need it.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I can give you a moment if you need it."
+      ]
+    },
+    {
+      "boundary": "Please wait while I connect you.",
+      "truth": "agent",
+      "text": "My name is Alex. How can I help you?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "My name is Alex. How can I help you?"
+      ]
+    },
+    {
+      "boundary": "Please wait while I connect you.",
+      "truth": "agent",
+      "text": "Hello, this is Dana. How can I help?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Hello, this is Dana. How can I help?"
+      ]
+    },
+    {
+      "boundary": "Please wait while I connect you.",
+      "truth": "agent",
+      "text": "Dana speaking.",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Dana speaking."
+      ]
+    },
+    {
+      "boundary": "Please wait while I connect you.",
+      "truth": "agent",
+      "text": "Hello, how can I help?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello, how can I help?"
+      ]
+    },
+    {
+      "boundary": "Please wait while I connect you.",
+      "truth": "agent",
+      "text": "May I have your confirmation number?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "May I have your confirmation number?"
+      ]
+    },
+    {
+      "boundary": "Please wait while I connect you.",
+      "truth": "agent",
+      "text": "Hello? Are you there?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello? Are you there?"
+      ]
+    },
+    {
+      "boundary": "Please wait while I connect you.",
+      "truth": "agent",
+      "text": "Sorry, can you hear me?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Sorry, can you hear me?"
+      ]
+    },
+    {
+      "boundary": "Please wait while I connect you.",
+      "truth": "bot",
+      "text": "Hi, I am Ava, your virtual assistant.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Hi, I am Ava, your virtual assistant."
+      ]
+    },
+    {
+      "boundary": "Please wait while I connect you.",
+      "truth": "bot",
+      "text": "I'm not a live person.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I'm not a live person."
+      ]
+    },
+    {
+      "boundary": "Please wait while I connect you.",
+      "truth": "bot",
+      "text": "Are you trying to add or update your known traveler number?",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Are you trying to add or update your known traveler number?"
+      ]
+    },
+    {
+      "boundary": "Please wait while I connect you.",
+      "truth": "bot",
+      "text": "I can give you a moment if you need it.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I can give you a moment if you need it."
+      ]
+    },
+    {
+      "boundary": "Connecting you now.",
+      "truth": "agent",
+      "text": "My name is Alex. How can I help you?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "My name is Alex. How can I help you?"
+      ]
+    },
+    {
+      "boundary": "Connecting you now.",
+      "truth": "agent",
+      "text": "Hello, this is Dana. How can I help?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Hello, this is Dana. How can I help?"
+      ]
+    },
+    {
+      "boundary": "Connecting you now.",
+      "truth": "agent",
+      "text": "Dana speaking.",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Dana speaking."
+      ]
+    },
+    {
+      "boundary": "Connecting you now.",
+      "truth": "agent",
+      "text": "Hello, how can I help?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello, how can I help?"
+      ]
+    },
+    {
+      "boundary": "Connecting you now.",
+      "truth": "agent",
+      "text": "May I have your confirmation number?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "May I have your confirmation number?"
+      ]
+    },
+    {
+      "boundary": "Connecting you now.",
+      "truth": "agent",
+      "text": "Hello? Are you there?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello? Are you there?"
+      ]
+    },
+    {
+      "boundary": "Connecting you now.",
+      "truth": "agent",
+      "text": "Sorry, can you hear me?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Sorry, can you hear me?"
+      ]
+    },
+    {
+      "boundary": "Connecting you now.",
+      "truth": "bot",
+      "text": "Hi, I am Ava, your virtual assistant.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Hi, I am Ava, your virtual assistant."
+      ]
+    },
+    {
+      "boundary": "Connecting you now.",
+      "truth": "bot",
+      "text": "I'm not a live person.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I'm not a live person."
+      ]
+    },
+    {
+      "boundary": "Connecting you now.",
+      "truth": "bot",
+      "text": "Are you trying to add or update your known traveler number?",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Are you trying to add or update your known traveler number?"
+      ]
+    },
+    {
+      "boundary": "Connecting you now.",
+      "truth": "bot",
+      "text": "I can give you a moment if you need it.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I can give you a moment if you need it."
+      ]
+    },
+    {
+      "boundary": "One moment while I transfer you.",
+      "truth": "agent",
+      "text": "My name is Alex. How can I help you?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "My name is Alex. How can I help you?"
+      ]
+    },
+    {
+      "boundary": "One moment while I transfer you.",
+      "truth": "agent",
+      "text": "Hello, this is Dana. How can I help?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Hello, this is Dana. How can I help?"
+      ]
+    },
+    {
+      "boundary": "One moment while I transfer you.",
+      "truth": "agent",
+      "text": "Dana speaking.",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Dana speaking."
+      ]
+    },
+    {
+      "boundary": "One moment while I transfer you.",
+      "truth": "agent",
+      "text": "Hello, how can I help?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello, how can I help?"
+      ]
+    },
+    {
+      "boundary": "One moment while I transfer you.",
+      "truth": "agent",
+      "text": "May I have your confirmation number?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "May I have your confirmation number?"
+      ]
+    },
+    {
+      "boundary": "One moment while I transfer you.",
+      "truth": "agent",
+      "text": "Hello? Are you there?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello? Are you there?"
+      ]
+    },
+    {
+      "boundary": "One moment while I transfer you.",
+      "truth": "agent",
+      "text": "Sorry, can you hear me?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Sorry, can you hear me?"
+      ]
+    },
+    {
+      "boundary": "One moment while I transfer you.",
+      "truth": "bot",
+      "text": "Hi, I am Ava, your virtual assistant.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Hi, I am Ava, your virtual assistant."
+      ]
+    },
+    {
+      "boundary": "One moment while I transfer you.",
+      "truth": "bot",
+      "text": "I'm not a live person.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I'm not a live person."
+      ]
+    },
+    {
+      "boundary": "One moment while I transfer you.",
+      "truth": "bot",
+      "text": "Are you trying to add or update your known traveler number?",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Are you trying to add or update your known traveler number?"
+      ]
+    },
+    {
+      "boundary": "One moment while I transfer you.",
+      "truth": "bot",
+      "text": "I can give you a moment if you need it.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I can give you a moment if you need it."
+      ]
+    },
+    {
+      "boundary": "I'll get you to someone.",
+      "truth": "agent",
+      "text": "My name is Alex. How can I help you?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "My name is Alex. How can I help you?"
+      ]
+    },
+    {
+      "boundary": "I'll get you to someone.",
+      "truth": "agent",
+      "text": "Hello, this is Dana. How can I help?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Hello, this is Dana. How can I help?"
+      ]
+    },
+    {
+      "boundary": "I'll get you to someone.",
+      "truth": "agent",
+      "text": "Dana speaking.",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Dana speaking."
+      ]
+    },
+    {
+      "boundary": "I'll get you to someone.",
+      "truth": "agent",
+      "text": "Hello, how can I help?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello, how can I help?"
+      ]
+    },
+    {
+      "boundary": "I'll get you to someone.",
+      "truth": "agent",
+      "text": "May I have your confirmation number?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "May I have your confirmation number?"
+      ]
+    },
+    {
+      "boundary": "I'll get you to someone.",
+      "truth": "agent",
+      "text": "Hello? Are you there?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello? Are you there?"
+      ]
+    },
+    {
+      "boundary": "I'll get you to someone.",
+      "truth": "agent",
+      "text": "Sorry, can you hear me?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Sorry, can you hear me?"
+      ]
+    },
+    {
+      "boundary": "I'll get you to someone.",
+      "truth": "bot",
+      "text": "Hi, I am Ava, your virtual assistant.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Hi, I am Ava, your virtual assistant."
+      ]
+    },
+    {
+      "boundary": "I'll get you to someone.",
+      "truth": "bot",
+      "text": "I'm not a live person.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I'm not a live person."
+      ]
+    },
+    {
+      "boundary": "I'll get you to someone.",
+      "truth": "bot",
+      "text": "Are you trying to add or update your known traveler number?",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Are you trying to add or update your known traveler number?"
+      ]
+    },
+    {
+      "boundary": "I'll get you to someone.",
+      "truth": "bot",
+      "text": "I can give you a moment if you need it.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I can give you a moment if you need it."
+      ]
+    },
+    {
+      "boundary": "Putting you through.",
+      "truth": "agent",
+      "text": "My name is Alex. How can I help you?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "My name is Alex. How can I help you?"
+      ]
+    },
+    {
+      "boundary": "Putting you through.",
+      "truth": "agent",
+      "text": "Hello, this is Dana. How can I help?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Hello, this is Dana. How can I help?"
+      ]
+    },
+    {
+      "boundary": "Putting you through.",
+      "truth": "agent",
+      "text": "Dana speaking.",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Dana speaking."
+      ]
+    },
+    {
+      "boundary": "Putting you through.",
+      "truth": "agent",
+      "text": "Hello, how can I help?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello, how can I help?"
+      ]
+    },
+    {
+      "boundary": "Putting you through.",
+      "truth": "agent",
+      "text": "May I have your confirmation number?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "May I have your confirmation number?"
+      ]
+    },
+    {
+      "boundary": "Putting you through.",
+      "truth": "agent",
+      "text": "Hello? Are you there?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello? Are you there?"
+      ]
+    },
+    {
+      "boundary": "Putting you through.",
+      "truth": "agent",
+      "text": "Sorry, can you hear me?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Sorry, can you hear me?"
+      ]
+    },
+    {
+      "boundary": "Putting you through.",
+      "truth": "bot",
+      "text": "Hi, I am Ava, your virtual assistant.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Hi, I am Ava, your virtual assistant."
+      ]
+    },
+    {
+      "boundary": "Putting you through.",
+      "truth": "bot",
+      "text": "I'm not a live person.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I'm not a live person."
+      ]
+    },
+    {
+      "boundary": "Putting you through.",
+      "truth": "bot",
+      "text": "Are you trying to add or update your known traveler number?",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Are you trying to add or update your known traveler number?"
+      ]
+    },
+    {
+      "boundary": "Putting you through.",
+      "truth": "bot",
+      "text": "I can give you a moment if you need it.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I can give you a moment if you need it."
+      ]
+    },
+    {
+      "boundary": "Let me get an agent.",
+      "truth": "agent",
+      "text": "My name is Alex. How can I help you?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "My name is Alex. How can I help you?"
+      ]
+    },
+    {
+      "boundary": "Let me get an agent.",
+      "truth": "agent",
+      "text": "Hello, this is Dana. How can I help?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Hello, this is Dana. How can I help?"
+      ]
+    },
+    {
+      "boundary": "Let me get an agent.",
+      "truth": "agent",
+      "text": "Dana speaking.",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Dana speaking."
+      ]
+    },
+    {
+      "boundary": "Let me get an agent.",
+      "truth": "agent",
+      "text": "Hello, how can I help?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello, how can I help?"
+      ]
+    },
+    {
+      "boundary": "Let me get an agent.",
+      "truth": "agent",
+      "text": "May I have your confirmation number?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "May I have your confirmation number?"
+      ]
+    },
+    {
+      "boundary": "Let me get an agent.",
+      "truth": "agent",
+      "text": "Hello? Are you there?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello? Are you there?"
+      ]
+    },
+    {
+      "boundary": "Let me get an agent.",
+      "truth": "agent",
+      "text": "Sorry, can you hear me?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Sorry, can you hear me?"
+      ]
+    },
+    {
+      "boundary": "Let me get an agent.",
+      "truth": "bot",
+      "text": "Hi, I am Ava, your virtual assistant.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Hi, I am Ava, your virtual assistant."
+      ]
+    },
+    {
+      "boundary": "Let me get an agent.",
+      "truth": "bot",
+      "text": "I'm not a live person.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I'm not a live person."
+      ]
+    },
+    {
+      "boundary": "Let me get an agent.",
+      "truth": "bot",
+      "text": "Are you trying to add or update your known traveler number?",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Are you trying to add or update your known traveler number?"
+      ]
+    },
+    {
+      "boundary": "Let me get an agent.",
+      "truth": "bot",
+      "text": "I can give you a moment if you need it.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I can give you a moment if you need it."
+      ]
+    },
+    {
+      "boundary": "8000ms gap",
+      "truth": "agent",
+      "text": "My name is Alex. How can I help you?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "My name is Alex. How can I help you?"
+      ]
+    },
+    {
+      "boundary": "8000ms gap",
+      "truth": "agent",
+      "text": "Hello, this is Dana. How can I help?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Hello, this is Dana. How can I help?"
+      ]
+    },
+    {
+      "boundary": "8000ms gap",
+      "truth": "agent",
+      "text": "Dana speaking.",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "named introduction after party boundary or without contrary bot evidence",
+        "Dana speaking."
+      ]
+    },
+    {
+      "boundary": "8000ms gap",
+      "truth": "agent",
+      "text": "Hello, how can I help?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello, how can I help?"
+      ]
+    },
+    {
+      "boundary": "8000ms gap",
+      "truth": "agent",
+      "text": "May I have your confirmation number?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "May I have your confirmation number?"
+      ]
+    },
+    {
+      "boundary": "8000ms gap",
+      "truth": "agent",
+      "text": "Hello? Are you there?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Hello? Are you there?"
+      ]
+    },
+    {
+      "boundary": "8000ms gap",
+      "truth": "agent",
+      "text": "Sorry, can you hear me?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Sorry, can you hear me?"
+      ]
+    },
+    {
+      "boundary": "8000ms gap",
+      "truth": "bot",
+      "text": "Hi, I am Ava, your virtual assistant.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Hi, I am Ava, your virtual assistant."
+      ]
+    },
+    {
+      "boundary": "8000ms gap",
+      "truth": "bot",
+      "text": "I'm not a live person.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "I'm not a live person."
+      ]
+    },
+    {
+      "boundary": "8000ms gap",
+      "truth": "bot",
+      "text": "Are you trying to add or update your known traveler number?",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "continuing automated assistant; no human handoff evidence",
+        "Are you trying to add or update your known traveler number?"
+      ]
+    },
+    {
+      "boundary": "8000ms gap",
+      "truth": "bot",
+      "text": "I can give you a moment if you need it.",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "continuing automated assistant; no human handoff evidence",
+        "I can give you a moment if you need it."
+      ]
+    },
+    {
+      "boundary": "none",
+      "truth": "bot",
+      "text": "My name is Alex. How can I help you?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "My name is Alex. How can I help you?"
+      ]
+    },
+    {
+      "boundary": "none",
+      "truth": "bot",
+      "text": "My name is Alex, your virtual assistant. How can I help?",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "My name is Alex, your virtual assistant. How can I help?"
+      ]
+    }
+  ],
+  "agents": 84,
+  "bots": 50,
+  "bot_labels_on_agents": 0,
+  "false_humans": 0,
+  "named_human_misses": 0
+}

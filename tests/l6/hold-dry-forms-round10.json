@@ -1,0 +1,26 @@
+[
+  {
+    "To": "[NUMBER]",
+    "From": "[NUMBER]",
+    "Url": "https://line.test/t/[SECRET]/twilio/voice/answer/call_b9c625e94bdb4dca",
+    "Method": "POST",
+    "StatusCallback": "https://line.test/t/[SECRET]/twilio/voice/status/call_b9c625e94bdb4dca",
+    "StatusCallbackMethod": "POST",
+    "Timeout": "30",
+    "TimeLimit": "2699",
+    "Record": "false",
+    "StatusCallbackEvent": "completed"
+  },
+  {
+    "To": "[NUMBER]",
+    "From": "[NUMBER]",
+    "Url": "https://line.test/t/[SECRET]/twilio/voice/owner/answer/call_b9c625e94bdb4dca",
+    "Method": "POST",
+    "StatusCallback": "https://line.test/t/[SECRET]/twilio/voice/owner/status/call_b9c625e94bdb4dca",
+    "StatusCallbackMethod": "POST",
+    "Timeout": "20",
+    "TimeLimit": "2699",
+    "Record": "false",
+    "StatusCallbackEvent": "completed"
+  }
+]

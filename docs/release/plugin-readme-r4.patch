@@ -1,0 +1,111 @@
+--- a/plugin/README.md
++++ b/plugin/README.md
+@@ -18,21 +18,22 @@
+ | Feature | Status | Evidence |
+ |---|---|---|
+ | Outbound call, AI disclosure spoken first | **Live, twice**, ConversationRelay, agent mode, to the owner's own phone. Call 1 (80 s, `owner call 1`): disclosure, first reply in 1.56 s, then about 39 s of silence and the owner hung up. Call 2 after the fix (43 s, `owner call 2`): no silence; first text of Hermes's turns after 2.0, 1.6 and 7.3 s, with spoken fillers covering the slow turn; Hermes finished the call itself. | `evidence/trial/call_68921278eab742c6/trial.json`, `evidence/trial/call_9fda11b071df4fea/trial.json`, `STATUS.md` (2026-11-05 18:52Z) |
+-| Answering a call to your own forwarded line | **Live, once.** Call 3 (92 s, `owner call 3`): the owner called his Google Fi number, Fi "Always forward" sent it to the Twilio line, Hermes answered with the disclosure and took the call. Twilio received the original caller's number in `From` and no `ForwardedFrom`. The plugin treated the owner as a hidden caller; fixed offline in L1 round 12, not yet re-run live. | `evidence/trial/call_c20d76d32e9e47db/trial.json`, `STATUS.md` (2026-11-05 18:54Z), `docs/lanes/L1.md` section 21 |
++| Answering a call to your own forwarded line | **Live, twice**, both with the owner calling his own Google Fi number, forwarded by Fi "Always forward" to the Twilio line. Call 3 (92 s, `owner call 3`): Hermes answered with the disclosure; Twilio received the original caller in `From` and no `ForwardedFrom`; the plugin wrongly treated the owner as a hidden caller. Call 5 (121 s, `owner call 5`): the owner's number was recognised, Fi's screening prompt ("press 1 to take this call") was answered with 1, and Hermes held a 2-minute conversation without tools beyond the call. It offered to take a note five times; L1 round 16 limits that to once (offline). No PIN step on either call. | `evidence/trial/call_c20d76d32e9e47db/trial.json`, `evidence/trial/call_94909a575a8941db/trial.json`, `docs/lanes/L1.md` sections 21 and 27 |
+ | Verified caller ID (your mobile number shown to the business) | **Live.** Twilio verified the owner's Google Fi number as caller ID; calls 1 and 2 used it. | `evidence/twilio/04-verify-check.json`, `docs/briefs/L1-round7-live-findings.md` |
++| Calling a real business (Delta Air Lines reservations, toll-free, approved by the owner) | **Live, twice; no hold and no person reached.** Run 1 (68 s, `Delta run 1`): Delta answered with a conversational automated assistant; the menu gate kept Hermes silent, the task ended as failed, and the summary named phrases the gate had blocked, so they were never spoken. Run 2 (57 s, `Delta run 2`): the bot's cut-off self-introduction led to a false "person" verdict; the owner was rung for 18 s and did not pick up; the fallback question went to the bot and its non-answer was reported as an answer. Fixes since then, offline: fixed phrases for automated assistants (L1 round 25), a clear yes to our live-person question before any ring, one quiet gate for every fixed line, and honest fallback outcomes (rounds 30-31). Run 3 was refused by the quiet-hours gate; no call was placed. | `evidence/trial/call_b669b105d4774a49/trial.json`, `evidence/trial/call_2243b7f205194ab5/trial.json`, `evidence/trial/delta3-stdout.jsonl`, `docs/lanes/L1.md` sections 38, 42, 43 |
+ | Phone menus (keys and speech) | Offline tests with a fake Twilio. Not tried on a real menu. | `tests/l1/test_flows.py`, `docs/lanes/L1.md` section 1 |
+-| Waiting on hold | Offline: a 40-minute virtual hold with 0.0 s of voice-model time. Not tried on a real hold line. | `docs/lanes/L5.md` section 4, `tests/l5/` |
+-| Detecting that a person answered | Experimental. On authored transcripts plus the two live replies: 0 false "person" results on 31 held-out non-human cases; 2 of 7 held-out human cases missed with a model, 4 of 7 without one. The live reply to the live-person question ("Yeah. It's me, ...") is now recognised as a person; this is not yet confirmed on a new live call. Authored airline hold transcripts: 0 false "person" in 13 held-out non-human events, 0 of 2 agents missed. | `docs/lanes/L2.md` rounds 2 and 4, `tests/l2/round2-after.json`, `tests/l2/round4-airline-metrics.json` |
+-| Ringing you and bridging you in | Offline tests with a fake Twilio, including a full end-to-end fake call over the real ingress. Not tried live. | `tests/l1/test_flows.py`, `tests/l1/test_r5_voice.py`, `docs/lanes/L1.md` section 12 |
++| Waiting on hold | Offline: a 40-minute virtual hold with 0.0 s of voice-model time. Not yet on a real hold line: both Delta runs ended at the automated assistant. | `docs/lanes/L5.md` section 4, `tests/l5/`, `evidence/trial/call_b669b105d4774a49/trial.json` |
++| Detecting that a person answered | Experimental. On authored transcripts plus the two live replies: 0 false "person" results on 31 held-out non-human cases; 2 of 7 held-out human cases missed with a model, 4 of 7 without one. The live reply to the live-person question ("Yeah. It's me, ...") is now recognised as a person; this is not yet confirmed on a new live call. Authored airline hold transcripts: 0 false "person" in 13 held-out non-human events, 0 of 2 agents missed. Live, Delta run 2 produced a false "person" from a bot; replayed through the current detector it gives 0 of 9 "person" verdicts (offline). | `docs/lanes/L2.md` rounds 2, 4 and 9, `STATUS.md` (L2 r9), `tests/l2/round2-after.json`, `tests/l2/round4-airline-metrics.json` |
++| Ringing you and bridging you in | The owner ring has happened live once, wrongly (Delta run 2, no pickup). A bridge has not happened live. Offline tests with a fake Twilio, including a full end-to-end fake call over the real ingress, and the opt-in live-leg bridge (`owner_live_bridge`). | `evidence/trial/call_2243b7f205194ab5/trial.json`, `tests/l1/test_flows.py`, `docs/lanes/L1.md` sections 12 and 26 |
+ | Callbacks from a business | Offline tests: matching a callback to its task, callbacks forwarded from your own line (for example Fi), unknown callers (message, or ring you and you press 1). A real business callback has not happened yet (call 3 was the owner). | `tests/l1/test_r7_callbacks.py`, `docs/lanes/L1.md` section 16 |
+ | Reading SMS codes from an Android phone | **Live read** on a Pixel 10 Pro XL (Android 17): one message with a code was found, the code masked in the log. Whether Android 17 delays fresh codes is not measured yet: the probe found no phone attached. | `evidence/sms/probe-check.txt`, `evidence/sms/probe-inbox.txt`, `evidence/sms/otp-delay-20261105T184714Z.json` |
+ | Codes sent to a Twilio number | **Live observation:** Twilio filtered a one-time-code text to this project's Twilio line (error 30038). Codes can only come from your carrier phone. | `STATUS.md` (Vezir, 2026-11-05) |
+ | Sending an approved code into a call | Offline tests only, including the real Hermes core in a throwaway home. Off in the live trial. | `docs/lanes/L4.md` sections 2 and 5 |
+-| Grok Voice path (optional xAI key) | Offline tests with fakes, plus **one real, audio-free xAI connection**: session configuration accepted 1108 ms after connecting, about $0.0015. No phone call over this path yet; first-audio latency, barge-in, key tones and billing basis are unmeasured. Security review R1 delta 9: YES for a 3-minute outbound and an inbound trial. | `docs/adr/0004-realtime-voice.md`, `docs/lanes/L6.md` round 6, `tests/l6/dry-round6-grok.json`, `evidence/reviews/R1-DELTA9-n11.md` |
+-| Owner line mode (call your line, key a PIN, have Hermes call a business) | Offline tests only. Security review R1 delta 12: YES for one attended trial (keypad-only PIN and confirmation, two allowed numbers with distinct last four digits); two Medium limits remain for wider use (see setup step 8). | `docs/lanes/L1.md` sections 22-26, `evidence/reviews/R1-DELTA12.md` |
+-| Desktop pane | **Runs inside a real Hermes Desktop** (v0.22.5, isolated sandbox install, sample data, real REST API); matches the offline harness renders. Not yet used during a live call. | `docs/lanes/L3.md` round 5, `tools/pane-preview/screenshots/desktop/` |
++| Grok Voice path (optional xAI key) | **Live, once.** Call 4 (64 s, `owner call 4`, to the owner's phone): Grok spoke for Hermes and used three tools (one question to Hermes, the outcome report, the hang-up); the conversation session connected in 1214 ms once the person was detected, and `voice_first_audio` logged 490 ms; Grok was connected 53 s and hold-path speech-to-text 12.8 s; harness estimate $0.096 of xAI time (not an invoice). Seen on that call and fixed offline in L5 round 6: the disclosure recorded twice in the transcript (spoken once) and repeated copies of the caller's words. No barge-in happened, so barge-in is still unproven live. Key tones on this path are untested. | `evidence/trial/call_374a992b53c044f9/trial.json` (`grok_evidence`), `docs/lanes/L5.md` section 7 |
++| Owner line mode (call your line, key a PIN, have Hermes call a business) | Offline tests only; no live call has used the PIN yet (calls 3 and 5 had no PIN step). Security review R1b delta 35: YES for one attended, keypad-only trial in which the owner asks Hermes to call his own other line; not cleared for business calls or a broader allowlist. Two Medium limits remain (see setup step 8). | `docs/lanes/L1.md` sections 22-26, `evidence/reviews/R1-DELTA35.md` |
++| Desktop pane | **Runs inside a real Hermes Desktop** (v0.22.5, isolated sandbox install, real REST API) with sample data, matching the offline harness renders. Replayed in real time with the recorded data of Delta run 2: the pane went from "Dialing" straight to the owner ring, because "A person answered" lasted 1.2 s and the pane polls every 5 s; the ended headline showed the summary's status line; the time strip was wrong for real data (backlog B7-B9, B12; fixes briefed). Not yet captured during a live call. | `docs/lanes/L3.md` rounds 5 and 6, `tools/pane-preview/screenshots/desktop/`, `tools/pane-preview/screenshots/live/replay-call_2243b7f205194ab5/`, `docs/BACKLOG.md` |
+ | `hermes plugins validate --install-deps` | Passed, exit 0, no plugin warnings (cold run, last re-run in L1 round 15). | `tests/l1/evidence/validate.txt` |
+-| Offline test suites | 840 tests pass (L1 273, L2 83, L3 63, L4 288, L5 79, L6 54), no network. | `docs/release/test-run.txt` |
++| Offline test suites | 1247 tests pass (L1 535, L2 130, L3 66, L4 317, L5 88, L6 111), no network. | `docs/release/test-run.txt` |
+ 
+ ## How a call goes
+ 
+@@ -41,8 +42,12 @@
+    `/line approve <task_id>` (the Desktop pane shows it as waiting). Hermes cannot approve its own call, and nothing said on the phone
+    counts as approval.
+ 3. Hermes dials, says the disclosure line ("Hi, this is Hermes, an AI assistant calling on behalf of ..."),
+-   presses menu keys, and stays quiet on hold.
+-4. When the transcript shows a person, Hermes asks "Am I speaking with a live person?" and listens for a yes.
++   presses menu keys, and stays quiet on hold. If the business answers with a conversational automated assistant,
++   Hermes says only fixed phrases the line picks ("Representative.", "Agent.", "Speak to an agent." and a few more,
++   see Limits), never model text.
++4. When the transcript shows a person, Hermes asks "Am I speaking with a live person?". On a restricted task your
++   phone rings only after a plain yes to that question, never on a guess. Every fixed line Hermes says after the
++   disclosure waits until the business has finished and 1.2 seconds of quiet have passed (10 seconds at most).
+ 5. Then, as you chose in the request:
+    - **owner mode**: your phone rings with a short private message; you press 1 and are joined to the business.
+    - **agent mode**: Hermes talks to the person and finishes the task. It can use your Hermes memory and tools
+@@ -153,8 +158,8 @@
+ spoken conversation, and xAI's streaming speech-to-text while on hold. Without it, calls use Twilio
+ ConversationRelay, where Twilio does speech-to-text and text-to-speech and your Hermes writes every sentence.
+ Force one with `voice.transport: conversation_relay` or `media_streams`. This path is tested offline and with one
+-real xAI connection that set up a session without audio (`tests/l6/dry-round6-grok.json`); no phone call has used it
+-yet.
++real xAI connection that set up a session without audio (`tests/l6/dry-round6-grok.json`), and one live 64-second call
++to the owner's phone (`evidence/trial/call_374a992b53c044f9/trial.json`).
+ 
+ ### 6. SMS codes from an Android phone (optional)
+ 
+@@ -200,7 +205,7 @@
+ For a Google Fi line the steps are in `docs/release/fi-forwarding.md`.
+ 
+ Callbacks are tested offline (`tests/l1/test_r7_callbacks.py`), and the plugin does not yet print the webhook
+-address to set on the Twilio number. On the one live forwarded call so far (Google Fi "always forward"), Twilio got
++address to set on the Twilio number. On both live forwarded calls so far (Google Fi "always forward"), Twilio got
+ the original caller's number and no `ForwardedFrom`, so the plugin records the forwarding as `unknown` rather than
+ guessing. Other carriers are untested.
+ 
+@@ -217,11 +222,11 @@
+ Call your Hermes Line from the road and have Hermes phone a business for you. Set `HERMES_LINE_OWNER_PIN` (4 to 8
+ digits) and `owner_number`.
+ 
+-**Status: experimental, tested offline only.** Security review R1 delta 12 (`evidence/reviews/R1-DELTA12.md`)
+-cleared one attended trial with keypad-only PIN and confirmation and an allowlist of two numbers with different last
+-four digits. It names two limits for wider use: two allowed numbers with the same last four digits cannot be told
+-apart by the confirmation, and a PIN spoken aloud late in a call can reach Hermes before it is scrubbed. Keep your
+-allowlist's last four digits distinct and never say your PIN aloud.
++**Status: experimental, tested offline only.** The latest security review, R1b delta 35
++(`evidence/reviews/R1-DELTA35.md`), cleared one attended, keypad-only trial in which the owner asks Hermes to call
++his own other line, with a two-number allowlist; it is not clearance for business calls or a broader allowlist. It
++names two Medium limits: the keypad confirmation does not identify a replacement goal or prove the read-back was
++heard, and a PIN spoken slowly in fragments can reach Hermes before it is scrubbed. Key your PIN; never say it aloud.
+ 
+ - **Caller ID is not proof.** A call from `owner_number` is only offered the PIN: "If you are Can, key your PIN,
+   then press pound." Until the PIN passes, the caller is an unknown caller who can leave a message, nothing more.
+@@ -377,7 +382,10 @@
+ call 1 to $13.78356 after call 3, $0.088 as read from the balance. That figure also covers any other Twilio usage
+ in that window (for example the filtered inbound text); Twilio had not yet published per-call prices in the
+ evidence (`evidence/trial/*/trial.json`). The one audio-free xAI connection was metered at about
+-$0.0015 (`tests/l6/xai-ledger-round6.json`).
++$0.0015 (`tests/l6/xai-ledger-round6.json`). Twilio's published prices for the two Delta runs (toll-free, outbound):
++$0.028 for run 1 (68 s) and $0.014 for run 2 (57 s) (`provider.price` in their `trial.json`). The live Grok call's
++xAI time was estimated at $0.096 by the harness ledger, not by an xAI invoice (`grok_evidence` in
++`evidence/trial/call_374a992b53c044f9/trial.json`).
+ 
+ ## Limits and known issues
+ 
+@@ -440,9 +448,10 @@
+ 
+ - **US numbers only.** Geographic and toll-free numbers can be called; non-US, premium (900, 976) and US territory
+   numbers cannot (`plugin/line/policy/destinations.py`).
+-- **Three live calls so far**, all with the owner's own phones. Real hold lines, real phone menus, bridging, a
+-  business calling back, codes into a live call, owner line mode, the Grok path on a phone call and holds longer
+-  than 30 minutes have not been tried on a real call. See the status table.
++- **Seven live calls so far:** five with the owner's own phones (three outbound, two inbound) and two to Delta's
++  reservations line, which never got past its automated assistant. A real hold, a human agent at a business, a
++  bridge, a business calling back, a code into a live call, owner line mode, barge-in on the Grok path and holds
++  longer than 30 minutes have not happened on a real call. See the status table.
+ - **Slow turns.** On call 2 one turn took 7.3 s to its first text; spoken fillers covered the gap. Turns that end a
+   call were 5.7 to 7.3 s on call 3; L1 round 12 cut that offline (`docs/lanes/L1.md` section 21).
+ - **Person detection is experimental** and misses some real people (status table); a bare "hello" is not enough. Owner mode can fall back to

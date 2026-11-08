@@ -1,0 +1,141 @@
+{
+  "simulation": true,
+  "description": "Masked full run-2 text replay; authored airline/bank variants are simulations, not verified company scripts",
+  "source": "call_2243b7f205194ab5/trial.json",
+  "events": [
+    {
+      "text": "Hi, this is Hermes, an AI assistant calling on behalf of [OWNER]. This call is not recorded.",
+      "speaker": "hermes",
+      "at_ms": 0,
+      "turn_id": "1",
+      "last": true
+    },
+    {
+      "text": "Thanks for calling. I'm Del",
+      "speaker": "business",
+      "at_ms": 4728,
+      "turn_id": "2",
+      "last": true
+    },
+    {
+      "text": "Hi, this is Hermes, an AI assistant calling for [OWNER]. Am I speaking with a live person?",
+      "speaker": "hermes",
+      "at_ms": 7234,
+      "turn_id": "3",
+      "last": true
+    },
+    {
+      "text": "Hi, Hermes.",
+      "speaker": "business",
+      "at_ms": 9075,
+      "turn_id": "4",
+      "last": true
+    },
+    {
+      "text": "Sorry, I didn't catch that. Am I speaking with a live person?",
+      "speaker": "hermes",
+      "at_ms": 11581,
+      "turn_id": "5",
+      "last": true
+    },
+    {
+      "text": "What can I help you with today regarding Delta Travel?",
+      "speaker": "business",
+      "at_ms": 11689,
+      "turn_id": "6",
+      "last": true
+    },
+    {
+      "text": "Thank you. Please hold for just a moment while I connect [OWNER].",
+      "speaker": "hermes",
+      "at_ms": 14488,
+      "turn_id": "7",
+      "last": true
+    },
+    {
+      "text": "I can't help with that.",
+      "speaker": "business",
+      "at_ms": 30525,
+      "turn_id": "9",
+      "last": true
+    },
+    {
+      "text": "Thank you for your patience, I'm connecting [OWNER] now.",
+      "speaker": "hermes",
+      "at_ms": 30527,
+      "turn_id": "10",
+      "last": true
+    },
+    {
+      "text": "What can I help you with today regarding Delta travel?",
+      "speaker": "business",
+      "at_ms": 33332,
+      "turn_id": "11",
+      "last": true
+    },
+    {
+      "text": "Sorry, [OWNER] can't come to the phone right now. I have just one quick question: What is the checked-bag fee for a domestic economy ticket?",
+      "speaker": "hermes",
+      "at_ms": 35691,
+      "turn_id": "13",
+      "last": true
+    },
+    {
+      "text": "You're welcome.",
+      "speaker": "business",
+      "at_ms": 38051,
+      "turn_id": "14",
+      "last": true
+    },
+    {
+      "text": "What can",
+      "speaker": "business",
+      "at_ms": 40170,
+      "turn_id": "15",
+      "last": true
+    },
+    {
+      "text": "no problem.",
+      "speaker": "business",
+      "at_ms": 44710,
+      "turn_id": "16",
+      "last": true
+    },
+    {
+      "text": "What do you need help with today for Delta Travel?",
+      "speaker": "business",
+      "at_ms": 47431,
+      "turn_id": "17",
+      "last": true
+    },
+    {
+      "text": "I don't have a booking or an account to look up; it's a general question. What is the checked-bag fee for a domestic economy ticket?",
+      "speaker": "hermes",
+      "at_ms": 47432,
+      "turn_id": "18",
+      "last": true
+    },
+    {
+      "text": "Thank you, that's very helpful. That's all I needed. Have a good day. Goodbye.",
+      "speaker": "hermes",
+      "at_ms": 50714,
+      "turn_id": "19",
+      "last": true
+    }
+  ],
+  "brand_questions": [
+    "What can I help you with today regarding Delta Travel?",
+    "What can I help you with about United reservations?",
+    "What do you need help with today for American travel?",
+    "What can I help you with regarding Sample Bank banking?",
+    "What do you need help with today for Example Bank accounts?",
+    "How can I assist you today about Sample Air travel?"
+  ],
+  "truncated": [
+    "Thanks for calling. I'm Del",
+    "I'm Delta's",
+    "this is Delta's",
+    "I'm Uni",
+    "this is Example Bank's"
+  ]
+}

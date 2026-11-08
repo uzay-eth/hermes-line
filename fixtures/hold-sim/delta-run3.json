@@ -1,0 +1,294 @@
+{
+  "simulation": true,
+  "description": "Recorded hold simulation: masked Delta run 3 transcript; transcript text only, no audio liveness claim",
+  "events": [
+    {
+      "text": "Hi, this is Hermes, an AI assistant calling on behalf of [OWNER]. This call is not recorded.",
+      "speaker": "hermes",
+      "at_ms": 0,
+      "turn_id": "1",
+      "last": true
+    },
+    {
+      "text": "Thanks for calling. I'm",
+      "speaker": "business",
+      "at_ms": 4758,
+      "turn_id": "2",
+      "last": true
+    },
+    {
+      "text": "Hi, this is Hermes, an AI assistant calling for [OWNER]. Am I speaking with a live person?",
+      "speaker": "hermes",
+      "at_ms": 7262,
+      "turn_id": "3",
+      "last": true
+    },
+    {
+      "text": "You're speaking with Delta's virtual assistant.",
+      "speaker": "business",
+      "at_ms": 21196,
+      "turn_id": "4",
+      "last": true
+    },
+    {
+      "text": "Not a live person.",
+      "speaker": "business",
+      "at_ms": 22594,
+      "turn_id": "5",
+      "last": true
+    },
+    {
+      "text": "Are you trying to add or update a known traveler number on an existing reservation, or in your Delta SkyMiles account for future travel?",
+      "speaker": "business",
+      "at_ms": 30026,
+      "turn_id": "6",
+      "last": true
+    },
+    {
+      "text": "Whenever you're set, go ahead and ask your question.",
+      "speaker": "business",
+      "at_ms": 44729,
+      "turn_id": "7",
+      "last": true
+    },
+    {
+      "text": "Sorry, am I speaking with a live person?",
+      "speaker": "hermes",
+      "at_ms": 45962,
+      "turn_id": "8",
+      "last": true
+    },
+    {
+      "text": "Got it. 1 moment.",
+      "speaker": "business",
+      "at_ms": 54960,
+      "turn_id": "9",
+      "last": true
+    },
+    {
+      "text": "I'll transfer your call now.",
+      "speaker": "business",
+      "at_ms": 60620,
+      "turn_id": "10",
+      "last": true
+    },
+    {
+      "text": "The current phone wait time is 23 minutes.",
+      "speaker": "business",
+      "at_ms": 66210,
+      "turn_id": "11",
+      "last": true
+    },
+    {
+      "text": "Instead of waiting on hold, you can message with a representative for fast service where the wait time is 0 minutes.",
+      "speaker": "business",
+      "at_ms": 72325,
+      "turn_id": "12",
+      "last": true
+    },
+    {
+      "text": "Please say yes, and we'll send a message to your phone.",
+      "speaker": "business",
+      "at_ms": 75285,
+      "turn_id": "13",
+      "last": true
+    },
+    {
+      "text": "Or you can say, no. Thanks.",
+      "speaker": "business",
+      "at_ms": 77624,
+      "turn_id": "14",
+      "last": true
+    },
+    {
+      "text": "Sorry, am I speaking with a live person?",
+      "speaker": "hermes",
+      "at_ms": 78852,
+      "turn_id": "15",
+      "last": true
+    },
+    {
+      "text": "Sorry. Can you please repeat that?",
+      "speaker": "business",
+      "at_ms": 85874,
+      "turn_id": "16",
+      "last": true
+    },
+    {
+      "text": "Sorry. Can you please repeat that?",
+      "speaker": "business",
+      "at_ms": 92136,
+      "turn_id": "17",
+      "last": true
+    },
+    {
+      "text": "Sorry. Can you please repeat that?",
+      "speaker": "business",
+      "at_ms": 98390,
+      "turn_id": "18",
+      "last": true
+    },
+    {
+      "text": "Sorry. I could not understand.",
+      "speaker": "business",
+      "at_ms": 104924,
+      "turn_id": "19",
+      "last": true
+    },
+    {
+      "text": "To help improve our service, please stay on the line at the end of your call for a 1 question survey.",
+      "speaker": "business",
+      "at_ms": 110339,
+      "turn_id": "20",
+      "last": true
+    },
+    {
+      "text": "As a SkyMiles member, for every mile you fly with us in main cabin or above, you earn miles towards exciting rewards, including flights, upgrades, and more.",
+      "speaker": "business",
+      "at_ms": 241062,
+      "turn_id": "21",
+      "last": true
+    },
+    {
+      "text": "You have the flexibility to book award flights with no blackout giving you the freedom to travel when it suits you best.",
+      "speaker": "business",
+      "at_ms": 247588,
+      "turn_id": "22",
+      "last": true
+    },
+    {
+      "text": "And with our extensive network of partners, your options are endless.",
+      "speaker": "business",
+      "at_ms": 251608,
+      "turn_id": "23",
+      "last": true
+    },
+    {
+      "text": "Sorry, am I speaking with a live person?",
+      "speaker": "hermes",
+      "at_ms": 252851,
+      "turn_id": "24",
+      "last": true
+    },
+    {
+      "text": "Need assistance on the go?",
+      "speaker": "business",
+      "at_ms": 375159,
+      "turn_id": "25",
+      "last": true
+    },
+    {
+      "text": "You can now message a Delta representative via delta.com slash need help.",
+      "speaker": "business",
+      "at_ms": 379757,
+      "turn_id": "26",
+      "last": true
+    },
+    {
+      "text": "Or by clicking the message us button in the more section of the FlyDelta app.",
+      "speaker": "business",
+      "at_ms": 383733,
+      "turn_id": "27",
+      "last": true
+    },
+    {
+      "text": "Representative.",
+      "speaker": "hermes",
+      "at_ms": 384976,
+      "turn_id": "28",
+      "last": true
+    },
+    {
+      "text": "When redeeming your companion certificate, make sure to book well in advance to maximize redemption opportunities.",
+      "speaker": "business",
+      "at_ms": 511167,
+      "turn_id": "29",
+      "last": true
+    },
+    {
+      "text": "Booking your companion certificate further in advance will help the probability of finding your desired itinerary.",
+      "speaker": "business",
+      "at_ms": 517442,
+      "turn_id": "30",
+      "last": true
+    },
+    {
+      "text": "Agent.",
+      "speaker": "hermes",
+      "at_ms": 518690,
+      "turn_id": "31",
+      "last": true
+    },
+    {
+      "text": "For quicker service, please have your confirmation number, ticket number, or SkyMiles number ready.",
+      "speaker": "business",
+      "at_ms": 646993,
+      "turn_id": "32",
+      "last": true
+    },
+    {
+      "text": "You can find this information in the Fly Delta app and delta.com under my trips, or in your confirmation email?",
+      "speaker": "business",
+      "at_ms": 653508,
+      "turn_id": "33",
+      "last": true
+    },
+    {
+      "text": "Agent.",
+      "speaker": "hermes",
+      "at_ms": 654748,
+      "turn_id": "34",
+      "last": true
+    },
+    {
+      "text": "Can",
+      "speaker": "business",
+      "at_ms": 663942,
+      "turn_id": "35",
+      "last": true
+    },
+    {
+      "text": "Agent.",
+      "speaker": "hermes",
+      "at_ms": 665170,
+      "turn_id": "36",
+      "last": true
+    },
+    {
+      "text": "Free Wi Fi for SkyMiles members is now available on most domestic flights.",
+      "speaker": "business",
+      "at_ms": 782023,
+      "turn_id": "37",
+      "last": true
+    },
+    {
+      "text": "Agent.",
+      "speaker": "hermes",
+      "at_ms": 783246,
+      "turn_id": "38",
+      "last": true
+    },
+    {
+      "text": "Enjoy streaming, browsing, messaging, and more.",
+      "speaker": "business",
+      "at_ms": 785827,
+      "turn_id": "39",
+      "last": true
+    },
+    {
+      "text": "From takeoff to touchdown.",
+      "speaker": "business",
+      "at_ms": 787768,
+      "turn_id": "40",
+      "last": true
+    },
+    {
+      "text": "Visit delta.com/wifi to learn more.",
+      "speaker": "business",
+      "at_ms": 791164,
+      "turn_id": "41",
+      "last": true
+    }
+  ],
+  "hold_start_turn": "10"
+}

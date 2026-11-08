@@ -1,0 +1,135 @@
+{
+  "mode": "offline deterministic model; real Hermes AIAgent and tool dispatch",
+  "machine": "arm64",
+  "os": "27.3",
+  "init_ms": 320.93,
+  "calendar_calls": 10,
+  "memory_in_every_request": true,
+  "turns": [
+    {
+      "kind": "cold",
+      "first_ms": 986.493,
+      "full_ms": 1014.219
+    },
+    {
+      "kind": "text",
+      "first_ms": 26.302,
+      "full_ms": 56.505
+    },
+    {
+      "kind": "tool",
+      "first_ms": 62.144,
+      "full_ms": 92.909
+    },
+    {
+      "kind": "text",
+      "first_ms": 25.34,
+      "full_ms": 56.04
+    },
+    {
+      "kind": "tool",
+      "first_ms": 54.009,
+      "full_ms": 84.379
+    },
+    {
+      "kind": "text",
+      "first_ms": 26.421,
+      "full_ms": 57.086
+    },
+    {
+      "kind": "tool",
+      "first_ms": 53.733,
+      "full_ms": 84.0
+    },
+    {
+      "kind": "text",
+      "first_ms": 25.958,
+      "full_ms": 57.313
+    },
+    {
+      "kind": "tool",
+      "first_ms": 55.971,
+      "full_ms": 87.718
+    },
+    {
+      "kind": "text",
+      "first_ms": 28.377,
+      "full_ms": 60.032
+    },
+    {
+      "kind": "tool",
+      "first_ms": 58.302,
+      "full_ms": 90.236
+    },
+    {
+      "kind": "text",
+      "first_ms": 29.286,
+      "full_ms": 61.885
+    },
+    {
+      "kind": "tool",
+      "first_ms": 58.74,
+      "full_ms": 90.283
+    },
+    {
+      "kind": "text",
+      "first_ms": 28.5,
+      "full_ms": 59.584
+    },
+    {
+      "kind": "tool",
+      "first_ms": 58.568,
+      "full_ms": 90.726
+    },
+    {
+      "kind": "text",
+      "first_ms": 29.157,
+      "full_ms": 61.322
+    },
+    {
+      "kind": "tool",
+      "first_ms": 62.469,
+      "full_ms": 94.762
+    },
+    {
+      "kind": "text",
+      "first_ms": 30.611,
+      "full_ms": 63.831
+    },
+    {
+      "kind": "tool",
+      "first_ms": 63.472,
+      "full_ms": 97.015
+    },
+    {
+      "kind": "text",
+      "first_ms": 32.526,
+      "full_ms": 65.47
+    },
+    {
+      "kind": "tool",
+      "first_ms": 62.237,
+      "full_ms": 95.161
+    }
+  ],
+  "text": {
+    "first_ms": {
+      "median": 28.438,
+      "p95": 32.526
+    },
+    "full_ms": {
+      "median": 59.808,
+      "p95": 65.47
+    }
+  },
+  "tool": {
+    "first_ms": {
+      "median": 58.654,
+      "p95": 63.472
+    },
+    "full_ms": {
+      "median": 90.505,
+      "p95": 97.015
+    }
+  }
+}

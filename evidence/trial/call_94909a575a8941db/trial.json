@@ -1,0 +1,1015 @@
+{
+  "call": {
+    "id": "call_94909a575a8941db",
+    "task_id": null,
+    "task_title": "Incoming call",
+    "direction": "inbound",
+    "counterpart_masked": "[owner phone (Spectrum)]",
+    "state": "ended",
+    "started_at": "2026-11-05T20:49:50.065+00:00",
+    "state_since": "2026-11-05T20:51:51.872+00:00",
+    "duration_s": 121,
+    "mode": "agent",
+    "transcript": [
+      {
+        "seq": 1,
+        "speaker": "hermes",
+        "text": "Hi Can, this is Hermes on your line, your AI assistant. How can I help?",
+        "ts": "2026-11-05T20:49:50.664+00:00"
+      },
+      {
+        "seq": 2,
+        "speaker": "business",
+        "text": "In case of a fast pickup, we ask you to let us know that you are not a voice mail system.",
+        "ts": "2026-11-05T20:49:55.923+00:00"
+      },
+      {
+        "seq": 3,
+        "speaker": "business",
+        "text": "So you need to press 1 to take this call.",
+        "ts": "2026-11-05T20:49:57.764+00:00"
+      },
+      {
+        "seq": 4,
+        "speaker": "system",
+        "text": "Pressed 1",
+        "ts": "2026-11-05T20:50:03.033+00:00"
+      },
+      {
+        "seq": 5,
+        "speaker": "hermes",
+        "text": "I pressed 1, so I'm on the line now. How can I help you?",
+        "ts": "2026-11-05T20:50:04.013+00:00"
+      },
+      {
+        "seq": 6,
+        "speaker": "business",
+        "text": "Hi. How are you?",
+        "ts": "2026-11-05T20:50:10.399+00:00"
+      },
+      {
+        "seq": 7,
+        "speaker": "hermes",
+        "text": "I'm doing well, thanks. What can I help you with today?",
+        "ts": "2026-11-05T20:50:11.718+00:00"
+      },
+      {
+        "seq": 8,
+        "speaker": "business",
+        "text": "Who are you?",
+        "ts": "2026-11-05T20:50:17.241+00:00"
+      },
+      {
+        "seq": 9,
+        "speaker": "hermes",
+        "text": "I'm an AI assistant answering calls for Can. Who's calling, and what's it about?",
+        "ts": "2026-11-05T20:50:18.671+00:00"
+      },
+      {
+        "seq": 10,
+        "speaker": "business",
+        "text": "I am Can.",
+        "ts": "2026-11-05T20:50:25.940+00:00"
+      },
+      {
+        "seq": 11,
+        "speaker": "hermes",
+        "text": "Hi Can, good to hear from you. What can I do for you?",
+        "ts": "2026-11-05T20:50:27.306+00:00"
+      },
+      {
+        "seq": 12,
+        "speaker": "business",
+        "text": "Okay.",
+        "ts": "2026-11-05T20:50:35.454+00:00"
+      },
+      {
+        "seq": 13,
+        "speaker": "hermes",
+        "text": "Take your time. Do you want me to take a note, or is there something you need help with?",
+        "ts": "2026-11-05T20:50:36.918+00:00"
+      },
+      {
+        "seq": 14,
+        "speaker": "business",
+        "text": "Can you know who I am from my number?",
+        "ts": "2026-11-05T20:50:38.535+00:00"
+      },
+      {
+        "seq": 15,
+        "speaker": "hermes",
+        "text": "Yes, the call is coming from your own phone number, so I assume it's you. Caller ID can be faked though, so anything that needs your approval still has to go through chat as usual.",
+        "ts": "2026-11-05T20:50:40.988+00:00"
+      },
+      {
+        "seq": 16,
+        "speaker": "business",
+        "text": "Okay. Can you read my club limit right now and tell me?",
+        "ts": "2026-11-05T20:50:57.715+00:00"
+      },
+      {
+        "seq": 17,
+        "speaker": "hermes",
+        "text": "Did you mean your Claude usage limit? I can't check that from this call, but I can leave a note so you get the answer in chat.",
+        "ts": "2026-11-05T20:51:00.693+00:00"
+      },
+      {
+        "seq": 18,
+        "speaker": "business",
+        "text": "Yeah.",
+        "ts": "2026-11-05T20:51:04.605+00:00"
+      },
+      {
+        "seq": 19,
+        "speaker": "hermes",
+        "text": "Got it. I can't see your Claude usage from this call, but I can leave a note so it gets checked and the answer shows up in your chat. Should I do that?",
+        "ts": "2026-11-05T20:51:06.243+00:00"
+      },
+      {
+        "seq": 20,
+        "speaker": "business",
+        "text": "Why not?",
+        "ts": "2026-11-05T20:51:07.445+00:00"
+      },
+      {
+        "seq": 21,
+        "speaker": "hermes",
+        "text": "On this call I only have phone tools, like pressing keys and ending the call, so I can't open your account. I can leave a note so the answer shows up in your chat. Want me to?",
+        "ts": "2026-11-05T20:51:09.104+00:00"
+      },
+      {
+        "seq": 22,
+        "speaker": "business",
+        "text": "What can you answer with, though?",
+        "ts": "2026-11-05T20:51:21.554+00:00"
+      },
+      {
+        "seq": 23,
+        "speaker": "hermes",
+        "text": "I can answer general questions from what I already know, take notes or messages for you, and handle phone menus. Anything that needs your accounts or files gets done in chat after the call.",
+        "ts": "2026-11-05T20:51:25.029+00:00"
+      },
+      {
+        "seq": 24,
+        "speaker": "business",
+        "text": "K.",
+        "ts": "2026-11-05T20:51:31.422+00:00"
+      },
+      {
+        "seq": 25,
+        "speaker": "hermes",
+        "text": "Anything that needs your accounts or files has to happen in chat. Should I leave a note to check your Claude usage limit?",
+        "ts": "2026-11-05T20:51:32.976+00:00"
+      },
+      {
+        "seq": 26,
+        "speaker": "business",
+        "text": "How old I am?",
+        "ts": "2026-11-05T20:51:34.052+00:00"
+      },
+      {
+        "seq": 27,
+        "speaker": "hermes",
+        "text": "I don't know your age, it isn't in anything I have access to here. Want me to add it to my notes if you tell me?",
+        "ts": "2026-11-05T20:51:35.725+00:00"
+      },
+      {
+        "seq": 28,
+        "speaker": "business",
+        "text": "No. I'm all good. Thank you.",
+        "ts": "2026-11-05T20:51:43.914+00:00"
+      },
+      {
+        "seq": 29,
+        "speaker": "hermes",
+        "text": "You're welcome, Can. Have a good one, bye.",
+        "ts": "2026-11-05T20:51:48.101+00:00"
+      }
+    ],
+    "summary": "Hermes Line: Call completed ([owner phone (Spectrum)], \"callback\", 2m01s). Incoming call from Can's own number (caller said he was Can; not verified). After the screening prompt I pressed 1 to take the call. Can asked for his Claude usage limit, but I can't check it from the call. I offered to leave a note so the answer would come through chat, and he didn't take it up. He also asked whether I know his age. I don't, and he didn't want it saved. He ended by saying he was all good. No follow-up requested.",
+    "end_reason": "completed",
+    "revision": 33,
+    "control_revision": 32
+  },
+  "CallSID": "owner call 5",
+  "events": [
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "inbound",
+      "data": {
+        "matched": false,
+        "from": "[owner phone (Spectrum)]",
+        "caller_hidden": false,
+        "owner_number": true,
+        "forwarded": false,
+        "forwarding": "unknown",
+        "via_forwarding_line": false
+      },
+      "ts": 1793911790.070813
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "relay_connected",
+      "data": {
+        "reconnects": 0
+      },
+      "ts": 1793911790.4396942
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1793911791.5112169
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1793911797.76596
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": null,
+        "full_ms": 2393.1,
+        "interrupted": true
+      },
+      "ts": 1793911798.318221
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "filler",
+      "data": {},
+      "ts": 1793911800.820889
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "dtmf_sent",
+      "data": {
+        "digits": "1"
+      },
+      "ts": 1793911803.0333781
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "filler",
+      "data": {},
+      "ts": 1793911803.324679
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 5605.700583997532,
+        "full_ms": 5694.3,
+        "interrupted": false
+      },
+      "ts": 1793911804.013652
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 857.2239999994054,
+        "full_ms": 1318.5,
+        "interrupted": false
+      },
+      "ts": 1793911811.7187982
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 905.3156250010943,
+        "full_ms": 1428.2,
+        "interrupted": false
+      },
+      "ts": 1793911818.671363
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 916.8112089973874,
+        "full_ms": 1364.8,
+        "interrupted": false
+      },
+      "ts": 1793911827.3069499
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 900.9600839999621,
+        "full_ms": 1462.5,
+        "interrupted": false
+      },
+      "ts": 1793911836.918985
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1793911836.989556
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 2387.2745420012507,
+        "full_ms": 2450.7,
+        "interrupted": false
+      },
+      "ts": 1793911840.988308
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "filler",
+      "data": {},
+      "ts": 1793911860.219188
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 2941.526333001093,
+        "full_ms": 2976.3,
+        "interrupted": false
+      },
+      "ts": 1793911860.694168
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1793911864.343755
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 844.1864169944893,
+        "full_ms": 1635.7,
+        "interrupted": false
+      },
+      "ts": 1793911866.2437708
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1793911867.1454148
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 839.2187089993968,
+        "full_ms": 1657.6,
+        "interrupted": false
+      },
+      "ts": 1793911869.105134
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "filler",
+      "data": {},
+      "ts": 1793911884.058675
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 3402.942250002525,
+        "full_ms": 3473.3,
+        "interrupted": false
+      },
+      "ts": 1793911885.0302248
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1793911891.420168
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 937.993457999255,
+        "full_ms": 1551.7,
+        "interrupted": false
+      },
+      "ts": 1793911892.977352
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1793911893.274092
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 1649.3360829990706,
+        "full_ms": 1672.2,
+        "interrupted": false
+      },
+      "ts": 1793911895.725895
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "filler",
+      "data": {},
+      "ts": 1793911906.417891
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "finish_requested",
+      "data": {
+        "outcome": "done"
+      },
+      "ts": 1793911907.136448
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 4109.883457997057,
+        "full_ms": 4185.7,
+        "interrupted": false
+      },
+      "ts": 1793911908.1019719
+    },
+    {
+      "call_id": "call_94909a575a8941db",
+      "task_id": null,
+      "kind": "ended",
+      "data": {
+        "state": "ended",
+        "reason": "completed"
+      },
+      "ts": 1793911911.874379
+    }
+  ],
+  "provider": {
+    "sid": "owner call 5",
+    "duration": "121",
+    "status": "completed",
+    "price": null,
+    "price_unit": "USD"
+  },
+  "balance_before": {
+    "usd": "13.73856",
+    "at": 1793911607.37847
+  },
+  "balance_after": {
+    "usd": "13.73856",
+    "at": 1793911915.397181
+  },
+  "provider_legs": [
+    {
+      "sid": "owner call 5",
+      "duration": "121",
+      "status": "completed",
+      "price": null,
+      "price_unit": "USD"
+    }
+  ],
+  "owner_pin_attempts": {
+    "count": 0,
+    "results": []
+  },
+  "owner_mode_entered": false,
+  "tasks_created_from_call": [],
+  "approved_tasks": [],
+  "related_calls": [
+    {
+      "call": {
+        "id": "call_94909a575a8941db",
+        "task_id": null,
+        "task_title": "Incoming call",
+        "direction": "inbound",
+        "counterpart_masked": "[owner phone (Spectrum)]",
+        "state": "ended",
+        "started_at": "2026-11-05T20:49:50.065+00:00",
+        "state_since": "2026-11-05T20:51:51.872+00:00",
+        "duration_s": 121,
+        "mode": "agent",
+        "transcript": [
+          {
+            "seq": 1,
+            "speaker": "hermes",
+            "text": "Hi Can, this is Hermes on your line, your AI assistant. How can I help?",
+            "ts": "2026-11-05T20:49:50.664+00:00"
+          },
+          {
+            "seq": 2,
+            "speaker": "business",
+            "text": "In case of a fast pickup, we ask you to let us know that you are not a voice mail system.",
+            "ts": "2026-11-05T20:49:55.923+00:00"
+          },
+          {
+            "seq": 3,
+            "speaker": "business",
+            "text": "So you need to press 1 to take this call.",
+            "ts": "2026-11-05T20:49:57.764+00:00"
+          },
+          {
+            "seq": 4,
+            "speaker": "system",
+            "text": "Pressed 1",
+            "ts": "2026-11-05T20:50:03.033+00:00"
+          },
+          {
+            "seq": 5,
+            "speaker": "hermes",
+            "text": "I pressed 1, so I'm on the line now. How can I help you?",
+            "ts": "2026-11-05T20:50:04.013+00:00"
+          },
+          {
+            "seq": 6,
+            "speaker": "business",
+            "text": "Hi. How are you?",
+            "ts": "2026-11-05T20:50:10.399+00:00"
+          },
+          {
+            "seq": 7,
+            "speaker": "hermes",
+            "text": "I'm doing well, thanks. What can I help you with today?",
+            "ts": "2026-11-05T20:50:11.718+00:00"
+          },
+          {
+            "seq": 8,
+            "speaker": "business",
+            "text": "Who are you?",
+            "ts": "2026-11-05T20:50:17.241+00:00"
+          },
+          {
+            "seq": 9,
+            "speaker": "hermes",
+            "text": "I'm an AI assistant answering calls for Can. Who's calling, and what's it about?",
+            "ts": "2026-11-05T20:50:18.671+00:00"
+          },
+          {
+            "seq": 10,
+            "speaker": "business",
+            "text": "I am Can.",
+            "ts": "2026-11-05T20:50:25.940+00:00"
+          },
+          {
+            "seq": 11,
+            "speaker": "hermes",
+            "text": "Hi Can, good to hear from you. What can I do for you?",
+            "ts": "2026-11-05T20:50:27.306+00:00"
+          },
+          {
+            "seq": 12,
+            "speaker": "business",
+            "text": "Okay.",
+            "ts": "2026-11-05T20:50:35.454+00:00"
+          },
+          {
+            "seq": 13,
+            "speaker": "hermes",
+            "text": "Take your time. Do you want me to take a note, or is there something you need help with?",
+            "ts": "2026-11-05T20:50:36.918+00:00"
+          },
+          {
+            "seq": 14,
+            "speaker": "business",
+            "text": "Can you know who I am from my number?",
+            "ts": "2026-11-05T20:50:38.535+00:00"
+          },
+          {
+            "seq": 15,
+            "speaker": "hermes",
+            "text": "Yes, the call is coming from your own phone number, so I assume it's you. Caller ID can be faked though, so anything that needs your approval still has to go through chat as usual.",
+            "ts": "2026-11-05T20:50:40.988+00:00"
+          },
+          {
+            "seq": 16,
+            "speaker": "business",
+            "text": "Okay. Can you read my club limit right now and tell me?",
+            "ts": "2026-11-05T20:50:57.715+00:00"
+          },
+          {
+            "seq": 17,
+            "speaker": "hermes",
+            "text": "Did you mean your Claude usage limit? I can't check that from this call, but I can leave a note so you get the answer in chat.",
+            "ts": "2026-11-05T20:51:00.693+00:00"
+          },
+          {
+            "seq": 18,
+            "speaker": "business",
+            "text": "Yeah.",
+            "ts": "2026-11-05T20:51:04.605+00:00"
+          },
+          {
+            "seq": 19,
+            "speaker": "hermes",
+            "text": "Got it. I can't see your Claude usage from this call, but I can leave a note so it gets checked and the answer shows up in your chat. Should I do that?",
+            "ts": "2026-11-05T20:51:06.243+00:00"
+          },
+          {
+            "seq": 20,
+            "speaker": "business",
+            "text": "Why not?",
+            "ts": "2026-11-05T20:51:07.445+00:00"
+          },
+          {
+            "seq": 21,
+            "speaker": "hermes",
+            "text": "On this call I only have phone tools, like pressing keys and ending the call, so I can't open your account. I can leave a note so the answer shows up in your chat. Want me to?",
+            "ts": "2026-11-05T20:51:09.104+00:00"
+          },
+          {
+            "seq": 22,
+            "speaker": "business",
+            "text": "What can you answer with, though?",
+            "ts": "2026-11-05T20:51:21.554+00:00"
+          },
+          {
+            "seq": 23,
+            "speaker": "hermes",
+            "text": "I can answer general questions from what I already know, take notes or messages for you, and handle phone menus. Anything that needs your accounts or files gets done in chat after the call.",
+            "ts": "2026-11-05T20:51:25.029+00:00"
+          },
+          {
+            "seq": 24,
+            "speaker": "business",
+            "text": "K.",
+            "ts": "2026-11-05T20:51:31.422+00:00"
+          },
+          {
+            "seq": 25,
+            "speaker": "hermes",
+            "text": "Anything that needs your accounts or files has to happen in chat. Should I leave a note to check your Claude usage limit?",
+            "ts": "2026-11-05T20:51:32.976+00:00"
+          },
+          {
+            "seq": 26,
+            "speaker": "business",
+            "text": "How old I am?",
+            "ts": "2026-11-05T20:51:34.052+00:00"
+          },
+          {
+            "seq": 27,
+            "speaker": "hermes",
+            "text": "I don't know your age, it isn't in anything I have access to here. Want me to add it to my notes if you tell me?",
+            "ts": "2026-11-05T20:51:35.725+00:00"
+          },
+          {
+            "seq": 28,
+            "speaker": "business",
+            "text": "No. I'm all good. Thank you.",
+            "ts": "2026-11-05T20:51:43.914+00:00"
+          },
+          {
+            "seq": 29,
+            "speaker": "hermes",
+            "text": "You're welcome, Can. Have a good one, bye.",
+            "ts": "2026-11-05T20:51:48.101+00:00"
+          }
+        ],
+        "summary": "Hermes Line: Call completed ([owner phone (Spectrum)], \"callback\", 2m01s). Incoming call from Can's own number (caller said he was Can; not verified). After the screening prompt I pressed 1 to take the call. Can asked for his Claude usage limit, but I can't check it from the call. I offered to leave a note so the answer would come through chat, and he didn't take it up. He also asked whether I know his age. I don't, and he didn't want it saved. He ended by saying he was all good. No follow-up requested.",
+        "end_reason": "completed",
+        "revision": 33,
+        "control_revision": 32
+      },
+      "CallSID": "owner call 5",
+      "owner_sid": "",
+      "events": [
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "inbound",
+          "data": {
+            "matched": false,
+            "from": "[owner phone (Spectrum)]",
+            "caller_hidden": false,
+            "owner_number": true,
+            "forwarded": false,
+            "forwarding": "unknown",
+            "via_forwarding_line": false
+          },
+          "ts": 1793911790.070813
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "relay_connected",
+          "data": {
+            "reconnects": 0
+          },
+          "ts": 1793911790.4396942
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "barge_in",
+          "data": {},
+          "ts": 1793911791.5112169
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "barge_in",
+          "data": {},
+          "ts": 1793911797.76596
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "turn",
+          "data": {
+            "first_text_ms": null,
+            "full_ms": 2393.1,
+            "interrupted": true
+          },
+          "ts": 1793911798.318221
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "filler",
+          "data": {},
+          "ts": 1793911800.820889
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "dtmf_sent",
+          "data": {
+            "digits": "1"
+          },
+          "ts": 1793911803.0333781
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "filler",
+          "data": {},
+          "ts": 1793911803.324679
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "turn",
+          "data": {
+            "first_text_ms": 5605.700583997532,
+            "full_ms": 5694.3,
+            "interrupted": false
+          },
+          "ts": 1793911804.013652
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "turn",
+          "data": {
+            "first_text_ms": 857.2239999994054,
+            "full_ms": 1318.5,
+            "interrupted": false
+          },
+          "ts": 1793911811.7187982
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "turn",
+          "data": {
+            "first_text_ms": 905.3156250010943,
+            "full_ms": 1428.2,
+            "interrupted": false
+          },
+          "ts": 1793911818.671363
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "turn",
+          "data": {
+            "first_text_ms": 916.8112089973874,
+            "full_ms": 1364.8,
+            "interrupted": false
+          },
+          "ts": 1793911827.3069499
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "turn",
+          "data": {
+            "first_text_ms": 900.9600839999621,
+            "full_ms": 1462.5,
+            "interrupted": false
+          },
+          "ts": 1793911836.918985
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "barge_in",
+          "data": {},
+          "ts": 1793911836.989556
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "turn",
+          "data": {
+            "first_text_ms": 2387.2745420012507,
+            "full_ms": 2450.7,
+            "interrupted": false
+          },
+          "ts": 1793911840.988308
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "filler",
+          "data": {},
+          "ts": 1793911860.219188
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "turn",
+          "data": {
+            "first_text_ms": 2941.526333001093,
+            "full_ms": 2976.3,
+            "interrupted": false
+          },
+          "ts": 1793911860.694168
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "barge_in",
+          "data": {},
+          "ts": 1793911864.343755
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "turn",
+          "data": {
+            "first_text_ms": 844.1864169944893,
+            "full_ms": 1635.7,
+            "interrupted": false
+          },
+          "ts": 1793911866.2437708
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "barge_in",
+          "data": {},
+          "ts": 1793911867.1454148
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "turn",
+          "data": {
+            "first_text_ms": 839.2187089993968,
+            "full_ms": 1657.6,
+            "interrupted": false
+          },
+          "ts": 1793911869.105134
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "filler",
+          "data": {},
+          "ts": 1793911884.058675
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "turn",
+          "data": {
+            "first_text_ms": 3402.942250002525,
+            "full_ms": 3473.3,
+            "interrupted": false
+          },
+          "ts": 1793911885.0302248
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "barge_in",
+          "data": {},
+          "ts": 1793911891.420168
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "turn",
+          "data": {
+            "first_text_ms": 937.993457999255,
+            "full_ms": 1551.7,
+            "interrupted": false
+          },
+          "ts": 1793911892.977352
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "barge_in",
+          "data": {},
+          "ts": 1793911893.274092
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "turn",
+          "data": {
+            "first_text_ms": 1649.3360829990706,
+            "full_ms": 1672.2,
+            "interrupted": false
+          },
+          "ts": 1793911895.725895
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "filler",
+          "data": {},
+          "ts": 1793911906.417891
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "finish_requested",
+          "data": {
+            "outcome": "done"
+          },
+          "ts": 1793911907.136448
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "turn",
+          "data": {
+            "first_text_ms": 4109.883457997057,
+            "full_ms": 4185.7,
+            "interrupted": false
+          },
+          "ts": 1793911908.1019719
+        },
+        {
+          "call_id": "call_94909a575a8941db",
+          "task_id": null,
+          "kind": "ended",
+          "data": {
+            "state": "ended",
+            "reason": "completed"
+          },
+          "ts": 1793911911.874379
+        }
+      ],
+      "latencies": {
+        "human_to_owner_connected_s": null,
+        "ring_to_owner_connected_s": null,
+        "transcript_to_human_s": null,
+        "note": "state-event times; transcript-to-human timing unavailable"
+      }
+    }
+  ],
+  "bridge_legs": []
+}

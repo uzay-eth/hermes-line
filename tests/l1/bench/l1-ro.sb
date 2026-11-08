@@ -1,0 +1,4 @@
+(version 1)
+(allow default)
+(deny file-write* (require-not (subpath "/Users/mac/.hermes/cache/scratch/hermes-line-l1/run")))
+(allow file-write* (literal "/dev/null") (literal "/dev/tty") (literal "/dev/dtracehelper"))

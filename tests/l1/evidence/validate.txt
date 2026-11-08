@@ -1,0 +1,34 @@
+$ hermes plugins validate plugin --install-deps   (shipped package, round 16; cold scratch home, sandboxed writes)
+⚠ install out of sync (ffmpeg: not installed or outdated; node: not installed or outdated; npm: not installed or outdated; ripgrep: not installed or outdated) — run `hermes pm install`
+Preparing the isolated Hermes runtime…
+  → Installing Python dependencies…
+  ✓ Installing Python dependencies
+  → Resolving Python dependencies…
+  ✓ Resolving Python dependencies
+  → Installing Python dependencies…
+  ✓ Installing Python dependencies
+
+✓ manifest — plugin.yaml parses
+✓ manifest fields — name, version, description present
+✓ requires_hermes — spec '>=0.22.5' parses
+✓ config schema — shape valid
+✓ requires_env — all entries UPPER_SNAKE
+✓ oauth — not declared
+✓ loadable — entry: __init__.py, desktop/plugin.js
+✓ python dependencies — 3 requirements from manifest
+✓ capability probe — register() ran in isolation
+✓ declared tools — matches registrations
+✓ declared hooks — matches registrations
+✓ declared middleware — matches registrations
+✓ built-in tool collisions — no collisions
+✓ security scan — safe
+✓ no core override — no runtime rebinds of Hermes core
+✓ desktop surface — stays inside the plugin SDK surface
+◇ Isolation — in-process only: line/engine/hermes_glue.py:197 
+ctx.post_message(): the returned handle is bound to the gateway's event loop and
+live adapter; line/engine/hermes_glue.py:232 ctx.post_message(): the returned 
+handle is bound to the gateway's event loop and live adapter
+  · dashboard backend API is served through the plugin host (buffered responses)
+
+Validation passed.
+Exit status: 0

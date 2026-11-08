@@ -1,0 +1,16 @@
+name: hermes-line-s1
+version: "0.1.0"
+description: Offline Hermes Line lifecycle and voice-loop architecture probe.
+author: Hermes Line
+requires_hermes: ">=0.22.5"
+provides_tools: [hermes_line_noop]
+provides_hooks: []
+requires_env: []
+python_dependencies: []
+config_schema:
+  start_server:
+    type: boolean
+    default: false
+  port:
+    type: integer
+    default: 0

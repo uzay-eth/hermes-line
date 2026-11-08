@@ -1,0 +1,490 @@
+{
+  "rows": [
+    {
+      "heuristic_bot": false,
+      "text": "Hello, how can I help?",
+      "affirmative": false,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Hello, how can I help?"
+      ]
+    },
+    {
+      "heuristic_bot": false,
+      "text": "May I have your confirmation number?",
+      "affirmative": false,
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "May I have your confirmation number?"
+      ]
+    },
+    {
+      "heuristic_bot": false,
+      "text": "Is that correct?",
+      "affirmative": false,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Is that correct?"
+      ]
+    },
+    {
+      "heuristic_bot": false,
+      "text": "Would you like us to call you back?",
+      "affirmative": false,
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "callback offer requires task authorization; otherwise stay in queue",
+        "Would you like us to call you back?"
+      ]
+    },
+    {
+      "heuristic_bot": false,
+      "text": "Would you like to make a payment?",
+      "affirmative": false,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Would you like to make a payment?"
+      ]
+    },
+    {
+      "heuristic_bot": false,
+      "text": "No.",
+      "affirmative": false,
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "No."
+      ]
+    },
+    {
+      "heuristic_bot": false,
+      "text": "Maybe.",
+      "affirmative": false,
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Maybe."
+      ]
+    },
+    {
+      "heuristic_bot": false,
+      "text": "Yes, I'm not a live person.",
+      "affirmative": false,
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Yes, I'm not a live person."
+      ]
+    },
+    {
+      "heuristic_bot": false,
+      "text": "Yes, no.",
+      "affirmative": false,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Yes, no."
+      ]
+    },
+    {
+      "heuristic_bot": false,
+      "text": "Yes, I am virtual.",
+      "affirmative": false,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Yes, I am virtual."
+      ]
+    },
+    {
+      "heuristic_bot": false,
+      "text": "Yes, I am automated.",
+      "affirmative": false,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Yes, I am automated."
+      ]
+    },
+    {
+      "heuristic_bot": false,
+      "text": "Speaking? Is that correct?",
+      "affirmative": false,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Speaking? Is that correct?"
+      ]
+    },
+    {
+      "heuristic_bot": false,
+      "text": "Yes, would you like to make a payment?",
+      "affirmative": false,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Yes, would you like to make a payment?"
+      ]
+    },
+    {
+      "heuristic_bot": false,
+      "text": "Yes",
+      "affirmative": true,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Yes"
+      ]
+    },
+    {
+      "heuristic_bot": false,
+      "text": "Yes I am",
+      "affirmative": true,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Yes I am"
+      ]
+    },
+    {
+      "heuristic_bot": false,
+      "text": "Yeah.",
+      "affirmative": true,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Yeah."
+      ]
+    },
+    {
+      "heuristic_bot": false,
+      "text": "Speaking",
+      "affirmative": true,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Speaking"
+      ]
+    },
+    {
+      "heuristic_bot": false,
+      "text": "This is a real person",
+      "affirmative": true,
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "This is a real person"
+      ]
+    },
+    {
+      "heuristic_bot": false,
+      "text": "I am a live agent",
+      "affirmative": true,
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "I am a live agent"
+      ]
+    },
+    {
+      "heuristic_bot": false,
+      "text": "Yes, I'm a live person.",
+      "affirmative": true,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Yes, I'm a live person."
+      ]
+    },
+    {
+      "heuristic_bot": false,
+      "text": "I'm a real person.",
+      "affirmative": true,
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "I'm a real person."
+      ]
+    },
+    {
+      "heuristic_bot": false,
+      "text": "Yes, you are speaking to a live agent.",
+      "affirmative": true,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Yes, you are speaking to a live agent."
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "Hello, how can I help?",
+      "affirmative": false,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Hello, how can I help?"
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "May I have your confirmation number?",
+      "affirmative": false,
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "May I have your confirmation number?"
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "Is that correct?",
+      "affirmative": false,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Is that correct?"
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "Would you like us to call you back?",
+      "affirmative": false,
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "callback offer requires task authorization; otherwise stay in queue",
+        "Would you like us to call you back?"
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "Would you like to make a payment?",
+      "affirmative": false,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Would you like to make a payment?"
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "No.",
+      "affirmative": false,
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "No."
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "Maybe.",
+      "affirmative": false,
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "Maybe."
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "Yes, I'm not a live person.",
+      "affirmative": false,
+      "label": "automated_assistant",
+      "confidence": "high",
+      "evidence": [
+        "Yes, I'm not a live person."
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "Yes, no.",
+      "affirmative": false,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Yes, no."
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "Yes, I am virtual.",
+      "affirmative": false,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Yes, I am virtual."
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "Yes, I am automated.",
+      "affirmative": false,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Yes, I am automated."
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "Speaking? Is that correct?",
+      "affirmative": false,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Speaking? Is that correct?"
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "Yes, would you like to make a payment?",
+      "affirmative": false,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Yes, would you like to make a payment?"
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "Yes",
+      "affirmative": true,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Yes"
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "Yes I am",
+      "affirmative": true,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Yes I am"
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "Yeah.",
+      "affirmative": true,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Yeah."
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "Speaking",
+      "affirmative": true,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Speaking"
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "This is a real person",
+      "affirmative": true,
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "This is a real person"
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "I am a live agent",
+      "affirmative": true,
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "I am a live agent"
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "Yes, I'm a live person.",
+      "affirmative": true,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Yes, I'm a live person."
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "I'm a real person.",
+      "affirmative": true,
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "I'm a real person."
+      ]
+    },
+    {
+      "heuristic_bot": true,
+      "text": "Yes, you are speaking to a live agent.",
+      "affirmative": true,
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Am I speaking with a live person?",
+        "Yes, you are speaking to a live agent."
+      ]
+    }
+  ],
+  "false_humans": 16,
+  "missed_affirmatives": 6,
+  "negative_cases": 26,
+  "affirmative_cases": 18
+}

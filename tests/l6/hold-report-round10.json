@@ -1,0 +1,33 @@
+{
+  "dry": true,
+  "outcome": "fallback_question_answered",
+  "cleanup_failures": [],
+  "rates": {
+    "business": "0.0210",
+    "relay": "0.1050",
+    "owner": "0.0210",
+    "conference": "0.00270"
+  },
+  "rate_basis": "S2 planning rates x1.5; no pricing read in dry",
+  "balance_reads": [
+    {
+      "at": 1793913460.766316,
+      "usd": "20.00"
+    },
+    {
+      "at": 1793913460.824957,
+      "usd": "20.00"
+    }
+  ],
+  "conservative_cost_usd": "0.15240",
+  "cost_basis": "conservative estimate, separate from Twilio billing",
+  "metrics": {
+    "menu_s": 0.00896906852722168,
+    "hold_s": 0.012953996658325195,
+    "transcript_to_human_s": 0.000993967056274414,
+    "bridge_s": null,
+    "false_human_count": 0,
+    "false_human_basis": "scripted ground truth",
+    "human_assumed_count": 0
+  }
+}

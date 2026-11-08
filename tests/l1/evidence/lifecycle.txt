@@ -1,0 +1,30 @@
+{
+ "enabled": true,
+ "tools": [
+  "hermes_line_call_bring_owner",
+  "hermes_line_call_finish",
+  "hermes_line_call_new_task",
+  "hermes_line_call_press_digits",
+  "hermes_line_call_status",
+  "hermes_line_hang_up",
+  "hermes_line_list_tasks",
+  "hermes_line_request_call",
+  "hermes_line_say",
+  "hermes_line_take_over",
+  "line_otp_to_call"
+ ],
+ "missing_tools": [],
+ "skills": [
+  "hermes-line"
+ ],
+ "health": {
+  "ok": true
+ },
+ "lease_after_start": "ready",
+ "service_status": "ready",
+ "emergency_refused": true,
+ "port_closed_after_unload": true,
+ "lease_after_unload": "stopped",
+ "tools_after_unload": []
+}
+PASS

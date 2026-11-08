@@ -1,0 +1,12 @@
+2026-11-05T08:59:58Z
+BALANCE (200, (15.03556, 'USD'))
+STATUS 200
+NUMBER [the Bora number] [number SID withheld] voice_url_set True voice_app False trunk False
+STATUS 200 []
+STATUS 200 [('local', '1.15', '1.15'), ('toll free', '2.15', '2.15')]
+STATUS 200
+AVAIL +1 775-•••-6522 Winnemucca NV {'MMS': True, 'SMS': True, 'voice': True}
+AVAIL +1 775-•••-9750 Empire NV {'MMS': True, 'SMS': True, 'voice': True}
+AVAIL +1 775-•••-9781 Fish Lake Valley NV {'MMS': True, 'SMS': True, 'voice': True}
+AVAIL +1 775-•••-9301 Silver Springs NV {'MMS': True, 'SMS': True, 'voice': True}
+AVAIL +1 775-•••-5614 Eureka NV {'MMS': True, 'SMS': True, 'voice': True}

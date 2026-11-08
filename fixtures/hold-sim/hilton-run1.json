@@ -1,0 +1,223 @@
+{
+ "simulation": false,
+ "description": "Hilton Reservations live call 1 (Hilton call 1, 2026-11-08), masked transcript as recorded by the plugin store; the agent answered our live-person question with \"Yes. Are you a live person too?\" and was missed (round 43).",
+ "source": "evidence/trial/call_05b4aa023f374279/trial.json",
+ "transcript": [
+  {
+   "seq": 1,
+   "speaker": "hermes",
+   "text": "Hi, this is Hermes, an AI assistant calling on behalf of Can. This call is not recorded.",
+   "ts": "2026-11-08T06:20:57.087+00:00"
+  },
+  {
+   "seq": 2,
+   "speaker": "business",
+   "text": "Hi.",
+   "ts": "2026-11-08T06:21:00.313+00:00"
+  },
+  {
+   "seq": 3,
+   "speaker": "business",
+   "text": "Thanks for calling Hilton Hotels.",
+   "ts": "2026-11-08T06:21:02.715+00:00"
+  },
+  {
+   "seq": 4,
+   "speaker": "hermes",
+   "text": "Hi, this is Hermes, an AI assistant calling for Can. Am I speaking with a live person?",
+   "ts": "2026-11-08T06:21:05.219+00:00"
+  },
+  {
+   "seq": 5,
+   "speaker": "business",
+   "text": "I?",
+   "ts": "2026-11-08T06:21:10.460+00:00"
+  },
+  {
+   "seq": 6,
+   "speaker": "business",
+   "text": "Are you calling about a reservation?",
+   "ts": "2026-11-08T06:21:13.869+00:00"
+  },
+  {
+   "seq": 7,
+   "speaker": "hermes",
+   "text": "No, a general question.",
+   "ts": "2026-11-08T06:21:15.223+00:00"
+  },
+  {
+   "seq": 8,
+   "speaker": "business",
+   "text": "Got it.",
+   "ts": "2026-11-08T06:21:20.138+00:00"
+  },
+  {
+   "seq": 9,
+   "speaker": "business",
+   "text": "To get your call to the appropriate representative, please tell me in a few words.",
+   "ts": "2026-11-08T06:21:25.194+00:00"
+  },
+  {
+   "seq": 10,
+   "speaker": "business",
+   "text": "Why you're calling today.",
+   "ts": "2026-11-08T06:21:25.926+00:00"
+  },
+  {
+   "seq": 11,
+   "speaker": "hermes",
+   "text": "Agent.",
+   "ts": "2026-11-08T06:21:27.154+00:00"
+  },
+  {
+   "seq": 12,
+   "speaker": "business",
+   "text": "Okay. So that I can connect you to the right place, please select from 1 of the following options that is closest to what you need help with.",
+   "ts": "2026-11-08T06:21:37.659+00:00"
+  },
+  {
+   "seq": 13,
+   "speaker": "business",
+   "text": "For recent stay feedback or billing questions, press 1.",
+   "ts": "2026-11-08T06:21:41.896+00:00"
+  },
+  {
+   "seq": 14,
+   "speaker": "business",
+   "text": "For Honors account inquiries, press 2.",
+   "ts": "2026-11-08T06:21:44.818+00:00"
+  },
+  {
+   "seq": 15,
+   "speaker": "business",
+   "text": "For reservations, press 3.",
+   "ts": "2026-11-08T06:21:47.322+00:00"
+  },
+  {
+   "seq": 16,
+   "speaker": "business",
+   "text": "For price match claims, press 4.",
+   "ts": "2026-11-08T06:21:49.972+00:00"
+  },
+  {
+   "seq": 17,
+   "speaker": "business",
+   "text": "Are you still there?",
+   "ts": "2026-11-08T06:21:55.604+00:00"
+  },
+  {
+   "seq": 18,
+   "speaker": "business",
+   "text": "Please select from 1 of the following options.",
+   "ts": "2026-11-08T06:21:58.509+00:00"
+  },
+  {
+   "seq": 19,
+   "speaker": "business",
+   "text": "For recent stay feedback or billing questions, press 1.",
+   "ts": "2026-11-08T06:22:02.425+00:00"
+  },
+  {
+   "seq": 20,
+   "speaker": "business",
+   "text": "For Honors account inquiries, press 2.",
+   "ts": "2026-11-08T06:22:05.338+00:00"
+  },
+  {
+   "seq": 21,
+   "speaker": "business",
+   "text": "For reservations, press 3.",
+   "ts": "2026-11-08T06:22:07.855+00:00"
+  },
+  {
+   "seq": 22,
+   "speaker": "business",
+   "text": "For price match claims, press 4.",
+   "ts": "2026-11-08T06:22:10.504+00:00"
+  },
+  {
+   "seq": 23,
+   "speaker": "business",
+   "text": "Thank you for calling.",
+   "ts": "2026-11-08T06:22:16.841+00:00"
+  },
+  {
+   "seq": 24,
+   "speaker": "business",
+   "text": "Goodbye.",
+   "ts": "2026-11-08T06:22:17.996+00:00"
+  },
+  {
+   "seq": 25,
+   "speaker": "business",
+   "text": "I'm connecting you with an agent.",
+   "ts": "2026-11-08T06:22:21.323+00:00"
+  },
+  {
+   "seq": 26,
+   "speaker": "business",
+   "text": "You may receive a survey via email about your experience the agent who assisted you today.",
+   "ts": "2026-11-08T06:22:26.695+00:00"
+  },
+  {
+   "seq": 27,
+   "speaker": "business",
+   "text": "Your call may be monitored or recorded for quality purposes.",
+   "ts": "2026-11-08T06:22:30.649+00:00"
+  },
+  {
+   "seq": 28,
+   "speaker": "business",
+   "text": "For information on our privacy policy, please visit privacy.hilton.com.",
+   "ts": "2026-11-08T06:22:36.027+00:00"
+  },
+  {
+   "seq": 29,
+   "speaker": "business",
+   "text": "Thank you for calling Hilton today. Did you know you can earn more Hilton Honors points with our Hilton Honors American Express credit cards?",
+   "ts": "2026-11-08T06:22:58.145+00:00"
+  },
+  {
+   "seq": 30,
+   "speaker": "business",
+   "text": "To learn more, visit hilton.com and click on credit cards.",
+   "ts": "2026-11-08T06:23:01.978+00:00"
+  },
+  {
+   "seq": 31,
+   "speaker": "business",
+   "text": "We look forward Thank you for calling Hilton. This is Chris. How can I help you?",
+   "ts": "2026-11-08T06:23:07.264+00:00"
+  },
+  {
+   "seq": 32,
+   "speaker": "hermes",
+   "text": "Sorry, am I speaking with a live person?",
+   "ts": "2026-11-08T06:23:08.487+00:00"
+  },
+  {
+   "seq": 33,
+   "speaker": "business",
+   "text": "Yes. Are you a live person too?",
+   "ts": "2026-11-08T06:23:14.937+00:00"
+  },
+  {
+   "seq": 34,
+   "speaker": "business",
+   "text": "Hello? Are you a live person too?",
+   "ts": "2026-11-08T06:23:22.310+00:00"
+  },
+  {
+   "seq": 35,
+   "speaker": "business",
+   "text": "I'm a live person.",
+   "ts": "2026-11-08T06:23:22.949+00:00"
+  },
+  {
+   "seq": 36,
+   "speaker": "business",
+   "text": "Sorry. I'm not hearing any response.",
+   "ts": "2026-11-08T06:23:27.993+00:00"
+  }
+ ]
+}

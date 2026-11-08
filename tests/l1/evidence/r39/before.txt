@@ -1,0 +1,63 @@
+# Round 39 replay test run on the unchanged engine (HEAD ddfe40a), 2026-11-06T17:28Z
+# tests/l1/test_r39_hold_queue.py copied into a clean worktree of HEAD; expected to FAIL
+test_R39_real_detector_replay (test_r39_hold_queue.RealDetectorReplayTests.test_R39_real_detector_replay)
+The same replay through the real detector (L2 on main at the time of the run). ... FAIL
+test_R39_the_message_offer_is_unsafe (test_r39_hold_queue.UnsafeOfferTests.test_R39_the_message_offer_is_unsafe) ... FAIL
+test_R39_no_phrase_into_the_hold_queue_and_the_agent_at_minute_23_rings (test_r39_hold_queue.WorstCaseReplayTests.test_R39_no_phrase_into_the_hold_queue_and_the_agent_at_minute_23_rings) ... FAIL
+
+======================================================================
+FAIL: test_R39_real_detector_replay (test_r39_hold_queue.RealDetectorReplayTests.test_R39_real_detector_replay)
+The same replay through the real detector (L2 on main at the time of the run).
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/hl-before/tests/l1/test_r39_hold_queue.py", line 142, in test_R39_real_detector_replay
+    self.assertEqual(phrases_after_hold(line, req), [], "assistant phrases were sent during hold")
+AssertionError: Lists differ: [{'state': 'possible_new_party', 'phrase_i[393 chars]nt'}] != []
+
+First list contains 8 additional elements.
+First extra element 0:
+{'state': 'possible_new_party', 'phrase_id': 'agent'}
+
++ []
+- [{'phrase_id': 'agent', 'state': 'possible_new_party'},
+-  {'phrase_id': 'agent', 'state': 'possible_new_party'},
+-  {'phrase_id': 'agent', 'state': 'possible_new_party'},
+-  {'phrase_id': 'agent', 'state': 'possible_new_party'},
+-  {'phrase_id': 'agent', 'state': 'possible_new_party'},
+-  {'phrase_id': 'agent', 'state': 'possible_new_party'},
+-  {'phrase_id': 'agent', 'state': 'possible_new_party'},
+-  {'phrase_id': 'agent', 'state': 'possible_new_party'}] : assistant phrases were sent during hold
+
+======================================================================
+FAIL: test_R39_the_message_offer_is_unsafe (test_r39_hold_queue.UnsafeOfferTests.test_R39_the_message_offer_is_unsafe)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/hl-before/tests/l1/test_r39_hold_queue.py", line 155, in test_R39_the_message_offer_is_unsafe
+    self.assertTrue(assistant.unsafe_offer(text), text)
+AssertionError: False is not true : Please say yes, and we'll send a message to your phone.
+
+======================================================================
+FAIL: test_R39_no_phrase_into_the_hold_queue_and_the_agent_at_minute_23_rings (test_r39_hold_queue.WorstCaseReplayTests.test_R39_no_phrase_into_the_hold_queue_and_the_agent_at_minute_23_rings)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/hl-before/tests/l1/test_r39_hold_queue.py", line 127, in test_R39_no_phrase_into_the_hold_queue_and_the_agent_at_minute_23_rings
+    self.assertEqual(phrases_after_hold(line, req), [], "assistant phrases were sent during hold")
+AssertionError: Lists differ: [{'state': 'possible_new_party', 'phrase_i[338 chars]nt'}] != []
+
+First list contains 7 additional elements.
+First extra element 0:
+{'state': 'possible_new_party', 'phrase_id': 'agent'}
+
++ []
+- [{'phrase_id': 'agent', 'state': 'possible_new_party'},
+-  {'phrase_id': 'agent', 'state': 'possible_new_party'},
+-  {'phrase_id': 'agent', 'state': 'possible_new_party'},
+-  {'phrase_id': 'agent', 'state': 'possible_new_party'},
+-  {'phrase_id': 'agent', 'state': 'possible_new_party'},
+-  {'phrase_id': 'agent', 'state': 'possible_new_party'},
+-  {'phrase_id': 'agent', 'state': 'possible_new_party'}] : assistant phrases were sent during hold
+
+----------------------------------------------------------------------
+Ran 3 tests in 138.042s
+
+FAILED (failures=3)

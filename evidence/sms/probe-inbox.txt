@@ -1,0 +1,2 @@
+{"count": 1, "probe": "inbox", "since_minutes": 60, "status": "ok"}
+{"at": "2026-11-05T08:11:59Z", "from": "95737", "id": "2", "len": 44, "otp": {"ambiguous": false, "codes": 1, "found": true, "kinds": ["prefixed"]}, "probe": "message", "shape": "A A a a a A-9"}

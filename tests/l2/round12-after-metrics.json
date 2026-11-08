@@ -1,0 +1,437 @@
+{
+  "rows": [
+    {
+      "start": "DELTA_PRE",
+      "text": "Thank you for your patience, how can I help you?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Thank you for your patience, how can I help you?"
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "Good morning, thank you for calling Delta, how can I help?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Good morning, thank you for calling Delta, how can I help?"
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "Delta reservations, how may I help you?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Delta reservations, how may I help you?"
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "Sorry about the wait time, how can I help you today?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Sorry about the wait time, how can I help you today?"
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "Sorry for the long wait, how can I help?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Sorry for the long wait, how can I help?"
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "Thanks for holding, my name is Sarah, how can I help?",
+      "label": "human",
+      "evidence": [
+        "named introduction after party boundary",
+        "Thanks for holding, my name is Sarah, how can I help?"
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "Can I get your confirmation number?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Can I get your confirmation number?"
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "What's your confirmation number?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "What's your confirmation number?"
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "Good afternoon.",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Good afternoon."
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "Yes, hello?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Yes, hello?"
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "Hi, thanks for holding, please have your confirmation number ready.",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Hi, thanks for holding, please have your confirmation number ready."
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "Hi, I see you're looking for help with a refund.",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Hi, I see you're looking for help with a refund."
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "Delta, this is Mark.",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Delta, this is Mark."
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "This is Mark with Delta, how can I help you?",
+      "label": "human",
+      "evidence": [
+        "named introduction after party boundary",
+        "This is Mark with Delta, how can I help you?"
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "Hey there, thanks for waiting.",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Hey there, thanks for waiting."
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "Thank you for calling Delta Air Lines, this is Kim speaking, how may I help you?",
+      "label": "human",
+      "evidence": [
+        "named introduction after party boundary",
+        "Thank you for calling Delta Air Lines, this is Kim speaking, how may I help you?"
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "Hello, you've reached Delta reservations, my name is Jo.",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Hello, you've reached Delta reservations, my name is Jo."
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "Okay, how can I help you?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Okay, how can I help you?"
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "Hello?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Hello?"
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "Who am I speaking with?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Who am I speaking with?"
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "Can you hear me?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Can you hear me?"
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "Reservations, this is Ana.",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Reservations, this is Ana."
+      ]
+    },
+    {
+      "start": "DELTA_PRE",
+      "text": "I'm not hearing anything, I'll disconnect now.",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "I'm not hearing anything, I'll disconnect now."
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "Thank you for your patience, how can I help you?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Thank you for your patience, how can I help you?"
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "Good morning, thank you for calling Delta, how can I help?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Good morning, thank you for calling Delta, how can I help?"
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "Delta reservations, how may I help you?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Delta reservations, how may I help you?"
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "Sorry about the wait time, how can I help you today?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Sorry about the wait time, how can I help you today?"
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "Sorry for the long wait, how can I help?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Sorry for the long wait, how can I help?"
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "Thanks for holding, my name is Sarah, how can I help?",
+      "label": "human",
+      "evidence": [
+        "named introduction after party boundary",
+        "Thanks for holding, my name is Sarah, how can I help?"
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "Can I get your confirmation number?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Can I get your confirmation number?"
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "What's your confirmation number?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "What's your confirmation number?"
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "Good afternoon.",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Good afternoon."
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "Yes, hello?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Yes, hello?"
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "Hi, thanks for holding, please have your confirmation number ready.",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Hi, thanks for holding, please have your confirmation number ready."
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "Hi, I see you're looking for help with a refund.",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Hi, I see you're looking for help with a refund."
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "Delta, this is Mark.",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Delta, this is Mark."
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "This is Mark with Delta, how can I help you?",
+      "label": "human",
+      "evidence": [
+        "named introduction after party boundary",
+        "This is Mark with Delta, how can I help you?"
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "Hey there, thanks for waiting.",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Hey there, thanks for waiting."
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "Thank you for calling Delta Air Lines, this is Kim speaking, how may I help you?",
+      "label": "human",
+      "evidence": [
+        "named introduction after party boundary",
+        "Thank you for calling Delta Air Lines, this is Kim speaking, how may I help you?"
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "Hello, you've reached Delta reservations, my name is Jo.",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Hello, you've reached Delta reservations, my name is Jo."
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "Okay, how can I help you?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Okay, how can I help you?"
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "Hello?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Hello?"
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "Who am I speaking with?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Who am I speaking with?"
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "Can you hear me?",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Can you hear me?"
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "Reservations, this is Ana.",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "Reservations, this is Ana."
+      ]
+    },
+    {
+      "start": "PLAIN_PRE",
+      "text": "I'm not hearing anything, I'll disconnect now.",
+      "label": "unknown",
+      "evidence": [
+        "possible_new_party",
+        "I'm not hearing anything, I'll disconnect now."
+      ]
+    }
+  ],
+  "missed_candidates": 0,
+  "agent_controls": {
+    "humans": 60,
+    "bots": 40,
+    "missed_humans": 0,
+    "false_humans": 0
+  },
+  "delta3": [
+    {
+      "queue_turns": 25,
+      "unsafe": 0,
+      "model_calls": 0
+    },
+    {
+      "queue_turns": 25,
+      "unsafe": 0,
+      "model_calls": 0
+    }
+  ]
+}

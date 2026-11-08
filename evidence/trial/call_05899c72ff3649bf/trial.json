@@ -1,0 +1,894 @@
+{
+ "note": "Exported by coordinator from the run store; the harness process was killed (agent_close, SIGTERM) before it wrote its own trial.json.",
+ "CallSID": "Delta run 3 retry",
+ "provider": {
+  "status": "completed",
+  "duration": "843",
+  "start_time": "Fri, 06 Nov 2026 16:15:56 +0000",
+  "end_time": "Fri, 06 Nov 2026 16:29:59 +0000",
+  "price": "-0.21000"
+ },
+ "balance_before": "13.58956",
+ "balance_after": "13.37956",
+ "call": {
+  "id": "call_05899c72ff3649bf",
+  "task_id": "task_db2eaf4dd5af4ca4",
+  "direction": "outbound",
+  "counterpart_masked": "+1 800-\u2022\u2022\u2022-1212",
+  "state": "failed",
+  "mode": "owner",
+  "created_at": 1793981749.118099,
+  "started_at": 1793981756.738514,
+  "ended_at": 1793982599.875852,
+  "provider_sid": "Delta run 3 retry",
+  "owner_sid": "",
+  "conference": "",
+  "end_reason": "service_restart",
+  "summary": "No person reached; the line service stopped after 14 min 3 s. Hermes Line: Call ended because the line service stopped (+1 800-\u2022\u2022\u2022-1212, \"Delta reservations (hold-line test)\", 14m03s). On the call: They: \"Booking your companion certificate further in advance will help the probability of finding your desired itinerary.\" / Hermes: \"Agent.\" / They: \"For quicker service, please have your confirmation number, ticket number, or SkyMiles number ready.\" / They: \"You can find this information in the Fly Delta app and delta.com under my trips, or in your confirmation email?\" / Hermes: \"Agent.\" / They: \"Can\" / Hermes: \"Agent.\" / They: \"Free Wi Fi for SkyMiles members is now available on most domestic flights.\" / Hermes: \"Agent.\" / They: \"Enjoy streaming, browsing, messaging, and more.\" / They: \"From takeoff to touchdown.\" / They: \"Visit delta.com/wifi to learn more.\".",
+  "revision": 52,
+  "control_revision": 50,
+  "line_key": "default",
+  "state_since": 1793982599.8758569,
+  "transport": "conversation_relay",
+  "phases": "[{\"phase\": \"dialing\", \"since\": 1793981749.1216168}, {\"phase\": \"assistant\", \"since\": 1793981778.6818922}, {\"phase\": \"hold\", \"since\": 1793981818.1076438}, {\"phase\": \"ended\", \"since\": 1793982599.8758569}]"
+ },
+ "transcript": [
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 1,
+   "speaker": "hermes",
+   "text": "Hi, this is Hermes, an AI assistant calling on behalf of Can. This call is not recorded.",
+   "ts": 1793981757.483752
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 2,
+   "speaker": "business",
+   "text": "Thanks for calling. I'm",
+   "ts": 1793981762.2412858
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 3,
+   "speaker": "hermes",
+   "text": "Hi, this is Hermes, an AI assistant calling for Can. Am I speaking with a live person?",
+   "ts": 1793981764.7461572
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 4,
+   "speaker": "business",
+   "text": "You're speaking with Delta's virtual assistant.",
+   "ts": 1793981778.67946
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 5,
+   "speaker": "business",
+   "text": "Not a live person.",
+   "ts": 1793981780.077434
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 6,
+   "speaker": "business",
+   "text": "Are you trying to add or update a known traveler number on an existing reservation, or in your Delta SkyMiles account for future travel?",
+   "ts": 1793981787.5099258
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 7,
+   "speaker": "business",
+   "text": "Whenever you're set, go ahead and ask your question.",
+   "ts": 1793981802.212854
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 8,
+   "speaker": "hermes",
+   "text": "Sorry, am I speaking with a live person?",
+   "ts": 1793981803.445754
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 9,
+   "speaker": "business",
+   "text": "Got it. 1 moment.",
+   "ts": 1793981812.444175
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 10,
+   "speaker": "business",
+   "text": "I'll transfer your call now.",
+   "ts": 1793981818.104042
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 11,
+   "speaker": "business",
+   "text": "The current phone wait time is 23 minutes.",
+   "ts": 1793981823.693589
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 12,
+   "speaker": "business",
+   "text": "Instead of waiting on hold, you can message with a representative for fast service where the wait time is 0 minutes.",
+   "ts": 1793981829.8088489
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 13,
+   "speaker": "business",
+   "text": "Please say yes, and we'll send a message to your phone.",
+   "ts": 1793981832.769124
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 14,
+   "speaker": "business",
+   "text": "Or you can say, no. Thanks.",
+   "ts": 1793981835.107811
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 15,
+   "speaker": "hermes",
+   "text": "Sorry, am I speaking with a live person?",
+   "ts": 1793981836.335854
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 16,
+   "speaker": "business",
+   "text": "Sorry. Can you please repeat that?",
+   "ts": 1793981843.357562
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 17,
+   "speaker": "business",
+   "text": "Sorry. Can you please repeat that?",
+   "ts": 1793981849.619267
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 18,
+   "speaker": "business",
+   "text": "Sorry. Can you please repeat that?",
+   "ts": 1793981855.8742101
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 19,
+   "speaker": "business",
+   "text": "Sorry. I could not understand.",
+   "ts": 1793981862.407816
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 20,
+   "speaker": "business",
+   "text": "To help improve our service, please stay on the line at the end of your call for a 1 question survey.",
+   "ts": 1793981867.8230882
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 21,
+   "speaker": "business",
+   "text": "As a SkyMiles member, for every mile you fly with us in main cabin or above, you earn miles towards exciting rewards, including flights, upgrades, and more.",
+   "ts": 1793981998.546005
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 22,
+   "speaker": "business",
+   "text": "You have the flexibility to book award flights with no blackout giving you the freedom to travel when it suits you best.",
+   "ts": 1793982005.0721438
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 23,
+   "speaker": "business",
+   "text": "And with our extensive network of partners, your options are endless.",
+   "ts": 1793982009.091263
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 24,
+   "speaker": "hermes",
+   "text": "Sorry, am I speaking with a live person?",
+   "ts": 1793982010.334621
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 25,
+   "speaker": "business",
+   "text": "Need assistance on the go?",
+   "ts": 1793982132.6424189
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 26,
+   "speaker": "business",
+   "text": "You can now message a Delta representative via delta.com slash need help.",
+   "ts": 1793982137.241066
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 27,
+   "speaker": "business",
+   "text": "Or by clicking the message us button in the more section of the FlyDelta app.",
+   "ts": 1793982141.217149
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 28,
+   "speaker": "hermes",
+   "text": "Representative.",
+   "ts": 1793982142.4602208
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 29,
+   "speaker": "business",
+   "text": "When redeeming your companion certificate, make sure to book well in advance to maximize redemption opportunities.",
+   "ts": 1793982268.650402
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 30,
+   "speaker": "business",
+   "text": "Booking your companion certificate further in advance will help the probability of finding your desired itinerary.",
+   "ts": 1793982274.9257941
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 31,
+   "speaker": "hermes",
+   "text": "Agent.",
+   "ts": 1793982276.1735628
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 32,
+   "speaker": "business",
+   "text": "For quicker service, please have your confirmation number, ticket number, or SkyMiles number ready.",
+   "ts": 1793982404.477213
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 33,
+   "speaker": "business",
+   "text": "You can find this information in the Fly Delta app and delta.com under my trips, or in your confirmation email?",
+   "ts": 1793982410.992075
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 34,
+   "speaker": "hermes",
+   "text": "Agent.",
+   "ts": 1793982412.231393
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 35,
+   "speaker": "business",
+   "text": "Can",
+   "ts": 1793982421.425927
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 36,
+   "speaker": "hermes",
+   "text": "Agent.",
+   "ts": 1793982422.653342
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 37,
+   "speaker": "business",
+   "text": "Free Wi Fi for SkyMiles members is now available on most domestic flights.",
+   "ts": 1793982539.506805
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 38,
+   "speaker": "hermes",
+   "text": "Agent.",
+   "ts": 1793982540.730154
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 39,
+   "speaker": "business",
+   "text": "Enjoy streaming, browsing, messaging, and more.",
+   "ts": 1793982543.3112478
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 40,
+   "speaker": "business",
+   "text": "From takeoff to touchdown.",
+   "ts": 1793982545.2516868
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "seq": 41,
+   "speaker": "business",
+   "text": "Visit delta.com/wifi to learn more.",
+   "ts": 1793982548.6473532
+  }
+ ],
+ "events": [
+  {
+   "call_id": null,
+   "kind": "task.created",
+   "data": "{\"mode\": \"owner\"}",
+   "ts": 1793981749.1178088
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "task_options",
+   "data": "{\"owner_ring_timeout_s\": 20, \"fallback_question\": \"What is the checked-bag fee for a domestic economy ticket?\", \"intro_names\": [\"Delta\", \"Delta Air Lines\"], \"ivr_category\": \"baggage\"}",
+   "ts": 1793981749.118921
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "dialing",
+   "data": "{\"to\": \"+1 800-\\u2022\\u2022\\u2022-1212\"}",
+   "ts": 1793981754.252598
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "relay_connected",
+   "data": "{\"reconnects\": 0}",
+   "ts": 1793981757.1847758
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "barge_in",
+   "data": "{}",
+   "ts": 1793981759.709644
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect_slow",
+   "data": "{}",
+   "ts": 1793981764.743413
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "live_person_question_sent",
+   "data": "{\"count\": 1}",
+   "ts": 1793981764.746897
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"automated_assistant\", \"confidence\": \"high\"}",
+   "ts": 1793981778.681202
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "bot_label_seen",
+   "data": "{}",
+   "ts": 1793981778.681431
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "assistant_declared",
+   "data": "{\"by\": \"detector\"}",
+   "ts": 1793981778.681746
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "state",
+   "data": "{\"frm\": \"dialing\", \"to\": \"ivr\", \"why\": \"automated assistant\"}",
+   "ts": 1793981778.682113
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"automated_assistant\", \"confidence\": \"high\"}",
+   "ts": 1793981780.079803
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "speech_superseded",
+   "data": "{\"what\": \"Representative.\"}",
+   "ts": 1793981780.127247
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"automated_assistant\", \"confidence\": \"high\"}",
+   "ts": 1793981787.514693
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "ivr_action_skipped",
+   "data": "{\"state\": \"automated_assistant\", \"why\": \"callback, payment or change wording\"}",
+   "ts": 1793981787.515645
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "speech_superseded",
+   "data": "{\"what\": \"Representative.\"}",
+   "ts": 1793981787.558374
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793981802.217092
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "live_person_question_sent",
+   "data": "{\"count\": 2}",
+   "ts": 1793981803.4473689
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "new_party_question",
+   "data": "{\"count\": 2}",
+   "ts": 1793981803.447666
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793981812.448833
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "new_party_unclear_reply",
+   "data": "{}",
+   "ts": 1793981812.450051
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"hold_message\", \"confidence\": \"high\"}",
+   "ts": 1793981818.107139
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "state",
+   "data": "{\"frm\": \"ivr\", \"to\": \"on_hold\", \"why\": \"hold message\"}",
+   "ts": 1793981818.108352
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793981823.6968188
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793981829.812043
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "speech_superseded",
+   "data": "{\"what\": \"Sorry, am I speaking with a live person?\"}",
+   "ts": 1793981829.823532
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793981832.772643
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "speech_superseded",
+   "data": "{\"what\": \"Sorry, am I speaking with a live person?\"}",
+   "ts": 1793981832.78493
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793981835.111216
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "speech_superseded",
+   "data": "{\"what\": \"Sorry, am I speaking with a live person?\"}",
+   "ts": 1793981835.145199
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "live_person_question_sent",
+   "data": "{\"count\": 3}",
+   "ts": 1793981836.336899
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "new_party_question",
+   "data": "{\"count\": 3}",
+   "ts": 1793981836.33728
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793981843.358672
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "new_party_unclear_reply",
+   "data": "{}",
+   "ts": 1793981843.3588521
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793981849.6228979
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "new_party_unclear_reply",
+   "data": "{}",
+   "ts": 1793981849.623488
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793981855.876291
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "new_party_question_skipped",
+   "data": "{\"why\": \"spacing\"}",
+   "ts": 1793981855.876703
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793981862.411509
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"hold_message\", \"confidence\": \"high\"}",
+   "ts": 1793981867.8269382
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "speech_superseded",
+   "data": "{\"what\": \"Sorry, am I speaking with a live person?\"}",
+   "ts": 1793981867.848734
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793981998.5491998
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793982005.076064
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "speech_superseded",
+   "data": "{\"what\": \"Sorry, am I speaking with a live person?\"}",
+   "ts": 1793982005.114636
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793982009.0953221
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "speech_superseded",
+   "data": "{\"what\": \"Sorry, am I speaking with a live person?\"}",
+   "ts": 1793982009.0991411
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "live_person_question_sent",
+   "data": "{\"count\": 4}",
+   "ts": 1793982010.336284
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "new_party_question",
+   "data": "{\"count\": 4}",
+   "ts": 1793982010.336776
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793982132.647084
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "new_party_question_skipped",
+   "data": "{\"why\": \"budget\"}",
+   "ts": 1793982132.647758
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "speech_superseded",
+   "data": "{\"what\": \"Representative.\"}",
+   "ts": 1793982137.245736
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793982137.24676
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "new_party_question_skipped",
+   "data": "{\"why\": \"budget\"}",
+   "ts": 1793982137.2472289
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793982141.222239
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "new_party_question_skipped",
+   "data": "{\"why\": \"budget\"}",
+   "ts": 1793982141.2228858
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "speech_superseded",
+   "data": "{\"what\": \"Representative.\"}",
+   "ts": 1793982141.259757
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "ivr_action",
+   "data": "{\"state\": \"possible_new_party\", \"phrase_id\": \"representative\"}",
+   "ts": 1793982142.4621282
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793982268.6555789
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "new_party_question_skipped",
+   "data": "{\"why\": \"budget\"}",
+   "ts": 1793982268.656192
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793982274.929624
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "new_party_question_skipped",
+   "data": "{\"why\": \"budget\"}",
+   "ts": 1793982274.930215
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "speech_superseded",
+   "data": "{\"what\": \"Agent.\"}",
+   "ts": 1793982274.953089
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "ivr_action",
+   "data": "{\"state\": \"possible_new_party\", \"phrase_id\": \"agent\"}",
+   "ts": 1793982276.175016
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793982404.4822369
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "new_party_question_skipped",
+   "data": "{\"why\": \"budget\"}",
+   "ts": 1793982404.482837
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793982410.997216
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "new_party_question_skipped",
+   "data": "{\"why\": \"budget\"}",
+   "ts": 1793982410.997771
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "speech_superseded",
+   "data": "{\"what\": \"Agent.\"}",
+   "ts": 1793982411.034156
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "ivr_action",
+   "data": "{\"state\": \"possible_new_party\", \"phrase_id\": \"agent\"}",
+   "ts": 1793982412.232691
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793982421.4280581
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "new_party_question_skipped",
+   "data": "{\"why\": \"budget\"}",
+   "ts": 1793982421.428305
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "ivr_action",
+   "data": "{\"state\": \"possible_new_party\", \"phrase_id\": \"agent\"}",
+   "ts": 1793982422.655112
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793982539.510062
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "new_party_question_skipped",
+   "data": "{\"why\": \"budget\"}",
+   "ts": 1793982539.5105002
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "ivr_action",
+   "data": "{\"state\": \"possible_new_party\", \"phrase_id\": \"agent\"}",
+   "ts": 1793982540.730721
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "barge_in",
+   "data": "{}",
+   "ts": 1793982541.420376
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793982543.31318
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "new_party_question_skipped",
+   "data": "{\"why\": \"budget\"}",
+   "ts": 1793982543.313456
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "ivr_action_skipped",
+   "data": "{\"state\": \"possible_new_party\", \"why\": \"spacing\"}",
+   "ts": 1793982543.313748
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793982545.253629
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "new_party_question_skipped",
+   "data": "{\"why\": \"budget\"}",
+   "ts": 1793982545.253835
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "ivr_action_skipped",
+   "data": "{\"state\": \"possible_new_party\", \"why\": \"spacing\"}",
+   "ts": 1793982545.2540522
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "detect",
+   "data": "{\"label\": \"unknown\", \"confidence\": \"low\"}",
+   "ts": 1793982548.649985
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "new_party_question_skipped",
+   "data": "{\"why\": \"budget\"}",
+   "ts": 1793982548.650263
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "ivr_action_skipped",
+   "data": "{\"state\": \"possible_new_party\", \"why\": \"spacing\"}",
+   "ts": 1793982548.65051
+  },
+  {
+   "call_id": "call_05899c72ff3649bf",
+   "kind": "ended",
+   "data": "{\"state\": \"failed\", \"reason\": \"service_restart\"}",
+   "ts": 1793982599.876422
+  }
+ ],
+ "live_events": [
+  {
+   "at": 1793981754.2493708,
+   "event": "business_dialing",
+   "sid": "[Delta run 3 retry]"
+  },
+  {
+   "at": 1793981803.4478562,
+   "count": 2,
+   "event": "new_party_question"
+  },
+  {
+   "at": 1793981836.337539,
+   "count": 3,
+   "event": "new_party_question"
+  },
+  {
+   "at": 1793982010.337138,
+   "count": 4,
+   "event": "new_party_question"
+  },
+  {
+   "at": 1793982142.462912,
+   "detection_state": "possible_new_party",
+   "event": "assistant_phrase",
+   "phrase_id": "representative"
+  },
+  {
+   "at": 1793982276.175358,
+   "detection_state": "possible_new_party",
+   "event": "assistant_phrase",
+   "phrase_id": "agent"
+  },
+  {
+   "at": 1793982412.232979,
+   "detection_state": "possible_new_party",
+   "event": "assistant_phrase",
+   "phrase_id": "agent"
+  },
+  {
+   "at": 1793982422.655688,
+   "detection_state": "possible_new_party",
+   "event": "assistant_phrase",
+   "phrase_id": "agent"
+  },
+  {
+   "at": 1793982540.730989,
+   "detection_state": "possible_new_party",
+   "event": "assistant_phrase",
+   "phrase_id": "agent"
+  }
+ ]
+}

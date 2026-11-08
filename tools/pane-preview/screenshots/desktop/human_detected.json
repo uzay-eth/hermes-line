@@ -1,0 +1,90 @@
+{
+  "scene": "human_detected",
+  "pane": {
+    "x": 1060,
+    "y": 0,
+    "width": 380,
+    "height": 900,
+    "paneTop": 34,
+    "dpr": 2,
+    "inner": [
+      1440,
+      900
+    ]
+  },
+  "theme": {
+    "skin": "nous",
+    "mode": "light",
+    "vars": {
+      "--ui-accent": "#0053fd",
+      "--theme-primary": "#0053fd",
+      "--theme-midground": "#0053fd",
+      "--dt-primary-solid": "#0053fd",
+      "--ui-red": "#cf2d56",
+      "--dt-destructive": "#cf222e",
+      "--ui-base": "#1f2328"
+    }
+  },
+  "contrast": {
+    "card": "#dee9ff",
+    "tone": "attention",
+    "rows": [
+      {
+        "kind": "text",
+        "sel": ".hlc-task-meta",
+        "ink": "#454b53",
+        "ratio": 7.24,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-quote-by",
+        "ink": "#454b53",
+        "ratio": 7.24,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-sub",
+        "ink": "#454b53",
+        "ratio": 7.24,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"false\"] .hlc-label",
+        "ink": "#454b53",
+        "ratio": 7.24,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-col[data-current=\"true\"] .hlc-label",
+        "ink": "#2a2f35",
+        "ratio": 11.09,
+        "need": 4.5
+      },
+      {
+        "kind": "text",
+        "sel": ".hlc-headline",
+        "ink": "#0053fd",
+        "ratio": 4.71,
+        "need": 4.5
+      },
+      {
+        "kind": "segment",
+        "sel": "segment",
+        "ink": "#727b86",
+        "ratio": 3.53,
+        "need": 3
+      },
+      {
+        "kind": "segment",
+        "sel": "segment (live)",
+        "ink": "#0053fd",
+        "ratio": 4.71,
+        "need": 3
+      }
+    ]
+  }
+}

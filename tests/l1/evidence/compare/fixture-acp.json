@@ -1,0 +1,397 @@
+{
+  "what": "Hermes model route from HERMES_HOME config, fake ConversationRelay over loopback ingress; no STT/TTS/phone",
+  "driver": "acp",
+  "route": {
+    "model": "l1-fixture",
+    "provider": "custom",
+    "reasoning_effort": "low",
+    "credential": "resolved by Hermes, never read by this script"
+  },
+  "safe_mode_env": "",
+  "child_processes_after_first_turn": [
+    "python3.14"
+  ],
+  "machine": "arm64",
+  "os": "27.3",
+  "python": "3.14.9",
+  "agent_construction_ms": [
+    5923.3
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "kind": "cold",
+      "first_text_ms": 64.1,
+      "full_ms": 133.9,
+      "chars": 29
+    },
+    {
+      "turn": 2,
+      "kind": "warm",
+      "first_text_ms": 47.0,
+      "full_ms": 117.2,
+      "chars": 29
+    },
+    {
+      "turn": 3,
+      "kind": "warm",
+      "first_text_ms": 52.3,
+      "full_ms": 121.8,
+      "chars": 29
+    },
+    {
+      "turn": 4,
+      "kind": "warm",
+      "first_text_ms": 52.1,
+      "full_ms": 120.3,
+      "chars": 29
+    },
+    {
+      "turn": 5,
+      "kind": "warm",
+      "first_text_ms": 64.9,
+      "full_ms": 121.3,
+      "chars": 29
+    },
+    {
+      "turn": 6,
+      "kind": "warm",
+      "first_text_ms": 53.8,
+      "full_ms": 120.5,
+      "chars": 29
+    },
+    {
+      "turn": 7,
+      "kind": "warm",
+      "first_text_ms": 53.5,
+      "full_ms": 120.7,
+      "chars": 29
+    },
+    {
+      "turn": 8,
+      "kind": "warm",
+      "first_text_ms": 51.9,
+      "full_ms": 119.1,
+      "chars": 29
+    },
+    {
+      "turn": 9,
+      "kind": "warm",
+      "first_text_ms": 69.2,
+      "full_ms": 135.9,
+      "chars": 29
+    },
+    {
+      "turn": 10,
+      "kind": "warm",
+      "first_text_ms": 56.3,
+      "full_ms": 122.1,
+      "chars": 29
+    },
+    {
+      "turn": 11,
+      "kind": "warm",
+      "first_text_ms": 57.6,
+      "full_ms": 119.1,
+      "chars": 29
+    },
+    {
+      "turn": 12,
+      "kind": "warm",
+      "first_text_ms": 52.3,
+      "full_ms": 134.6,
+      "chars": 29
+    },
+    {
+      "turn": 13,
+      "kind": "warm",
+      "first_text_ms": 54.9,
+      "full_ms": 122.3,
+      "chars": 29
+    },
+    {
+      "turn": 14,
+      "kind": "warm",
+      "first_text_ms": 60.3,
+      "full_ms": 124.9,
+      "chars": 29
+    }
+  ],
+  "driver_turn_events": [
+    {
+      "first_text_ms": 60.79908399988199,
+      "full_ms": 131.1,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 45.35470800146868,
+      "full_ms": 115.4,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 50.8283749986731,
+      "full_ms": 119.7,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 50.53829200005566,
+      "full_ms": 118.6,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 63.68874999861873,
+      "full_ms": 118.9,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 50.75533400122367,
+      "full_ms": 118.8,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 51.322584000445204,
+      "full_ms": 118.1,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 51.136374999259715,
+      "full_ms": 118.2,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 67.94508299935842,
+      "full_ms": 133.4,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 53.5210409998399,
+      "full_ms": 119.5,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 54.519957999218605,
+      "full_ms": 118.1,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 51.36770799981605,
+      "full_ms": 132.9,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 53.21070900026825,
+      "full_ms": 120.4,
+      "interrupted": false
+    },
+    {
+      "first_text_ms": 58.15508300111105,
+      "full_ms": 123.5,
+      "interrupted": false
+    }
+  ],
+  "in_call_tool_context": [],
+  "final_state": "agent_talking",
+  "transcript": [
+    {
+      "seq": 1,
+      "speaker": "hermes",
+      "text": "Hi, this is Hermes, an AI assistant calling on behalf of Sam. This call is not recorded.",
+      "ts": 1793868005.684383
+    },
+    {
+      "seq": 2,
+      "speaker": "business",
+      "text": "Good evening, Sample Bistro, this is Mike speaking.",
+      "ts": 1793868005.684715
+    },
+    {
+      "seq": 3,
+      "speaker": "hermes",
+      "text": "Hi, this is Hermes, an AI assistant calling for Sam. Am I speaking with a live person?",
+      "ts": 1793868012.443291
+    },
+    {
+      "seq": 4,
+      "speaker": "business",
+      "text": "Yes, I am a real person",
+      "ts": 1793868012.4476402
+    },
+    {
+      "seq": 5,
+      "speaker": "hermes",
+      "text": "Thank you, that works for us.",
+      "ts": 1793868012.5797482
+    },
+    {
+      "seq": 6,
+      "speaker": "business",
+      "text": "Sure, what day and time were you thinking?",
+      "ts": 1793868012.5941849
+    },
+    {
+      "seq": 7,
+      "speaker": "hermes",
+      "text": "Thank you, that works for us.",
+      "ts": 1793868012.709952
+    },
+    {
+      "seq": 8,
+      "speaker": "business",
+      "text": "And for how many people?",
+      "ts": 1793868012.711345
+    },
+    {
+      "seq": 9,
+      "speaker": "hermes",
+      "text": "Thank you, that works for us.",
+      "ts": 1793868012.831291
+    },
+    {
+      "seq": 10,
+      "speaker": "business",
+      "text": "Okay. What name should I put the reservation under?",
+      "ts": 1793868012.8332212
+    },
+    {
+      "seq": 11,
+      "speaker": "hermes",
+      "text": "Thank you, that works for us.",
+      "ts": 1793868012.952078
+    },
+    {
+      "seq": 12,
+      "speaker": "business",
+      "text": "We're actually full at seven. Would seven thirty work instead?",
+      "ts": 1793868012.953504
+    },
+    {
+      "seq": 13,
+      "speaker": "hermes",
+      "text": "Thank you, that works for us.",
+      "ts": 1793868013.072695
+    },
+    {
+      "seq": 14,
+      "speaker": "business",
+      "text": "Great. Indoor or patio?",
+      "ts": 1793868013.07487
+    },
+    {
+      "seq": 15,
+      "speaker": "hermes",
+      "text": "Thank you, that works for us.",
+      "ts": 1793868013.1940029
+    },
+    {
+      "seq": 16,
+      "speaker": "business",
+      "text": "Any allergies or a special occasion we should know about?",
+      "ts": 1793868013.195364
+    },
+    {
+      "seq": 17,
+      "speaker": "hermes",
+      "text": "Thank you, that works for us.",
+      "ts": 1793868013.3138602
+    },
+    {
+      "seq": 18,
+      "speaker": "business",
+      "text": "Perfect. Can I get a phone number in case we need to reach you?",
+      "ts": 1793868013.316139
+    },
+    {
+      "seq": 19,
+      "speaker": "hermes",
+      "text": "Thank you, that works for us.",
+      "ts": 1793868013.434649
+    },
+    {
+      "seq": 20,
+      "speaker": "business",
+      "text": "Got it. Just so you know, we hold tables for fifteen minutes.",
+      "ts": 1793868013.435308
+    },
+    {
+      "seq": 21,
+      "speaker": "hermes",
+      "text": "Thank you, that works for us.",
+      "ts": 1793868013.569041
+    },
+    {
+      "seq": 22,
+      "speaker": "business",
+      "text": "Is there anything else I can help with?",
+      "ts": 1793868013.571212
+    },
+    {
+      "seq": 23,
+      "speaker": "hermes",
+      "text": "Thank you, that works for us.",
+      "ts": 1793868013.691107
+    },
+    {
+      "seq": 24,
+      "speaker": "business",
+      "text": "Do you need directions or parking information?",
+      "ts": 1793868013.693385
+    },
+    {
+      "seq": 25,
+      "speaker": "hermes",
+      "text": "Thank you, that works for us.",
+      "ts": 1793868013.811767
+    },
+    {
+      "seq": 26,
+      "speaker": "business",
+      "text": "Alright, you're all set for Friday at seven thirty for four.",
+      "ts": 1793868013.8124108
+    },
+    {
+      "seq": 27,
+      "speaker": "hermes",
+      "text": "Thank you, that works for us.",
+      "ts": 1793868013.945612
+    },
+    {
+      "seq": 28,
+      "speaker": "business",
+      "text": "Sorry, could you repeat the name once more?",
+      "ts": 1793868013.947078
+    },
+    {
+      "seq": 29,
+      "speaker": "hermes",
+      "text": "Thank you, that works for us.",
+      "ts": 1793868014.067817
+    },
+    {
+      "seq": 30,
+      "speaker": "business",
+      "text": "Thanks. We'll see you Friday. Have a good one!",
+      "ts": 1793868014.069464
+    },
+    {
+      "seq": 31,
+      "speaker": "hermes",
+      "text": "Thank you, that works for us.",
+      "ts": 1793868014.19328
+    }
+  ],
+  "warm_stats": {
+    "n": 13,
+    "first_text_ms": {
+      "p50": 53.8,
+      "p90": 64.9,
+      "min": 47.0,
+      "max": 69.2
+    },
+    "full_ms": {
+      "p50": 121.3,
+      "p90": 134.6,
+      "min": 117.2,
+      "max": 135.9
+    }
+  }
+}

@@ -1,0 +1,510 @@
+[
+  {
+    "rows": [
+      {
+        "turn": "10",
+        "text": "I'll transfer your call now.",
+        "label": "hold_message",
+        "evidence": [
+          "transfer",
+          "I'll transfer your call now."
+        ],
+        "ms": 0.08383299999999844
+      },
+      {
+        "turn": "11",
+        "text": "The current phone wait time is 23 minutes.",
+        "label": "hold_message",
+        "evidence": [
+          "The current phone wait time is 23 minutes."
+        ],
+        "ms": 0.09141699999999642
+      },
+      {
+        "turn": "12",
+        "text": "Instead of waiting on hold, you can message with a representative for fast service where the wait time is 0 minutes.",
+        "label": "automated_assistant",
+        "evidence": [
+          "automated queue choice; no person evidence",
+          "Instead of waiting on hold, you can message with a representative for fast service where the wait time is 0 minutes."
+        ],
+        "ms": 0.058500000000002994
+      },
+      {
+        "turn": "13",
+        "text": "Please say yes, and we'll send a message to your phone.",
+        "label": "automated_assistant",
+        "evidence": [
+          "automated queue choice; no person evidence",
+          "Please say yes, and we'll send a message to your phone."
+        ],
+        "ms": 0.042083000000005255
+      },
+      {
+        "turn": "14",
+        "text": "Or you can say, no. Thanks.",
+        "label": "automated_assistant",
+        "evidence": [
+          "automated queue choice; no person evidence",
+          "Or you can say, no. Thanks."
+        ],
+        "ms": 0.03354199999999752
+      },
+      {
+        "turn": "16",
+        "text": "Sorry. Can you please repeat that?",
+        "label": "unknown",
+        "evidence": [
+          "reply lacks person cues or clear affirmative"
+        ],
+        "ms": 0.5241250000000003
+      },
+      {
+        "turn": "17",
+        "text": "Sorry. Can you please repeat that?",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "Sorry. Can you please repeat that?"
+        ],
+        "ms": 0.25274999999999603
+      },
+      {
+        "turn": "18",
+        "text": "Sorry. Can you please repeat that?",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "Sorry. Can you please repeat that?"
+        ],
+        "ms": 0.19495800000000202
+      },
+      {
+        "turn": "19",
+        "text": "Sorry. I could not understand.",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "Sorry. I could not understand."
+        ],
+        "ms": 0.17229099999999803
+      },
+      {
+        "turn": "20",
+        "text": "To help improve our service, please stay on the line at the end of your call for a 1 question survey.",
+        "label": "hold_message",
+        "evidence": [
+          "To help improve our service, please stay on the line at the end of your call for a 1 question survey."
+        ],
+        "ms": 0.13479200000000163
+      },
+      {
+        "turn": "21",
+        "text": "As a SkyMiles member, for every mile you fly with us in main cabin or above, you earn miles towards exciting rewards, including flights, upgrades, and more.",
+        "label": "hold_message",
+        "evidence": [
+          "recorded queue information",
+          "As a SkyMiles member, for every mile you fly with us in main cabin or above, you earn miles towards exciting rewards, including flights, upgrades, and more."
+        ],
+        "ms": 0.22295800000000227
+      },
+      {
+        "turn": "22",
+        "text": "You have the flexibility to book award flights with no blackout giving you the freedom to travel when it suits you best.",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "You have the flexibility to book award flights with no blackout giving you the freedom to travel when it suits you best."
+        ],
+        "ms": 0.2833329999999967
+      },
+      {
+        "turn": "23",
+        "text": "And with our extensive network of partners, your options are endless.",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "And with our extensive network of partners, your options are endless."
+        ],
+        "ms": 0.2851250000000041
+      },
+      {
+        "turn": "25",
+        "text": "Need assistance on the go?",
+        "label": "hold_message",
+        "evidence": [
+          "recorded queue information",
+          "Need assistance on the go?"
+        ],
+        "ms": 0.2863339999999992
+      },
+      {
+        "turn": "26",
+        "text": "You can now message a Delta representative via delta.com slash need help.",
+        "label": "hold_message",
+        "evidence": [
+          "recorded queue information",
+          "You can now message a Delta representative via delta.com slash need help."
+        ],
+        "ms": 0.2884170000000061
+      },
+      {
+        "turn": "27",
+        "text": "Or by clicking the message us button in the more section of the FlyDelta app.",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "Or by clicking the message us button in the more section of the FlyDelta app."
+        ],
+        "ms": 0.3180409999999981
+      },
+      {
+        "turn": "29",
+        "text": "When redeeming your companion certificate, make sure to book well in advance to maximize redemption opportunities.",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "When redeeming your companion certificate, make sure to book well in advance to maximize redemption opportunities."
+        ],
+        "ms": 0.3207910000000008
+      },
+      {
+        "turn": "30",
+        "text": "Booking your companion certificate further in advance will help the probability of finding your desired itinerary.",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "Booking your companion certificate further in advance will help the probability of finding your desired itinerary."
+        ],
+        "ms": 0.318041000000005
+      },
+      {
+        "turn": "32",
+        "text": "For quicker service, please have your confirmation number, ticket number, or SkyMiles number ready.",
+        "label": "hold_message",
+        "evidence": [
+          "recorded queue information",
+          "For quicker service, please have your confirmation number, ticket number, or SkyMiles number ready."
+        ],
+        "ms": 0.5067080000000015
+      },
+      {
+        "turn": "33",
+        "text": "You can find this information in the Fly Delta app and delta.com under my trips, or in your confirmation email?",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "You can find this information in the Fly Delta app and delta.com under my trips, or in your confirmation email?"
+        ],
+        "ms": 0.48566600000000265
+      },
+      {
+        "turn": "35",
+        "text": "Can",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "Can"
+        ],
+        "ms": 0.3903750000000053
+      },
+      {
+        "turn": "37",
+        "text": "Free Wi Fi for SkyMiles members is now available on most domestic flights.",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "Free Wi Fi for SkyMiles members is now available on most domestic flights."
+        ],
+        "ms": 0.44483299999999865
+      },
+      {
+        "turn": "39",
+        "text": "Enjoy streaming, browsing, messaging, and more.",
+        "label": "hold_message",
+        "evidence": [
+          "recorded queue information",
+          "Enjoy streaming, browsing, messaging, and more."
+        ],
+        "ms": 0.33479100000000095
+      },
+      {
+        "turn": "40",
+        "text": "From takeoff to touchdown.",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "From takeoff to touchdown."
+        ],
+        "ms": 0.35462500000000424
+      },
+      {
+        "turn": "41",
+        "text": "Visit delta.com/wifi to learn more.",
+        "label": "hold_message",
+        "evidence": [
+          "recorded queue information",
+          "Visit delta.com/wifi to learn more."
+        ],
+        "ms": 0.271708999999995
+      }
+    ],
+    "unsafe": 0,
+    "model_calls": 0,
+    "pre_queue_model_calls": 0
+  },
+  {
+    "rows": [
+      {
+        "turn": "10",
+        "text": "I'll transfer your call now.",
+        "label": "hold_message",
+        "evidence": [
+          "transfer",
+          "I'll transfer your call now."
+        ],
+        "ms": 0.07862499999999883
+      },
+      {
+        "turn": "11",
+        "text": "The current phone wait time is 23 minutes.",
+        "label": "hold_message",
+        "evidence": [
+          "The current phone wait time is 23 minutes."
+        ],
+        "ms": 0.09429200000000276
+      },
+      {
+        "turn": "12",
+        "text": "Instead of waiting on hold, you can message with a representative for fast service where the wait time is 0 minutes.",
+        "label": "automated_assistant",
+        "evidence": [
+          "automated queue choice; no person evidence",
+          "Instead of waiting on hold, you can message with a representative for fast service where the wait time is 0 minutes."
+        ],
+        "ms": 0.055458000000001284
+      },
+      {
+        "turn": "13",
+        "text": "Please say yes, and we'll send a message to your phone.",
+        "label": "automated_assistant",
+        "evidence": [
+          "automated queue choice; no person evidence",
+          "Please say yes, and we'll send a message to your phone."
+        ],
+        "ms": 0.03974999999999812
+      },
+      {
+        "turn": "14",
+        "text": "Or you can say, no. Thanks.",
+        "label": "automated_assistant",
+        "evidence": [
+          "automated queue choice; no person evidence",
+          "Or you can say, no. Thanks."
+        ],
+        "ms": 0.03650000000000181
+      },
+      {
+        "turn": "16",
+        "text": "Sorry. Can you please repeat that?",
+        "label": "unknown",
+        "evidence": [
+          "reply lacks person cues or clear affirmative"
+        ],
+        "ms": 0.21933400000000158
+      },
+      {
+        "turn": "17",
+        "text": "Sorry. Can you please repeat that?",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "Sorry. Can you please repeat that?"
+        ],
+        "ms": 0.2052079999999984
+      },
+      {
+        "turn": "18",
+        "text": "Sorry. Can you please repeat that?",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "Sorry. Can you please repeat that?"
+        ],
+        "ms": 0.18479200000000306
+      },
+      {
+        "turn": "19",
+        "text": "Sorry. I could not understand.",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "Sorry. I could not understand."
+        ],
+        "ms": 0.16274999999999623
+      },
+      {
+        "turn": "20",
+        "text": "To help improve our service, please stay on the line at the end of your call for a 1 question survey.",
+        "label": "hold_message",
+        "evidence": [
+          "To help improve our service, please stay on the line at the end of your call for a 1 question survey."
+        ],
+        "ms": 0.13033299999999637
+      },
+      {
+        "turn": "21",
+        "text": "As a SkyMiles member, for every mile you fly with us in main cabin or above, you earn miles towards exciting rewards, including flights, upgrades, and more.",
+        "label": "hold_message",
+        "evidence": [
+          "recorded queue information",
+          "As a SkyMiles member, for every mile you fly with us in main cabin or above, you earn miles towards exciting rewards, including flights, upgrades, and more."
+        ],
+        "ms": 0.2159580000000022
+      },
+      {
+        "turn": "22",
+        "text": "You have the flexibility to book award flights with no blackout giving you the freedom to travel when it suits you best.",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "You have the flexibility to book award flights with no blackout giving you the freedom to travel when it suits you best."
+        ],
+        "ms": 0.30712499999999837
+      },
+      {
+        "turn": "23",
+        "text": "And with our extensive network of partners, your options are endless.",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "And with our extensive network of partners, your options are endless."
+        ],
+        "ms": 0.27545799999999926
+      },
+      {
+        "turn": "25",
+        "text": "Need assistance on the go?",
+        "label": "hold_message",
+        "evidence": [
+          "recorded queue information",
+          "Need assistance on the go?"
+        ],
+        "ms": 0.27279200000000087
+      },
+      {
+        "turn": "26",
+        "text": "You can now message a Delta representative via delta.com slash need help.",
+        "label": "hold_message",
+        "evidence": [
+          "recorded queue information",
+          "You can now message a Delta representative via delta.com slash need help."
+        ],
+        "ms": 0.28758299999999404
+      },
+      {
+        "turn": "27",
+        "text": "Or by clicking the message us button in the more section of the FlyDelta app.",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "Or by clicking the message us button in the more section of the FlyDelta app."
+        ],
+        "ms": 0.3220419999999946
+      },
+      {
+        "turn": "29",
+        "text": "When redeeming your companion certificate, make sure to book well in advance to maximize redemption opportunities.",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "When redeeming your companion certificate, make sure to book well in advance to maximize redemption opportunities."
+        ],
+        "ms": 0.30170799999999776
+      },
+      {
+        "turn": "30",
+        "text": "Booking your companion certificate further in advance will help the probability of finding your desired itinerary.",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "Booking your companion certificate further in advance will help the probability of finding your desired itinerary."
+        ],
+        "ms": 0.3123750000000036
+      },
+      {
+        "turn": "32",
+        "text": "For quicker service, please have your confirmation number, ticket number, or SkyMiles number ready.",
+        "label": "hold_message",
+        "evidence": [
+          "recorded queue information",
+          "For quicker service, please have your confirmation number, ticket number, or SkyMiles number ready."
+        ],
+        "ms": 0.4272080000000053
+      },
+      {
+        "turn": "33",
+        "text": "You can find this information in the Fly Delta app and delta.com under my trips, or in your confirmation email?",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "You can find this information in the Fly Delta app and delta.com under my trips, or in your confirmation email?"
+        ],
+        "ms": 0.4249579999999961
+      },
+      {
+        "turn": "35",
+        "text": "Can",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "Can"
+        ],
+        "ms": 0.33600000000000296
+      },
+      {
+        "turn": "37",
+        "text": "Free Wi Fi for SkyMiles members is now available on most domestic flights.",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "Free Wi Fi for SkyMiles members is now available on most domestic flights."
+        ],
+        "ms": 0.35683300000000084
+      },
+      {
+        "turn": "39",
+        "text": "Enjoy streaming, browsing, messaging, and more.",
+        "label": "hold_message",
+        "evidence": [
+          "recorded queue information",
+          "Enjoy streaming, browsing, messaging, and more."
+        ],
+        "ms": 0.2967079999999997
+      },
+      {
+        "turn": "40",
+        "text": "From takeoff to touchdown.",
+        "label": "hold_message",
+        "evidence": [
+          "queue speech without person cues",
+          "From takeoff to touchdown."
+        ],
+        "ms": 0.30154200000000186
+      },
+      {
+        "turn": "41",
+        "text": "Visit delta.com/wifi to learn more.",
+        "label": "hold_message",
+        "evidence": [
+          "recorded queue information",
+          "Visit delta.com/wifi to learn more."
+        ],
+        "ms": 0.26195799999999964
+      }
+    ],
+    "unsafe": 0,
+    "model_calls": 0,
+    "pre_queue_model_calls": 1
+  }
+]

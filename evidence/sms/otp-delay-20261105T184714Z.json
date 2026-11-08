@@ -1,0 +1,13 @@
+{
+  "bodies_or_codes_recorded": false,
+  "detail": "no device attached",
+  "ended_utc": "2026-11-05T18:47:14.605Z",
+  "interval_s": 3.0,
+  "lookback_min": 240.0,
+  "messages": [],
+  "minutes": 2.0,
+  "read_only": true,
+  "started_utc": "2026-11-05T18:47:14.590Z",
+  "status": "waiting for owner step",
+  "tool": "tests/l4/live/otp_delay.py"
+}

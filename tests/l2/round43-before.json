@@ -1,0 +1,366 @@
+{
+ "hold-sim train (no model)": {
+  "false_human": 0,
+  "negative_events": 31,
+  "missed_human_events": 2
+ },
+ "hold-sim train (fake model)": {
+  "false_human": 0,
+  "negative_events": 31,
+  "missed_human_events": 2
+ },
+ "hold-sim held-out (no model)": {
+  "false_human": 0,
+  "negative_events": 31,
+  "missed_human_events": 4
+ },
+ "hold-sim held-out (fake model)": {
+  "false_human": 0,
+  "negative_events": 31,
+  "missed_human_events": 4
+ },
+ "hold-sim soak (no model)": {
+  "false_human": 0,
+  "negative_events": 104,
+  "missed_human_events": 6
+ },
+ "hold-sim soak (fake model)": {
+  "false_human": 0,
+  "negative_events": 104,
+  "missed_human_events": 6
+ },
+ "airline train (no model)": {
+  "false_human": 0,
+  "missed_human": 0
+ },
+ "airline train (overconfident fake)": {
+  "false_human": 0,
+  "missed_human": 0
+ },
+ "airline held-out (no model)": {
+  "false_human": 0,
+  "missed_human": 0
+ },
+ "airline held-out (overconfident fake)": {
+  "false_human": 0,
+  "missed_human": 0
+ },
+ "agent-greetings": {
+  "humans": 60,
+  "bots": 40,
+  "missed_humans": 0,
+  "false_humans": 0
+ },
+ "assistants (no model)": {
+  "false_humans": 0,
+  "missed_humans": 0
+ },
+ "assistants (overconfident fake)": {
+  "false_humans": 0,
+  "missed_humans": 0
+ },
+ "delta-run2 replay": {
+  "false_humans": 0
+ },
+ "delta-run3 queue replay (model=False)": {
+  "unsafe": 0
+ },
+ "delta-run3 queue replay (model=True)": {
+  "unsafe": 0
+ },
+ "r2 openers": {
+  "missed_candidates": 0
+ },
+ "round43 stress: yes-like non-human after our question": {
+  "cases": 38,
+  "false_human": 0,
+  "which": []
+ },
+ "round43 stress: engine clear-yes test on the same non-human replies": {
+  "cases": 38,
+  "accepted": 0,
+  "which": []
+ },
+ "round43c engine verdicts": "not available before round 43c (the engine used clear_yes only)",
+ "round43c engine verdict on the three Hilton exchanges (agent replies after our question)": {
+  "call 1": [
+   [
+    "Yes. Are you a live person too?",
+    "not yes"
+   ],
+   [
+    "Hello? Are you a live person too?",
+    "not yes"
+   ],
+   [
+    "I'm a live person.",
+    "not yes"
+   ],
+   [
+    "Sorry. I'm not hearing any response.",
+    "not yes"
+   ]
+  ],
+  "call 2 retry": [
+   [
+    "Yes. You are speaking with the live person. Yes. Indeed.",
+    "not yes"
+   ],
+   [
+    "How can I help?",
+    "not yes"
+   ],
+   [
+    "You are speaking with a live person. How can I help you?",
+    "not yes"
+   ],
+   [
+    "You are speaking to a live person. How can I help you?",
+    "not yes"
+   ],
+   [
+    "Yes. You are speaking with the live person. How can I help?",
+    "not yes"
+   ],
+   [
+    "You are speaking with a live person. How can I help you?",
+    "not yes"
+   ],
+   [
+    "No. I didn't do it. I... *****.",
+    "not yes"
+   ],
+   [
+    "You have come through to Hilton Reservations, and you are speaking to a live person.",
+    "not yes"
+   ],
+   [
+    "How can I be of assistance?",
+    "not yes"
+   ],
+   [
+    "I am going to have to end this call, please.",
+    "not yes"
+   ],
+   [
+    "Do call us back so we can assist you further.",
+    "not yes"
+   ],
+   [
+    "But you have come through to a live person at Hilton Reservations.",
+    "not yes"
+   ],
+   [
+    "When you're ready for us to assist you, please can you call us back so I can be able to assist or any of my colleagues can be able to assist you with your query.",
+    "not yes"
+   ],
+   [
+    "Alright. I am now ending this call as I am unable to hear you.",
+    "not yes"
+   ],
+   [
+    "Please do phone us back so we can be able to assist you.",
+    "not yes"
+   ],
+   [
+    "Thank you.",
+    "not yes"
+   ],
+   [
+    "I am now ending this call.",
+    "not yes"
+   ],
+   [
+    "Yes. You are speaking with a live person. How can I help you?",
+    "not yes"
+   ],
+   [
+    "You are speaking to a live person. How can I help?",
+    "not yes"
+   ],
+   [
+    "Yes. You are speaking with a live person.",
+    "not yes"
+   ],
+   [
+    "How can I help?",
+    "not yes"
+   ],
+   [
+    "Yes. You are speaking with a live person. How can I help you? Okay.",
+    "not yes"
+   ],
+   [
+    "You've come through to Hilton Reservations. How can I help you?",
+    "not yes"
+   ],
+   [
+    "Yes. You are speaking with a live person. How can I help?",
+    "not yes"
+   ]
+  ],
+  "call 2 attempt 1 (menu, no person)": [
+   [
+    "Hi.",
+    "not yes"
+   ],
+   [
+    "Thanks for calling Hilton Hotels.",
+    "not yes"
+   ],
+   [
+    "How can I help?",
+    "not yes"
+   ],
+   [
+    "To book a new reservation, say new reservation or press 1.",
+    "not yes"
+   ],
+   [
+    "To retrieve your Hilton Honors number, say find Hilton Honors number or press 2.",
+    "not yes"
+   ],
+   [
+    "For account related issues, say account help or press 3.",
+    "not yes"
+   ],
+   [
+    "To report a billing issue, say billing issue or press 4.",
+    "not yes"
+   ],
+   [
+    "To enroll for Hilton Honors, say enroll in Honors or press 5.",
+    "not yes"
+   ],
+   [
+    "If you have an upcoming reservation, you can say reconfirm, cancel, modify ask a question, or press 6.",
+    "not yes"
+   ],
+   [
+    "If you're calling about a previous stay, you can say things like copy of my hotel receipt, give feedback, or press 7.",
+    "not yes"
+   ],
+   [
+    "Otherwise, you can say I'm calling about something else or press 8.",
+    "not yes"
+   ],
+   [
+    "Sorry. I didn't catch that.",
+    "not yes"
+   ],
+   [
+    "To book a new reservation, say new reservation or press 1.",
+    "not yes"
+   ],
+   [
+    "To retrieve your Hilton Honors number, say find Hilton Honors number or 2.",
+    "not yes"
+   ],
+   [
+    "For account related issues, say account help or press 3.",
+    "not yes"
+   ],
+   [
+    "To report a billing issue, say billing issue or press 4.",
+    "not yes"
+   ],
+   [
+    "To enroll for Hilton Honors, say enroll in Honors or press 5.",
+    "not yes"
+   ],
+   [
+    "If you have an upcoming reservation, you can say reconfirm, cancel, modify, ask a question, or press 6.",
+    "not yes"
+   ],
+   [
+    "If you're calling about a previous stay, you can say things like copy of my hotel receipt, give feedback, or press 7.",
+    "not yes"
+   ],
+   [
+    "Otherwise, you can say I'm calling about something else or press 8.",
+    "not yes"
+   ],
+   [
+    "Sorry. I didn't catch that.",
+    "not yes"
+   ],
+   [
+    "To book a new reservation, say new reservation or press 1.",
+    "not yes"
+   ],
+   [
+    "To retrieve your Hilton Honors number, say find Hilton Honors number or press 2.",
+    "not yes"
+   ],
+   [
+    "For account related issues, say account help or press 3.",
+    "not yes"
+   ],
+   [
+    "To report a billing issue, say billing issue or press 4.",
+    "not yes"
+   ],
+   [
+    "To enroll for Hilton Honors, say enroll in Honors or press 5.",
+    "not yes"
+   ],
+   [
+    "If you have an upcoming reservation, you can say reconfirm, cancel, modify, ask a question, or press 6.",
+    "not yes"
+   ],
+   [
+    "If you're calling about a previous stay, you can say things like copy of my hotel receipt, give feedback, or press 7.",
+    "not yes"
+   ],
+   [
+    "Otherwise, you can say I'm calling about something else or press 8.",
+    "not yes"
+   ],
+   [
+    "Are you still there?",
+    "not yes"
+   ],
+   [
+    "Say yes or press 1 to continue on to an agent.",
+    "not yes"
+   ],
+   [
+    "Are you still there?",
+    "not yes"
+   ],
+   [
+    "Say yes or press 1 to continue on to an agent.",
+    "not yes"
+   ],
+   [
+    "Thank you for calling.",
+    "not yes"
+   ],
+   [
+    "Goodbye.",
+    "not yes"
+   ]
+  ]
+ },
+ "round43 target: people answering our question": {
+  "cases": 16,
+  "human": 1,
+  "missed": [
+   "Yes. Are you a live person too?",
+   "Yes. Are you a robot?",
+   "I'm a live person.",
+   "Uh, yes.",
+   "I am. Who is this?",
+   "Speaking. Who is calling?",
+   "Yes. You are speaking with the live person. Yes. Indeed.",
+   "Yes. You are speaking with a live person.",
+   "You are speaking to a live person. How can I help you?",
+   "Yes. You are speaking with a live person. How can I help you? Okay.",
+   "Yes, how can I help you?",
+   "Yes, this is Chris. How can I help you?",
+   "Yeah, I'm here.",
+   "Yes, I am a real person and I can help",
+   "Yes. Okay."
+  ]
+ }
+}

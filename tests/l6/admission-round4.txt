@@ -1,0 +1,17 @@
+test_4_blocked_destinations_pass_through_config_and_refuse_before_the_adapter (test_r8_admission.BlockedDestinationsPlumbingTests.test_4_blocked_destinations_pass_through_config_and_refuse_before_the_adapter) ... ok
+test_G5_restricted_session_dials (test_r8_admission.DialRefusalTests.test_G5_restricted_session_dials) ... ok
+test_G5_unrestricted_session_dials_nobody (test_r8_admission.DialRefusalTests.test_G5_unrestricted_session_dials_nobody) ... ok
+test_G5_call_profile_selects_the_viewer_profile (test_r8_admission.DriverGuardTests.test_G5_call_profile_selects_the_viewer_profile) ... ok
+test_G5_driver_refuses_an_unrestricted_or_unreadable_session (test_r8_admission.DriverGuardTests.test_G5_driver_refuses_an_unrestricted_or_unreadable_session) ... ok
+test_G5_viewer_never_inherits_yolo_or_other_launch_flags (test_r8_admission.DriverGuardTests.test_G5_viewer_never_inherits_yolo_or_other_launch_flags) ... ok
+test_N3_rotation_revocation_or_expiry_during_the_body_stops_the_request (test_r8_admission.N3PendingRequestTests.test_N3_rotation_revocation_or_expiry_during_the_body_stops_the_request) ... ok
+test_N3_unchanged_token_with_a_slow_body_still_works_and_the_cap_is_streamed (test_r8_admission.N3PendingRequestTests.test_N3_unchanged_token_with_a_slow_body_still_works_and_the_cap_is_streamed) ... ok
+test_G7_no_approve_in_the_pane_and_the_skill_documents_line_otp_to_call (test_r8_admission.TextsMatchWhatExistsTests.test_G7_no_approve_in_the_pane_and_the_skill_documents_line_otp_to_call) ... ok
+test_G5_only_the_call_tools_and_the_bridge_pass (test_r8_admission.ToolListTests.test_G5_only_the_call_tools_and_the_bridge_pass) ... ok
+test_G5_other_mcp_tools_and_lookalikes_are_extra (test_r8_admission.ToolListTests.test_G5_other_mcp_tools_and_lookalikes_are_extra) ... ok
+test_G5_unreadable_lists_fail_closed (test_r8_admission.ToolListTests.test_G5_unreadable_lists_fail_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 3.191s
+
+OK

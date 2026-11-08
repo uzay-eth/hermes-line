@@ -1,0 +1,18 @@
+test_R6_cross_profile_call_finishes_through_the_session_mcp (test_r6_call_tools.AcpSessionMcpTests.test_R6_cross_profile_call_finishes_through_the_session_mcp)
+The agent process shares nothing with the service but the MCP spec it got in session/new: ... ok
+test_R6_driver_passes_the_servers_in_session_new (test_r6_call_tools.AcpSessionMcpTests.test_R6_driver_passes_the_servers_in_session_new) ... ok
+test_R6_listener_is_loopback_and_closes_on_stop (test_r6_call_tools.SessionMcpTests.test_R6_listener_is_loopback_and_closes_on_stop) ... ok
+test_R6_no_server_no_spec (test_r6_call_tools.SessionMcpTests.test_R6_no_server_no_spec) ... ok
+test_R6_spec_is_loopback_http_with_a_bearer_header_and_noted_in_the_briefing (test_r6_call_tools.SessionMcpTests.test_R6_spec_is_loopback_http_with_a_bearer_header_and_noted_in_the_briefing) ... ok
+test_R6_token_is_revoked_when_the_call_ends (test_r6_call_tools.SessionMcpTests.test_R6_token_is_revoked_when_the_call_ends) ... ok
+test_R6_token_of_another_call_acts_only_on_its_own_call (test_r6_call_tools.SessionMcpTests.test_R6_token_of_another_call_acts_only_on_its_own_call) ... ok
+test_R6_tool_list_matches_the_in_process_tools (test_r6_call_tools.SessionMcpTests.test_R6_tool_list_matches_the_in_process_tools) ... ok
+test_R6_tool_parity_with_the_in_process_handlers (test_r6_call_tools.SessionMcpTests.test_R6_tool_parity_with_the_in_process_handlers) ... ok
+test_R6_wrong_missing_expired_and_ended_tokens_are_refused (test_r6_call_tools.SessionMcpTests.test_R6_wrong_missing_expired_and_ended_tokens_are_refused) ... ok
+test_non_loopback_bind_is_refused (test_r6_call_tools.TokenTests.test_non_loopback_bind_is_refused) ... ok
+test_tokens_are_per_call_single_holder_expiring_and_revocable (test_r6_call_tools.TokenTests.test_tokens_are_per_call_single_holder_expiring_and_revocable) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 2.977s
+
+OK

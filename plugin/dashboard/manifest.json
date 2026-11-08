@@ -1,0 +1,7 @@
+{
+  "name": "hermes-line",
+  "label": "Hermes Line",
+  "description": "Backend for the Hermes Line Desktop pane: live calls, transcript and call controls.",
+  "api": "plugin_api.py",
+  "tab": {"hidden": true}
+}

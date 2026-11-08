@@ -1,0 +1,636 @@
+{
+  "label": "replay-call_2243b7f205194ab5",
+  "store": "replay",
+  "shots": [
+    {
+      "file": "tick-0001.png",
+      "kind": "tick",
+      "at": "2026-11-06T07:04:56.311Z",
+      "status": null,
+      "clock": null,
+      "visibleTranscript": null
+    },
+    {
+      "file": "state-01-dialing.png",
+      "kind": "state",
+      "at": "2026-11-06T07:05:06.484Z",
+      "status": "Dialing",
+      "clock": "0:08",
+      "visibleTranscript": {
+        "count": 3,
+        "first": "Hermes0:07LatestHi, this is Hermes, an AI assistant calling ",
+        "viewportTop": 322,
+        "viewportHeight": 530
+      },
+      "state": "dialing",
+      "shownOnPane": true,
+      "mirroredAt": "2026-11-06T07:04:56.140Z"
+    },
+    {
+      "file": "tick-0002.png",
+      "kind": "tick",
+      "at": "2026-11-06T07:05:06.789Z",
+      "status": "Dialing",
+      "clock": "0:08",
+      "visibleTranscript": {
+        "count": 3,
+        "first": "Hermes0:07LatestHi, this is Hermes, an AI assistant calling ",
+        "viewportTop": 322,
+        "viewportHeight": 530
+      }
+    },
+    {
+      "file": "tick-0003.png",
+      "kind": "tick",
+      "at": "2026-11-06T07:05:07.208Z",
+      "status": "Dialing",
+      "clock": "0:08",
+      "visibleTranscript": {
+        "count": 3,
+        "first": "Hermes0:07LatestHi, this is Hermes, an AI assistant calling ",
+        "viewportTop": 322,
+        "viewportHeight": 530
+      }
+    },
+    {
+      "file": "tick-0004.png",
+      "kind": "tick",
+      "at": "2026-11-06T07:05:11.503Z",
+      "status": "Dialing",
+      "clock": "0:12",
+      "visibleTranscript": {
+        "count": 4,
+        "first": "Business0:09LatestHi, Hermes.",
+        "viewportTop": 322,
+        "viewportHeight": 530
+      }
+    },
+    {
+      "file": "state-02-human.png",
+      "kind": "state",
+      "at": "2026-11-06T07:05:14.822Z",
+      "status": "A person answered",
+      "clock": null,
+      "visibleTranscript": {
+        "count": 6,
+        "first": "Hermes0:15LatestThank you. Please hold for just a moment whi",
+        "viewportTop": 358,
+        "viewportHeight": 494
+      },
+      "state": "human_detected",
+      "shownOnPane": true,
+      "mirroredAt": "2026-11-06T07:05:13.468Z"
+    },
+    {
+      "file": "state-03-owner-ring.png",
+      "kind": "state",
+      "at": "2026-11-06T07:05:16.684Z",
+      "status": "Ringing your phone",
+      "clock": null,
+      "visibleTranscript": {
+        "count": 7,
+        "first": "Ringing Can0:16",
+        "viewportTop": 375,
+        "viewportHeight": 477
+      },
+      "state": "ringing_owner",
+      "shownOnPane": true,
+      "mirroredAt": "2026-11-06T07:05:14.486Z"
+    },
+    {
+      "file": "tick-0005.png",
+      "kind": "tick",
+      "at": "2026-11-06T07:05:17.020Z",
+      "status": "Ringing your phone",
+      "clock": null,
+      "visibleTranscript": {
+        "count": 7,
+        "first": "Ringing Can0:16",
+        "viewportTop": 375,
+        "viewportHeight": 477
+      }
+    },
+    {
+      "file": "tick-0006.png",
+      "kind": "tick",
+      "at": "2026-11-06T07:05:21.518Z",
+      "status": "Ringing your phone",
+      "clock": null,
+      "visibleTranscript": {
+        "count": 7,
+        "first": "Ringing Can0:16",
+        "viewportTop": 375,
+        "viewportHeight": 477
+      }
+    },
+    {
+      "file": "tick-0007.png",
+      "kind": "tick",
+      "at": "2026-11-06T07:05:26.445Z",
+      "status": "Ringing your phone",
+      "clock": null,
+      "visibleTranscript": {
+        "count": 7,
+        "first": "Ringing Can0:16",
+        "viewportTop": 375,
+        "viewportHeight": 477
+      }
+    },
+    {
+      "file": "tick-0008.png",
+      "kind": "tick",
+      "at": "2026-11-06T07:05:31.385Z",
+      "status": "Ringing your phone",
+      "clock": null,
+      "visibleTranscript": {
+        "count": 8,
+        "first": "Hermes0:31LatestThank you for your patience, I'm connecting ",
+        "viewportTop": 353,
+        "viewportHeight": 499
+      }
+    },
+    {
+      "file": "state-04-fallback-agent.png",
+      "kind": "state",
+      "at": "2026-11-06T07:05:35.686Z",
+      "status": "Hermes is talking",
+      "clock": "0:00",
+      "visibleTranscript": {
+        "count": 8,
+        "first": "Hermes0:36LatestSorry, Can can't come to the phone right now",
+        "viewportTop": 322,
+        "viewportHeight": 530
+      },
+      "state": "agent_talking",
+      "shownOnPane": true,
+      "mirroredAt": "2026-11-06T07:05:34.331Z"
+    },
+    {
+      "file": "tick-0009.png",
+      "kind": "tick",
+      "at": "2026-11-06T07:05:36.468Z",
+      "status": "Hermes is talking",
+      "clock": "0:01",
+      "visibleTranscript": {
+        "count": 8,
+        "first": "Hermes0:36LatestSorry, Can can't come to the phone right now",
+        "viewportTop": 322,
+        "viewportHeight": 530
+      }
+    },
+    {
+      "file": "tick-0010.png",
+      "kind": "tick",
+      "at": "2026-11-06T07:05:41.360Z",
+      "status": "Hermes is talking",
+      "clock": "0:06",
+      "visibleTranscript": {
+        "count": 8,
+        "first": "Business0:38LatestYou're welcome.What can",
+        "viewportTop": 322,
+        "viewportHeight": 530
+      }
+    },
+    {
+      "file": "tick-0011.png",
+      "kind": "tick",
+      "at": "2026-11-06T07:05:46.475Z",
+      "status": "Hermes is talking",
+      "clock": "0:11",
+      "visibleTranscript": {
+        "count": 8,
+        "first": "Business0:38LatestYou're welcome.What canno problem.",
+        "viewportTop": 322,
+        "viewportHeight": 530
+      }
+    },
+    {
+      "file": "tick-0012.png",
+      "kind": "tick",
+      "at": "2026-11-06T07:05:51.381Z",
+      "status": "Hermes is talking",
+      "clock": "0:16",
+      "visibleTranscript": {
+        "count": 6,
+        "first": "Hermes0:48LatestI don't have a booking or an account to look",
+        "viewportTop": 322,
+        "viewportHeight": 530
+      }
+    },
+    {
+      "file": "state-05-ended.png",
+      "kind": "state",
+      "at": "2026-11-06T07:05:57.642Z",
+      "status": "Call ended",
+      "clock": null,
+      "visibleTranscript": {
+        "count": 4,
+        "first": "Hermes0:48LatestI don't have a booking or an account to look",
+        "viewportTop": 407,
+        "viewportHeight": 445
+      },
+      "state": "ended",
+      "shownOnPane": true,
+      "mirroredAt": "2026-11-06T07:05:55.725Z"
+    },
+    {
+      "file": "tick-0013.png",
+      "kind": "tick",
+      "at": "2026-11-06T07:05:57.980Z",
+      "status": "Call ended",
+      "clock": null,
+      "visibleTranscript": {
+        "count": 4,
+        "first": "Hermes0:48LatestI don't have a booking or an account to look",
+        "viewportTop": 407,
+        "viewportHeight": 445
+      }
+    },
+    {
+      "file": "tick-0014.png",
+      "kind": "tick",
+      "at": "2026-11-06T07:06:01.506Z",
+      "status": "Call ended",
+      "clock": null,
+      "visibleTranscript": {
+        "count": 4,
+        "first": "Hermes0:48LatestI don't have a booking or an account to look",
+        "viewportTop": 407,
+        "viewportHeight": 445
+      }
+    }
+  ],
+  "log": [
+    {
+      "at": 1793948695311,
+      "replay": {
+        "replay": "started",
+        "call": "call_feac3fe131fb4ae6",
+        "source_call": "call_2243b7f205194ab5",
+        "steps": 24
+      }
+    },
+    {
+      "at": 1793948696140,
+      "mirror": {
+        "event": "appeared",
+        "call": "call_feac3fe131fb4ae6",
+        "state": "dialing",
+        "lines": 0,
+        "at": 1793948696.140061
+      }
+    },
+    {
+      "at": 1793948697786,
+      "replay": {
+        "replay": "started",
+        "at_offset": 2.46
+      }
+    },
+    {
+      "at": 1793948698186,
+      "mirror": {
+        "event": "update",
+        "call": "call_feac3fe131fb4ae6",
+        "state": "dialing",
+        "lines": 0,
+        "at": 1793948698.186128
+      }
+    },
+    {
+      "at": 1793948698480,
+      "replay": {
+        "replay": "line",
+        "at_offset": 3.16
+      }
+    },
+    {
+      "at": 1793948698696,
+      "mirror": {
+        "event": "update",
+        "call": "call_feac3fe131fb4ae6",
+        "state": "dialing",
+        "lines": 1,
+        "at": 1793948698.696668
+      }
+    },
+    {
+      "at": 1793948703208,
+      "replay": {
+        "replay": "line",
+        "at_offset": 7.89
+      }
+    },
+    {
+      "at": 1793948703280,
+      "mirror": {
+        "event": "update",
+        "call": "call_feac3fe131fb4ae6",
+        "state": "dialing",
+        "lines": 2,
+        "at": 1793948703.280355
+      }
+    },
+    {
+      "at": 1793948705716,
+      "replay": {
+        "replay": "line",
+        "at_offset": 10.39
+      }
+    },
+    {
+      "at": 1793948705822,
+      "mirror": {
+        "event": "update",
+        "call": "call_feac3fe131fb4ae6",
+        "state": "dialing",
+        "lines": 3,
+        "at": 1793948705.822433
+      }
+    },
+    {
+      "at": 1793948707559,
+      "replay": {
+        "replay": "line",
+        "at_offset": 12.24
+      }
+    },
+    {
+      "at": 1793948707867,
+      "mirror": {
+        "event": "update",
+        "call": "call_feac3fe131fb4ae6",
+        "state": "dialing",
+        "lines": 4,
+        "at": 1793948707.867418
+      }
+    },
+    {
+      "at": 1793948710061,
+      "replay": {
+        "replay": "line",
+        "at_offset": 14.74
+      }
+    },
+    {
+      "at": 1793948710170,
+      "replay": {
+        "replay": "line",
+        "at_offset": 14.85
+      }
+    },
+    {
+      "at": 1793948710408,
+      "mirror": {
+        "event": "update",
+        "call": "call_feac3fe131fb4ae6",
+        "state": "dialing",
+        "lines": 6,
+        "at": 1793948710.4078588
+      }
+    },
+    {
+      "at": 1793948712971,
+      "replay": {
+        "replay": "state",
+        "at_offset": 17.65
+      }
+    },
+    {
+      "at": 1793948712972,
+      "replay": {
+        "replay": "line",
+        "at_offset": 17.65
+      }
+    },
+    {
+      "at": 1793948713468,
+      "mirror": {
+        "event": "state",
+        "call": "call_feac3fe131fb4ae6",
+        "state": "human_detected",
+        "lines": 7,
+        "at": 1793948713.468286
+      }
+    },
+    {
+      "at": 1793948714161,
+      "replay": {
+        "replay": "line",
+        "at_offset": 18.85
+      }
+    },
+    {
+      "at": 1793948714162,
+      "replay": {
+        "replay": "state",
+        "at_offset": 18.85
+      }
+    },
+    {
+      "at": 1793948714486,
+      "mirror": {
+        "event": "state",
+        "call": "call_feac3fe131fb4ae6",
+        "state": "ringing_owner",
+        "lines": 8,
+        "at": 1793948714.4860742
+      }
+    },
+    {
+      "at": 1793948729001,
+      "replay": {
+        "replay": "line",
+        "at_offset": 33.69
+      }
+    },
+    {
+      "at": 1793948729002,
+      "replay": {
+        "replay": "line",
+        "at_offset": 33.69
+      }
+    },
+    {
+      "at": 1793948729229,
+      "mirror": {
+        "event": "update",
+        "call": "call_feac3fe131fb4ae6",
+        "state": "ringing_owner",
+        "lines": 10,
+        "at": 1793948729.228666
+      }
+    },
+    {
+      "at": 1793948731814,
+      "replay": {
+        "replay": "line",
+        "at_offset": 36.49
+      }
+    },
+    {
+      "at": 1793948732294,
+      "mirror": {
+        "event": "update",
+        "call": "call_feac3fe131fb4ae6",
+        "state": "ringing_owner",
+        "lines": 11,
+        "at": 1793948732.2941718
+      }
+    },
+    {
+      "at": 1793948734171,
+      "replay": {
+        "replay": "line",
+        "at_offset": 38.85
+      }
+    },
+    {
+      "at": 1793948734172,
+      "replay": {
+        "replay": "line",
+        "at_offset": 38.85
+      }
+    },
+    {
+      "at": 1793948734172,
+      "replay": {
+        "replay": "state",
+        "at_offset": 38.85
+      }
+    },
+    {
+      "at": 1793948734331,
+      "mirror": {
+        "event": "state",
+        "call": "call_feac3fe131fb4ae6",
+        "state": "agent_talking",
+        "lines": 13,
+        "at": 1793948734.33141
+      }
+    },
+    {
+      "at": 1793948736524,
+      "replay": {
+        "replay": "line",
+        "at_offset": 41.21
+      }
+    },
+    {
+      "at": 1793948736869,
+      "mirror": {
+        "event": "update",
+        "call": "call_feac3fe131fb4ae6",
+        "state": "agent_talking",
+        "lines": 14,
+        "at": 1793948736.869335
+      }
+    },
+    {
+      "at": 1793948738647,
+      "replay": {
+        "replay": "line",
+        "at_offset": 43.33
+      }
+    },
+    {
+      "at": 1793948738908,
+      "mirror": {
+        "event": "update",
+        "call": "call_feac3fe131fb4ae6",
+        "state": "agent_talking",
+        "lines": 15,
+        "at": 1793948738.908458
+      }
+    },
+    {
+      "at": 1793948743192,
+      "replay": {
+        "replay": "line",
+        "at_offset": 47.87
+      }
+    },
+    {
+      "at": 1793948743496,
+      "mirror": {
+        "event": "update",
+        "call": "call_feac3fe131fb4ae6",
+        "state": "agent_talking",
+        "lines": 16,
+        "at": 1793948743.496033
+      }
+    },
+    {
+      "at": 1793948745907,
+      "replay": {
+        "replay": "line",
+        "at_offset": 50.59
+      }
+    },
+    {
+      "at": 1793948745908,
+      "replay": {
+        "replay": "line",
+        "at_offset": 50.59
+      }
+    },
+    {
+      "at": 1793948746042,
+      "mirror": {
+        "event": "update",
+        "call": "call_feac3fe131fb4ae6",
+        "state": "agent_talking",
+        "lines": 18,
+        "at": 1793948746.041983
+      }
+    },
+    {
+      "at": 1793948749187,
+      "replay": {
+        "replay": "line",
+        "at_offset": 53.87
+      }
+    },
+    {
+      "at": 1793948749603,
+      "mirror": {
+        "event": "update",
+        "call": "call_feac3fe131fb4ae6",
+        "state": "agent_talking",
+        "lines": 19,
+        "at": 1793948749.6030421
+      }
+    },
+    {
+      "at": 1793948755305,
+      "replay": {
+        "replay": "summary",
+        "reconstructed": true,
+        "text": "Can did not pick up, so Hermes asked the fallback question and got a reply (not verified); the call ended after 57 s. Hermes Line: Call completed (+1 800-•••-1212, \"Delta reservations (hold-line test)\", 0m57s). Can did not take the call within 20 s, so the line asked: \"What is the checked-bag fee for a domestic economy ticket?\" They answered: \"You're welcome. What can no problem.\" On the call: They: \"What can I help you with today regarding Delta Travel?\" / Hermes: \"Thank you. Please hold for just a moment while I connect Can.\" / They: \"I can't help with that.\" / Hermes: \"Thank you for your patience, I'm connecting Can now.\" / They: \"What can I help you with today regarding Delta travel?\" / Hermes: \"Sorry, Can can't come to the phone right now. I have just one quick question: What is the checked-bag fee for a domestic economy ticket?\" / They: \"You're welcome.\" / They: \"What can\" / They: \"no problem.\" / They: \"What do you need help with today for Delta Travel?\" / Hermes: \"I don't have a booking or an account to look up; it's a general question. What is the checked-bag fee for a domestic economy ticket?\" / Hermes: \"Thank you, that's very helpful. That's all I needed. Have a good day. Goodbye.\"."
+      }
+    },
+    {
+      "at": 1793948755305,
+      "replay": {
+        "replay": "end",
+        "at_offset": 59.99
+      }
+    },
+    {
+      "at": 1793948755306,
+      "replay": {
+        "replay": "done"
+      }
+    },
+    {
+      "at": 1793948755725,
+      "mirror": {
+        "event": "state",
+        "call": "call_feac3fe131fb4ae6",
+        "state": "ended",
+        "lines": 19,
+        "at": 1793948755.725606
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "what": "real hermes acp, scratch gateway, fixture model; primary and detector sessions",
+  "expect": "pass",
+  "tool_config": "restricted",
+  "approve_result": {
+    "ok": true,
+    "call_id": "call_503b7f9aaf894e08",
+    "state": "dialing"
+  },
+  "provider_calls": 1,
+  "primary_tools_reply": "Enabled toolsets: mcp-editor_hl_736bde30_cf55be6c\n",
+  "ask_tools_reply": "Enabled toolsets: mcp-editor_hl_e86b4d8c_50bc6012\n",
+  "ask_refused": null,
+  "model_tool_calls": [
+    "tool_search",
+    "mcp__editor_hl_736bde30_cf55be6c__hermes_line_call_finish"
+  ],
+  "task_outcome": "done",
+  "end_reason": "completed",
+  "session_refusals": [],
+  "tokens_active_after_end": 0,
+  "pass": true
+}

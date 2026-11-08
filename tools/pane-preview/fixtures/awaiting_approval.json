@@ -1,0 +1,18 @@
+{
+  "revision": 34,
+  "calls": [
+    {
+      "id": "call_sample_pharmacy",
+      "task_title": "Ask Sample Pharmacy whether the refill is ready",
+      "direction": "outbound",
+      "counterpart_masked": "+1 555-01••",
+      "state": "awaiting_approval",
+      "state_since": "2026-11-07T22:00:00Z",
+      "started_at": "2026-11-07T22:00:00Z",
+      "duration_s": 0,
+      "mode": "agent",
+      "transcript": [],
+      "summary": null
+    }
+  ]
+}

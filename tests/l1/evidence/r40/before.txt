@@ -1,0 +1,68 @@
+# Round 40 tests on the unchanged engine (HEAD 65355bf), clean worktree; expected to FAIL
+test_B1_a_greeting_outside_hold_after_silence_is_not_counted_against_itself (test_r40_segment_renewal.ReviewerSequenceTests.test_B1_a_greeting_outside_hold_after_silence_is_not_counted_against_itself) ... FAIL
+test_B1_control_without_the_outside_hold_utterance (test_r40_segment_renewal.ReviewerSequenceTests.test_B1_control_without_the_outside_hold_utterance) ... ok
+test_B1_outside_hold_speech_only_delays_renewal (test_r40_segment_renewal.ReviewerSequenceTests.test_B1_outside_hold_speech_only_delays_renewal) ... FAIL
+test_B1_renewal_counts_120_s_from_the_last_outside_hold_speech (test_r40_segment_renewal.ReviewerSequenceTests.test_B1_renewal_counts_120_s_from_the_last_outside_hold_speech) ... FAIL
+test_B1_spacing_and_the_cap_of_twelve_stay (test_r40_segment_renewal.ReviewerSequenceTests.test_B1_spacing_and_the_cap_of_twelve_stay) ... ok
+test_B17_switch_channel_offers_are_unsafe (test_r40_segment_renewal.SwitchChannelTests.test_B17_switch_channel_offers_are_unsafe) ... FAIL
+test_B17_through_the_output_path_silence (test_r40_segment_renewal.SwitchChannelTests.test_B17_through_the_output_path_silence) ... FAIL
+
+======================================================================
+FAIL: test_B1_a_greeting_outside_hold_after_silence_is_not_counted_against_itself (test_r40_segment_renewal.ReviewerSequenceTests.test_B1_a_greeting_outside_hold_after_silence_is_not_counted_against_itself)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/hl-before/tests/l1/test_r40_segment_renewal.py", line 121, in test_B1_a_greeting_outside_hold_after_silence_is_not_counted_against_itself
+    wait_for(lambda: session.questions_sent == 5, timeout=5, what="the question to the greeting at 400")
+  File "/private/tmp/hl-before/tests/l1/harness.py", line 53, in wait_for
+    raise AssertionError(f"timed out waiting for {what}")
+AssertionError: timed out waiting for the question to the greeting at 400
+
+======================================================================
+FAIL: test_B1_outside_hold_speech_only_delays_renewal (test_r40_segment_renewal.ReviewerSequenceTests.test_B1_outside_hold_speech_only_delays_renewal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/hl-before/tests/l1/test_r40_segment_renewal.py", line 99, in test_B1_outside_hold_speech_only_delays_renewal
+    self.sequence(intervening=True)
+  File "/private/tmp/hl-before/tests/l1/test_r40_segment_renewal.py", line 92, in sequence
+    wait_for(lambda: session.questions_sent == 5, timeout=5, what="the fifth question at 600")
+  File "/private/tmp/hl-before/tests/l1/harness.py", line 53, in wait_for
+    raise AssertionError(f"timed out waiting for {what}")
+AssertionError: timed out waiting for the fifth question at 600
+
+======================================================================
+FAIL: test_B1_renewal_counts_120_s_from_the_last_outside_hold_speech (test_r40_segment_renewal.ReviewerSequenceTests.test_B1_renewal_counts_120_s_from_the_last_outside_hold_speech)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/hl-before/tests/l1/test_r40_segment_renewal.py", line 115, in test_B1_renewal_counts_120_s_from_the_last_outside_hold_speech
+    wait_for(lambda: session.questions_sent == 5, timeout=5, what="the question 130 s after the last speech")
+  File "/private/tmp/hl-before/tests/l1/harness.py", line 53, in wait_for
+    raise AssertionError(f"timed out waiting for {what}")
+AssertionError: timed out waiting for the question 130 s after the last speech
+
+======================================================================
+FAIL: test_B17_switch_channel_offers_are_unsafe (test_r40_segment_renewal.SwitchChannelTests.test_B17_switch_channel_offers_are_unsafe)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/hl-before/tests/l1/test_r40_segment_renewal.py", line 148, in test_B17_switch_channel_offers_are_unsafe
+    self.assertTrue(assistant.unsafe_offer(text), text)
+AssertionError: False is not true : Would you like to switch channels?
+
+======================================================================
+FAIL: test_B17_through_the_output_path_silence (test_r40_segment_renewal.SwitchChannelTests.test_B17_through_the_output_path_silence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/hl-before/tests/l1/test_r40_segment_renewal.py", line 157, in test_B17_through_the_output_path_silence
+    self.assertEqual(session.assistant_said, ())
+AssertionError: Tuples differ: ((136276.62053609593, 'representative'),) != ()
+
+First tuple contains 1 additional elements.
+First extra element 0:
+(136276.62053609593, 'representative')
+
+- ((136276.62053609593, 'representative'),)
++ ()
+
+----------------------------------------------------------------------
+Ran 7 tests in 181.678s
+
+FAILED (failures=5)

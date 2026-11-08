@@ -1,0 +1,98 @@
+{
+  "rows": [
+    {
+      "text": "Thanks for calling. I'm Del",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "human lacks contextual confirmation"
+      ],
+      "ms": 2.528416999999998
+    },
+    {
+      "text": "Hi, Hermes.",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Hi, this is Hermes, an AI assistant calling on behalf of [OWNER]. This call is not recorded.",
+        "Thanks for calling. I'm Del",
+        "Hi, this is Hermes, an AI assistant calling for [OWNER]. Am I speaking with a live person?",
+        "Hi, Hermes."
+      ],
+      "ms": 0.901209
+    },
+    {
+      "text": "What can I help you with today regarding Delta Travel?",
+      "label": "human",
+      "confidence": "high",
+      "evidence": [
+        "Sorry, I didn't catch that. Am I speaking with a live person?",
+        "What can I help you with today regarding Delta Travel?"
+      ],
+      "ms": 0.2810410000000027
+    },
+    {
+      "text": "I can't help with that.",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "I can't help with that."
+      ],
+      "ms": 0.3184590000000001
+    },
+    {
+      "text": "What can I help you with today regarding Delta travel?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "What can I help you with today regarding Delta travel?"
+      ],
+      "ms": 0.17454100000000028
+    },
+    {
+      "text": "You're welcome.",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "You're welcome."
+      ],
+      "ms": 0.20087500000000313
+    },
+    {
+      "text": "What can",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "What can"
+      ],
+      "ms": 0.19604100000000096
+    },
+    {
+      "text": "no problem.",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "no problem."
+      ],
+      "ms": 0.18462500000000076
+    },
+    {
+      "text": "What do you need help with today for Delta Travel?",
+      "label": "unknown",
+      "confidence": "low",
+      "evidence": [
+        "possible_new_party",
+        "What do you need help with today for Delta Travel?"
+      ],
+      "ms": 0.2077499999999996
+    }
+  ],
+  "false_humans": 2,
+  "model_calls": 2,
+  "max_ms": 2.528416999999998
+}

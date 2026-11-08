@@ -1,0 +1,25 @@
+test_N20_a_bot_answer_to_the_question_keeps_the_assistant_path (test_r27_new_party.N20Tests.test_N20_a_bot_answer_to_the_question_keeps_the_assistant_path) ... ok
+test_N20_a_name_after_a_bot_without_a_boundary_is_asked_not_rung (test_r27_new_party.N20Tests.test_N20_a_name_after_a_bot_without_a_boundary_is_asked_not_rung) ... ok
+test_N20_explicit_bot_name_in_one_line_stays_a_bot (test_r27_new_party.N20Tests.test_N20_explicit_bot_name_in_one_line_stays_a_bot) ... ok
+test_N21_a_named_agent_after_a_transfer_rings_directly (test_r27_new_party.N21Tests.test_N21_a_named_agent_after_a_transfer_rings_directly) ... ok
+test_N21_question_budget_one_per_20_seconds_four_per_call (test_r27_new_party.N21Tests.test_N21_question_budget_one_per_20_seconds_four_per_call) ... ok
+test_N21_restricted_task_also_confirms (test_r27_new_party.N21Tests.test_N21_restricted_task_also_confirms) ... ok
+test_N21_unnamed_human_after_a_human_only_cue (test_r27_new_party.N21Tests.test_N21_unnamed_human_after_a_human_only_cue) ... ok
+test_N21_unnamed_human_after_a_transfer (test_r27_new_party.N21Tests.test_N21_unnamed_human_after_a_transfer) ... ok
+test_N21_unnamed_human_after_hold_music (test_r27_new_party.N21Tests.test_N21_unnamed_human_after_hold_music) ... ok
+test_N22_unsafe_offers_before_data_words (test_r27_new_party.N22Tests.test_N22_unsafe_offers_before_data_words) ... ok
+test_R27_l1_reads_no_transfer_or_declaration_from_text (test_r27_new_party.NoL1TextRulesTests.test_R27_l1_reads_no_transfer_or_declaration_from_text) ... ok
+test_N20_a_bot_answer_to_the_question_keeps_the_assistant_path (test_r27_new_party.RealDetectorN20Tests.test_N20_a_bot_answer_to_the_question_keeps_the_assistant_path) ... ok
+test_N20_a_name_after_a_bot_without_a_boundary_is_asked_not_rung (test_r27_new_party.RealDetectorN20Tests.test_N20_a_name_after_a_bot_without_a_boundary_is_asked_not_rung) ... ok
+test_N20_explicit_bot_name_in_one_line_stays_a_bot (test_r27_new_party.RealDetectorN20Tests.test_N20_explicit_bot_name_in_one_line_stays_a_bot) ... ok
+test_N21_a_named_agent_after_a_transfer_rings_directly (test_r27_new_party.RealDetectorN21Tests.test_N21_a_named_agent_after_a_transfer_rings_directly) ... ok
+test_N21_question_budget_one_per_20_seconds_four_per_call (test_r27_new_party.RealDetectorN21Tests.test_N21_question_budget_one_per_20_seconds_four_per_call) ... ok
+test_N21_restricted_task_also_confirms (test_r27_new_party.RealDetectorN21Tests.test_N21_restricted_task_also_confirms) ... ok
+test_N21_unnamed_human_after_a_human_only_cue (test_r27_new_party.RealDetectorN21Tests.test_N21_unnamed_human_after_a_human_only_cue) ... ok
+test_N21_unnamed_human_after_a_transfer (test_r27_new_party.RealDetectorN21Tests.test_N21_unnamed_human_after_a_transfer) ... ok
+test_N21_unnamed_human_after_hold_music (test_r27_new_party.RealDetectorN21Tests.test_N21_unnamed_human_after_hold_music) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 45.525s
+
+OK

@@ -1,0 +1,845 @@
+{
+  "version": 1,
+  "description": "recorded hold simulation; self-authored transcript streams, no audio or real calls",
+  "author": "Hermes Line L2",
+  "license": "CC0-1.0",
+  "language": "en-US",
+  "split": "held-out",
+  "streams": [
+    {
+      "id": "held-out-silence-1",
+      "simulation": true,
+      "category": "silence",
+      "human_onset_ms": null,
+      "duration_ms": 6700,
+      "events": [
+        {
+          "at_ms": 1900,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ],
+      "scenario": "silent/dead-air transcript boundary, schedule 1"
+    },
+    {
+      "id": "held-out-silence-2",
+      "simulation": true,
+      "category": "silence",
+      "human_onset_ms": null,
+      "duration_ms": 7700,
+      "events": [
+        {
+          "at_ms": 2100,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ],
+      "scenario": "silent/dead-air transcript boundary, schedule 2"
+    },
+    {
+      "id": "held-out-silence-3",
+      "simulation": true,
+      "category": "silence",
+      "human_onset_ms": null,
+      "duration_ms": 8700,
+      "events": [
+        {
+          "at_ms": 2300,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ],
+      "scenario": "silent/dead-air transcript boundary, schedule 3"
+    },
+    {
+      "id": "held-out-silence-4",
+      "simulation": true,
+      "category": "silence",
+      "human_onset_ms": null,
+      "duration_ms": 9700,
+      "events": [
+        {
+          "at_ms": 2500,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ],
+      "scenario": "silent/dead-air transcript boundary, schedule 4"
+    },
+    {
+      "id": "held-out-silence-5",
+      "simulation": true,
+      "category": "silence",
+      "human_onset_ms": null,
+      "duration_ms": 10700,
+      "events": [
+        {
+          "at_ms": 2700,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ],
+      "scenario": "silent/dead-air transcript boundary, schedule 5"
+    },
+    {
+      "id": "held-out-hold_message-1",
+      "simulation": true,
+      "category": "hold_message",
+      "human_onset_ms": null,
+      "duration_ms": 65000,
+      "events": [
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "All representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 61000,
+          "type": "prompt",
+          "turn_id": "b",
+          "speaker": "business",
+          "text": "All representatives are assisting other callers.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-hold_message-2",
+      "simulation": true,
+      "category": "hold_message",
+      "human_onset_ms": null,
+      "duration_ms": 65000,
+      "events": [
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "Your call remains in the queue.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 61000,
+          "type": "prompt",
+          "turn_id": "b",
+          "speaker": "business",
+          "text": "Your call remains in the queue.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-hold_message-3",
+      "simulation": true,
+      "category": "hold_message",
+      "human_onset_ms": null,
+      "duration_ms": 65000,
+      "events": [
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "Please stay on the line for the next representative.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 61000,
+          "type": "prompt",
+          "turn_id": "b",
+          "speaker": "business",
+          "text": "Please stay on the line for the next representative.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-hold_message-4",
+      "simulation": true,
+      "category": "hold_message",
+      "human_onset_ms": null,
+      "duration_ms": 65000,
+      "events": [
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "Hello, thanks for holding.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 61000,
+          "type": "prompt",
+          "turn_id": "b",
+          "speaker": "business",
+          "text": "Hello, thanks for holding.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-hold_message-5",
+      "simulation": true,
+      "category": "hold_message",
+      "human_onset_ms": null,
+      "duration_ms": 65000,
+      "events": [
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "We appreciate your patience; please hold.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 61000,
+          "type": "prompt",
+          "turn_id": "b",
+          "speaker": "business",
+          "text": "We appreciate your patience; please hold.",
+          "last": true,
+          "label": "hold_message",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-ivr-1",
+      "simulation": true,
+      "category": "ivr",
+      "human_onset_ms": null,
+      "duration_ms": 5000,
+      "events": [
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "For account services, press seven.",
+          "last": true,
+          "label": "ivr",
+          "permissible_actions": [
+            "continue_listening",
+            "request_task_scoped_ivr_decision"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-ivr-2",
+      "simulation": true,
+      "category": "ivr",
+      "human_onset_ms": null,
+      "duration_ms": 5000,
+      "events": [
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "Say billing or technical support.",
+          "last": true,
+          "label": "ivr",
+          "permissible_actions": [
+            "continue_listening",
+            "request_task_scoped_ivr_decision"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-ivr-3",
+      "simulation": true,
+      "category": "ivr",
+      "human_onset_ms": null,
+      "duration_ms": 5000,
+      "events": [
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "Enter your account number followed by pound.",
+          "last": true,
+          "label": "ivr",
+          "permissible_actions": [
+            "continue_listening",
+            "request_task_scoped_ivr_decision"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-ivr-4",
+      "simulation": true,
+      "category": "ivr",
+      "human_onset_ms": null,
+      "duration_ms": 5000,
+      "events": [
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "To repeat these options, press nine.",
+          "last": true,
+          "label": "ivr",
+          "permissible_actions": [
+            "continue_listening",
+            "request_task_scoped_ivr_decision"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-ivr-5",
+      "simulation": true,
+      "category": "ivr",
+      "human_onset_ms": null,
+      "duration_ms": 5000,
+      "events": [
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "Select an option using your keypad.",
+          "last": true,
+          "label": "ivr",
+          "permissible_actions": [
+            "continue_listening",
+            "request_task_scoped_ivr_decision"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-voicemail-1",
+      "simulation": true,
+      "category": "voicemail",
+      "human_onset_ms": null,
+      "duration_ms": 5000,
+      "events": [
+        {
+          "at_ms": 0,
+          "type": "prompt",
+          "turn_id": "g",
+          "speaker": "business",
+          "text": "Hello?",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "Record your message after the tone.",
+          "last": true,
+          "label": "voicemail",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-voicemail-2",
+      "simulation": true,
+      "category": "voicemail",
+      "human_onset_ms": null,
+      "duration_ms": 5000,
+      "events": [
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "The mailbox you reached is full.",
+          "last": true,
+          "label": "voicemail",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-voicemail-3",
+      "simulation": true,
+      "category": "voicemail",
+      "human_onset_ms": null,
+      "duration_ms": 5000,
+      "events": [
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "Please leave your name and number.",
+          "last": true,
+          "label": "voicemail",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-voicemail-4",
+      "simulation": true,
+      "category": "voicemail",
+      "human_onset_ms": null,
+      "duration_ms": 5000,
+      "events": [
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "You have reached the voicemail system.",
+          "last": true,
+          "label": "voicemail",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-voicemail-5",
+      "simulation": true,
+      "category": "voicemail",
+      "human_onset_ms": null,
+      "duration_ms": 5000,
+      "events": [
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "[beep]",
+          "last": true,
+          "label": "voicemail",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-human-1",
+      "simulation": true,
+      "category": "human",
+      "human_onset_ms": 1000,
+      "duration_ms": 5000,
+      "events": [
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "Hello?",
+          "last": true,
+          "label": "human",
+          "permissible_actions": [
+            "continue_listening",
+            "confirm_live_person_before_owner_ring"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-human-2",
+      "simulation": true,
+      "category": "human",
+      "human_onset_ms": 1000,
+      "duration_ms": 5000,
+      "events": [
+        {
+          "at_ms": 0,
+          "type": "prompt",
+          "turn_id": "q",
+          "speaker": "hermes",
+          "text": "Are you a live representative responding to my request?",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "Yes, I am a live agent.",
+          "last": true,
+          "label": "human",
+          "permissible_actions": [
+            "continue_listening",
+            "confirm_live_person_before_owner_ring"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-human-3",
+      "simulation": true,
+      "category": "human",
+      "human_onset_ms": 1000,
+      "duration_ms": 5000,
+      "events": [
+        {
+          "at_ms": 0,
+          "type": "prompt",
+          "turn_id": "q",
+          "speaker": "hermes",
+          "text": "Are you a live representative responding to my request?",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "Speaking, how may I assist?",
+          "last": true,
+          "label": "human",
+          "permissible_actions": [
+            "continue_listening",
+            "confirm_live_person_before_owner_ring"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-human-4",
+      "simulation": true,
+      "category": "human",
+      "human_onset_ms": 1000,
+      "duration_ms": 5000,
+      "events": [
+        {
+          "at_ms": 0,
+          "type": "prompt",
+          "turn_id": "q",
+          "speaker": "hermes",
+          "text": "Are you a live representative responding to my request?",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "I can look into the reservation for you.",
+          "last": true,
+          "label": "human",
+          "permissible_actions": [
+            "continue_listening",
+            "confirm_live_person_before_owner_ring"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-human-5",
+      "simulation": true,
+      "category": "human",
+      "human_onset_ms": 1000,
+      "duration_ms": 5000,
+      "events": [
+        {
+          "at_ms": 0,
+          "type": "prompt",
+          "turn_id": "q",
+          "speaker": "hermes",
+          "text": "Are you a live representative responding to my request?",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "Sorry, were you asking about a refund?",
+          "last": true,
+          "label": "human",
+          "permissible_actions": [
+            "continue_listening",
+            "confirm_live_person_before_owner_ring"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-unknown-1",
+      "simulation": true,
+      "category": "unknown",
+      "human_onset_ms": null,
+      "duration_ms": 5000,
+      "events": [
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "Good afternoon.",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-unknown-2",
+      "simulation": true,
+      "category": "unknown",
+      "human_onset_ms": null,
+      "duration_ms": 5000,
+      "events": [
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "Are you still there?",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-unknown-3",
+      "simulation": true,
+      "category": "unknown",
+      "human_onset_ms": null,
+      "duration_ms": 5000,
+      "events": [
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "There is a delay on this connection.",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-unknown-4",
+      "simulation": true,
+      "category": "unknown",
+      "human_onset_ms": null,
+      "duration_ms": 5000,
+      "events": [
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "The office opens tomorrow.",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-unknown-5",
+      "simulation": true,
+      "category": "unknown",
+      "human_onset_ms": null,
+      "duration_ms": 5000,
+      "events": [
+        {
+          "at_ms": 1000,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "I did not catch that.",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-live-disclosure-greeting",
+      "simulation": true,
+      "source": "masked transcript replay from call_68921278eab742c6, seq 1-2",
+      "category": "human",
+      "human_onset_ms": 8595,
+      "duration_ms": 10000,
+      "events": [
+        {
+          "at_ms": 0,
+          "type": "prompt",
+          "turn_id": "d",
+          "speaker": "hermes",
+          "text": "Hi, this is Hermes, an AI assistant calling on behalf of [OWNER]. This call is not recorded.",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 8595,
+          "type": "prompt",
+          "turn_id": "g",
+          "speaker": "business",
+          "text": "Hi. How are you?",
+          "last": true,
+          "label": "human",
+          "permissible_actions": [
+            "continue_listening",
+            "confirm_live_person_before_owner_ring"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "held-out-live-confirmation-answer",
+      "simulation": true,
+      "source": "masked transcript replay from call_68921278eab742c6, seq 3-4",
+      "category": "human",
+      "human_onset_ms": 9739,
+      "duration_ms": 11000,
+      "events": [
+        {
+          "at_ms": 0,
+          "type": "prompt",
+          "turn_id": "q",
+          "speaker": "hermes",
+          "text": "Hi, this is Hermes, an AI assistant calling for [OWNER]. Am I speaking with a live person?",
+          "last": true,
+          "label": "unknown",
+          "permissible_actions": [
+            "continue_listening"
+          ]
+        },
+        {
+          "at_ms": 9739,
+          "type": "prompt",
+          "turn_id": "a",
+          "speaker": "business",
+          "text": "Yeah. It's me, [NAME]. But information you have about me?",
+          "last": true,
+          "label": "human",
+          "permissible_actions": [
+            "continue_listening",
+            "confirm_live_person_before_owner_ring"
+          ]
+        }
+      ]
+    }
+  ]
+}

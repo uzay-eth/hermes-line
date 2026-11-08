@@ -1,0 +1,78 @@
+/* Harness-only frame: a Hermes-Desktop-shaped 1440 px window around the real pane. The chat and
+   sidebar are labelled placeholders, never imitations of real app content. Theme tokens only. */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background: var(--ui-bg-chrome);
+  color: var(--ui-text-primary);
+  font-family: var(--font-sans);
+}
+.pv-window {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+.pv-sidebar {
+  flex: none;
+  width: 260px;
+  padding: 14px 12px;
+  box-sizing: border-box;
+  background: var(--ui-bg-sidebar);
+  border-right: 1px solid var(--ui-stroke-tertiary);
+}
+.pv-chip {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ui-text-secondary);
+  margin-bottom: 12px;
+}
+.pv-chat {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  background: var(--ui-chat-surface-background);
+}
+.pv-placeholder {
+  font-size: 12px;
+  color: var(--ui-text-quaternary);
+}
+.pv-center {
+  text-align: center;
+  display: grid;
+  gap: 6px;
+}
+.pv-sample {
+  font-size: 12px;
+  color: var(--ui-text-secondary);
+}
+.pv-pane {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: var(--ui-bg-editor);
+  border-left: 1px solid var(--ui-stroke-tertiary);
+}
+.pv-tabs {
+  flex: none;
+  height: 36px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 8px;
+  border-bottom: 1px solid var(--ui-stroke-tertiary);
+}
+.pv-tab {
+  padding: 8px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ui-text-primary);
+}
+.pv-pane-body {
+  flex: 1;
+  min-height: 0;
+}

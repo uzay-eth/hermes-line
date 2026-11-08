@@ -1,0 +1,21 @@
+{
+  "what": "real hermes acp, scratch gateway, fixture model; primary and detector sessions",
+  "expect": "refuse",
+  "tool_config": "default",
+  "approve_result": {
+    "ok": false,
+    "error": "the call's Hermes session could not start; nothing was dialled (see the event log; call_profile must limit it to the call tools)"
+  },
+  "provider_calls": 0,
+  "primary_tools_reply": "Available tools (19):\n  browser-use: browser_exec\n  code_execution: execute_code\n  connections: manage_connections\n  delegation: delegate_task\n  file: patch, read_file, search_files, write_file\n  memory: memory\n  other: tool_call, tool_describe, tool_search\n  skills: skill_manage, skill_view, skills_list\n  terminal: terminal\n  vision: vision_analyze\n  web: web_extract, web_search\n",
+  "refusal": [
+    {
+      "why": "call session not restricted to the call tools (17 extra, e.g. browser_exec, delegate_task, execute_code, manage_connections)"
+    },
+    {
+      "why": "agent session unavailable",
+      "error": "AcpError"
+    }
+  ],
+  "pass": true
+}

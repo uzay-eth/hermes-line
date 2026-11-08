@@ -1,0 +1,3 @@
+{"approval_ok": true, "call_id": "call_374a992b53c044f9", "command": "call", "max_minutes": 3, "retry": false}
+{"evidence": "evidence/trial/call_374a992b53c044f9", "tunnel": "stopped"}
+exit 0

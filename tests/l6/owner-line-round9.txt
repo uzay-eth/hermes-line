@@ -1,0 +1,17 @@
+test_R13_spoken_digits_yes_no_and_pin_compare (test_r13_owner_line.HelperTests.test_R13_spoken_digits_yes_no_and_pin_compare) ... ok
+test_R13_a_newer_request_replaces_an_unanswered_one (test_r13_owner_line.OwnerRequestTests.test_R13_a_newer_request_replaces_an_unanswered_one) ... ok
+test_R13_a_second_task_needs_its_own_yes (test_r13_owner_line.OwnerRequestTests.test_R13_a_second_task_needs_its_own_yes) ... ok
+test_R13_a_yes_without_a_read_back_approves_nothing (test_r13_owner_line.OwnerRequestTests.test_R13_a_yes_without_a_read_back_approves_nothing) ... ok
+test_R13_spoken_yes_approves_only_the_read_back_destination (test_r13_owner_line.OwnerRequestTests.test_R13_spoken_yes_approves_only_the_read_back_destination) ... ok
+test_R13_a_stranger_cannot_reach_owner_mode (test_r13_owner_line.PinTests.test_R13_a_stranger_cannot_reach_owner_mode) ... ok
+test_R13_no_pin_configured_means_no_pin_step (test_r13_owner_line.PinTests.test_R13_no_pin_configured_means_no_pin_step) ... ok
+test_R13_owner_number_is_offered_the_pin_and_verifies_by_keypad (test_r13_owner_line.PinTests.test_R13_owner_number_is_offered_the_pin_and_verifies_by_keypad) ... ok
+test_R13_owner_number_without_the_pin_is_an_unknown_caller (test_r13_owner_line.PinTests.test_R13_owner_number_without_the_pin_is_an_unknown_caller) ... ok
+test_R13_pin_by_speech (test_r13_owner_line.PinTests.test_R13_pin_by_speech) ... ok
+test_R13_three_wrong_pins_end_the_call_without_a_hint (test_r13_owner_line.PinTests.test_R13_three_wrong_pins_end_the_call_without_a_hint) ... ok
+test_R13_a_phone_requested_task_summary_goes_to_the_owners_chat (test_r13_owner_line.SummaryRouteTests.test_R13_a_phone_requested_task_summary_goes_to_the_owners_chat) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 4.624s
+
+OK

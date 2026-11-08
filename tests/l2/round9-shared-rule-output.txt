@@ -1,0 +1,21 @@
+test_R29_a_yes_without_our_question_is_not_a_person (test_r29_uniform_rule.Base.test_R29_a_yes_without_our_question_is_not_a_person) ... ok
+test_R29_every_l2_affirmative_rings_and_every_negative_does_not (test_r29_uniform_rule.Base.test_R29_every_l2_affirmative_rings_and_every_negative_does_not) ... ok
+test_R29_n23r_inputs_do_not_ring (test_r29_uniform_rule.Base.test_R29_n23r_inputs_do_not_ring) ... ok
+test_R29_n24_a_named_greeting_after_any_boundary_is_asked_first (test_r29_uniform_rule.Base.test_R29_n24_a_named_greeting_after_any_boundary_is_asked_first) ... ok
+test_R29_the_three_former_misses_now_ring (test_r29_uniform_rule.Base.test_R29_the_three_former_misses_now_ring) ... ok
+test_R29_no_bot_label_controls (test_r29_uniform_rule.NoBotLabelTests.test_R29_no_bot_label_controls) ... ok
+test_R29_a_yes_without_our_question_is_not_a_person (test_r29_uniform_rule.ScriptedOverconfidentTests.test_R29_a_yes_without_our_question_is_not_a_person) ... ok
+test_R29_every_l2_affirmative_rings_and_every_negative_does_not (test_r29_uniform_rule.ScriptedOverconfidentTests.test_R29_every_l2_affirmative_rings_and_every_negative_does_not) ... ok
+test_R29_n23_and_bot_yes_with_an_overconfident_detector (test_r29_uniform_rule.ScriptedOverconfidentTests.test_R29_n23_and_bot_yes_with_an_overconfident_detector) ... ok
+test_R29_n23r_inputs_do_not_ring (test_r29_uniform_rule.ScriptedOverconfidentTests.test_R29_n23r_inputs_do_not_ring) ... ok
+test_R29_n24_a_named_greeting_after_any_boundary_is_asked_first (test_r29_uniform_rule.ScriptedOverconfidentTests.test_R29_n24_a_named_greeting_after_any_boundary_is_asked_first) ... ok
+test_R29_the_three_former_misses_now_ring (test_r29_uniform_rule.ScriptedOverconfidentTests.test_R29_the_three_former_misses_now_ring) ... ok
+test_R29_confirmation_window_is_inclusive (test_r29_uniform_rule.SharedContractTests.test_R29_confirmation_window_is_inclusive) ... ok
+test_R29_l1_uses_the_shared_function_after_a_bot_label (test_r29_uniform_rule.SharedContractTests.test_R29_l1_uses_the_shared_function_after_a_bot_label) ... ok
+test_R29_ring_owner_refuses_a_bot_call_without_a_clear_yes (test_r29_uniform_rule.SharedContractTests.test_R29_ring_owner_refuses_a_bot_call_without_a_clear_yes) ... ok
+test_R29_the_shared_list (test_r29_uniform_rule.SharedContractTests.test_R29_the_shared_list) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 177.385s
+
+OK

@@ -1,0 +1,5 @@
+ 2613 /Applications/Cua Spaces.app/Contents/MacOS/cua mcp
+ 2614 /Users/mac/.local/bin/cua-driver mcp
+ 2617 /Users/mac/.hermes/tools/python-3.14.9+20261021-darwin-arm64/bin/python3 /Users/mac/.hermes/hermes-agent/tools/mcp
+15477 /Applications/bb.app/Contents/MacOS/bb --use-system-ca --use-env-proxy /Users/mac/.bb/plugin-host-artifacts/provid
+21854 node /Users/mac/.hermes/lsp/node_modules/.bin/pyright-langserver --stdio

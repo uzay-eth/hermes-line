@@ -1,0 +1,10 @@
+test_keypad_hangup_child_human_owner_accept_conference_and_evidence (test_ringback.RingbackTests.test_keypad_hangup_child_human_owner_accept_conference_and_evidence) ... ok
+test_keypad_hangup_child_human_owner_accept_conference_and_evidence (test_ringback.RingbackTests.test_keypad_hangup_child_human_owner_accept_conference_and_evidence) ... ok
+test_keypad_hangup_child_human_owner_accept_conference_and_evidence (test_ringback.RingbackTests.test_keypad_hangup_child_human_owner_accept_conference_and_evidence) ... ok
+test_keypad_hangup_child_human_owner_accept_conference_and_evidence (test_ringback.RingbackTests.test_keypad_hangup_child_human_owner_accept_conference_and_evidence) ... ok
+test_keypad_hangup_child_human_owner_accept_conference_and_evidence (test_ringback.RingbackTests.test_keypad_hangup_child_human_owner_accept_conference_and_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 19.906s
+
+OK

@@ -1,0 +1,131 @@
+{
+  "simulation": true,
+  "description": "Delta live transcript masked replay; other scenarios are explicitly authored simulations, not verified company scripts",
+  "streams": [
+    {
+      "id": "delta-run-1-masked",
+      "events": [
+        {
+          "text": "Thanks for calling.",
+          "label": "unknown"
+        },
+        {
+          "text": "Hi.",
+          "label": "unknown"
+        },
+        {
+          "text": "I'm not a live person.",
+          "label": "automated_assistant"
+        },
+        {
+          "text": "I'm Delta's automated assistant.",
+          "label": "automated_assistant"
+        },
+        {
+          "text": "For the known traveler number, are you trying to add or update it?",
+          "label": "automated_assistant"
+        },
+        {
+          "text": "Or are you trying to verify whether it's already on a reservation?",
+          "label": "automated_assistant"
+        },
+        {
+          "text": "I can give you a moment if you need it.",
+          "label": "automated_assistant"
+        },
+        {
+          "text": "I can give you a moment if you need it.",
+          "label": "automated_assistant"
+        }
+      ]
+    },
+    {
+      "id": "utility virtual assistant",
+      "events": [
+        {
+          "text": "Hello, I'm your utility's virtual assistant.",
+          "label": "automated_assistant"
+        },
+        {
+          "text": "How can I help you today?",
+          "label": "automated_assistant"
+        },
+        {
+          "text": "What is your account number?",
+          "label": "automated_assistant"
+        },
+        {
+          "text": "I can wait while you find that.",
+          "label": "automated_assistant"
+        },
+        {
+          "text": "Yes.",
+          "label": "automated_assistant"
+        }
+      ]
+    },
+    {
+      "id": "airline digital assistant",
+      "events": [
+        {
+          "text": "I'm a digital assistant for this airline.",
+          "label": "automated_assistant"
+        },
+        {
+          "text": "Are you calling about an existing booking?",
+          "label": "automated_assistant"
+        },
+        {
+          "text": "May I have your frequent flyer number?",
+          "label": "automated_assistant"
+        },
+        {
+          "text": "Hi.",
+          "label": "automated_assistant"
+        }
+      ]
+    },
+    {
+      "id": "transfer to human",
+      "events": [
+        {
+          "text": "I'm a virtual assistant.",
+          "label": "automated_assistant"
+        },
+        {
+          "text": "Let me connect you with a representative.",
+          "label": "hold_message"
+        },
+        {
+          "text": "Hi.",
+          "label": "unknown"
+        },
+        {
+          "text": "Hello, this is Morgan with reservations, how can I help?",
+          "label": "human"
+        }
+      ]
+    },
+    {
+      "id": "queue to human",
+      "events": [
+        {
+          "text": "I'm the automated assistant.",
+          "label": "automated_assistant"
+        },
+        {
+          "text": "Please hold while I transfer your call.",
+          "label": "hold_message"
+        },
+        {
+          "text": "Your call is important to us.",
+          "label": "hold_message"
+        },
+        {
+          "text": "Hi, this is Avery with the airline, how may I help you today?",
+          "label": "human"
+        }
+      ]
+    }
+  ]
+}

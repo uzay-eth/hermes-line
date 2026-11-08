@@ -1,0 +1,33 @@
+{
+  "simulation": true,
+  "description": "Coordinator-supplied Delta regressions plus self-authored realistic airline/bank/utility/carrier variants; no claim of independently recorded real-world scripts",
+  "humans": [
+    "Thank you for calling Delta, this is Dana. How can I help you today?",
+    "Thanks for holding, my name is Marcus with Delta reservations, how can I help?",
+    "Hi, this is Dana, how can I help you today?",
+    "Dana speaking.",
+    "Thank you for calling Sample Bank, my name is Priya. How may I assist you?",
+    "This is Priya, your banking specialist. How may I assist you?",
+    "Thanks for holding. This is Sam with customer care.",
+    "My name is Sam, your utility service representative.",
+    "Taylor speaking, how may I assist you?",
+    "Hello, this is Taylor with mobile support.",
+    "This is Dana.",
+    "My name is Marcus."
+  ],
+  "bots": [
+    "Hi, I'm Ava, Delta's virtual assistant.",
+    "This is Ava, your AI assistant. How can I help?",
+    "My name is Sky, your digital assistant.",
+    "I'm not a live person. I'm an automated assistant.",
+    "Are you calling about an existing reservation?",
+    "What is your confirmation number?",
+    "I can give you a moment if you need it.",
+    "I'm your virtual support agent, Dana speaking."
+  ],
+  "transfers": [
+    "Let me connect you to an agent.",
+    "Transferring you to a representative.",
+    "Please hold while I transfer you to an agent."
+  ]
+}

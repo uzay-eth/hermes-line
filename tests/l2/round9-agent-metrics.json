@@ -1,0 +1,809 @@
+{
+  "humans": 60,
+  "bots": 40,
+  "missed_humans": 0,
+  "false_humans": 0,
+  "max_ms": 0.11020800000000053,
+  "rows": [
+    {
+      "context": "hold_message",
+      "text": "Thank you for calling Delta, this is Dana. How can I help you today?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.07424999999999793
+    },
+    {
+      "context": "hold_message",
+      "text": "Thanks for holding, my name is Marcus with Delta reservations, how can I help?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.11020800000000053
+    },
+    {
+      "context": "hold_message",
+      "text": "Hi, this is Dana, how can I help you today?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.058207999999997095
+    },
+    {
+      "context": "hold_message",
+      "text": "Dana speaking.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.04962499999999759
+    },
+    {
+      "context": "hold_message",
+      "text": "Thank you for calling Sample Bank, my name is Priya. How may I assist you?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.06220799999999416
+    },
+    {
+      "context": "hold_message",
+      "text": "This is Priya, your banking specialist. How may I assist you?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.06437499999999846
+    },
+    {
+      "context": "hold_message",
+      "text": "Thanks for holding. This is Sam with customer care.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.0531669999999998
+    },
+    {
+      "context": "hold_message",
+      "text": "My name is Sam, your utility service representative.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.06295800000000185
+    },
+    {
+      "context": "hold_message",
+      "text": "Taylor speaking, how may I assist you?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.05412500000000209
+    },
+    {
+      "context": "hold_message",
+      "text": "Hello, this is Taylor with mobile support.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.051457999999997284
+    },
+    {
+      "context": "hold_message",
+      "text": "This is Dana.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.042709000000001884
+    },
+    {
+      "context": "hold_message",
+      "text": "My name is Marcus.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.044083000000000316
+    },
+    {
+      "context": "hold_message",
+      "text": "Hi, I'm Ava, Delta's virtual assistant.",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.04433400000000004
+    },
+    {
+      "context": "hold_message",
+      "text": "This is Ava, your AI assistant. How can I help?",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.038833000000002005
+    },
+    {
+      "context": "hold_message",
+      "text": "My name is Sky, your digital assistant.",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.039708999999998884
+    },
+    {
+      "context": "hold_message",
+      "text": "I'm not a live person. I'm an automated assistant.",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.059584000000001414
+    },
+    {
+      "context": "hold_message",
+      "text": "Are you calling about an existing reservation?",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.06670799999999866
+    },
+    {
+      "context": "hold_message",
+      "text": "What is your confirmation number?",
+      "expected": "not_human",
+      "label": "unknown",
+      "confidence": "low",
+      "ms": 0.06783300000000325
+    },
+    {
+      "context": "hold_message",
+      "text": "I can give you a moment if you need it.",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.07375000000000437
+    },
+    {
+      "context": "hold_message",
+      "text": "I'm your virtual support agent, Dana speaking.",
+      "expected": "not_human",
+      "label": "unknown",
+      "confidence": "low",
+      "ms": 0.07158300000000006
+    },
+    {
+      "context": "hold_music",
+      "text": "Thank you for calling Delta, this is Dana. How can I help you today?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.07145800000000341
+    },
+    {
+      "context": "hold_music",
+      "text": "Thanks for holding, my name is Marcus with Delta reservations, how can I help?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.05487500000000284
+    },
+    {
+      "context": "hold_music",
+      "text": "Hi, this is Dana, how can I help you today?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.06187499999999596
+    },
+    {
+      "context": "hold_music",
+      "text": "Dana speaking.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.04350000000000187
+    },
+    {
+      "context": "hold_music",
+      "text": "Thank you for calling Sample Bank, my name is Priya. How may I assist you?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.06787500000000196
+    },
+    {
+      "context": "hold_music",
+      "text": "This is Priya, your banking specialist. How may I assist you?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.04595799999999872
+    },
+    {
+      "context": "hold_music",
+      "text": "Thanks for holding. This is Sam with customer care.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.04308399999999879
+    },
+    {
+      "context": "hold_music",
+      "text": "My name is Sam, your utility service representative.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.041790999999999356
+    },
+    {
+      "context": "hold_music",
+      "text": "Taylor speaking, how may I assist you?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.04004200000000402
+    },
+    {
+      "context": "hold_music",
+      "text": "Hello, this is Taylor with mobile support.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.040667000000001174
+    },
+    {
+      "context": "hold_music",
+      "text": "This is Dana.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.03279100000000423
+    },
+    {
+      "context": "hold_music",
+      "text": "My name is Marcus.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.034332999999997504
+    },
+    {
+      "context": "hold_music",
+      "text": "Hi, I'm Ava, Delta's virtual assistant.",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.03283300000000294
+    },
+    {
+      "context": "hold_music",
+      "text": "This is Ava, your AI assistant. How can I help?",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.03475000000000006
+    },
+    {
+      "context": "hold_music",
+      "text": "My name is Sky, your digital assistant.",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.03137500000000015
+    },
+    {
+      "context": "hold_music",
+      "text": "I'm not a live person. I'm an automated assistant.",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.037624999999999464
+    },
+    {
+      "context": "hold_music",
+      "text": "Are you calling about an existing reservation?",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.04954100000000017
+    },
+    {
+      "context": "hold_music",
+      "text": "What is your confirmation number?",
+      "expected": "not_human",
+      "label": "unknown",
+      "confidence": "low",
+      "ms": 0.04129199999999833
+    },
+    {
+      "context": "hold_music",
+      "text": "I can give you a moment if you need it.",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.049457999999995284
+    },
+    {
+      "context": "hold_music",
+      "text": "I'm your virtual support agent, Dana speaking.",
+      "expected": "not_human",
+      "label": "unknown",
+      "confidence": "low",
+      "ms": 0.04770799999999353
+    },
+    {
+      "context": "transfer-0",
+      "text": "Thank you for calling Delta, this is Dana. How can I help you today?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.07837500000000552
+    },
+    {
+      "context": "transfer-0",
+      "text": "Thanks for holding, my name is Marcus with Delta reservations, how can I help?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.0628750000000039
+    },
+    {
+      "context": "transfer-0",
+      "text": "Hi, this is Dana, how can I help you today?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.05583299999999819
+    },
+    {
+      "context": "transfer-0",
+      "text": "Dana speaking.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.04404099999999467
+    },
+    {
+      "context": "transfer-0",
+      "text": "Thank you for calling Sample Bank, my name is Priya. How may I assist you?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.06749999999999812
+    },
+    {
+      "context": "transfer-0",
+      "text": "This is Priya, your banking specialist. How may I assist you?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.06012500000000115
+    },
+    {
+      "context": "transfer-0",
+      "text": "Thanks for holding. This is Sam with customer care.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.047417000000000986
+    },
+    {
+      "context": "transfer-0",
+      "text": "My name is Sam, your utility service representative.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.06512499999999921
+    },
+    {
+      "context": "transfer-0",
+      "text": "Taylor speaking, how may I assist you?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.044583000000000816
+    },
+    {
+      "context": "transfer-0",
+      "text": "Hello, this is Taylor with mobile support.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.05595899999999432
+    },
+    {
+      "context": "transfer-0",
+      "text": "This is Dana.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.03733399999999998
+    },
+    {
+      "context": "transfer-0",
+      "text": "My name is Marcus.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.038708999999997884
+    },
+    {
+      "context": "transfer-0",
+      "text": "Hi, I'm Ava, Delta's virtual assistant.",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.038833000000002005
+    },
+    {
+      "context": "transfer-0",
+      "text": "This is Ava, your AI assistant. How can I help?",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.041417000000001924
+    },
+    {
+      "context": "transfer-0",
+      "text": "My name is Sky, your digital assistant.",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.03737500000000615
+    },
+    {
+      "context": "transfer-0",
+      "text": "I'm not a live person. I'm an automated assistant.",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.043082999999999316
+    },
+    {
+      "context": "transfer-0",
+      "text": "Are you calling about an existing reservation?",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.05258299999999494
+    },
+    {
+      "context": "transfer-0",
+      "text": "What is your confirmation number?",
+      "expected": "not_human",
+      "label": "unknown",
+      "confidence": "low",
+      "ms": 0.04454199999999464
+    },
+    {
+      "context": "transfer-0",
+      "text": "I can give you a moment if you need it.",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.0533749999999944
+    },
+    {
+      "context": "transfer-0",
+      "text": "I'm your virtual support agent, Dana speaking.",
+      "expected": "not_human",
+      "label": "unknown",
+      "confidence": "low",
+      "ms": 0.05112499999999909
+    },
+    {
+      "context": "transfer-1",
+      "text": "Thank you for calling Delta, this is Dana. How can I help you today?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.05500000000001337
+    },
+    {
+      "context": "transfer-1",
+      "text": "Thanks for holding, my name is Marcus with Delta reservations, how can I help?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.05358299999999594
+    },
+    {
+      "context": "transfer-1",
+      "text": "Hi, this is Dana, how can I help you today?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.04670899999999201
+    },
+    {
+      "context": "transfer-1",
+      "text": "Dana speaking.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.04175000000000706
+    },
+    {
+      "context": "transfer-1",
+      "text": "Thank you for calling Sample Bank, my name is Priya. How may I assist you?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.05541700000000205
+    },
+    {
+      "context": "transfer-1",
+      "text": "This is Priya, your banking specialist. How may I assist you?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.04979200000000683
+    },
+    {
+      "context": "transfer-1",
+      "text": "Thanks for holding. This is Sam with customer care.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.046915999999994074
+    },
+    {
+      "context": "transfer-1",
+      "text": "My name is Sam, your utility service representative.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.04570800000000541
+    },
+    {
+      "context": "transfer-1",
+      "text": "Taylor speaking, how may I assist you?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.04349999999998799
+    },
+    {
+      "context": "transfer-1",
+      "text": "Hello, this is Taylor with mobile support.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.04433299999999363
+    },
+    {
+      "context": "transfer-1",
+      "text": "This is Dana.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.03695900000000307
+    },
+    {
+      "context": "transfer-1",
+      "text": "My name is Marcus.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.03845900000000457
+    },
+    {
+      "context": "transfer-1",
+      "text": "Hi, I'm Ava, Delta's virtual assistant.",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.038625000000000465
+    },
+    {
+      "context": "transfer-1",
+      "text": "This is Ava, your AI assistant. How can I help?",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.0408339999999896
+    },
+    {
+      "context": "transfer-1",
+      "text": "My name is Sky, your digital assistant.",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.03954200000000352
+    },
+    {
+      "context": "transfer-1",
+      "text": "I'm not a live person. I'm an automated assistant.",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.04333400000000598
+    },
+    {
+      "context": "transfer-1",
+      "text": "Are you calling about an existing reservation?",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.05258399999999441
+    },
+    {
+      "context": "transfer-1",
+      "text": "What is your confirmation number?",
+      "expected": "not_human",
+      "label": "unknown",
+      "confidence": "low",
+      "ms": 0.044833000000008005
+    },
+    {
+      "context": "transfer-1",
+      "text": "I can give you a moment if you need it.",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.05337500000000828
+    },
+    {
+      "context": "transfer-1",
+      "text": "I'm your virtual support agent, Dana speaking.",
+      "expected": "not_human",
+      "label": "unknown",
+      "confidence": "low",
+      "ms": 0.05099999999999549
+    },
+    {
+      "context": "transfer-2",
+      "text": "Thank you for calling Delta, this is Dana. How can I help you today?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.058291999999987576
+    },
+    {
+      "context": "transfer-2",
+      "text": "Thanks for holding, my name is Marcus with Delta reservations, how can I help?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.056791999999999954
+    },
+    {
+      "context": "transfer-2",
+      "text": "Hi, this is Dana, how can I help you today?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.0493749999999904
+    },
+    {
+      "context": "transfer-2",
+      "text": "Dana speaking.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.039125000000000965
+    },
+    {
+      "context": "transfer-2",
+      "text": "Thank you for calling Sample Bank, my name is Priya. How may I assist you?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.058208000000004034
+    },
+    {
+      "context": "transfer-2",
+      "text": "This is Priya, your banking specialist. How may I assist you?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.052499999999996994
+    },
+    {
+      "context": "transfer-2",
+      "text": "Thanks for holding. This is Sam with customer care.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.04991699999999655
+    },
+    {
+      "context": "transfer-2",
+      "text": "My name is Sam, your utility service representative.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.048625000000010465
+    },
+    {
+      "context": "transfer-2",
+      "text": "Taylor speaking, how may I assist you?",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.046375000000001276
+    },
+    {
+      "context": "transfer-2",
+      "text": "Hello, this is Taylor with mobile support.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.05104100000000167
+    },
+    {
+      "context": "transfer-2",
+      "text": "This is Dana.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.04245799999999522
+    },
+    {
+      "context": "transfer-2",
+      "text": "My name is Marcus.",
+      "expected": "human",
+      "label": "human",
+      "confidence": "high",
+      "ms": 0.04091600000000195
+    },
+    {
+      "context": "transfer-2",
+      "text": "Hi, I'm Ava, Delta's virtual assistant.",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.04004200000000402
+    },
+    {
+      "context": "transfer-2",
+      "text": "This is Ava, your AI assistant. How can I help?",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.04295799999999572
+    },
+    {
+      "context": "transfer-2",
+      "text": "My name is Sky, your digital assistant.",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.03929199999999633
+    },
+    {
+      "context": "transfer-2",
+      "text": "I'm not a live person. I'm an automated assistant.",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.04433299999999363
+    },
+    {
+      "context": "transfer-2",
+      "text": "Are you calling about an existing reservation?",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.055208000000001034
+    },
+    {
+      "context": "transfer-2",
+      "text": "What is your confirmation number?",
+      "expected": "not_human",
+      "label": "unknown",
+      "confidence": "low",
+      "ms": 0.04729199999999045
+    },
+    {
+      "context": "transfer-2",
+      "text": "I can give you a moment if you need it.",
+      "expected": "not_human",
+      "label": "automated_assistant",
+      "confidence": "high",
+      "ms": 0.056249999999993805
+    },
+    {
+      "context": "transfer-2",
+      "text": "I'm your virtual support agent, Dana speaking.",
+      "expected": "not_human",
+      "label": "unknown",
+      "confidence": "low",
+      "ms": 0.05345800000000622
+    }
+  ]
+}

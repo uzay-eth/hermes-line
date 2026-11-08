@@ -1,0 +1,1 @@
+{"version": 1, "runs": {"dry-e6d3b6b78fc349fbb5537bc876a2415d": {"state": "settled", "usd": "0.00147753", "worst_case_usd": "0.006666666666666666666666666665", "seconds_limit": 5, "dry": true, "grok_seconds": 1.108143083001778, "stt_seconds": 0.0, "text_inputs": 0}}}

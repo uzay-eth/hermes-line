@@ -1,0 +1,362 @@
+{
+ "hold-sim train (no model)": {
+  "false_human": 0,
+  "negative_events": 31,
+  "missed_human_events": 2
+ },
+ "hold-sim train (fake model)": {
+  "false_human": 0,
+  "negative_events": 31,
+  "missed_human_events": 2
+ },
+ "hold-sim held-out (no model)": {
+  "false_human": 0,
+  "negative_events": 31,
+  "missed_human_events": 4
+ },
+ "hold-sim held-out (fake model)": {
+  "false_human": 0,
+  "negative_events": 31,
+  "missed_human_events": 4
+ },
+ "hold-sim soak (no model)": {
+  "false_human": 0,
+  "negative_events": 104,
+  "missed_human_events": 4
+ },
+ "hold-sim soak (fake model)": {
+  "false_human": 0,
+  "negative_events": 104,
+  "missed_human_events": 4
+ },
+ "airline train (no model)": {
+  "false_human": 0,
+  "missed_human": 0
+ },
+ "airline train (overconfident fake)": {
+  "false_human": 0,
+  "missed_human": 0
+ },
+ "airline held-out (no model)": {
+  "false_human": 0,
+  "missed_human": 0
+ },
+ "airline held-out (overconfident fake)": {
+  "false_human": 0,
+  "missed_human": 0
+ },
+ "agent-greetings": {
+  "humans": 60,
+  "bots": 40,
+  "missed_humans": 0,
+  "false_humans": 0
+ },
+ "assistants (no model)": {
+  "false_humans": 0,
+  "missed_humans": 0
+ },
+ "assistants (overconfident fake)": {
+  "false_humans": 0,
+  "missed_humans": 0
+ },
+ "delta-run2 replay": {
+  "false_humans": 0
+ },
+ "delta-run3 queue replay (model=False)": {
+  "unsafe": 0
+ },
+ "delta-run3 queue replay (model=True)": {
+  "unsafe": 0
+ },
+ "r2 openers": {
+  "missed_candidates": 0
+ },
+ "round43 stress: yes-like non-human after our question": {
+  "cases": 38,
+  "false_human": 0,
+  "which": []
+ },
+ "round43 stress: engine clear-yes test on the same non-human replies": {
+  "cases": 38,
+  "accepted": 0,
+  "which": []
+ },
+ "round43c engine verdict on the non-human replies (unclear = re-ask, then the owner judges)": {
+  "yes": [],
+  "unclear": [
+   "Speaking? Is that correct?",
+   "Hello? Are you there?",
+   "Hello? Are you a live person too?"
+  ],
+  "bot": 35
+ },
+ "round43c engine verdict on the human target set": {
+  "yes": 16,
+  "not_yes": []
+ },
+ "round43c engine verdict on the three Hilton exchanges (agent replies after our question)": {
+  "call 1": [
+   [
+    "Yes. Are you a live person too?",
+    "yes"
+   ],
+   [
+    "Hello? Are you a live person too?",
+    "unclear"
+   ],
+   [
+    "I'm a live person.",
+    "yes"
+   ],
+   [
+    "Sorry. I'm not hearing any response.",
+    "bot"
+   ]
+  ],
+  "call 2 retry": [
+   [
+    "Yes. You are speaking with the live person. Yes. Indeed.",
+    "yes"
+   ],
+   [
+    "How can I help?",
+    "generic"
+   ],
+   [
+    "You are speaking with a live person. How can I help you?",
+    "yes"
+   ],
+   [
+    "You are speaking to a live person. How can I help you?",
+    "yes"
+   ],
+   [
+    "Yes. You are speaking with the live person. How can I help?",
+    "yes"
+   ],
+   [
+    "You are speaking with a live person. How can I help you?",
+    "yes"
+   ],
+   [
+    "No. I didn't do it. I... *****.",
+    "bot"
+   ],
+   [
+    "You have come through to Hilton Reservations, and you are speaking to a live person.",
+    "unclear"
+   ],
+   [
+    "How can I be of assistance?",
+    "generic"
+   ],
+   [
+    "I am going to have to end this call, please.",
+    "unclear"
+   ],
+   [
+    "Do call us back so we can assist you further.",
+    "unclear"
+   ],
+   [
+    "But you have come through to a live person at Hilton Reservations.",
+    "generic"
+   ],
+   [
+    "When you're ready for us to assist you, please can you call us back so I can be able to assist or any of my colleagues can be able to assist you with your query.",
+    "unclear"
+   ],
+   [
+    "Alright. I am now ending this call as I am unable to hear you.",
+    "unclear"
+   ],
+   [
+    "Please do phone us back so we can be able to assist you.",
+    "unclear"
+   ],
+   [
+    "Thank you.",
+    "generic"
+   ],
+   [
+    "I am now ending this call.",
+    "unclear"
+   ],
+   [
+    "Yes. You are speaking with a live person. How can I help you?",
+    "yes"
+   ],
+   [
+    "You are speaking to a live person. How can I help?",
+    "yes"
+   ],
+   [
+    "Yes. You are speaking with a live person.",
+    "yes"
+   ],
+   [
+    "How can I help?",
+    "generic"
+   ],
+   [
+    "Yes. You are speaking with a live person. How can I help you? Okay.",
+    "yes"
+   ],
+   [
+    "You've come through to Hilton Reservations. How can I help you?",
+    "unclear"
+   ],
+   [
+    "Yes. You are speaking with a live person. How can I help?",
+    "yes"
+   ]
+  ],
+  "call 2 attempt 1 (menu, no person)": [
+   [
+    "Hi.",
+    "generic"
+   ],
+   [
+    "Thanks for calling Hilton Hotels.",
+    "generic"
+   ],
+   [
+    "How can I help?",
+    "generic"
+   ],
+   [
+    "To book a new reservation, say new reservation or press 1.",
+    "bot"
+   ],
+   [
+    "To retrieve your Hilton Honors number, say find Hilton Honors number or press 2.",
+    "bot"
+   ],
+   [
+    "For account related issues, say account help or press 3.",
+    "bot"
+   ],
+   [
+    "To report a billing issue, say billing issue or press 4.",
+    "bot"
+   ],
+   [
+    "To enroll for Hilton Honors, say enroll in Honors or press 5.",
+    "bot"
+   ],
+   [
+    "If you have an upcoming reservation, you can say reconfirm, cancel, modify ask a question, or press 6.",
+    "bot"
+   ],
+   [
+    "If you're calling about a previous stay, you can say things like copy of my hotel receipt, give feedback, or press 7.",
+    "bot"
+   ],
+   [
+    "Otherwise, you can say I'm calling about something else or press 8.",
+    "bot"
+   ],
+   [
+    "Sorry. I didn't catch that.",
+    "bot"
+   ],
+   [
+    "To book a new reservation, say new reservation or press 1.",
+    "bot"
+   ],
+   [
+    "To retrieve your Hilton Honors number, say find Hilton Honors number or 2.",
+    "bot"
+   ],
+   [
+    "For account related issues, say account help or press 3.",
+    "bot"
+   ],
+   [
+    "To report a billing issue, say billing issue or press 4.",
+    "bot"
+   ],
+   [
+    "To enroll for Hilton Honors, say enroll in Honors or press 5.",
+    "bot"
+   ],
+   [
+    "If you have an upcoming reservation, you can say reconfirm, cancel, modify, ask a question, or press 6.",
+    "bot"
+   ],
+   [
+    "If you're calling about a previous stay, you can say things like copy of my hotel receipt, give feedback, or press 7.",
+    "bot"
+   ],
+   [
+    "Otherwise, you can say I'm calling about something else or press 8.",
+    "bot"
+   ],
+   [
+    "Sorry. I didn't catch that.",
+    "bot"
+   ],
+   [
+    "To book a new reservation, say new reservation or press 1.",
+    "bot"
+   ],
+   [
+    "To retrieve your Hilton Honors number, say find Hilton Honors number or press 2.",
+    "bot"
+   ],
+   [
+    "For account related issues, say account help or press 3.",
+    "bot"
+   ],
+   [
+    "To report a billing issue, say billing issue or press 4.",
+    "bot"
+   ],
+   [
+    "To enroll for Hilton Honors, say enroll in Honors or press 5.",
+    "bot"
+   ],
+   [
+    "If you have an upcoming reservation, you can say reconfirm, cancel, modify, ask a question, or press 6.",
+    "bot"
+   ],
+   [
+    "If you're calling about a previous stay, you can say things like copy of my hotel receipt, give feedback, or press 7.",
+    "bot"
+   ],
+   [
+    "Otherwise, you can say I'm calling about something else or press 8.",
+    "bot"
+   ],
+   [
+    "Are you still there?",
+    "bot"
+   ],
+   [
+    "Say yes or press 1 to continue on to an agent.",
+    "bot"
+   ],
+   [
+    "Are you still there?",
+    "bot"
+   ],
+   [
+    "Say yes or press 1 to continue on to an agent.",
+    "bot"
+   ],
+   [
+    "Thank you for calling.",
+    "generic"
+   ],
+   [
+    "Goodbye.",
+    "generic"
+   ]
+  ]
+ },
+ "round43 target: people answering our question": {
+  "cases": 16,
+  "human": 16,
+  "missed": []
+ }
+}

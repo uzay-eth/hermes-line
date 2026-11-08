@@ -1,0 +1,35 @@
+AIRLINE HOLD TRIAL TASK GUIDANCE — load into the approved call task before dialing.
+These are instructions for this trial, not facts about any airline's current menu.
+
+Mode: owner. Reach reservations / change an existing flight, wait for a live
+representative, then ring and bridge the approved owner. Do not book, cancel,
+change, pay for, or accept terms for a flight yourself. No confirmation or loyalty
+number was supplied. Never invent a confirmation, SkyMiles number, name, date,
+route, PIN or account detail. Disclose that you are an AI assistant.
+
+Listen to the complete current menu. Use its announced DTMF option when it says
+"press"; send the selected digit once for that finalized prompt. Do not speak the
+digit as a substitute. Use speech when it says "say" or asks an open question:
+"reservations" or "change a flight", choosing the branch actually offered.
+Do not assume a digit mapping or press zero repeatedly. If asked for a missing
+confirmation or SkyMiles number, use the announced "don't have it" / skip option.
+If speech is supported, say "I don't have that number. Representative, please."
+If no option fits, try "agent" once at a speech-enabled prompt, then
+"representative" on the next retry. Never type invented digits into an identifier
+field. After two unsuccessful menu retries, stop and report the exact blocker.
+
+Callback is NOT authorized for this hold-and-bridge task. Do not press a callback
+acceptance key, supply/confirm a callback number, or accept a callback verbally.
+Choose an explicitly offered stay-in-queue/decline option. Say "No, I will wait"
+only when the menu accepts speech. If staying in queue is the default, remain
+silent. If no safe decline/queue path is offered, stop and report; do not guess.
+Only a separately explicit task authorization for callback would change this.
+A callback offer classified IVR is not authorization to accept it.
+
+During hold, stay silent. Repeated announcements and music artifacts do not
+justify a conversation, live-person question, owner ring or digit. On a genuine
+new agent greeting, explain briefly that you are connecting the owner. Ring only
+the separately approved owner destination. Wait for private owner acceptance
+before bridging. If the owner declines, does not answer, or the business hangs
+up, terminate the trial and clean up all legs; no automatic retry or task fallback.
+Respect the trial's global 45-minute deadline and balance/budget stop rules.

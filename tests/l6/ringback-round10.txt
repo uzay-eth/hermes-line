@@ -1,0 +1,13 @@
+test_child_unanswered_finishes_without_owner_ring (test_ringback.RingbackTests.test_child_unanswered_finishes_without_owner_ring) ... ok
+test_global_deadline_refuses_owner_create_before_balance (test_ringback.RingbackTests.test_global_deadline_refuses_owner_create_before_balance) ... ok
+test_keypad_hangup_child_human_owner_accept_conference_and_evidence (test_ringback.RingbackTests.test_keypad_hangup_child_human_owner_accept_conference_and_evidence) ... ok
+test_owner_balance_stop_cancels_run_before_create_and_never_retries (test_ringback.RingbackTests.test_owner_balance_stop_cancels_run_before_create_and_never_retries) ... ok
+test_owner_declines_no_retry (test_ringback.RingbackTests.test_owner_declines_no_retry) ... ok
+test_retry_and_changed_business_refused_before_any_api (test_ringback.RingbackTests.test_retry_and_changed_business_refused_before_any_api) ... ok
+test_stranger_cannot_create_task (test_ringback.RingbackTests.test_stranger_cannot_create_task) ... ok
+test_unexpected_direct_create_before_balance_or_api (test_ringback.RingbackTests.test_unexpected_direct_create_before_balance_or_api) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.973s
+
+OK

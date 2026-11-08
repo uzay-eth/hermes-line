@@ -1,0 +1,64 @@
+# Catalog admission check: hermes-line 0.1.0
+
+Lane L7, round 3, 2026-11-05, against `main` at `febb39a` (L1 rounds 12-15, L2 round 4, R1 delta 12, L3 round 5, L5 round 5, L6 rounds 6-8
+merged). Round 1 checked `039bef8`, round 2 `c600883`; closed gaps are listed at the end.
+
+Rules source: the admission policy in
+[plugin-catalog/README.md](https://github.com/NousResearch/hermes-agent/blob/main/plugin-catalog/README.md) and the
+mirrored [Submitting to the plugin catalog](https://hermes-agent.nousresearch.com/docs/developer-guide/plugins/catalog-submission)
+page, both read live on 2026-11-05. The README says the docs page copy is kept "identical" by a test; the two texts
+read the same. There are **18 rules**. Quotes below are from that text.
+
+The submission page also asks, before opening the PR: "Run the same check catalog CI runs, against a checkout at
+the commit you are about to pin: `hermes plugins validate /path/to/your-plugin --install-deps`", and for the PR
+description: "say what the plugin does, which Hermes surfaces it uses, and everything rule 13 asks you to disclose.
+Add screenshots for anything with a UI."
+
+Status: **pass** = the repo meets it today; **owner** = Can's step at submission time; **n/a** = does not apply.
+
+## Rule by rule
+
+| # | Rule (quoted) | Status | Evidence |
+|---|---|---|---|
+| 1 | "Entries are added *only* via a PR to the `hermes-agent` repository, reviewed and merged by a maintainer." | owner | `docs/release/PR.md` is the draft. Opening it is Can's decision (`docs/BRIEF.md` LIMITS). |
+| 2 | "Every entry pins a full 40-character commit SHA." | owner (G1) | No public repo and no release commit yet; `catalog-entry.yaml` has `FILL` placeholders for `repo` and `sha`. |
+| 3 | "A listed plugin must not fetch and replace its own files" | pass | No updater code. The only remote hosts the code talks to are `api.twilio.com` and `api.x.ai`; the other URLs in `plugin/` are documentation links and examples (search of every `https://` and `wss://` literal). |
+| 4 | "SHA bumps are new PRs." | n/a now | Applies to later releases. |
+| 5 | "An entry may be submitted by the plugin repository's owner or a major contributor to it" | owner | Can submits from his own repo. |
+| 6 | "The `capabilities:` block (tools, hooks, middleware, env vars) must match what the plugin actually registers at the pinned commit." | pass | `catalog-entry.yaml` lists the same 11 tools (now including `hermes_line_call_new_task` for owner line mode), 2 hooks and 3 `requires_env` names as `plugin/plugin.yaml`; `HERMES_LINE_OWNER_PIN` is in `optional_env`, which the entry schema has no field for. Validation: "✓ declared tools — matches registrations", "✓ declared hooks — matches registrations", no plugin warning (`tests/l1/evidence/validate.txt`, re-run in L1 round 15). |
+| 7 | "`hermes plugins validate` includes the `security scan` check: `dangerous` fails the entry; `caution` findings appear as warnings" | pass | "✓ security scan — safe", no caution (`tests/l1/evidence/validate.txt`). |
+| 8 | "Desktop plugins stay inside the SDK surface." | pass | "✓ desktop surface — stays inside the plugin SDK surface" (`tests/l1/evidence/validate.txt`). Hand check of `plugin/desktop/plugin.js` (round 1): imports only `@hermes/plugin-sdk` and `react`; no `eval`, `new Function`, dynamic `import()`, script tags, `data-slot`/`data-testid` queries, `MutationObserver` or `window.hermesDesktop`; the one `prototype` use is a read (`Object.prototype.hasOwnProperty.call`). |
+| 9 | "It must not replace, wrap or rebind core functions, methods, module attributes or private dicts in place" | pass | "✓ no core override — no runtime rebinds of Hermes core" and no private-import warning (`tests/l1/evidence/validate.txt`). Core imports: `agent.secret_scope.get_secret` and `hermes_cli.plugin_events.broadcast_plugin_event`. |
+| 10 | "bare floors (`>=X` with no upper bound) and floors on the newest release get a request for the oldest API-compatible floor plus an upper bound" | pass | `uvicorn>=0.31.0,<1`, `starlette>=0.40,<2`, `websockets>=15,<16` (`plugin/plugin.yaml`). Whether each floor is the oldest compatible one was not checked. |
+| 11 | "Its declared `requires_env` and `config_schema` secrets are read with `agent.secret_scope.get_secret(NAME)`" | pass | Secrets: `plugin/line/engine/hermes_glue.py` through `agent.secret_scope.get_secret`. The one `os.environ` use (`plugin/line/engine/acp_driver.py:66`) copies the environment for the `hermes acp` child and removes launch flags; it reads no secret. No `.env`, `auth.json` or other credential file is read. |
+| 12 | "A plugin never routes around Hermes's approval system ... no spawning Hermes or shell children that inherit YOLO or non-interactive mode to run commands nobody approved." | pass; owner line mode under review | Each call's Hermes session runs in a dedicated `call_profile` whose ACP toolsets are empty. Before every dial the plugin reads the session's `/tools` list and refuses the call unless it holds only the deferred-tool bridge and the call's own tools; an unreadable list fails closed. The `hermes acp` child never inherits `HERMES_YOLO_MODE`, `HERMES_IGNORE_RULES`, `HERMES_ACCEPT_HOOKS`, `HERMES_SAFE_MODE` or `HERMES_IGNORE_USER_CONFIG`, and the driver declines every permission request (`docs/lanes/L1.md` section 17.1). Live evidence with `HERMES_YOLO_MODE=1` set: `tests/l1/evidence/r8/rule12-default-profile-refused.json` (refused, 0 provider calls), `tests/l1/evidence/r8/rule12-call-profile-finishes.json`. `/line allow-code` falls back to `/line confirm-code` when no prompt is possible; `hermes_line_request_call` returns at once. Behaviour under cron was not tested. **New approval path:** owner line mode lets the owner approve one call by phone: a keypad PIN, then the plugin reads the number back and the owner keys its last four digits (L1 round 15; speech never approves). It does not route around Hermes's approvals (the call profile still has no tools), but it is a new approval surface: the last finished review, R1 delta 11, said NO (N12 High, N14 Medium; `evidence/reviews/R1-DELTA11.md`), and R1 delta 12 (`evidence/reviews/R1-DELTA12.md`) then said YES for one attended trial with a two-number allowlist whose last four digits differ, leaving two Medium limits for wider use (last-four collisions; late spoken PIN fragments cannot be recalled from Hermes). It is off unless `HERMES_LINE_OWNER_PIN` is set. See G11. |
+| 13 | "What a user would want to know before installing goes in the PR description and the plugin's README: network calls to third-party services, reads outside the plugin's own data, shell commands, long-running background processes, stored credentials. Telemetry and usage reporting are opt-in." | pass | The "Disclosures" section of `plugin/README.md` (the copy the catalog renders) covers Twilio, xAI, the tunnel provider and the Hermes model provider; SMS inbox reads and the call session's tool-list read; `adb` and `hermes acp` processes (and the idle-exit gateway that `hermes acp` may start); the background service and its two listeners; stored data (now also owner-PIN failure counts); owner line mode; codes only from a carrier phone; no telemetry. `PR.md` repeats them as disclosure lines. This round's updates are pending in `docs/release/plugin-readme.patch` (G10). |
+| 14 | "`requires_hermes` is a SemVer floor ... Declare the same floor in `plugin.yaml` as well ... `version` matches the pinned code, and Python dependencies resolve under Hermes's core constraints (`hermes plugins validate --install-deps` is what CI runs)." | pass, re-run at release | `requires_hermes: ">=0.22.5"` in `plugin/plugin.yaml` and the entry; tested against Hermes tag `v0.22.5` (`bf0203a794a`). Cold validate, last re-run in L1 round 15: dependencies installed, "Validation passed. Exit status: 0" (`tests/l1/evidence/validate.txt`). Its only `⚠` line is the scratch machine's "install out of sync" (ffmpeg, node, npm, ripgrep), not a plugin finding. `version: "0.1.0"` in both. Re-run at the pinned commit once G1 exists. |
+| 15 | "A change to a bundled plugin is a PR against `hermes-agent`, not a competing listing" | pass | Not a fork or skin of a bundled plugin. The name contains "Hermes"; the final name is Can's call (`docs/BRIEF.md`). |
+| 16 | "A fork of a listed community plugin is listed only when it is materially different" | pass | Not a fork. The brief's scan of 978 catalog entries found no plugin that phones businesses (`docs/BRIEF.md` PURPOSE). |
+| 17 | "A plugin must not ship a compiled binary ..., committed Python bytecode (`.pyc`/`.pyo`...), or an archive whose members are not themselves reviewable source." | pass | 78 tracked files under `plugin/`; none has an ELF, Mach-O, PE or WebAssembly header, and no `.pyc`/`.pyo`/archive is tracked (checked by file header at `8d9141f`). `adb` is the user's own install. |
+| 18 | "A plugin that registers a `browser_vault` login backend (`ctx.register_login_backend`) is listed only at `tier: verified`" | n/a | No login backend. Browser code fill is removed from this build. |
+
+## Remaining before submission
+
+| Id | What | Who |
+|---|---|---|
+| G1 | No public repo and no release commit (rules 1, 2, 5). Then fill `repo`, `sha`, `maintainer` and the screenshot URLs in `catalog-entry.yaml`, re-run `hermes plugins validate --install-deps` at that commit. Image links in `plugin/README.md` stay relative: the catalog resolves them against the pinned tree (`plugin-catalog/README.md`). | Can, then coordinator |
+| G9 | Not a rule: live proof is nine calls (`evidence/trial/`): five with the owner's own phones (one on the Grok path) and four to Delta reservations, two of which reached the real hold queue (runs 3 and 4; no person came on). A human agent at a business, bridging, a business callback, a code into a live call, owner line mode and Grok barge-in are offline only. | coordinator |
+
+## Earlier gaps, closed
+
+| Id | Round 1 gap | Closed by | Evidence |
+|---|---|---|---|
+| G8 | No `LICENSE`; `author: Hermes Line` placeholder | MIT `LICENSE` (copyright Can Uzay) added and `author: Can Uzay` set in the release commit (MIT-018) | `LICENSE`, `plugin/plugin.yaml` |
+| G10 (round 3/4) | `plugin/README.md` behind the round-3/4 facts | The r4 patch was applied on main (`838e8ab`); the release commit adds Delta runs 3 and 4 and syncs the root `README.md` | `python3 -I docs/release/sync_readme.py --check` |
+| G11 | Owner line mode cleared only for one attended trial | Shipped experimental and off by default: it is off unless `HERMES_LINE_OWNER_PIN` is set (`valid_pin` in `plugin/line/engine/owner_line.py`); README status table, setup step 8 and `plugin.yaml` say so; the two Medium limits stay listed | `plugin/README.md` step 8, `plugin/plugin.yaml` |
+| G2 | Catalog would render a missing `plugin/README.md` | L1 round 8 added it | `plugin/README.md`; `docs/lanes/L1.md` section 17.6 |
+| G3 | `line_otp_fill` declared but not registered (validate warning) | L1 round 8 removed browser code fill: the tool, its setting (`true` is refused), the web path of `/line allow-code` | `docs/lanes/L1.md` section 17.2; `tests/l1/evidence/validate.txt` (no plugin warning) |
+| G4 | Validate evidence predated round 6 | L1 round 8 re-ran it cold | `tests/l1/evidence/validate.txt` |
+| G5 | Rule 12: call session inherited the profile's approval mode and toolset | L1 round 8: `call_profile` with no ACP toolsets, tool-list check before every dial, launch flags stripped | `docs/lanes/L1.md` section 17.1; `tests/l1/evidence/r8/` |
+| G6 | R1 delta 3 Low N3: an authenticated MCP request survived token rotation | L1 round 8: bearer re-resolved after the body and before the tool runs; streamed 64 KB cap, 5 s deadline | `docs/lanes/L1.md` section 17.5 |
+| G7 | Texts claimed approval in the Desktop pane; skill lacked `line_otp_to_call` | L1 round 8 texts and skill | `docs/lanes/L1.md` section 17.3 |
+| Toll-free | Toll-free hotlines refused | L2 round 3: 800, 833, 844, 855, 866, 877, 888 allowed; 900 and 976 refused | `docs/lanes/L2.md` round 3; `plugin/line/policy/destinations.py` |
+| Bora number | Hard-coded blocked number from the author's setup | L2 round 3 removed it; the trial config sets `policy.blocked_destinations` | `docs/lanes/L2.md` round 3; `docs/lanes/L1.md` section 17.4 |
+| G10 (round 2) | `plugin/README.md` facts from before L2 rounds 2/3 and L1 round 7 | The round-2 patch was applied on main and the root synced | `git log` `4ffc512` |

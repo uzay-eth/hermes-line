@@ -1,0 +1,111 @@
+{
+  "revision": 13,
+  "calls": [
+    {
+      "id": "call_sample_airline",
+      "task_title": "Move Sample Airline flight to Friday",
+      "direction": "outbound",
+      "counterpart_masked": "+1 555-01••",
+      "state": "on_hold",
+      "state_since": "2026-11-07T17:02:21Z",
+      "started_at": "2026-11-07T17:01:40Z",
+      "duration_s": 2333,
+      "mode": "owner",
+      "transcript": [
+        {
+          "seq": 1,
+          "ts": "2026-11-07T17:01:40Z",
+          "speaker": "system",
+          "text": "Call placed"
+        },
+        {
+          "seq": 2,
+          "ts": "2026-11-07T17:01:44Z",
+          "speaker": "business",
+          "text": "Thank you for calling Sample Airline. For new reservations, press 1. To change an existing trip, press 2."
+        },
+        {
+          "seq": 3,
+          "ts": "2026-11-07T17:01:52Z",
+          "speaker": "system",
+          "text": "Pressed 2"
+        },
+        {
+          "seq": 4,
+          "ts": "2026-11-07T17:01:58Z",
+          "speaker": "business",
+          "text": "Please say or enter your six-character confirmation code."
+        },
+        {
+          "seq": 5,
+          "ts": "2026-11-07T17:02:03Z",
+          "speaker": "hermes",
+          "text": "[CODE]"
+        },
+        {
+          "seq": 6,
+          "ts": "2026-11-07T17:02:12Z",
+          "speaker": "business",
+          "text": "Thank you. All of our agents are helping other customers. Your wait time is more than 30 minutes."
+        },
+        {
+          "seq": 7,
+          "ts": "2026-11-07T17:02:21Z",
+          "speaker": "system",
+          "text": "On hold"
+        },
+        {
+          "seq": 8,
+          "ts": "2026-11-07T17:24:50Z",
+          "speaker": "business",
+          "text": "Thank you for your patience. Please stay on the line and an agent will be with you shortly."
+        }
+      ],
+      "summary": null
+    },
+    {
+      "id": "call_sample_clinic_callback",
+      "task_title": "Sample Clinic called back about Thursday",
+      "direction": "inbound",
+      "counterpart_masked": "+1 555-01••",
+      "state": "ended",
+      "state_since": "2026-11-06T22:15:41Z",
+      "started_at": "2026-11-06T22:14:05Z",
+      "duration_s": 96,
+      "mode": "agent",
+      "transcript": [
+        {
+          "seq": 1,
+          "ts": "2026-11-06T22:14:05Z",
+          "speaker": "system",
+          "text": "Answered a callback"
+        },
+        {
+          "seq": 2,
+          "ts": "2026-11-06T22:14:09Z",
+          "speaker": "business",
+          "text": "Hi, this is Sample Clinic returning a call about an appointment on Thursday."
+        },
+        {
+          "seq": 3,
+          "ts": "2026-11-06T22:14:12Z",
+          "speaker": "hermes",
+          "text": "Hi, this is Hermes, an AI assistant answering for the patient. Thanks for calling back. Is the 10:30 a.m. slot on Thursday still open?"
+        },
+        {
+          "seq": 4,
+          "ts": "2026-11-06T22:14:30Z",
+          "speaker": "business",
+          "text": "Yes, it's confirmed for 10:30. Please arrive ten minutes early."
+        },
+        {
+          "seq": 5,
+          "ts": "2026-11-06T22:15:41Z",
+          "speaker": "system",
+          "text": "Call ended"
+        }
+      ],
+      "summary": "Sample Clinic confirmed Thursday at 10:30 a.m. Arrive ten minutes early."
+    }
+  ]
+}

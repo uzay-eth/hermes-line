@@ -1,0 +1,192 @@
+[
+  {
+    "split": "train",
+    "mode": "no model",
+    "matrix": {
+      "human": {
+        "human": 1,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "hold_message": {
+        "human": 0,
+        "hold_message": 3,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "ivr": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 4,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "voicemail": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "unknown": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 4
+      }
+    },
+    "false_human": 0,
+    "missed_human": 0,
+    "human_latency_ms": [
+      0.7792500000000022
+    ],
+    "model_calls": 0
+  },
+  {
+    "split": "train",
+    "mode": "overconfident fake",
+    "matrix": {
+      "human": {
+        "human": 1,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "hold_message": {
+        "human": 0,
+        "hold_message": 3,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "ivr": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 4,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "voicemail": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "unknown": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 4
+      }
+    },
+    "false_human": 0,
+    "missed_human": 0,
+    "human_latency_ms": [
+      0.5430000000000018
+    ],
+    "model_calls": 0
+  },
+  {
+    "split": "held-out",
+    "mode": "no model",
+    "matrix": {
+      "human": {
+        "human": 2,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "hold_message": {
+        "human": 0,
+        "hold_message": 4,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "ivr": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 4,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "voicemail": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "unknown": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 5
+      }
+    },
+    "false_human": 0,
+    "missed_human": 0,
+    "human_latency_ms": [
+      0.7348749999999994,
+      0.5137080000000016
+    ],
+    "model_calls": 0
+  },
+  {
+    "split": "held-out",
+    "mode": "overconfident fake",
+    "matrix": {
+      "human": {
+        "human": 2,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "hold_message": {
+        "human": 0,
+        "hold_message": 4,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "ivr": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 4,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "voicemail": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 0
+      },
+      "unknown": {
+        "human": 0,
+        "hold_message": 0,
+        "ivr": 0,
+        "voicemail": 0,
+        "unknown": 5
+      }
+    },
+    "false_human": 0,
+    "missed_human": 0,
+    "human_latency_ms": [
+      0.7190419999999996,
+      0.5047499999999983
+    ],
+    "model_calls": 0
+  }
+]

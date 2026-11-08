@@ -1,0 +1,6 @@
+{"at": 1794118854.993066, "event": "business_dialing", "sid": "[Hilton call 1 leg]"}
+{"at": 1794118875.223999, "detection_state": "automated_assistant", "event": "assistant_phrase", "phrase_id": "no_general"}
+{"at": 1794118887.156183, "detection_state": "automated_assistant", "event": "assistant_phrase", "phrase_id": "agent"}
+{"at": 1794118988.488338, "count": 2, "event": "new_party_question"}
+{"at": 1794119011.0400379, "event": "ended", "outcome": "business_hangup"}
+{"evidence": "evidence/trial/call_05b4aa023f374279"}

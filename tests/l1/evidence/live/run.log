@@ -1,0 +1,99 @@
+hermes home for the run: /Users/mac/.hermes
+🔧 Auto-repaired tool name: 'mcp__tool_describe' -> 'tool_describe'
+🔧 Auto-repaired tool name: 'mcp__tool_call' -> 'tool_call'
+{
+ "agent_construction_ms": [
+  700.9
+ ],
+ "turns": [
+  {
+   "turn": 1,
+   "kind": "cold",
+   "first_text_ms": 1091.9,
+   "full_ms": 1748.6,
+   "chars": 116
+  },
+  {
+   "turn": 2,
+   "kind": "warm",
+   "first_text_ms": 1218.2,
+   "full_ms": 1764.5,
+   "chars": 75
+  },
+  {
+   "turn": 3,
+   "kind": "warm",
+   "first_text_ms": 1169.0,
+   "full_ms": 1559.3,
+   "chars": 20
+  },
+  {
+   "turn": 4,
+   "kind": "warm",
+   "first_text_ms": 1128.3,
+   "full_ms": 1552.7,
+   "chars": 24
+  },
+  {
+   "turn": 5,
+   "kind": "warm",
+   "first_text_ms": 1048.5,
+   "full_ms": 1630.9,
+   "chars": 60
+  },
+  {
+   "turn": 6,
+   "kind": "warm",
+   "first_text_ms": 1174.7,
+   "full_ms": 1553.8,
+   "chars": 15
+  },
+  {
+   "turn": 7,
+   "kind": "warm",
+   "first_text_ms": 1163.3,
+   "full_ms": 1572.6,
+   "chars": 38
+  },
+  {
+   "turn": 8,
+   "kind": "warm",
+   "first_text_ms": 1164.6,
+   "full_ms": 1895.5,
+   "chars": 152
+  },
+  {
+   "turn": 9,
+   "kind": "warm",
+   "first_text_ms": 6434.0,
+   "full_ms": 6447.8,
+   "chars": 85
+  },
+  {
+   "turn": 10,
+   "kind": "warm",
+   "first_text_ms": null,
+   "full_ms": 85.0,
+   "chars": 0
+  }
+ ],
+ "warm_stats": {
+  "n": 8,
+  "first_text_ms": {
+   "p50": 1166.8,
+   "p90": 6434.0,
+   "min": 1048.5,
+   "max": 6434.0
+  },
+  "full_ms": {
+   "p50": 1601.8,
+   "p90": 6447.8,
+   "min": 1552.7,
+   "max": 6447.8
+  }
+ },
+ "final_state": "ended",
+ "in_call_tool_context": [
+  "session_id"
+ ]
+}

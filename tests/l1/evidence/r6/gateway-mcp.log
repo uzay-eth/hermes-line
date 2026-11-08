@@ -1,0 +1,14 @@
+# scratch gateway agent.log, MCP lines only (r6home, fixture model)
+2026-11-05 02:45:40,327 INFO httpx2: HTTP Request: POST http://127.0.0.1:53607/mcp "HTTP/1.1 200 OK"
+2026-11-05 02:45:40,328 INFO httpx2: HTTP Request: POST http://127.0.0.1:53607/mcp "HTTP/1.1 202 Accepted"
+2026-11-05 02:45:40,330 INFO httpx2: HTTP Request: POST http://127.0.0.1:53607/mcp "HTTP/1.1 200 OK"
+2026-11-05 02:45:40,331 INFO tools.mcp_tool: MCP server 'editor_hermes_line_97826778' (HTTP): registered 3 tool(s): mcp__editor_hermes_line_97826778__hermes_line_call_press_digits, mcp__editor_hermes_line_97826778__hermes_line_call_finish, mcp__editor_hermes_line_97826778__hermes_line_call_bring_owner
+2026-11-05 02:45:40,331 INFO tools.mcp_tool: MCP: registered 3 tool(s) from 1 server(s)
+2026-11-05 02:45:43,520 INFO httpx2: HTTP Request: POST http://127.0.0.1:53607/mcp "HTTP/1.1 200 OK"
+2026-11-05 02:45:43,522 INFO httpx2: HTTP Request: POST http://127.0.0.1:53607/mcp "HTTP/1.1 202 Accepted"
+2026-11-05 02:45:43,523 INFO httpx2: HTTP Request: POST http://127.0.0.1:53607/mcp "HTTP/1.1 200 OK"
+2026-11-05 02:45:43,524 INFO tools.mcp_tool: MCP server 'editor_hermes_line_97826778' (HTTP): registered 3 tool(s): mcp__editor_hermes_line_97826778__hermes_line_call_press_digits, mcp__editor_hermes_line_97826778__hermes_line_call_finish, mcp__editor_hermes_line_97826778__hermes_line_call_bring_owner
+2026-11-05 02:45:43,525 INFO tools.mcp_tool: MCP: registered 3 tool(s) from 1 server(s)
+2026-11-05 02:45:43,529 INFO httpx2: HTTP Request: POST http://127.0.0.1:53607/mcp "HTTP/1.1 200 OK"
+2026-11-05 02:45:43,555 INFO httpx2: HTTP Request: POST http://127.0.0.1:53607/mcp "HTTP/1.1 200 OK"
+2026-11-05 02:45:44,218 INFO httpx2: HTTP Request: POST http://127.0.0.1:53607/mcp "HTTP/1.1 200 OK"

@@ -1,0 +1,4 @@
+{"at": 1794002490.1718888, "event": "business_dialing", "sid": "[Delta run 4]"}
+{"at": 1794002519.778854, "detection_state": "automated_assistant", "event": "assistant_phrase", "phrase_id": "agent"}
+{"at": 1794005178.2766342, "event": "ended", "outcome": "max_duration"}
+{"evidence": "evidence/trial/call_d4c0d44472b144c5"}

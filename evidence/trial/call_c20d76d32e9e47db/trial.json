@@ -1,0 +1,354 @@
+{
+  "call": {
+    "id": "call_c20d76d32e9e47db",
+    "task_id": null,
+    "task_title": "Incoming call",
+    "direction": "inbound",
+    "counterpart_masked": "[owner phone (Spectrum)]",
+    "state": "ended",
+    "started_at": "2026-11-05T18:54:58.730+00:00",
+    "state_since": "2026-11-05T18:56:31.947+00:00",
+    "duration_s": 93,
+    "mode": "agent",
+    "transcript": [
+      {
+        "seq": 1,
+        "speaker": "hermes",
+        "text": "Hi, you've reached Can's line. This is Hermes, an AI assistant. How can I help?",
+        "ts": "2026-11-05T18:54:59.402+00:00"
+      },
+      {
+        "seq": 2,
+        "speaker": "business",
+        "text": "Hi. Who are you exactly?",
+        "ts": "2026-11-05T18:55:09.537+00:00"
+      },
+      {
+        "seq": 3,
+        "speaker": "hermes",
+        "text": "Hi, I'm Hermes, an AI assistant answering calls for Can. May I ask who's calling and what it's about?",
+        "ts": "2026-11-05T18:55:11.978+00:00"
+      },
+      {
+        "seq": 4,
+        "speaker": "business",
+        "text": "I am Ken.",
+        "ts": "2026-11-05T18:55:20.449+00:00"
+      },
+      {
+        "seq": 5,
+        "speaker": "business",
+        "text": "Do you know about me?",
+        "ts": "2026-11-05T18:55:21.800+00:00"
+      },
+      {
+        "seq": 6,
+        "speaker": "hermes",
+        "text": "Thanks, Ken. I don't have any details about you, I'm just taking messages for Can. What's your call about, and what's the best way for Can to reach you?",
+        "ts": "2026-11-05T18:55:26.219+00:00"
+      },
+      {
+        "seq": 7,
+        "speaker": "business",
+        "text": "Bro, I'm gonna reach myself.",
+        "ts": "2026-11-05T18:55:38.564+00:00"
+      },
+      {
+        "seq": 8,
+        "speaker": "business",
+        "text": "What hour?",
+        "ts": "2026-11-05T18:55:39.699+00:00"
+      },
+      {
+        "seq": 9,
+        "speaker": "business",
+        "text": "I'm just doing testing and stuff, but what what language model behind you",
+        "ts": "2026-11-05T18:55:47.833+00:00"
+      },
+      {
+        "seq": 10,
+        "speaker": "hermes",
+        "text": "I run on Claude, a model made by Anthropic. Would you like me to pass a message to Can, or is this just a test call?",
+        "ts": "2026-11-05T18:55:53.709+00:00"
+      },
+      {
+        "seq": 11,
+        "speaker": "business",
+        "text": "Are you Sonet or Opus Fable?",
+        "ts": "2026-11-05T18:56:07.657+00:00"
+      },
+      {
+        "seq": 12,
+        "speaker": "business",
+        "text": "1?",
+        "ts": "2026-11-05T18:56:08.312+00:00"
+      },
+      {
+        "seq": 13,
+        "speaker": "hermes",
+        "text": "Sorry, you may have missed that. I'm running on Claude Opus. Is there anything you'd like me to tell Can?",
+        "ts": "2026-11-05T18:56:12.222+00:00"
+      },
+      {
+        "seq": 14,
+        "speaker": "business",
+        "text": "No. That's good. Thank you.",
+        "ts": "2026-11-05T18:56:23.014+00:00"
+      },
+      {
+        "seq": 15,
+        "speaker": "hermes",
+        "text": "Thanks for calling, Ken. Goodbye!",
+        "ts": "2026-11-05T18:56:28.841+00:00"
+      }
+    ],
+    "summary": "Hermes Line: Call completed ([owner phone (Spectrum)], \"callback\", 1m33s). Incoming call from Ken (number not passed through). He said he was just testing the line and asked which language model I run on (I said Claude Opus, by Anthropic). He left no message and needs no callback.",
+    "end_reason": "completed",
+    "revision": 19,
+    "control_revision": 18
+  },
+  "CallSID": "owner call 3",
+  "events": [
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "inbound",
+      "data": {
+        "matched": false,
+        "from": "[owner phone (Spectrum)]",
+        "caller_hidden": true,
+        "forwarded": false,
+        "via_forwarding_line": false
+      },
+      "ts": 1793904898.732256
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "relay_connected",
+      "data": {
+        "reconnects": 0
+      },
+      "ts": 1793904899.148362
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 1556.7984579975018,
+        "full_ms": 2439.9,
+        "interrupted": false
+      },
+      "ts": 1793904911.9784021
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1793904921.801204
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": null,
+        "full_ms": 1546.9,
+        "interrupted": true
+      },
+      "ts": 1793904921.999239
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "filler",
+      "data": {},
+      "ts": 1793904924.5008671
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 4147.098374996858,
+        "full_ms": 4219.5,
+        "interrupted": false
+      },
+      "ts": 1793904926.220094
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1793904939.700025
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": null,
+        "full_ms": 1500.6,
+        "interrupted": true
+      },
+      "ts": 1793904940.0662248
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "filler",
+      "data": {},
+      "ts": 1793904942.567883
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1793904942.888012
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": null,
+        "full_ms": 2977.9,
+        "interrupted": true
+      },
+      "ts": 1793904943.0448482
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "filler",
+      "data": {},
+      "ts": 1793904950.337093
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "filler",
+      "data": {},
+      "ts": 1793904952.83859
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 5770.533125003567,
+        "full_ms": 5873.0,
+        "interrupted": false
+      },
+      "ts": 1793904953.709516
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1793904968.3143082
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": null,
+        "full_ms": 922.7,
+        "interrupted": true
+      },
+      "ts": 1793904968.582674
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "filler",
+      "data": {},
+      "ts": 1793904971.0847292
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 3597.0907090013498,
+        "full_ms": 3638.2,
+        "interrupted": false
+      },
+      "ts": 1793904972.2225652
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "filler",
+      "data": {},
+      "ts": 1793904985.5155358
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "finish_requested",
+      "data": {
+        "outcome": "done"
+      },
+      "ts": 1793904986.461046
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "filler",
+      "data": {},
+      "ts": 1793904988.017171
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 5731.366375002835,
+        "full_ms": 5825.8,
+        "interrupted": false
+      },
+      "ts": 1793904988.8419368
+    },
+    {
+      "call_id": "call_c20d76d32e9e47db",
+      "task_id": null,
+      "kind": "ended",
+      "data": {
+        "state": "ended",
+        "reason": "completed"
+      },
+      "ts": 1793904991.949245
+    }
+  ],
+  "provider": {
+    "sid": "owner call 3",
+    "duration": "92",
+    "status": "completed",
+    "price": null,
+    "price_unit": "USD"
+  },
+  "balance_before": {
+    "usd": "13.80606",
+    "at": 1793904836.456728
+  },
+  "balance_after": {
+    "usd": "13.78356",
+    "at": 1793904995.308168
+  },
+  "provider_legs": [
+    {
+      "sid": "owner call 3",
+      "duration": "92",
+      "status": "completed",
+      "price": null,
+      "price_unit": "USD"
+    }
+  ]
+}

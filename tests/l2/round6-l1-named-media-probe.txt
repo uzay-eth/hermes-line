@@ -1,0 +1,6 @@
+test_R5_fake_call_over_media_streams_through_the_real_ingress (__main__.DirectNamedAgentMediaProbe.test_R5_fake_call_over_media_streams_through_the_real_ingress) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 2.892s
+
+OK

@@ -1,0 +1,5 @@
+{"at": 1793916241.025193, "candidates": [{"date_created": 1793916241.0226429, "from": "[the line]", "sid": "[SID withheld]", "status": "in-progress", "to": "[NUMBER ending 0100]"}], "complete": true, "coordinator": true, "date_created_floor": 1793916239.0219772, "event": "reconcile_candidates", "ignored_older": 0, "invalid_rows": 0, "role": "business", "upper_bound": null}
+{"candidates": [{"confirmed_status": "completed", "date_created": 1793916241.0226429, "from": "[the line]", "sid": "[SID withheld]", "status": "in-progress", "to": "[NUMBER ending 0100]"}], "event": "reconcile_result", "result": "confirmed_terminal", "role": "business"}
+{"hold_recovery": "completed"}
+N18: unresolved intent survives cleanup; fresh recovery finds and ends the accepted call
+N19: stop during balance read refuses dispatch; cleanup drains worker; no live fake leg

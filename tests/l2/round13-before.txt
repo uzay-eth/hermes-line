@@ -1,0 +1,753 @@
+test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) ...
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Thank you for calling. For reservations, press 1.', prefix=['Please hold.'], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'ivr'
+- unknown
++ ivr
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Thank you for calling. For reservations, press 1.', prefix=['Please hold.'], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'ivr'
+- unknown
++ ivr
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Thank you for calling. For reservations, press 1.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'ivr'
+- unknown
++ ivr
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Thank you for calling. For reservations, press 1.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'ivr'
+- unknown
++ ivr
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hi, to receive a callback instead of waiting, press 1.', prefix=['Please hold.'], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'ivr'
+- unknown
++ ivr
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hi, to receive a callback instead of waiting, press 1.', prefix=['Please hold.'], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'ivr'
+- unknown
++ ivr
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hi, to receive a callback instead of waiting, press 1.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'ivr'
+- unknown
++ ivr
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hi, to receive a callback instead of waiting, press 1.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'ivr'
+- unknown
++ ivr
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line="Thanks for waiting. Say yes and we'll text you a link.", prefix=['Please hold.'], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'automated_assistant'
+- unknown
++ automated_assistant
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line="Thanks for waiting. Say yes and we'll text you a link.", prefix=['Please hold.'], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'automated_assistant'
+- unknown
++ automated_assistant
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line="Thanks for waiting. Say yes and we'll text you a link.", prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'automated_assistant'
+- unknown
++ automated_assistant
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line="Thanks for waiting. Say yes and we'll text you a link.", prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'automated_assistant'
+- unknown
++ automated_assistant
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line="Hello, you've reached the SkyMiles desk. Please leave a message after the tone.", prefix=['Please hold.'], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'voicemail'
+- unknown
++ voicemail
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line="Hello, you've reached the SkyMiles desk. Please leave a message after the tone.", prefix=['Please hold.'], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'voicemail'
+- unknown
++ voicemail
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line="Hello, you've reached the SkyMiles desk. Please leave a message after the tone.", prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'voicemail'
+- unknown
++ voicemail
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line="Hello, you've reached the SkyMiles desk. Please leave a message after the tone.", prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'voicemail'
+- unknown
++ voicemail
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hi, this is Delta. Please leave your name and number after the beep.', prefix=['Please hold.'], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'human' != 'voicemail'
+- human
++ voicemail
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hi, this is Delta. Please leave your name and number after the beep.', prefix=['Please hold.'], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'human' != 'voicemail'
+- human
++ voicemail
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hi, this is Delta. Please leave your name and number after the beep.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'human' != 'voicemail'
+- human
++ voicemail
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hi, this is Delta. Please leave your name and number after the beep.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'human' != 'voicemail'
+- human
++ voicemail
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='This is a recorded message. Please stay on the line.', prefix=['Please hold.'], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='This is a recorded message. Please stay on the line.', prefix=['Please hold.'], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='This is a recorded message. Please stay on the line.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='This is a recorded message. Please stay on the line.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Thank you for holding. Please hold for the next available agent.', prefix=['Please hold.'], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Thank you for holding. Please hold for the next available agent.', prefix=['Please hold.'], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Thank you for holding. Please hold for the next available agent.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Thank you for holding. Please hold for the next available agent.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hello, your call is important to us. Please remain on the line.', prefix=['Please hold.'], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hello, your call is important to us. Please remain on the line.', prefix=['Please hold.'], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hello, your call is important to us. Please remain on the line.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hello, your call is important to us. Please remain on the line.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='You will be speaking with an agent shortly.', prefix=['Please hold.'], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='You will be speaking with an agent shortly.', prefix=['Please hold.'], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='You will be speaking with an agent shortly.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='You will be speaking with an agent shortly.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line="Thanks for calling, I'll transfer you to the next available agent.", prefix=['Please hold.'], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line="Thanks for calling, I'll transfer you to the next available agent.", prefix=['Please hold.'], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line="Thanks for calling, I'll transfer you to the next available agent.", prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line="Thanks for calling, I'll transfer you to the next available agent.", prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Thank you for holding. This call may be recorded for quality assurance.', prefix=['Please hold.'], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Thank you for holding. This call may be recorded for quality assurance.', prefix=['Please hold.'], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Thank you for holding. This call may be recorded for quality assurance.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Thank you for holding. This call may be recorded for quality assurance.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'hold_message'
+- unknown
++ hold_message
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hi, we can call you back when an agent is free. Press 1 to accept.', prefix=['Please hold.'], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'ivr'
+- unknown
++ ivr
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hi, we can call you back when an agent is free. Press 1 to accept.', prefix=['Please hold.'], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'ivr'
+- unknown
++ ivr
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hi, we can call you back when an agent is free. Press 1 to accept.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'ivr'
+- unknown
++ ivr
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hi, we can call you back when an agent is free. Press 1 to accept.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'ivr'
+- unknown
++ ivr
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hello! To hear these options again, press star.', prefix=['Please hold.'], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'ivr'
+- unknown
++ ivr
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hello! To hear these options again, press star.', prefix=['Please hold.'], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'ivr'
+- unknown
++ ivr
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hello! To hear these options again, press star.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'ivr'
+- unknown
++ ivr
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hello! To hear these options again, press star.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'ivr'
+- unknown
++ ivr
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line="Hi, you've reached Dana. Please leave a message after the tone.", prefix=['Please hold.'], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'voicemail'
+- unknown
++ voicemail
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line="Hi, you've reached Dana. Please leave a message after the tone.", prefix=['Please hold.'], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'voicemail'
+- unknown
++ voicemail
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line="Hi, you've reached Dana. Please leave a message after the tone.", prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'voicemail'
+- unknown
++ voicemail
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line="Hi, you've reached Dana. Please leave a message after the tone.", prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'voicemail'
+- unknown
++ voicemail
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line="Hello, this is Mark. I'm not available, please leave a message.", prefix=['Please hold.'], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'human' != 'voicemail'
+- human
++ voicemail
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line="Hello, this is Mark. I'm not available, please leave a message.", prefix=['Please hold.'], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'human' != 'voicemail'
+- human
++ voicemail
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line="Hello, this is Mark. I'm not available, please leave a message.", prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'human' != 'voicemail'
+- human
++ voicemail
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line="Hello, this is Mark. I'm not available, please leave a message.", prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'human' != 'voicemail'
+- human
++ voicemail
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hello, this is Kim with Delta, please leave your name and number and I will call you back.', prefix=['Please hold.'], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'human' != 'voicemail'
+- human
++ voicemail
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hello, this is Kim with Delta, please leave your name and number and I will call you back.', prefix=['Please hold.'], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'human' != 'voicemail'
+- human
++ voicemail
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hello, this is Kim with Delta, please leave your name and number and I will call you back.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'human' != 'voicemail'
+- human
++ voicemail
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hello, this is Kim with Delta, please leave your name and number and I will call you back.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'human' != 'voicemail'
+- human
++ voicemail
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hi, this is Delta reservations. Please press 1 for English.', prefix=['Please hold.'], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'ivr'
+- unknown
++ ivr
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hi, this is Delta reservations. Please press 1 for English.', prefix=['Please hold.'], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'ivr'
+- unknown
++ ivr
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hi, this is Delta reservations. Please press 1 for English.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'ivr'
+- unknown
++ ivr
+
+
+======================================================================
+FAIL: test_reviewer_negative_labels_win (test_r2_explicit_rules.ExplicitRuleTests) (line='Hi, this is Delta reservations. Please press 1 for English.', prefix=["I'm a virtual assistant.", "I'll transfer your call now."], question=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mac/.bb/plugins/environment-git-worktree/host-data/worktrees/thr_56qvuwnr2c-1/hermes-line/tests/l2/test_r2_explicit_rules.py", line 19, in test_reviewer_negative_labels_win
+    self.assertEqual(r.label,row['label'])
+AssertionError: 'unknown' != 'ivr'
+- unknown
++ ivr
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.014s
+
+FAILED (failures=68)

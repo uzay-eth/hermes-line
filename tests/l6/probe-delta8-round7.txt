@@ -1,0 +1,4 @@
+N9 cancelled_setup_socket_closed_after_call_close: True
+N10 private logger authorization absent, including forced DEBUG: True
+N11 concurrent close/finish: persisted USD= 0.16027384 ; actual simulated connected seconds>=120: True
+N11 cancelled close: persisted USD>=0.16 for simulated 120-second connection

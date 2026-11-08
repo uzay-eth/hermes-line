@@ -1,0 +1,22 @@
+{
+  "android17_otp_protection_expected": true,
+  "bodies_or_codes_recorded": false,
+  "clock_skew_s_estimate": 0.1,
+  "detail": "SourceError: adb exited with status 1",
+  "device": {
+    "android": "17",
+    "model": "Pixel 10 Pro XL",
+    "sdk": "37",
+    "security_patch": "2026-10-05",
+    "serial_tail": "_tcp"
+  },
+  "ended_utc": "2026-11-05T20:43:52.688Z",
+  "interval_s": 2.0,
+  "lookback_min": 240.0,
+  "messages": [],
+  "minutes": 1.0,
+  "read_only": true,
+  "started_utc": "2026-11-05T20:43:30.552Z",
+  "status": "failed",
+  "tool": "tests/l4/live/otp_delay.py"
+}

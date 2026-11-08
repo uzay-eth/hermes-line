@@ -1,0 +1,126 @@
+{
+  "call": {
+    "id": "call_68921278eab742c6",
+    "task_id": "task_e3e6a50c1dc74030",
+    "task_title": "Attended owner trial",
+    "direction": "outbound",
+    "counterpart_masked": "[owner phone (Spectrum)]",
+    "state": "failed",
+    "started_at": "2026-11-05T16:42:59.025+00:00",
+    "state_since": "2026-11-05T16:44:19.976+00:00",
+    "duration_s": 80,
+    "mode": "agent",
+    "transcript": [
+      {
+        "seq": 1,
+        "speaker": "hermes",
+        "text": "Hi, this is Hermes, an AI assistant calling on behalf of Can. This call is not recorded.",
+        "ts": "2026-11-05T16:42:59.714+00:00"
+      },
+      {
+        "seq": 2,
+        "speaker": "business",
+        "text": "Hi. How are you?",
+        "ts": "2026-11-05T16:43:08.309+00:00"
+      },
+      {
+        "seq": 3,
+        "speaker": "hermes",
+        "text": "Hi, this is Hermes, an AI assistant calling for Can. Am I speaking with a live person?",
+        "ts": "2026-11-05T16:43:09.874+00:00"
+      },
+      {
+        "seq": 4,
+        "speaker": "business",
+        "text": "Yeah. It's me, Ken. But information you have about me?",
+        "ts": "2026-11-05T16:43:19.613+00:00"
+      }
+    ],
+    "summary": null,
+    "end_reason": "business_hangup",
+    "revision": 11,
+    "control_revision": 11
+  },
+  "CallSID": "owner call 1",
+  "events": [
+    {
+      "call_id": "call_68921278eab742c6",
+      "task_id": "task_e3e6a50c1dc74030",
+      "kind": "dialing",
+      "data": {
+        "to": "[owner phone (Spectrum)]"
+      },
+      "ts": 1793896971.7878761
+    },
+    {
+      "call_id": "call_68921278eab742c6",
+      "task_id": "task_e3e6a50c1dc74030",
+      "kind": "relay_connected",
+      "data": {
+        "reconnects": 0
+      },
+      "ts": 1793896979.506212
+    },
+    {
+      "call_id": "call_68921278eab742c6",
+      "task_id": "task_e3e6a50c1dc74030",
+      "kind": "detect",
+      "data": {
+        "label": "unknown",
+        "confidence": "low"
+      },
+      "ts": 1793896989.873912
+    },
+    {
+      "call_id": "call_68921278eab742c6",
+      "task_id": "task_e3e6a50c1dc74030",
+      "kind": "detect",
+      "data": {
+        "label": "unknown",
+        "confidence": "low"
+      },
+      "ts": 1793897001.067059
+    },
+    {
+      "call_id": "call_68921278eab742c6",
+      "task_id": "task_e3e6a50c1dc74030",
+      "kind": "relay_lost",
+      "data": {},
+      "ts": 1793897058.701621
+    },
+    {
+      "call_id": "call_68921278eab742c6",
+      "task_id": "task_e3e6a50c1dc74030",
+      "kind": "relay_reconnect",
+      "data": {
+        "attempt": 1
+      },
+      "ts": 1793897059.136105
+    },
+    {
+      "call_id": "call_68921278eab742c6",
+      "task_id": "task_e3e6a50c1dc74030",
+      "kind": "ended",
+      "data": {
+        "state": "failed",
+        "reason": "business_hangup"
+      },
+      "ts": 1793897059.9779499
+    }
+  ],
+  "provider": {
+    "sid": "owner call 1",
+    "duration": "80",
+    "status": "completed",
+    "price": null,
+    "price_unit": "USD"
+  },
+  "balance_before": {
+    "usd": "13.87156",
+    "at": 1793896971.407369
+  },
+  "balance_after": {
+    "usd": "13.87156",
+    "at": 1793897064.3880498
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "admission": {
+    "session_tools_reply": "Enabled toolsets: jev, mcp-editor_hl_a5811c58_f4331e39, x_search\n",
+    "provider_calls": 0,
+    "driver_error": "AcpError"
+  },
+  "scope_projections": [
+    {
+      "original_reply": "Available tools (3):\n  other: tool_call, tool_describe, tool_search",
+      "scope_reply": "Enabled toolsets: jev, mcp-editor_hl_a5811c58_f4331e39, x_search"
+    }
+  ],
+  "live_call_placed": false
+}

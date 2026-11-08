@@ -1,0 +1,176 @@
+{
+  "simulation": true,
+  "description": "recorded hold simulation; self-authored airline-style transcripts, no verified real menu or audio",
+  "split": "train",
+  "events": [
+    {
+      "at_ms": 0,
+      "turn_id": "train-0",
+      "text": "Your call is important to us. Please continue to hold.",
+      "label": "hold_message",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 3000,
+      "turn_id": "train-1",
+      "text": "All of our reservation specialists are assisting other customers.",
+      "label": "hold_message",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 6000,
+      "turn_id": "train-2",
+      "text": "Thank you for your patience. We will be with you shortly.",
+      "label": "hold_message",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 9000,
+      "turn_id": "train-3",
+      "text": "Please enter or say your confirmation number.",
+      "label": "automated_assistant",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 12000,
+      "turn_id": "train-4",
+      "text": "Please tell me your SkyMiles number.",
+      "label": "automated_assistant",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 15000,
+      "turn_id": "train-5",
+      "text": "To get a call back without losing your place, press 1.",
+      "label": "ivr",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": true
+    },
+    {
+      "at_ms": 18000,
+      "turn_id": "train-6",
+      "text": "For reservations press two. For flight status press three.",
+      "label": "ivr",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 21000,
+      "turn_id": "train-7",
+      "text": "[music]",
+      "label": "hold_music",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 24000,
+      "turn_id": "train-8",
+      "text": "um uh hmm",
+      "label": "unknown",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 27000,
+      "turn_id": "train-9",
+      "text": "la la la",
+      "label": "unknown",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 30000,
+      "turn_id": "train-10",
+      "text": "",
+      "label": "unknown",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 32999,
+      "turn_id": "train-11-transfer",
+      "text": "Let me connect you with a representative.",
+      "label": "automated_assistant",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    },
+    {
+      "at_ms": 33000,
+      "turn_id": "train-11",
+      "text": "Hi, this is Morgan with Delta, how can I help?",
+      "label": "human",
+      "last": true,
+      "speaker": "business",
+      "context": {
+        "state": "on_hold",
+        "mode": "owner"
+      },
+      "callback_offer": false
+    }
+  ]
+}

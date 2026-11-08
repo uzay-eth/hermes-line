@@ -1,0 +1,12 @@
+# Round 41 tests after the change (2026-11-06T19:19Z); expected to PASS
+test_B2_a_110_s_recording_earns_no_segment_and_the_agent_still_rings (test_r41_segment_end.LongUtteranceTests.test_B2_a_110_s_recording_earns_no_segment_and_the_agent_still_rings)
+Delta 37 B2 case 1 inverted: recordings with 110 s of continuous partials never earn a segment, so the cap ... ok
+test_B2_a_previous_utterance_counts_from_its_end_not_its_start (test_r41_segment_end.LongUtteranceTests.test_B2_a_previous_utterance_counts_from_its_end_not_its_start)
+Delta 37 B2 case 2 inverted: a bot utterance 200-310 (continuous partials), then a recording at 335: only 25 s ... ok
+test_B2_control_genuine_silence_gets_the_fifth_question_and_a_yes_rings_once (test_r41_segment_end.LongUtteranceTests.test_B2_control_genuine_silence_gets_the_fifth_question_and_a_yes_rings_once) ... ok
+test_R41_marks_are_the_end_of_speech_and_relay_frames_cannot_set_it (test_r41_segment_end.MarkTests.test_R41_marks_are_the_end_of_speech_and_relay_frames_cannot_set_it) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 91.125s
+
+OK

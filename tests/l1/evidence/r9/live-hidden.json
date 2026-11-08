@@ -1,0 +1,21 @@
+{
+  "what": "real hermes acp, scratch gateway, fixture model; primary and detector sessions",
+  "expect": "refuse",
+  "tool_config": "hidden",
+  "approve_result": {
+    "ok": false,
+    "error": "the call's Hermes session could not start; nothing was dialled (see the event log; call_profile must limit it to the call tools)"
+  },
+  "provider_calls": 0,
+  "primary_tools_reply": "Available tools (3):\n  other: tool_call, tool_describe, tool_search\n",
+  "refusal": [
+    {
+      "why": "call session not restricted to the call tools (1 extra, e.g. deferred tools behind tool_search/tool_call cannot be verified)"
+    },
+    {
+      "why": "agent session unavailable",
+      "error": "AcpError"
+    }
+  ],
+  "pass": true
+}

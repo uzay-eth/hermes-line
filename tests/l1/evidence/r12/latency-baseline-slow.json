@@ -1,0 +1,100 @@
+{
+  "what": "latency theories, real hermes acp + scratch gateway + slowed fixture model",
+  "model_first_delay_s": 2.5,
+  "model_chunk_delay_s": 0.4,
+  "label": "baseline-slow",
+  "runs": [
+    {
+      "direction": "outbound",
+      "latency_s": {
+        "normal": [
+          3.07,
+          2.56
+        ],
+        "barge_in": [
+          2.84
+        ],
+        "finish": 7.65
+      },
+      "model_tool_calls": [
+        "tool_search",
+        "mcp__editor_hl_94c60dd4_dc46ceed__hermes_line_call_finish"
+      ],
+      "turn_events": [
+        {
+          "first_text_ms": 3068.390833999729,
+          "full_ms": 5554.8,
+          "interrupted": false
+        },
+        {
+          "first_text_ms": 2548.276084002282,
+          "full_ms": 5018.7,
+          "interrupted": false
+        },
+        {
+          "first_text_ms": null,
+          "full_ms": 1595.9,
+          "interrupted": true
+        },
+        {
+          "first_text_ms": 2538.391499998397,
+          "full_ms": 5018.5,
+          "interrupted": false
+        },
+        {
+          "first_text_ms": 7644.5091659988975,
+          "full_ms": 8513.8,
+          "interrupted": false
+        }
+      ],
+      "barge_ins": 1,
+      "first_prompt_chars": 2055
+    },
+    {
+      "direction": "inbound",
+      "latency_s": {
+        "normal": [
+          2.63,
+          2.53
+        ],
+        "barge_in": [
+          2.89
+        ],
+        "finish": 7.6
+      },
+      "model_tool_calls": [
+        "tool_search",
+        "mcp__editor_hl_08f57778_88e623b8__hermes_line_call_finish"
+      ],
+      "turn_events": [
+        {
+          "first_text_ms": 2624.3795420014067,
+          "full_ms": 5121.7,
+          "interrupted": false
+        },
+        {
+          "first_text_ms": 2528.9576669965754,
+          "full_ms": 5014.4,
+          "interrupted": false
+        },
+        {
+          "first_text_ms": null,
+          "full_ms": 1631.5,
+          "interrupted": true
+        },
+        {
+          "first_text_ms": 2548.5874580044765,
+          "full_ms": 5040.8,
+          "interrupted": false
+        },
+        {
+          "first_text_ms": 7594.0003330033505,
+          "full_ms": 8463.9,
+          "interrupted": false
+        }
+      ],
+      "barge_ins": 1,
+      "first_prompt_chars": 2055
+    }
+  ]
+}

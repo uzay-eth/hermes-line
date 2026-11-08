@@ -1,0 +1,9 @@
+{
+ "sent_utc": "2026-11-05T16:34:35Z",
+ "http": 200,
+ "to": "[owner phone (Fi)]",
+ "call_sid_present": true,
+ "validation_code": "[CODE]",
+ "balance_before": 13.88556,
+ "error": null
+}

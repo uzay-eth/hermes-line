@@ -1,0 +1,1071 @@
+{
+  "call": {
+    "id": "call_05b4aa023f374279",
+    "task_id": "task_de9459c7add84e75",
+    "task_title": "Hilton Reservations (bridge-call test)",
+    "direction": "outbound",
+    "counterpart_masked": "[Hilton Reservations]",
+    "state": "failed",
+    "started_at": "2026-11-08T06:20:56.674+00:00",
+    "state_since": "2026-11-08T06:23:29.764+00:00",
+    "duration_s": 153,
+    "mode": "owner",
+    "transcript": [
+      {
+        "seq": 1,
+        "speaker": "hermes",
+        "text": "Hi, this is Hermes, an AI assistant calling on behalf of Can. This call is not recorded.",
+        "ts": "2026-11-08T06:20:57.087+00:00"
+      },
+      {
+        "seq": 2,
+        "speaker": "business",
+        "text": "Hi.",
+        "ts": "2026-11-08T06:21:00.313+00:00"
+      },
+      {
+        "seq": 3,
+        "speaker": "business",
+        "text": "Thanks for calling Hilton Hotels.",
+        "ts": "2026-11-08T06:21:02.715+00:00"
+      },
+      {
+        "seq": 4,
+        "speaker": "hermes",
+        "text": "Hi, this is Hermes, an AI assistant calling for Can. Am I speaking with a live person?",
+        "ts": "2026-11-08T06:21:05.219+00:00"
+      },
+      {
+        "seq": 5,
+        "speaker": "business",
+        "text": "I?",
+        "ts": "2026-11-08T06:21:10.460+00:00"
+      },
+      {
+        "seq": 6,
+        "speaker": "business",
+        "text": "Are you calling about a reservation?",
+        "ts": "2026-11-08T06:21:13.869+00:00"
+      },
+      {
+        "seq": 7,
+        "speaker": "hermes",
+        "text": "No, a general question.",
+        "ts": "2026-11-08T06:21:15.223+00:00"
+      },
+      {
+        "seq": 8,
+        "speaker": "business",
+        "text": "Got it.",
+        "ts": "2026-11-08T06:21:20.138+00:00"
+      },
+      {
+        "seq": 9,
+        "speaker": "business",
+        "text": "To get your call to the appropriate representative, please tell me in a few words.",
+        "ts": "2026-11-08T06:21:25.194+00:00"
+      },
+      {
+        "seq": 10,
+        "speaker": "business",
+        "text": "Why you're calling today.",
+        "ts": "2026-11-08T06:21:25.926+00:00"
+      },
+      {
+        "seq": 11,
+        "speaker": "hermes",
+        "text": "Agent.",
+        "ts": "2026-11-08T06:21:27.154+00:00"
+      },
+      {
+        "seq": 12,
+        "speaker": "business",
+        "text": "Okay. So that I can connect you to the right place, please select from 1 of the following options that is closest to what you need help with.",
+        "ts": "2026-11-08T06:21:37.659+00:00"
+      },
+      {
+        "seq": 13,
+        "speaker": "business",
+        "text": "For recent stay feedback or billing questions, press 1.",
+        "ts": "2026-11-08T06:21:41.896+00:00"
+      },
+      {
+        "seq": 14,
+        "speaker": "business",
+        "text": "For Honors account inquiries, press 2.",
+        "ts": "2026-11-08T06:21:44.818+00:00"
+      },
+      {
+        "seq": 15,
+        "speaker": "business",
+        "text": "For reservations, press 3.",
+        "ts": "2026-11-08T06:21:47.322+00:00"
+      },
+      {
+        "seq": 16,
+        "speaker": "business",
+        "text": "For price match claims, press 4.",
+        "ts": "2026-11-08T06:21:49.972+00:00"
+      },
+      {
+        "seq": 17,
+        "speaker": "business",
+        "text": "Are you still there?",
+        "ts": "2026-11-08T06:21:55.604+00:00"
+      },
+      {
+        "seq": 18,
+        "speaker": "business",
+        "text": "Please select from 1 of the following options.",
+        "ts": "2026-11-08T06:21:58.509+00:00"
+      },
+      {
+        "seq": 19,
+        "speaker": "business",
+        "text": "For recent stay feedback or billing questions, press 1.",
+        "ts": "2026-11-08T06:22:02.425+00:00"
+      },
+      {
+        "seq": 20,
+        "speaker": "business",
+        "text": "For Honors account inquiries, press 2.",
+        "ts": "2026-11-08T06:22:05.338+00:00"
+      },
+      {
+        "seq": 21,
+        "speaker": "business",
+        "text": "For reservations, press 3.",
+        "ts": "2026-11-08T06:22:07.855+00:00"
+      },
+      {
+        "seq": 22,
+        "speaker": "business",
+        "text": "For price match claims, press 4.",
+        "ts": "2026-11-08T06:22:10.504+00:00"
+      },
+      {
+        "seq": 23,
+        "speaker": "business",
+        "text": "Thank you for calling.",
+        "ts": "2026-11-08T06:22:16.841+00:00"
+      },
+      {
+        "seq": 24,
+        "speaker": "business",
+        "text": "Goodbye.",
+        "ts": "2026-11-08T06:22:17.996+00:00"
+      },
+      {
+        "seq": 25,
+        "speaker": "business",
+        "text": "I'm connecting you with an agent.",
+        "ts": "2026-11-08T06:22:21.323+00:00"
+      },
+      {
+        "seq": 26,
+        "speaker": "business",
+        "text": "You may receive a survey via email about your experience the agent who assisted you today.",
+        "ts": "2026-11-08T06:22:26.695+00:00"
+      },
+      {
+        "seq": 27,
+        "speaker": "business",
+        "text": "Your call may be monitored or recorded for quality purposes.",
+        "ts": "2026-11-08T06:22:30.649+00:00"
+      },
+      {
+        "seq": 28,
+        "speaker": "business",
+        "text": "For information on our privacy policy, please visit privacy.hilton.com.",
+        "ts": "2026-11-08T06:22:36.027+00:00"
+      },
+      {
+        "seq": 29,
+        "speaker": "business",
+        "text": "Thank you for calling Hilton today. Did you know you can earn more Hilton Honors points with our Hilton Honors American Express credit cards?",
+        "ts": "2026-11-08T06:22:58.145+00:00"
+      },
+      {
+        "seq": 30,
+        "speaker": "business",
+        "text": "To learn more, visit hilton.com and click on credit cards.",
+        "ts": "2026-11-08T06:23:01.978+00:00"
+      },
+      {
+        "seq": 31,
+        "speaker": "business",
+        "text": "We look forward Thank you for calling Hilton. This is Chris. How can I help you?",
+        "ts": "2026-11-08T06:23:07.264+00:00"
+      },
+      {
+        "seq": 32,
+        "speaker": "hermes",
+        "text": "Sorry, am I speaking with a live person?",
+        "ts": "2026-11-08T06:23:08.487+00:00"
+      },
+      {
+        "seq": 33,
+        "speaker": "business",
+        "text": "Yes. Are you a live person too?",
+        "ts": "2026-11-08T06:23:14.937+00:00"
+      },
+      {
+        "seq": 34,
+        "speaker": "business",
+        "text": "Hello? Are you a live person too?",
+        "ts": "2026-11-08T06:23:22.310+00:00"
+      },
+      {
+        "seq": 35,
+        "speaker": "business",
+        "text": "I'm a live person.",
+        "ts": "2026-11-08T06:23:22.949+00:00"
+      },
+      {
+        "seq": 36,
+        "speaker": "business",
+        "text": "Sorry. I'm not hearing any response.",
+        "ts": "2026-11-08T06:23:27.993+00:00"
+      }
+    ],
+    "summary": "No person reached; Hilton's automated assistant ended the call after 2 min 33 s. Hermes Line: The other side hung up ([Hilton Reservations], \"Hilton Reservations (bridge-call test)\", 2m33s). On the call: They: \"I'm connecting you with an agent.\" / They: \"You may receive a survey via email about your experience the agent who assisted you today.\" / They: \"Your call may be monitored or recorded for quality purposes.\" / They: \"For information on our privacy policy, please visit privacy.hilton.com.\" / They: \"Thank you for calling Hilton today. Did you know you can earn more Hilton Honors points with our Hilton Honors American Express credit cards?\" / They: \"To learn more, visit hilton.com and click on credit cards.\" / They: \"We look forward Thank you for calling Hilton. This is Chris. How can I help you?\" / Hermes: \"Sorry, am I speaking with a live person?\" / They: \"Yes. Are you a live person too?\" / They: \"Hello? Are you a live person too?\" / They: \"I'm a live person.\" / They: \"Sorry. I'm not hearing any response.\".",
+    "end_reason": "business_hangup",
+    "revision": 51,
+    "control_revision": 49,
+    "phases": [
+      {
+        "phase": "dialing",
+        "since": "2026-11-08T06:20:49.409+00:00"
+      },
+      {
+        "phase": "assistant",
+        "since": "2026-11-08T06:21:15.223+00:00"
+      },
+      {
+        "phase": "hold",
+        "since": "2026-11-08T06:21:37.661+00:00"
+      },
+      {
+        "phase": "assistant",
+        "since": "2026-11-08T06:21:41.898+00:00"
+      },
+      {
+        "phase": "hold",
+        "since": "2026-11-08T06:21:55.605+00:00"
+      },
+      {
+        "phase": "assistant",
+        "since": "2026-11-08T06:22:02.426+00:00"
+      },
+      {
+        "phase": "hold",
+        "since": "2026-11-08T06:22:17.998+00:00"
+      },
+      {
+        "phase": "ended",
+        "since": "2026-11-08T06:23:29.764+00:00"
+      }
+    ]
+  },
+  "CallSID": "[Hilton call 1 CA id]",
+  "events": [
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "task_options",
+      "data": {
+        "owner_ring_timeout_s": 20,
+        "fallback_question": "What is the usual nightly rate for a standard room at a Hilton in Reno, Nevada, next Friday?",
+        "intro_names": [
+          "Hilton",
+          "Hilton Honors"
+        ],
+        "ivr_category": "reservations"
+      },
+      "ts": 1794118849.407827
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "dialing",
+      "data": {
+        "to": "[Hilton Reservations]"
+      },
+      "ts": 1794118854.9966662
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "relay_connected",
+      "data": {
+        "reconnects": 0
+      },
+      "ts": 1794118856.8882828
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794118860.31139
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "unknown",
+        "confidence": "low"
+      },
+      "ts": 1794118860.3205
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "speech_superseded",
+      "data": {
+        "what": "Hi, this is Hermes, an AI assistant call"
+      },
+      "ts": 1794118862.764757
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect_slow",
+      "data": {},
+      "ts": 1794118865.217955
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "live_person_question_sent",
+      "data": {
+        "count": 1
+      },
+      "ts": 1794118865.220532
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect_slow",
+      "data": {},
+      "ts": 1794118872.962568
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "automated_assistant",
+        "confidence": "high"
+      },
+      "ts": 1794118875.222168
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "bot_label_seen",
+      "data": {},
+      "ts": 1794118875.222718
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "assistant_declared",
+      "data": {
+        "by": "detector"
+      },
+      "ts": 1794118875.222873
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "state",
+      "data": {
+        "frm": "dialing",
+        "to": "ivr",
+        "why": "automated assistant"
+      },
+      "ts": 1794118875.223317
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "ivr_action",
+      "data": {
+        "state": "automated_assistant",
+        "phrase_id": "no_general"
+      },
+      "ts": 1794118875.223875
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "automated_assistant",
+        "confidence": "high"
+      },
+      "ts": 1794118880.141302
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "ivr_action_skipped",
+      "data": {
+        "state": "automated_assistant",
+        "why": "spacing"
+      },
+      "ts": 1794118880.1419039
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "automated_assistant",
+        "confidence": "high"
+      },
+      "ts": 1794118885.1953
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "automated_assistant",
+        "confidence": "high"
+      },
+      "ts": 1794118885.9281201
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "speech_superseded",
+      "data": {
+        "what": "Reservations question."
+      },
+      "ts": 1794118885.9584892
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "ivr_action",
+      "data": {
+        "state": "automated_assistant",
+        "phrase_id": "agent"
+      },
+      "ts": 1794118887.1558201
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794118897.66089
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "assistant_phrases_paused",
+      "data": {
+        "why": "hold"
+      },
+      "ts": 1794118897.661155
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "state",
+      "data": {
+        "frm": "ivr",
+        "to": "on_hold",
+        "why": "hold message"
+      },
+      "ts": 1794118897.6616828
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794118901.8982122
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "state",
+      "data": {
+        "frm": "on_hold",
+        "to": "ivr",
+        "why": "ivr prompt"
+      },
+      "ts": 1794118901.898924
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794118904.819731
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794118904.820097
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 2201.1900420184247,
+        "full_ms": 3561.9,
+        "interrupted": true
+      },
+      "ts": 1794118905.461545
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794118907.323976
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794118907.3242009
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 1236.948834033683,
+        "full_ms": 2577.9,
+        "interrupted": true
+      },
+      "ts": 1794118908.040329
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794118909.974389
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794118909.9747572
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": null,
+        "full_ms": 3422.4,
+        "interrupted": true
+      },
+      "ts": 1794118911.4636009
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794118915.6057448
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "state",
+      "data": {
+        "frm": "ivr",
+        "to": "on_hold",
+        "why": "hold message"
+      },
+      "ts": 1794118915.606064
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 4170.9864170406945,
+        "full_ms": 5537.5,
+        "interrupted": false
+      },
+      "ts": 1794118917.0015419
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794118918.512015
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794118922.426445
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "state",
+      "data": {
+        "frm": "on_hold",
+        "to": "ivr",
+        "why": "ivr prompt"
+      },
+      "ts": 1794118922.427076
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "restricted_action_blocked",
+      "data": {
+        "via": "dtmf",
+        "why": "the menu has the blocked word(s) \"billing\" (payment): nothing is sent for it",
+        "callback_offer": false
+      },
+      "ts": 1794118925.295746
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794118925.339912
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794118925.3402371
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": null,
+        "full_ms": 4730.1,
+        "interrupted": true
+      },
+      "ts": 1794118927.157558
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794118927.857673
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794118927.8582962
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": null,
+        "full_ms": 2088.6,
+        "interrupted": true
+      },
+      "ts": 1794118929.246853
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "ivr",
+        "confidence": "high"
+      },
+      "ts": 1794118930.505547
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794118930.505905
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": null,
+        "full_ms": 2838.3,
+        "interrupted": true
+      },
+      "ts": 1794118932.085936
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "unknown",
+        "confidence": "low"
+      },
+      "ts": 1794118936.842043
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "turn",
+      "data": {
+        "first_text_ms": 4520.192791998852,
+        "full_ms": 5753.1,
+        "interrupted": false
+      },
+      "ts": 1794118937.839487
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794118937.9979541
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "state",
+      "data": {
+        "frm": "ivr",
+        "to": "on_hold",
+        "why": "hold message"
+      },
+      "ts": 1794118937.998251
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "speech_superseded",
+      "data": {
+        "what": "Sorry, am I speaking with a live person?"
+      },
+      "ts": 1794118938.015758
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "human",
+        "confidence": "high"
+      },
+      "ts": 1794118941.3256161
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "human_label_needs_question",
+      "data": {},
+      "ts": 1794118941.326317
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "speech_superseded",
+      "data": {
+        "what": "Sorry, am I speaking with a live person?"
+      },
+      "ts": 1794118946.720682
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect_slow",
+      "data": {},
+      "ts": 1794118949.197043
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high",
+        "late": true
+      },
+      "ts": 1794118952.739
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794118952.7395542
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794118956.028384
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "unknown",
+        "confidence": "low"
+      },
+      "ts": 1794118978.145864
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794118981.979043
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "speech_superseded",
+      "data": {
+        "what": "Sorry, am I speaking with a live person?"
+      },
+      "ts": 1794118981.995879
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "unknown",
+        "confidence": "low"
+      },
+      "ts": 1794118987.265465
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "live_person_question_sent",
+      "data": {
+        "count": 2
+      },
+      "ts": 1794118988.488153
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "new_party_question",
+      "data": {
+        "count": 2
+      },
+      "ts": 1794118988.488262
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "unknown",
+        "confidence": "low"
+      },
+      "ts": 1794118994.939101
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "question_budget_skip",
+      "data": {
+        "why": "spacing"
+      },
+      "ts": 1794118994.9392729
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "unknown",
+        "confidence": "low"
+      },
+      "ts": 1794119002.311115
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "new_party_unclear_reply",
+      "data": {},
+      "ts": 1794119002.311293
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794119002.950818
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium"
+      },
+      "ts": 1794119007.994733
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "relay_lost",
+      "data": {},
+      "ts": 1794119008.630146
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "connect_after_hangup",
+      "data": {},
+      "ts": 1794119008.8399029
+    },
+    {
+      "call_id": "call_05b4aa023f374279",
+      "task_id": "task_de9459c7add84e75",
+      "kind": "ended",
+      "data": {
+        "state": "failed",
+        "reason": "business_hangup"
+      },
+      "ts": 1794119009.765064
+    }
+  ],
+  "provider": {
+    "sid": "[Hilton call 1 CA id]",
+    "duration": "152",
+    "status": "completed",
+    "price": "-0.04200",
+    "price_unit": "USD",
+    "read_at": 1794119011.371208
+  },
+  "balance_before": {
+    "usd": "12.41206",
+    "at": 1794118843.3693461
+  },
+  "balance_after": null,
+  "provider_legs": [
+    {
+      "sid": "[Hilton call 1 CA id]",
+      "duration": "152",
+      "status": "completed",
+      "price": "-0.04200",
+      "price_unit": "USD",
+      "read_at": 1794119011.371208
+    }
+  ],
+  "hold_report": {
+    "dry": false,
+    "outcome": "business_hangup",
+    "call_outcome": "business_hangup",
+    "cleanup_failures": [],
+    "rates": {
+      "business": "0.0210",
+      "relay": "0.1050",
+      "owner": "0.0210",
+      "conference": "0.00270"
+    },
+    "rate_basis": "Voice number Pricing API x1.5 (business); S2 x1.5 (owner/Relay/conference)",
+    "balance_reads": [
+      {
+        "at": 1794118843.369277,
+        "usd": "12.41206"
+      },
+      {
+        "at": 1794118854.530308,
+        "usd": "12.41206"
+      },
+      {
+        "at": 1794118915.2526069,
+        "usd": "12.41206"
+      },
+      {
+        "at": 1794118975.727154,
+        "usd": "12.41206"
+      }
+    ],
+    "conservative_cost_usd": "0.45720",
+    "cost_basis": "conservative estimate, separate from Twilio billing",
+    "metrics": {
+      "menu_s": 22.438365936279297,
+      "hold_s": null,
+      "transcript_to_human_s": null,
+      "bridge_s": null,
+      "false_human_count": null,
+      "false_human_basis": "requires independent operator annotation",
+      "human_assumed_count": 0
+    }
+  }
+}

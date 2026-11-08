@@ -1,0 +1,46 @@
+⚠ install out of sync (ffmpeg: not installed or outdated; node: not installed or outdated; npm: not installed or outdated; ripgrep: not installed or outdated) — run `hermes pm install`
+  → Installing Python dependencies…
+  ✗ Installing Python dependencies failed; last 10 lines of output:
+         Building hermes-agent @ file:///Users/mac/.hermes/cache/scratch/hermes-line-s1/installs/778930d1ee3bddda/environments/71a257b241614e36a67352e0ba6469a6/workspace
+      error: Failed to build `hermes-agent @ file:///Users/mac/.hermes/cache/scratch/hermes-line-s1/installs/778930d1ee3bddda/environments/71a257b241614e36a67352e0ba6469a6/workspace`
+        cause: Failed to resolve requirements from `build-system.requires`
+        cause: No solution found when resolving: `setuptools==83.0.0`, `wheel`
+        cause: Request failed after 3 retries in 6.0s
+        cause: Failed to fetch: https://pypi.org/simple/wheel/
+        cause: error sending request for url (https://pypi.org/simple/wheel/)
+        cause: client error (Connect)
+        cause: dns error
+        cause: failed to lookup address information: nodename nor servname provided, or not known
+dependency preparation failed: venv: uv sync exited 2:  file:///Users/mac/.hermes/cache/scratch/hermes-line-s1/installs/778930d1ee3bddda/environments/71a257b241614e36a67352e0ba6469a6/workspace`
+  cause: Failed to resolve requirements from `build-system.requires`
+  cause: No solution found when resolving: `setuptools==83.0.0`, `wheel`
+  cause: Request failed after 3 retries in 6.0s
+  cause: Failed to fetch: https://pypi.org/simple/wheel/
+  cause: error sending request for url (https://pypi.org/simple/wheel/)
+  cause: client error (Connect)
+  cause: dns error
+  cause: failed to lookup address information: nodename nor servname provided, or not known — retry, or run `hermes pm doctor`
+
+✓ manifest — plugin.yaml parses
+✓ manifest fields — name, version, description present
+✓ requires_hermes — spec '>=0.22.5' parses
+✓ config schema — shape valid
+✓ requires_env — all entries UPPER_SNAKE
+✓ oauth — not declared
+✓ loadable — entry: __init__.py
+✓ python dependencies — none declared
+✓ capability probe — register() ran in isolation
+✓ declared tools — matches registrations
+✓ declared hooks — matches registrations
+✓ declared middleware — matches registrations
+✓ built-in tool collisions — no collisions
+✓ security scan — safe
+✓ no core override — no runtime rebinds of Hermes core
+⚠ private core imports (catalog rule 9: public surfaces only; these can break on
+any release): benchmark.py:14 run_agent.AIAgent; lifecycle.py:12
+hermes_cli.plugins.PluginManager; run.py:16 hermes_bootstrap; run.py:18
+hermes_cli.main.main. Use ctx.* / documented plugin APIs, or open an issue for
+the seam you need.
+◆ Isolation — runs in the plugin host (plugins.isolation: host)
+
+Validation passed.

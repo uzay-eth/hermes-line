@@ -1,0 +1,34 @@
+test_trial_config_blocks_the_bora_number (test_harness.BlockedDestinationTests.test_trial_config_blocks_the_bora_number) ... ok
+test_default_caller_id_is_the_plugin_line (test_harness.CallerIdTests.test_default_caller_id_is_the_plugin_line) ... ok
+test_fi_caller_id_changes_only_the_business_leg_from (test_harness.CallerIdTests.test_fi_caller_id_changes_only_the_business_leg_from) ... ok
+test_unknown_caller_id_is_refused (test_harness.CallerIdTests.test_unknown_caller_id_is_refused) ... ok
+test_ambiguous_real_create_is_never_retried (test_harness.HarnessTests.test_ambiguous_real_create_is_never_retried) ... ok
+test_bad_destinations_and_missing_coordinator_refused_before_any_io (test_harness.HarnessTests.test_bad_destinations_and_missing_coordinator_refused_before_any_io) ... ok
+test_balance_fails_closed_and_accepts_exact_floor (test_harness.HarnessTests.test_balance_fails_closed_and_accepts_exact_floor) ... ok
+test_dns_override_is_exact_host_scoped_and_restored (test_harness.HarnessTests.test_dns_override_is_exact_host_scoped_and_restored) ... ok
+test_driver_forwards_session_mcp_instead_of_empty_list (test_harness.HarnessTests.test_driver_forwards_session_mcp_instead_of_empty_list) ... ok
+test_evidence_export_keeps_sid_price_pending_and_masks_transcript (test_harness.HarnessTests.test_evidence_export_keeps_sid_price_pending_and_masks_transcript) ... ok
+test_exact_safety_configuration (test_harness.HarnessTests.test_exact_safety_configuration) ... ok
+test_failed_tunnel_start_cleans_service_and_tunnel (test_harness.HarnessTests.test_failed_tunnel_start_cleans_service_and_tunnel) ... ok
+test_production_approval_sets_both_duration_caps_and_blocks_second_leg (test_harness.HarnessTests.test_production_approval_sets_both_duration_caps_and_blocks_second_leg) ... ok
+test_real_request_retains_quiet_hours_before_provider_io (test_harness.HarnessTests.test_real_request_retains_quiet_hours_before_provider_io) ... ok
+test_report_redacts_url_secrets_phone_codes_and_cards (test_harness.HarnessTests.test_report_redacts_url_secrets_phone_codes_and_cards) ... ok
+test_shutdown_blocks_even_the_first_create (test_harness.HarnessTests.test_shutdown_blocks_even_the_first_create) ... ok
+test_one_allowlisted_inbound_retries_status_auth_and_owner_ring (test_inbound.IngressTests.test_one_allowlisted_inbound_retries_status_auth_and_owner_ring) ... ok
+test_ambiguous_install_response_still_restores (test_inbound.RestoreTests.test_ambiguous_install_response_still_restores) ... ok
+test_down_recovers_a_crashed_listener_without_starting_a_runtime (test_inbound.RestoreTests.test_down_recovers_a_crashed_listener_without_starting_a_runtime) ... ok
+test_foreign_lookup_response_is_never_followed (test_inbound.RestoreTests.test_foreign_lookup_response_is_never_followed) ... ok
+test_interrupted_wait_restores_before_runtime_exit (test_inbound.RestoreTests.test_interrupted_wait_restores_before_runtime_exit) ... ok
+test_listen_flags_and_duration (test_inbound.RestoreTests.test_listen_flags_and_duration) ... ok
+test_never_touches_another_number_even_on_tampered_journal (test_inbound.RestoreTests.test_never_touches_another_number_even_on_tampered_journal) ... ok
+test_restore_failure_retains_journal_for_retry (test_inbound.RestoreTests.test_restore_failure_retains_journal_for_retry) ... ok
+test_restore_runs_after_a_crash_at_next_start (test_inbound.RestoreTests.test_restore_runs_after_a_crash_at_next_start) ... ok
+test_snapshot_is_durable_before_install_and_sms_is_never_touched (test_inbound.RestoreTests.test_snapshot_is_durable_before_install_and_sms_is_never_touched) ... ok
+test_bare_unconfigured_driver_has_no_session_mcp_tools (test_profile_routing.ProfileRoutingTests.test_bare_unconfigured_driver_has_no_session_mcp_tools) ... ok
+test_same_store_routes_to_call_agent_queue (test_profile_routing.ProfileRoutingTests.test_same_store_routes_to_call_agent_queue) ... ok
+test_separate_profile_cannot_route_any_in_call_action (test_profile_routing.ProfileRoutingTests.test_separate_profile_cannot_route_any_in_call_action) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.570s
+
+OK

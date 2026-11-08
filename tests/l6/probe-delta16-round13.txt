@@ -1,0 +1,10 @@
+test_crash_before_sid_persistence_both_roles_then_fresh_start (test_hold_recovery.SafetyTests.test_crash_before_sid_persistence_both_roles_then_fresh_start) ... ok
+test_nonempty_window_does_not_identify_the_missing_create (__main__.Review.test_nonempty_window_does_not_identify_the_missing_create) ... ok
+test_main_blocks_execute_when_recovery_window_is_empty (__main__.Review.test_main_blocks_execute_when_recovery_window_is_empty) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.272s
+
+OK
+{"case": "nonempty partial window", "recovery_success": true, "marker_exists": false, "missing_create_status": "completed", "matched_status": "completed"}
+startup empty window: execute not called, marker retained
