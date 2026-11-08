@@ -1,12 +1,12 @@
-# Draft of plugin-catalog/hermes-line.yaml for NousResearch/hermes-agent. NOT SUBMITTED.
+# Source of plugin-catalog/hermes-line.yaml, submitted to NousResearch/hermes-agent from uzay-eth (MIT-018).
 # Schema: "Entry schema" in https://github.com/NousResearch/hermes-agent/blob/main/plugin-catalog/README.md
-# (read 2026-11-05). Repo and maintainer filled (uzay-eth, approved by Can, MIT-018). The only FILL left is the
-# release commit: at push, replace every FILL-40-HEX-COMMIT-SHA with the 40-character sha read back from GitHub.
+# A file cannot contain the sha of its own commit, so this copy leaves `sha` empty and points the screenshot URLs
+# at `main`. The submitted copy in the catalog PR pins `sha` and every screenshot URL to the release commit.
 # Checked against the repo in docs/release/admission-check.md.
 
 name: hermes-line                       # [a-z0-9_-]{1,64}; same as plugin/plugin.yaml `name`
 repo: https://github.com/uzay-eth/hermes-line     # Can's public repo (rule 5: submitted by the owner)
-sha: FILL-40-HEX-COMMIT-SHA             # FILL at push: full 40-character commit of the reviewed release (rule 2)
+sha: ""                                 # in the catalog PR: the full 40-character release commit (rule 2)
 subdir: plugin                          # plugin.yaml, __init__.py, desktop/plugin.js and dashboard/ live here
 description: >-
   A phone line for Hermes: with your approval it calls a business from your Twilio account, works the phone
@@ -18,12 +18,12 @@ requires_hermes: ">=0.22.5"             # same floor as plugin/plugin.yaml (rule
 docs_url: ""
 version: "0.1.0"                        # matches plugin/plugin.yaml version
 image: ""                               # no 2:1 banner exists yet
-screenshots:                            # GitHub-hosted, pinned to the same sha; offline harness renders, sample data
-  - https://raw.githubusercontent.com/uzay-eth/hermes-line/FILL-40-HEX-COMMIT-SHA/tools/pane-preview/screenshots/round4/on_hold.png
-  - https://raw.githubusercontent.com/uzay-eth/hermes-line/FILL-40-HEX-COMMIT-SHA/tools/pane-preview/screenshots/round4/human_detected.png
-  - https://raw.githubusercontent.com/uzay-eth/hermes-line/FILL-40-HEX-COMMIT-SHA/tools/pane-preview/screenshots/round4/owner_connected.png
-  - https://raw.githubusercontent.com/uzay-eth/hermes-line/FILL-40-HEX-COMMIT-SHA/tools/pane-preview/screenshots/round4/ended.png
-readme: true                            # renders plugin/README.md (subdir); image links there must be pinned to the sha
+screenshots:                            # GitHub-hosted; pinned to the release sha in the PR; offline harness renders, sample data
+  - https://raw.githubusercontent.com/uzay-eth/hermes-line/main/tools/pane-preview/screenshots/round4/on_hold.png
+  - https://raw.githubusercontent.com/uzay-eth/hermes-line/main/tools/pane-preview/screenshots/round4/human_detected.png
+  - https://raw.githubusercontent.com/uzay-eth/hermes-line/main/tools/pane-preview/screenshots/round4/owner_connected.png
+  - https://raw.githubusercontent.com/uzay-eth/hermes-line/main/tools/pane-preview/screenshots/round4/ended.png
+readme: true                            # renders plugin/README.md (subdir) at the pinned sha; relative image links resolve against that tree
 platforms: []                           # empty = all; only macOS was tested
 title: Hermes Line
 onboarding: false                       # official or verified entries only

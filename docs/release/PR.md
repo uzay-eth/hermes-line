@@ -1,8 +1,9 @@
-# Draft PR for NousResearch/hermes-agent. NOT SUBMITTED.
+# Catalog PR text for NousResearch/hermes-agent
 
-Can approved opening it (MIT-018). Owner, repo and maintainer are filled (`uzay-eth`). The only `FILL` left is the
-release commit: at push, replace every `FILL-40-HEX-COMMIT-SHA` (catalog entry, screenshot URLs) and paste the
-validation output at that commit. Re-check every number below against the release commit.
+The pull request that adds this plugin to the Hermes plugin catalog, opened from `uzay-eth` (MIT-018). A file cannot
+contain the sha of its own commit, so this copy points the screenshots at `main` and does not repeat the validation
+output. The opened PR pins the catalog entry and every screenshot URL to the full 40-character release commit and
+carries the `hermes plugins validate --install-deps` output from a fresh checkout at that commit.
 
 Format followed (from https://hermes-agent.nousresearch.com/docs/developer-guide/plugins/catalog-submission, read
 2026-11-05): "Add one file, `plugin-catalog/<name>.yaml`" and "In the PR description, say what the plugin does,
@@ -28,7 +29,7 @@ the user approves which code goes to which call; the model never sees the code. 
 the user call their own line, key a PIN and ask Hermes to call a business; it is off unless a PIN is set and is experimental
 (see "Tested live").
 
-Adds `plugin-catalog/hermes-line.yaml` (draft in the plugin repo: `docs/release/catalog-entry.yaml`).
+Adds `plugin-catalog/hermes-line.yaml` (source copy in the plugin repo: `docs/release/catalog-entry.yaml`).
 
 ## Hermes surfaces used
 
@@ -94,8 +95,8 @@ Adds `plugin-catalog/hermes-line.yaml` (draft in the plugin repo: `docs/release/
 ## Validation
 
 `hermes plugins validate --install-deps` (cold, throwaway `HERMES_HOME`): "Validation passed. Exit status: 0", no
-plugin warning; every check from manifest to desktop surface is ✓. FILL: re-run at the pinned commit and paste the
-output here.
+plugin warning; every check from manifest to desktop surface is ✓. The opened PR carries the output of this check
+run on a fresh checkout at the pinned commit.
 
 Last cold run: see `tests/l1/evidence/validate.txt`. Offline tests on the release tree (2026-11-08): L1 571, L2 145,
 L4 353 (2 skipped), L5 88 and L6 122 pass; L3 75 of 76 (the remaining test needs a local Hermes Desktop build).
@@ -127,12 +128,13 @@ for each item.
 
 ## Screenshots
 
-Offline harness renders with sample data (the same four as the catalog entry), pinned to the release commit:
+Offline harness renders with sample data (the same four as the catalog entry; pinned to the release commit in the
+opened PR):
 
-![On hold](https://raw.githubusercontent.com/uzay-eth/hermes-line/FILL-40-HEX-COMMIT-SHA/tools/pane-preview/screenshots/round4/on_hold.png)
-![A person picked up](https://raw.githubusercontent.com/uzay-eth/hermes-line/FILL-40-HEX-COMMIT-SHA/tools/pane-preview/screenshots/round4/human_detected.png)
-![You are connected](https://raw.githubusercontent.com/uzay-eth/hermes-line/FILL-40-HEX-COMMIT-SHA/tools/pane-preview/screenshots/round4/owner_connected.png)
-![Ended, with summary](https://raw.githubusercontent.com/uzay-eth/hermes-line/FILL-40-HEX-COMMIT-SHA/tools/pane-preview/screenshots/round4/ended.png)
+![On hold](https://raw.githubusercontent.com/uzay-eth/hermes-line/main/tools/pane-preview/screenshots/round4/on_hold.png)
+![A person picked up](https://raw.githubusercontent.com/uzay-eth/hermes-line/main/tools/pane-preview/screenshots/round4/human_detected.png)
+![You are connected](https://raw.githubusercontent.com/uzay-eth/hermes-line/main/tools/pane-preview/screenshots/round4/owner_connected.png)
+![Ended, with summary](https://raw.githubusercontent.com/uzay-eth/hermes-line/main/tools/pane-preview/screenshots/round4/ended.png)
 
 ## Checklist
 
