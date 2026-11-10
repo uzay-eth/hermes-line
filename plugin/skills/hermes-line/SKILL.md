@@ -13,7 +13,11 @@ callback. Do not use it for anything a website, email or existing tool can do fa
    owner's allowlist can be dialled. Emergency numbers, short codes and non-US numbers
    are always refused; never try to work around a refusal.
 2. Call `hermes_line_request_call` with a short `title`, a concrete `goal` (what to
-   ask for, which details you may share, what is acceptable) and a `mode`:
+   ask for, which details you may share, what is acceptable) and a `mode`. The call
+   runs in a separate Hermes session without the owner's memory or this chat: of the
+   owner's it gets the `title` and `goal`, and the other party may hear any of it. So
+   put into `goal` every detail the call needs, and include only what the counterpart
+   may hear. The owner sees the goal in the approval message.
    - `agent`: you hold the conversation and finish the task yourself.
    - `owner`: when a person answers, the owner's phone rings and they are bridged in.
      Set `allow_agent_fallback` if you may continue alone when they do not pick up.

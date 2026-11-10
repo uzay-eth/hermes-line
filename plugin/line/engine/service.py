@@ -147,6 +147,9 @@ class CallService:
         self.store = store
         self.adapter = adapter
         self.driver_factory = driver_factory
+        # Nous review of d92bc1fb: "" when the call profile is neutral, else the refusal with each problem and the
+        # fix (hermes_glue sets it; call_profile.py). Checked at approval and at inbound admission.
+        self.profile_check: Optional[Callable[[], str]] = None
         self.get_secret = get_secret
         self.summary_sink = summary_sink
         self.notifier = notifier
@@ -1159,6 +1162,10 @@ class CallService:
             return await refuse(GateRejected("destination", decision.reason))
         if deps.is_quiet(self.now_utc(), self.gate.settings):
             return await refuse(GateRejected("quiet_hours", "outbound business calls are blocked during quiet hours"))
+        why = self.profile_check() if self.profile_check else ""
+        if why:  # nothing is dialled; the task is marked failed with outcome "blocked: call profile not neutral: ..."
+            return await refuse(GateRejected("call_profile", why + ". This task is now marked failed (blocked); after "
+                                             "the fix, ask Hermes to request the call again"))
         call.state = CallState.DIALING
         rev = self.store.update_call(call.id, state=CallState.DIALING)
         self.store.update_task(task.id, status=TaskStatus.CALLING)
@@ -1187,7 +1194,8 @@ class CallService:
             self.store.log_event(call.id, task.id, "dial_refused", {"why": "agent session unavailable", "error": why})
             await session.finalize(CallState.FAILED, EndReason.PROVIDER_ERROR)
             return {"ok": False, "error": "the call's Hermes session could not start; nothing was dialled "
-                                          "(see the event log; call_profile must limit it to the call tools)"}
+                                          "(see the event log; call_profile must limit it to the call tools and "
+                                          "hold none of your memory or persona)"}
         # N5: the startup took time. The call must still be ours and live, and the final gate runs now.
         stop = self._claim_dispatch(call.id, task.id)  # N7: under the stop lock; nothing below awaits before the dial
         if stop is not None:
@@ -1459,6 +1467,12 @@ class CallService:
                 body = twiml.response(twiml.reject("busy"))
                 self.store.put_admission(sid, None, body)
                 return body
+            why = self.profile_check() if self.profile_check else ""
+            if why:  # before any transport (relay or Grok Voice): no session, no voice model; a fixed line, hang up
+                self.store.log_event(None, None, "inbound_refused", {"why": why[:800], "from": mask_number(caller)})
+                body = twiml.response(twiml.say(INBOUND_REFUSED_LINE), twiml.hangup())
+                self.store.put_admission(sid, None, body)
+                return body
             transport = self.choose_transport()
             if transport == "refused":
                 body = twiml.response(twiml.reject("rejected"))
@@ -1549,6 +1563,9 @@ class CallService:
         return {"status": self.status, "detail": self.detail, "line": self.cfg.line_key,
                 "live_calls": len(self.sessions), "modules": deps.status(),
                 "telephony": "twilio" if self.adapter.live else "offline"}
+
+
+INBOUND_REFUSED_LINE = "Sorry, this line cannot take calls right now. Goodbye."
 
 
 def _caller_name(raw) -> str:

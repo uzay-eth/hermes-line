@@ -4,8 +4,9 @@ Hermes stays the brain. The voice model only gets narrow tools; each one is a re
 to the Hermes call session (L1's ``CallSession``) through a ``CallPort``, which applies
 exactly the rules the text path applies today:
 
-* ``ask_hermes``: one Hermes turn on the call's own Hermes session (memory, calendar,
-  any Hermes tool under Hermes's own approval rules). The answer comes back as text.
+* ``ask_hermes``: one Hermes turn on the call's own Hermes session, which runs in the call
+  profile: no memory, user profile, persona or tools of the owner's; it knows the request the
+  owner approved and the call so far. The answer comes back as text.
 * ``bring_owner``: ring the owner. Only the owner's earlier approval (L1 ``GrantBook``)
   and the destination gate (L2) can make that happen; the model cannot approve.
 * ``press_keys``: DTMF on the live call, validated, one press per prompt (L1).
@@ -61,9 +62,10 @@ def _obj(props: Dict[str, Any], required: Tuple[str, ...] = ()) -> Dict[str, Any
 
 TOOL_SPECS = (
     ToolSpec("ask_hermes",
-             "Ask Hermes, the owner's own assistant, for anything that needs the owner's memory, calendar, "
-             "preferences, documents or a decision (e.g. 'Is the owner free Friday at 7 pm?'). Before calling it, "
-             "tell the person briefly that you are checking. Use its answer; never invent the owner's details.",
+             "Ask Hermes, who holds the request the owner approved for this call, for a detail of the task or a "
+             "decision (e.g. 'Which time did the owner ask for?'). Hermes has that request and the call so far, "
+             "not the owner's memory, calendar or files. Before calling it, tell the person briefly that you "
+             "are checking. Use its answer; never invent the owner's details.",
              _obj({"question": {"type": "string", "description": "The question, with the context Hermes needs."}},
                   ("question",))),
     ToolSpec("bring_owner",

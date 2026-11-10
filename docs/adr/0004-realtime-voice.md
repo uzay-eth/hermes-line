@@ -126,7 +126,7 @@ Hermes call session through a `CallPort`, and L1 applies today's rules:
 
 | Tool | Goes to | Rule that applies (unchanged) |
 |---|---|---|
-| `ask_hermes(question)` | one turn on the call's own Hermes session (memory, calendar, any Hermes tool under Hermes's approval) | Hermes's own tool approvals; answer masked before Grok hears it |
+| `ask_hermes(question)` | one turn on the call's own Hermes session (the call profile: none of the owner's memory or tools; it knows the approved request and the call so far) | Hermes's own tool approvals; answer masked before Grok hears it |
 | `bring_owner()` | `CallSession.ring_owner` | single-use owner grant from approval (GrantBook) → L2 destination gate → quiet hours → `DialPermit`; Grok cannot approve |
 | `press_keys(digits)` | `CallSession.press_digits` | `^[0-9*#w]{1,32}$`, one press per prompt |
 | `report_outcome(outcome, summary)` / `end_call()` | `request_finish` / `hang_up` | outcome enum; hang-up only after the goodbye has played (marks drained) |

@@ -1,6 +1,10 @@
 # ADR 0002: Native plugin, profile-owned call service and Hermes agent driver
 
 Status: selected by S1 for implementation, with explicit production gates below.
+Superseded in part (2026-11-10, catalog review): calls do not run in the initiating profile. They run in a separate
+call profile with no ACP toolsets, started with Hermes's `--ignore-rules`, and the plugin refuses a call profile that
+holds the owner's memory, user profile, persona or prompt settings (`plugin/line/engine/call_profile.py`). "Memory"
+in Context and in decision 3 no longer holds; `plugin/README.md` lists the stated limits.
 Date: 2026-11-04.
 Evidence: [S1 spike](../spikes/S1-hermes-integration.md).
 

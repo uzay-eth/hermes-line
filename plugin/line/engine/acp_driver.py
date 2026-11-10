@@ -5,7 +5,11 @@ close`` plus ``ask`` and ``note``); no Hermes module is imported: the plugin spa
 ``hermes acp`` CLI and speaks the Agent Client Protocol (JSON-RPC 2.0, one JSON
 object per line on stdio). In Hermes v0.22.5 that process is a viewer: the
 profile's gateway owns the session, so model route, credentials, memory, SOUL,
-tools and approvals are exactly the profile's own.
+tools and approvals are exactly the call profile's own. The plugin starts it with
+Hermes's ``--ignore-rules`` (no SOUL.md, context files, memory or preloaded skills),
+refuses a call profile that holds the owner's memory, persona or prompt settings
+(``call_profile.py``), gives the child an exact environment allow-list
+(``child_env``) and runs the session in a fresh empty directory (``_workdir``).
 
 Differences from an in-process (embedded) agent, by protocol:
 - The call briefing is sent with the first prompt (ACP has no system-prompt field).
@@ -27,6 +31,7 @@ import os
 import queue
 import shutil
 import subprocess
+import tempfile
 import threading
 import time
 from typing import Any, Callable, Optional
@@ -60,11 +65,30 @@ INHERITED_LAUNCH_FLAGS = ("HERMES_YOLO_MODE", "HERMES_IGNORE_RULES", "HERMES_SAF
                           "HERMES_ACCEPT_HOOKS")
 
 
+# Client-environment names Hermes carries into a session's prompt or plugins (``agent.session_client_env``
+# ``BEHAVIOUR_ENV``, the environment hint, the TUI skill preload). A call session never gets them.
+PROMPT_ENV = ("HERMES_EPHEMERAL_SYSTEM_PROMPT", "HERMES_PREFILL_MESSAGES_FILE", "HERMES_ENVIRONMENT_HINT",
+              "HERMES_ENABLE_PROJECT_PLUGINS", "HERMES_TUI_SKILLS")
+# The exact allow-list for the viewer when the plugin passes no env (Nous review of d92bc1fb): what `hermes acp`
+# needs to run and to find the profile (HERMES_HOME), and, when it starts the call profile's gateway, what that
+# gateway needs to reach the model provider (proxy and CA bundle). No secrets, no toolchain, no other Hermes
+# variables: the call profile holds its own provider key (README, setup step 4). A call gateway that is already
+# running keeps the environment it was started with.
+CHILD_ENV_NAMES = ("PATH", "HOME", "USER", "LOGNAME", "LANG", "LC_ALL", "LC_CTYPE", "LC_MESSAGES", "TMPDIR",
+                   "HERMES_HOME", "XDG_CONFIG_HOME", "XDG_DATA_HOME", "XDG_STATE_HOME", "XDG_CACHE_HOME",
+                   "XDG_RUNTIME_DIR", "SYSTEMROOT", "SSL_CERT_FILE", "SSL_CERT_DIR", "REQUESTS_CA_BUNDLE",
+                   "CURL_CA_BUNDLE", "HTTP_PROXY", "HTTPS_PROXY", "NO_PROXY", "ALL_PROXY", "http_proxy",
+                   "https_proxy", "no_proxy", "all_proxy")
+
+
 def child_env(env: Optional[dict]) -> dict:
-    """The viewer's environment: the given one (or this process's) without the launch flags above. Values are
-    copied, never read or logged."""
-    base = dict(os.environ if env is None else env)
-    for name in INHERITED_LAUNCH_FLAGS:
+    """The viewer's environment: the given one, or the ``CHILD_ENV_NAMES`` part of this process's, without the
+    launch flags and prompt names above. Values are copied, never read or logged."""
+    if env is None:
+        base = {k: v for k, v in os.environ.items() if k in CHILD_ENV_NAMES}
+    else:
+        base = dict(env)
+    for name in INHERITED_LAUNCH_FLAGS + PROMPT_ENV:
         base.pop(name, None)
     return base
 
@@ -197,12 +221,15 @@ def _decline_permission(params: dict) -> dict:
 
 class AcpDriver:
     def __init__(self, session_id: str, *, command: Optional[list[str]] = None, env: Optional[dict] = None,
-                 cwd: Optional[str] = None, start_timeout_s: float = 60.0, turn_timeout_s: float = 120.0):
+                 cwd: Optional[str] = None, start_timeout_s: float = 60.0, turn_timeout_s: float = 120.0,
+                 ignore_rules: bool = False):
         self.session_id = session_id            # the plugin's name for this call session
         self.hermes_session_id: Optional[str] = None  # the gateway session id (in-call tool context)
         self._command = command
         self._env = env
         self._cwd = cwd
+        self._own_cwd: Optional[str] = None     # the fresh directory ``_workdir`` made; removed by ``close``
+        self._ignore_rules = ignore_rules       # the plugin's call sessions: Hermes's --ignore-rules, set here
         self._start_timeout = start_timeout_s
         self._turn_timeout = turn_timeout_s
         self._conn: Optional[_Connection] = None
@@ -266,7 +293,10 @@ class AcpDriver:
     def start(self, briefing: str) -> None:
         if self._conn is not None:
             return
-        conn = _Connection(self._command or default_command(), child_env(self._env), self._cwd or os.getcwd())
+        env = child_env(self._env)
+        if self._ignore_rules:  # set by the plugin, never inherited: no SOUL.md, context files, memory or skills
+            env["HERMES_IGNORE_RULES"] = "1"
+        conn = _Connection(self._command or default_command(), env, self._workdir())
         conn.on_notification = self._on_notification
         conn.on_request = self._on_request
         self._conn = conn
@@ -274,7 +304,7 @@ class AcpDriver:
                                     "clientCapabilities": {"fs": {"readTextFile": False, "writeTextFile": False},
                                                            "terminal": False}},
                      timeout=self._start_timeout)
-        result = conn.request("session/new", {"cwd": self._cwd or os.getcwd(), "mcpServers": self._mcp_servers},
+        result = conn.request("session/new", {"cwd": self._workdir(), "mcpServers": self._mcp_servers},
                               timeout=self._start_timeout)
         sid = result.get("sessionId")
         if not isinstance(sid, str) or not sid:
@@ -294,6 +324,21 @@ class AcpDriver:
         conn, self._conn = self._conn, None
         if conn is not None:
             conn.close()
+        own, self._own_cwd = self._own_cwd, None
+        if own is not None:
+            shutil.rmtree(own, ignore_errors=True)
+
+    def _workdir(self) -> str:
+        """The session's working directory. The plugin passes none, so each call gets a fresh, empty, owner-only
+        (0700) directory under the system temp dir, made at ``start`` and removed by ``close`` (the ask session
+        shares it). Never the process's own: Hermes loads a session cwd's context files (AGENTS.md and the like) and
+        project markers, and a stranger partly drives the session (Nous review of d92bc1fb). An explicit ``cwd``
+        (the trial harness's run directory) is used as given."""
+        if self._cwd:
+            return self._cwd
+        if self._own_cwd is None:
+            self._own_cwd = tempfile.mkdtemp(prefix="hermes-line-call-", dir=tempfile.gettempdir())
+        return self._own_cwd
 
     # -- protocol callbacks (reader thread) --------------------------------------
     def _on_notification(self, method: str, params: dict) -> None:
@@ -413,7 +458,7 @@ class AcpDriver:
             deadline = time.monotonic() + max(timeout_s, 0.1)
             try:
                 if self._ask_session is None:
-                    result = conn.request("session/new", {"cwd": self._cwd or os.getcwd(),
+                    result = conn.request("session/new", {"cwd": self._workdir(),
                                                           "mcpServers": list(self._ask_mcp_servers)},
                                           timeout=min(self._start_timeout, max(timeout_s, 0.1)))
                     sid = result.get("sessionId")

@@ -40,8 +40,9 @@ This is a hackathon release. Every claim below names its evidence in this reposi
 
 1. You ask in chat: "Call Sample Bistro at +1 775 555 0100 and book a table for 4 at 7, put me on if they need me."
 2. Hermes calls `hermes_line_request_call`. Nothing is dialed. The call waits until you approve it in chat with
-   `/line approve <task_id>` (the Desktop pane shows it as waiting). Hermes cannot approve its own call, and nothing said on the phone
-   counts as approval.
+   `/line approve <task_id>` (the Desktop pane shows it as waiting). The approval message shows the goal the call's
+   Hermes session will get; the other party may hear any of it. Hermes cannot approve its own call, and nothing
+   said on the phone counts as approval.
 3. Hermes dials, says the disclosure line ("Hi, this is Hermes, an AI assistant calling on behalf of ..."),
    presses menu keys, and stays quiet on hold. If the business answers with a conversational automated assistant,
    Hermes says only fixed phrases the line picks ("Representative.", "Agent.", "Speak to an agent." and a few more,
@@ -51,8 +52,9 @@ This is a hackathon release. Every claim below names its evidence in this reposi
    disclosure waits until the business has finished and 1.2 seconds of quiet have passed (10 seconds at most).
 5. Then, as you chose in the request:
    - **owner mode**: your phone rings with a short private message; you press 1 and are joined to the business.
-   - **agent mode**: Hermes talks to the person and finishes the task. It can use your Hermes memory and tools
-     during the call.
+   - **agent mode**: Hermes talks to the person and finishes the task with the title and goal you approved. The
+     call runs in its own Hermes profile, without your memory, user profile, persona or other tools (setup step 4;
+     Limits lists what is not closed).
 6. When the call ends, a summary goes back to the chat that asked for it. One-time codes and card numbers are
    masked.
 
@@ -129,23 +131,65 @@ plugins:
 (The numbers above are placeholders.)
 
 **A Hermes profile for the calls (required).** A stranger on the phone partly drives the call's Hermes session, so
-that session may hold only the call tools, never terminal, files, browser, web or other MCP tools. Hermes
-bounds a session's tools per profile, so create one for calls and give it no ACP toolsets:
+that session may hold only the call tools (never terminal, files, browser, web or other MCP tools) and none of your
+memory, user profile or persona. Hermes bounds a session's tools and memory per profile, so create a new profile for
+calls. Do not use `--clone`, `--clone-all` or `--clone-from`: they copy your `SOUL.md`, `MEMORY.md`, `USER.md`,
+`.env` and settings. Then set only its model and provider:
 
 ```sh
-hermes profile create hermes-line-calls --clone   # --clone copies your model settings; omit it to set them yourself
+hermes profile create hermes-line-calls
+hermes --profile hermes-line-calls model     # model, provider and the provider's key, kept in this profile
 ```
+
+The provider key must be in the call profile: the plugin does not pass the keys in your shell or your Hermes
+process to `hermes acp` (see the environment below).
 
 Add to `~/.hermes/profiles/hermes-line-calls/config.yaml`:
 
 ```yaml
 platform_toolsets:
   acp: []
+memory:
+  memory_enabled: false
+  user_profile_enabled: false
+plugins:
+  enabled: []
 ```
 
-and set `call_profile: hermes-line-calls` in the plugin settings. The plugin does not need to be installed in that
-profile. Before every call the plugin reads the session's tool list; if it holds anything beyond the call tools,
-nothing is dialled and the event log says why.
+Leave these unset or empty: `memory.provider`, `display.personality` (or a neutral name: `none`, `default`,
+`neutral`), `agent.system_prompt`, `personalities`, `agent.personalities`, `prefill_messages_file`,
+`agent.prefill_messages_file`, `agent.environment_hint`, `platform_hints`, `hooks` and `mcp_servers`. Keep the
+`SOUL.md` Hermes wrote into the new profile (its stock text), or empty it. Then set `call_profile: hermes-line-calls`
+in the plugin settings. The plugin does not need to be installed in that profile.
+
+What the plugin does with that profile:
+
+- Every call session starts with Hermes's own `--ignore-rules` (`HERMES_IGNORE_RULES=1` for `hermes acp`): Hermes
+  loads no `SOUL.md`, no project context file (`AGENTS.md`, `.cursorrules` and the like), no memory and no preloaded
+  skills into it.
+- The plugin checks the profile when you approve a call, when an inbound call arrives, and again just before the
+  session starts. It refuses the profile if memory or the user profile is on, a memory provider or any key listed
+  above is set, a plugin is enabled (or one is installed while `plugins.enabled` is unset), `memories/MEMORY.md` or
+  `memories/USER.md` is not empty, or `SOUL.md` is neither empty nor Hermes's stock or earlier auto-seeded text. It
+  reads `config.yaml` and `SOUL.md` and lists the `plugins` folder; the memory files are only checked for size.
+- With a refused profile, nothing is dialled. The `/line approve` reply names each problem and the fix, and the task
+  is marked failed with the outcome `blocked: call profile not neutral: ...`; ask Hermes for the call again after the
+  fix. An inbound caller hears "Sorry, this line cannot take calls right now. Goodbye." and the call ends, on both
+  voice paths. When the service starts with a refused profile, the plugin says so in your chat once.
+- **If you made this profile earlier with `--clone`, delete and recreate it:** `hermes profile delete
+  hermes-line-calls`, `hermes profile create hermes-line-calls`, `hermes --profile hermes-line-calls model`, then the
+  config lines above. Editing the clone until it passes is not enough: it keeps your `.env` (provider keys, platform
+  tokens) and your skills, which the check does not read.
+- The plugin then reads the session's tool list; if it holds anything beyond the call tools, nothing is dialled and
+  the event log says why.
+- The session runs in a new, empty, owner-only directory under the system temp directory, made for the call and
+  removed when the call ends; never in the gateway's working directory.
+- `hermes acp` gets only these variables from the plugin's environment: `PATH`, `HOME`, `USER`, `LOGNAME`, `LANG`,
+  `LC_ALL`, `LC_CTYPE`, `LC_MESSAGES`, `TMPDIR`, `HERMES_HOME`, `XDG_CONFIG_HOME`, `XDG_DATA_HOME`, `XDG_STATE_HOME`,
+  `XDG_CACHE_HOME`, `XDG_RUNTIME_DIR`, `SYSTEMROOT`, `SSL_CERT_FILE`, `SSL_CERT_DIR`, `REQUESTS_CA_BUNDLE`,
+  `CURL_CA_BUNDLE` and the proxy variables (`HTTP_PROXY`, `HTTPS_PROXY`, `NO_PROXY`, `ALL_PROXY`, also lower case),
+  plus `HERMES_IGNORE_RULES=1`. When the call profile's gateway is not running, `hermes acp` starts it with that
+  environment.
 
 In Hermes Desktop, turn Hermes Line on in Capabilities → Plugins, then reload the window (⌘R). In testing, switching
 it off and on without a reload did not load the pane (`docs/lanes/L3.md` round 5).
@@ -260,13 +304,34 @@ heard, and a PIN spoken slowly in fragments can reach Hermes before it is scrubb
     time, and no other call can start while it runs. It needs the same approvals as any call; only the second
     call to your phone is skipped. Tested offline only.
 - **What a phone session can't do.** It runs on the restricted call profile (step 4), so it cannot read your
-  calendar, files or other tools. It says so, and you can ask in chat.
+  memory, calendar, files or other tools, also on your own calls to the line (owner line mode). Of what you asked
+  for, it has the task's title and goal and your configured name. It says so, and you can ask in chat.
+- **Stated limits of the call session's isolation** (what the plugin does not close):
+  - **Your machine.** Hermes adds a runtime block to every session, the call session included: the host OS, the home
+    and working directory paths (the home path often holds your account name), the profile name, the time zone and,
+    unless `agent.environment_probe` is false in the call profile, a one-line probe of the host. A caller who asks
+    may hear it.
+  - **Callbacks matched by caller ID.** Caller ID can be faked. A caller who fakes the number of a business you asked
+    Hermes to call is greeted with that task's title, and the call session gets that task's title and goal.
+  - **A running call gateway.** The environment allow-list applies when `hermes acp` starts the call profile's
+    gateway. A gateway that already serves the call profile (started by you, or a multiplexed gateway that serves
+    all your profiles) keeps the environment it was started with, and the call session runs there.
+  - **What the check does not read.** It does not look at the call profile's `.env` or skills (no call-session tool
+    can read them), or at keys of `config.yaml` that are not listed in setup step 4. Recreate a cloned profile
+    instead of editing it.
+  - **Text from the call in your chat.** The summary posted to your chat, and what `hermes_line_call_status` returns
+    to your Hermes (masked transcript tail and summary), contain the other party's words. The posted summary is
+    marked as untrusted; your Hermes is told only that the call ended and its task status.
+  - **The check is a snapshot.** It runs at approval, at admission and before the session starts; a change to the
+    profile in between is not seen until the next check. Only you can write the profile.
 - Owner line mode works on ConversationRelay calls; the Grok Voice path has no PIN step yet.
 - Your PIN's key tones pass through Twilio like any keypad input.
 
 ## Commands and tools
 
-`/line` commands (owner only; tools and the model cannot run approve, deny or allow-code):
+`/line` commands (tools and the model cannot run approve, deny or allow-code). The plugin does not check who sends
+them: **any sender your Hermes gateway admits can run every `/line` command, including `/line approve`.** In a group
+chat that is every admitted member, so run the plugin on a gateway that admits only you.
 
 ```
 /line status
@@ -350,10 +415,23 @@ What you should know before installing:
   request a new call) and Hermes's deferred-tool bridge. The session never inherits YOLO, ignore-rules or pre-accepted hooks from the plugin's environment, and
   the call driver declines every permission request. What the other party says is untrusted input to that session,
   and the call briefing and the bundled skill tell Hermes so.
+- **The call's Hermes session gets none of your memory, user profile or persona.** It starts with Hermes's
+  `--ignore-rules`, and the plugin refuses a call profile that has memory, a user profile, a memory provider, a
+  persona or prompt key, MCP servers, hooks, enabled plugins, non-empty memory files or a `SOUL.md` other than
+  Hermes's stock text (setup step 4). It reads only the profile's `config.yaml` and `SOUL.md` for this, and lists its
+  `plugins` folder; the memory files are only checked for size. The session runs in an empty temporary directory and
+  its `hermes acp` process gets an exact environment allow-list (setup step 4). Of what you asked for, it gets the
+  task's title and goal, which the approval message shows you, and your configured name. See Limits for what is
+  not closed.
+- **Call summaries.** The summary quotes the other party. It is posted to your chat, marked as untrusted text from
+  the call; it is not injected into your Hermes session, which is told only that the call ended and its task status.
 - **Reads outside the plugin's own data:** the SMS inbox of the attached Android phone (through `adb`), when
-  `sms_source: adb`. Before each call, the call session's tool list (from `hermes acp`).
-- **Programs it starts:** `adb` (read-only queries), and one `hermes acp` process per call, which starts the
-  call profile's Hermes gateway (idle-exit) if it is not already running.
+  `sms_source: adb`. At approval, at inbound admission and before each call session: the call profile's
+  `config.yaml` and `SOUL.md`, the list of its `plugins` folder and the size of its memory files; then the call
+  session's tool list (from `hermes acp`).
+- **Programs it starts:** `adb` (read-only queries; it gets only `PATH`, `HOME`, `LANG` and `ANDROID_*`/`ADB_*`
+  from the environment), and one `hermes acp` process per call, which starts the call profile's Hermes gateway
+  (idle-exit) if it is not already running.
 - **Background service:** with `enabled: true`, a call service runs inside the Hermes process. It listens on
   `127.0.0.1:8788` for Twilio (through your tunnel) and on a second, loopback-only port that serves the four in-call
   tools to the call's Hermes session with a per-call token.

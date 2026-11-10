@@ -29,7 +29,7 @@ title: Hermes Line
 onboarding: false                       # official or verified entries only
 known_issues:
   - "US numbers only (geographic and toll-free); premium 900/976 and non-US numbers are refused."
-  - "Needs a Twilio account, a public HTTPS tunnel to the plugin, the Hermes gateway on the same machine, and a separate Hermes profile with no ACP toolsets for the calls (setup step in the README)."
+  - "Needs a Twilio account, a public HTTPS tunnel to the plugin, the Hermes gateway on the same machine, and a separate Hermes profile for the calls with no ACP toolsets and memory off (setup step in the README)."
   - "Waiting on hold was shown live on a real airline hold queue (44 min in silence, 0 phrases spoken into hold). Real agents answered on two Hilton calls, but the live-person check missed them every time; the fix is tested offline only, so detecting a real agent and bridging you in are not yet proven live."
   - "Detecting that a live person answered is experimental: live calls produced one false detection (Delta) and three missed agents (Hilton), all fixed offline and not yet re-proven live; on restricted tasks your phone rings only after a clear yes to the live-person question, or after two human-like but unclear replies so you can judge."
   - "Automated assistants and phone menus get only fixed phrases or keys; many real menus are left unanswered on purpose."

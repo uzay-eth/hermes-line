@@ -22,12 +22,13 @@ times out, the source does ONE bounded recovery per fetch (<= `reconnect_budget_
 """
 from __future__ import annotations
 
+import os
 import re
 import shlex
 import shutil
 import subprocess
 import time
-from typing import Any, Callable, Dict, List, NamedTuple, Optional, Sequence, Tuple
+from typing import Any, Callable, Dict, List, Mapping, NamedTuple, Optional, Sequence, Tuple
 
 from ..log import LOG
 from ..model import SmsMessage, is_safe_address
@@ -73,12 +74,22 @@ class RunResult(NamedTuple):
 
 Runner = Callable[[Sequence[str], float], RunResult]
 
+# adb gets only what it needs from the environment, never the gateway's whole one (provider keys, secrets): the adb
+# server that a first call may start keeps its environment for its whole life (Nous review of d92bc1fb).
+ADB_ENV_NAMES = ("PATH", "HOME", "LANG")
+ADB_ENV_PREFIXES = ("ANDROID_", "ADB_")
+
+
+def adb_env(environ: Optional[Mapping[str, str]] = None) -> Dict[str, str]:
+    source = os.environ if environ is None else environ
+    return {k: v for k, v in source.items() if k in ADB_ENV_NAMES or k.startswith(ADB_ENV_PREFIXES)}
+
 
 def default_runner(argv: Sequence[str], timeout: float) -> RunResult:
     try:
         p = subprocess.run(
             list(argv), capture_output=True, text=True, encoding="utf-8", errors="replace",
-            timeout=timeout, shell=False,
+            timeout=timeout, shell=False, env=adb_env(),
         )
     except subprocess.TimeoutExpired:
         raise DeviceUnavailable("adb timed out after %.0fs" % timeout)

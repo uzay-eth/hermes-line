@@ -1,3 +1,6 @@
+Historical record (release round 4 README patch), kept as it was applied. Superseded on 2026-11-10: the call
+session does not use the owner's Hermes memory or tools; see plugin/README.md, setup step 4 and Limits.
+
 --- a/plugin/README.md
 +++ b/plugin/README.md
 @@ -18,21 +18,22 @@

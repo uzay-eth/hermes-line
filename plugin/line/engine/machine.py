@@ -435,9 +435,9 @@ class CallSession:
                     self.svc.register_agent_session(hermes_sid, self)
             except Exception as exc:
                 self.driver_error = type(exc).__name__
-                detail = str(exc) if "not restricted" in str(exc) else ""
+                detail = str(exc) if ("not restricted" in str(exc) or "not neutral" in str(exc)) else ""
                 self.svc.call_tools.revoke(self.call_id)
-                data = {"why": detail[:160]} if detail else {"error": self.driver_error}
+                data = {"why": detail[:800]} if detail else {"error": self.driver_error}
                 self.loop.call_soon_threadsafe(lambda: self._event("agent_start_failed", **data))
         return self.driver
 

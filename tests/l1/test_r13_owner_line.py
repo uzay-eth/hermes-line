@@ -268,7 +268,8 @@ class SummaryRouteTests(unittest.TestCase):
             task = line.store.get_task(req["task_id"])
             ok, err = host.deliver(task, {"text": "Hermes Line: Call completed (Sample Bistro)."})
             self.assertTrue(ok, err)
-            self.assertEqual(posted, ["[Hermes Line call summary] Hermes Line: Call completed (Sample Bistro)."])
+            from plugin.line.engine.hermes_glue import SUMMARY_MARK
+            self.assertEqual(posted, [SUMMARY_MARK + " Hermes Line: Call completed (Sample Bistro)."])
         finally:
             line.close()
 

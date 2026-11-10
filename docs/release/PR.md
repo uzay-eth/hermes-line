@@ -19,7 +19,8 @@ Hermes Line gives Hermes a phone line on the user's own Twilio account. The user
 and approves the call with `/line approve`. Hermes dials, says it is an AI assistant, presses menu keys, waits on
 hold without talking, answers a business's automated assistant only with fixed routing phrases ("Representative.",
 "Agent.", "Speak to an agent."), and when a person answers it either rings the user's phone and bridges them in, or finishes
-the task itself with the user's own Hermes memory and tools. A summary goes back to the chat that asked for the
+the task itself from the title and goal the user approved, in a separate call profile without the user's memory,
+persona or tools (the plugin README lists the stated limits). A summary goes back to the chat that asked for the
 call. A Desktop pane shows the live call (state, time on hold, masked transcript) with Take over, Say this and Hang
 up. On a restricted task the owner's phone rings only after a clear yes to "Am I speaking with a live person?" (or after
 two human-like but unclear replies, so the owner judges), and
@@ -42,8 +43,8 @@ Adds `plugin-catalog/hermes-line.yaml` (source copy in the plugin repo: `docs/re
 - Desktop: one `panes` contribution in `desktop/plugin.js` (imports only `@hermes/plugin-sdk` and `react`),
   `ctx.rest`, `ctx.onEvent`; backend REST in `dashboard/plugin_api.py`; events through
   `hermes_cli.plugin_events.broadcast_plugin_event`.
-- Each call's conversation is a Hermes session through the documented ACP adapter (`hermes acp`), so the call
-  brain is the user's own Hermes. The viewer runs as `hermes --profile <call_profile> acp`. The in-call tools (press keys, finish, bring the
+- Each call's conversation is a Hermes session through the documented ACP adapter (`hermes acp`) on the user's
+  own Hermes, in a dedicated call profile. The viewer runs as `hermes --profile <call_profile> acp`. The in-call tools (press keys, finish, bring the
   owner in, and a new-call request that works only after the owner's PIN) reach that session as a session-scoped MCP server on loopback, passed in ACP `session/new` `mcpServers`.
 - Missing hook we would ask for: ACP `session/new` cannot carry a toolset selection to the gateway's
   `session.create` `toolsets`, so the plugin bounds the call session's tools with a dedicated profile instead.
@@ -56,10 +57,11 @@ Adds `plugin-catalog/hermes-line.yaml` (source copy in the plugin repo: `docs/re
   provider carries Twilio's webhooks and audio to the plugin. Masked call text goes to the user's Hermes model
   provider as a normal Hermes session.
 - **Reads outside its own data:** the SMS inbox of a USB-attached Android phone via `adb shell content query`
-  (read-only), when `sms_source: adb` (default; the phone is optional). Before each call, the call session's tool
-  list through `hermes acp`.
-- **Processes it starts:** `adb`; one `hermes acp` process per call, which starts the call profile's Hermes gateway
-  (idle-exit) if it is not running.
+  (read-only), when `sms_source: adb` (default; the phone is optional). Before each call, the call profile's
+  `config.yaml` and `SOUL.md` (and the size of its memory files), then the call session's tool list through
+  `hermes acp`.
+- **Processes it starts:** `adb`, with only `PATH`, `HOME`, `LANG` and `ANDROID_*`/`ADB_*` from the environment; one
+  `hermes acp` process per call, which starts the call profile's Hermes gateway (idle-exit) if it is not running.
 - **Background service:** with `enabled: true` (default `false`), a call service in the Hermes process listening on
   `127.0.0.1:8788` (exposed by the user's tunnel) and on a loopback-only port for the in-call tools (per-call
   256-bit bearer token).
@@ -73,10 +75,34 @@ Adds `plugin-catalog/hermes-line.yaml` (source copy in the plugin repo: `docs/re
   `HERMES_SAFE_MODE` or `HERMES_IGNORE_USER_CONFIG`, and the driver declines every permission request. Tested with
   a real `hermes acp` and gateway (fixture model) and `HERMES_YOLO_MODE=1` in the service's environment: an
   unrestricted profile was refused before dialling, the restricted one finished its call.
+- **The call session gets none of the user's memory, user profile or persona.** The setup creates the call profile
+  without `--clone`, with `memory.memory_enabled: false`, `memory.user_profile_enabled: false`,
+  `plugins.enabled: []`, the provider key in that profile, and Hermes's stock `SOUL.md`. Every call session starts
+  with Hermes's own `--ignore-rules` (`HERMES_IGNORE_RULES=1` for the `hermes acp` child): no `SOUL.md`, context
+  files, memory or preloaded skills. At approval, at inbound admission and before the session starts, the plugin
+  refuses a profile with memory or the user profile on, a memory provider, `display.personality`,
+  `agent.system_prompt`, `personalities`, `agent.personalities`, `prefill_messages_file`,
+  `agent.prefill_messages_file`, `agent.environment_hint`, `platform_hints`, `hooks`, `mcp_servers`, enabled
+  plugins, a non-empty `MEMORY.md` or `USER.md` (size only, never read) or a `SOUL.md` other than empty or Hermes's
+  stock or earlier auto-seeded text. A refused profile dials nobody (the approval reply names each problem and the
+  fix), admits no inbound caller on either voice path, and is said once in the user's chat at service start. The
+  session runs in a fresh owner-only temp directory per call, removed after it. The `hermes acp` child gets an
+  exact environment allow-list (`PATH`, `HOME`, `USER`, `LOGNAME`, `LANG`, `LC_ALL`, `LC_CTYPE`, `LC_MESSAGES`,
+  `TMPDIR`, `HERMES_HOME`, `XDG_*_HOME`, `XDG_RUNTIME_DIR`, `SYSTEMROOT`, CA-bundle and proxy variables), so no
+  prompt variable (`HERMES_EPHEMERAL_SYSTEM_PROMPT` and the like) or secret of the user's process reaches it when it
+  starts the call gateway. Stated limits in the plugin README: Hermes's runtime block (host OS, home and working
+  directory paths, profile name, time zone), callbacks matched by spoofable caller ID (that task's title and goal),
+  a call gateway that is already running keeps its own environment, and what the check does not read (`.env`,
+  skills, unlisted keys).
+- **Goal at approval.** The approval message shows the goal the call session will get; the other party may hear
+  any of it.
+- **Call summaries.** The summary quotes the other party, so it is only posted to the user's chat, marked as
+  untrusted text from the call. The requesting Hermes session is told only that the call ended and its task status.
 - **Phone safety defaults:** AI disclosure line on every outbound call (on by default); the plugin always sends
   `Record=false` to Twilio and has no recording feature; dialing only to an allowlist the user writes; every call
   needs the user's approval, which the model, tools and phone audio cannot give, also when the user turns the
-  allowlist off; an exact-number block list; one call per line; quiet hours 21:00 to 08:00 in the user's time
+  allowlist off (any sender the user's Hermes gateway admits can run `/line approve`; in a group chat that is every
+  admitted member); an exact-number block list; one call per line; quiet hours 21:00 to 08:00 in the user's time
   zone; emergency numbers, short codes, N11, premium (900, 976) and non-US numbers always refused (US geographic
   and toll-free numbers can be called); SMS codes released only with per-code consent bound to sender, time window
   and destination call, and delivered only into that call (no browser fill in this build).
@@ -98,8 +124,9 @@ Adds `plugin-catalog/hermes-line.yaml` (source copy in the plugin repo: `docs/re
 plugin warning; every check from manifest to desktop surface is ✓. The opened PR carries the output of this check
 run on a fresh checkout at the pinned commit.
 
-Last cold run: see `tests/l1/evidence/validate.txt`. Offline tests on the release tree (2026-11-08): L1 571, L2 145,
-L4 353 (2 skipped), L5 88 and L6 122 pass; L3 75 of 76 (the remaining test needs a local Hermes Desktop build).
+Last cold run: see `tests/l1/evidence/validate.txt`. Offline tests on the release tree (2026-11-10): L1 584, L2 145,
+L4 355 (2 skipped), L5 88 and L6 122 pass; L3 75 of 76 (the remaining test needs a local Hermes Desktop build). 15 of
+them (`tests/l1/test_s7_call_profile.py`, `tests/l4/test_s7_adb_env.py`) cover the catalog review of `d92bc1fb`.
 
 ## Tested live
 

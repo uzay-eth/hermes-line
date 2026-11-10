@@ -225,17 +225,28 @@ class DriverSelectionTests(unittest.TestCase):
     def test_glue_builds_the_acp_driver(self):
         from unittest import mock
         from test_otp_and_plugin import FakeCtx
+        from test_s7_call_profile import STOCK_SOUL, make_profile
         import plugin
-        ctx = FakeCtx({"sms_source": "none"})
-        plugin.register(ctx)
-        host = ctx.unloads[0].__self__
-        fake_store = mock.MagicMock()
-        with mock.patch("plugins.plugin_storage.plugin_data_dir", create=True) as data_dir, \
-                mock.patch("plugin.line.store.Store", return_value=fake_store):
-            data_dir.return_value = Path(tempfile.mkdtemp(prefix="hl-glue-"))
-            svc = host.get()
-        from plugin.line.engine.acp_driver import AcpDriver
-        self.assertIsInstance(svc.driver_factory("s1"), AcpDriver)
+        from plugin.line.engine import acp_driver, hermes_glue
+        from plugin.line.engine.acp_driver import AcpDriver, AcpError
+        for profile in ("hermes-line-calls", ""):
+            ctx = FakeCtx({"sms_source": "none", "call_profile": profile})
+            plugin.register(ctx)
+            host = ctx.unloads[0].__self__
+            fake_store = mock.MagicMock()
+            neutral = make_profile(Path(tempfile.mkdtemp(prefix="hl-glue-")), cloned=False)
+            with mock.patch("plugins.plugin_storage.plugin_data_dir", create=True) as data_dir, \
+                    mock.patch("plugin.line.store.Store", return_value=fake_store), \
+                    mock.patch.object(hermes_glue, "_profile_dir", return_value=neutral), \
+                    mock.patch.object(hermes_glue, "_neutral_souls", return_value=[STOCK_SOUL]), \
+                    mock.patch.object(acp_driver.shutil, "which", lambda n: "/bin/hermes" if n == "hermes" else None):
+                data_dir.return_value = Path(tempfile.mkdtemp(prefix="hl-glue-"))
+                svc = host.get()
+                if profile:
+                    self.assertIsInstance(svc.driver_factory("s1"), AcpDriver)
+                else:  # STEER-7: no call profile, no call session (README setup step 4)
+                    with self.assertRaises(AcpError):
+                        svc.driver_factory("s1")
 
 
 if __name__ == "__main__":
