@@ -247,6 +247,7 @@ class PluginRegistrationTests(unittest.TestCase):
             handler = ctx.tools["hermes_line_request_call"][2]
             out = json.loads(handler({"destination": "911", "title": "x", "goal": "y", "mode": "agent"}))
             self.assertEqual(out["blocked_by"], "destination")
+            ctx.post_message = lambda text: type("H", (), {"ok": True})()  # the approval message is posted (S7 RC-4)
             out = json.loads(handler({"destination": harness.BUSINESS, "title": "Book", "goal": "y",
                                       "mode": "agent"}, session_id="s1"))
             self.assertTrue(out["ok"])

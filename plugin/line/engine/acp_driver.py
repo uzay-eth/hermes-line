@@ -9,7 +9,8 @@ tools and approvals are exactly the call profile's own. The plugin starts it wit
 Hermes's ``--ignore-rules`` (no SOUL.md, context files, memory or preloaded skills),
 refuses a call profile that holds the owner's memory, persona or prompt settings
 (``call_profile.py``), gives the child an exact environment allow-list
-(``child_env``) and runs the session in a fresh empty directory (``_workdir``).
+(``child_env``) and runs the session in a fresh empty directory under a temp root that has no git repository or
+project marker at or above it (``_workdir``, ``clean_temp_root``).
 
 Differences from an in-process (embedded) agent, by protocol:
 - The call briefing is sent with the first prompt (ACP has no system-prompt field).
@@ -71,9 +72,9 @@ PROMPT_ENV = ("HERMES_EPHEMERAL_SYSTEM_PROMPT", "HERMES_PREFILL_MESSAGES_FILE", 
               "HERMES_ENABLE_PROJECT_PLUGINS", "HERMES_TUI_SKILLS")
 # The exact allow-list for the viewer when the plugin passes no env (Nous review of d92bc1fb): what `hermes acp`
 # needs to run and to find the profile (HERMES_HOME), and, when it starts the call profile's gateway, what that
-# gateway needs to reach the model provider (proxy and CA bundle). No secrets, no toolchain, no other Hermes
-# variables: the call profile holds its own provider key (README, setup step 4). A call gateway that is already
-# running keeps the environment it was started with.
+# gateway needs to reach the model provider (proxy and CA bundle; a proxy URL passes as set, credentials included).
+# No provider keys, no toolchain, no other Hermes variables: the call profile holds its own provider key (README,
+# setup step 4). A call gateway that is already running keeps the environment it was started with.
 CHILD_ENV_NAMES = ("PATH", "HOME", "USER", "LOGNAME", "LANG", "LC_ALL", "LC_CTYPE", "LC_MESSAGES", "TMPDIR",
                    "HERMES_HOME", "XDG_CONFIG_HOME", "XDG_DATA_HOME", "XDG_STATE_HOME", "XDG_CACHE_HOME",
                    "XDG_RUNTIME_DIR", "SYSTEMROOT", "SSL_CERT_FILE", "SSL_CERT_DIR", "REQUESTS_CA_BUNDLE",
@@ -91,6 +92,48 @@ def child_env(env: Optional[dict]) -> dict:
     for name in INHERITED_LAUNCH_FLAGS + PROMPT_ENV:
         base.pop(name, None)
     return base
+
+
+# Hermes's project-root signals (``agent.coding_context._PROJECT_MARKERS``) and its git rule (``.git`` in the session
+# cwd or any parent). A session cwd under either gets Hermes's coding workspace block (root, branch, status, recent
+# commit subjects) even with --ignore-rules, which only turns the context files off (S7 delta review R1).
+PROJECT_MARKERS = (
+    "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", "package.json", "tsconfig.json", "deno.json",
+    "Cargo.toml", "go.mod", "pom.xml", "build.gradle", "build.gradle.kts", "Gemfile", "composer.json", "mix.exs",
+    "pubspec.yaml", "CMakeLists.txt", "Makefile", "Dockerfile", "AGENTS.md", "CLAUDE.md", ".cursorrules",
+)
+# Fixed system temp roots, tried after this process's temp dir (which follows TMPDIR, and which Hermes may point
+# at its home's cache/scratch).
+TEMP_ROOTS = ("/tmp", "/var/tmp")
+
+
+def workspace_signal(path: str) -> Optional[str]:
+    """The first ``.git`` or project marker at ``path`` or any of its parents, else None. Stricter than Hermes's
+    ``_git_root``/``_marker_root``: markers are checked at every level, and ``$HOME`` and the temp root are not
+    skipped (the call gateway's own home and temp root can differ from this process's)."""
+    current = os.path.realpath(path)
+    while True:
+        for name in (".git",) + PROJECT_MARKERS:
+            if os.path.lexists(os.path.join(current, name)):
+                return os.path.join(current, name)
+        parent = os.path.dirname(current)
+        if parent == current:
+            return None
+        current = parent
+
+
+def clean_temp_root() -> str:
+    """The first of this process's temp dir, ``/tmp`` and ``/var/tmp`` that exists and has no ``workspace_signal``;
+    raises ``AcpError`` when none qualifies, so no call session starts inside a project."""
+    for candidate in (tempfile.gettempdir(), *TEMP_ROOTS):
+        try:
+            root = os.path.realpath(candidate)
+        except (OSError, ValueError):
+            continue
+        if os.path.isdir(root) and workspace_signal(root) is None:
+            return root
+    raise AcpError("no temp directory outside a git repository or project (this process's temp dir, /tmp and "
+                   "/var/tmp were checked): a call session there would get that project's workspace in its prompt")
 
 
 class _Connection:
@@ -296,6 +339,13 @@ class AcpDriver:
         env = child_env(self._env)
         if self._ignore_rules:  # set by the plugin, never inherited: no SOUL.md, context files, memory or skills
             env["HERMES_IGNORE_RULES"] = "1"
+        try:
+            self._start(briefing, env)
+        except BaseException:
+            self.close()  # a failed start leaves no child process and no temp dir behind (readiness RC-6)
+            raise
+
+    def _start(self, briefing: str, env: dict) -> None:
         conn = _Connection(self._command or default_command(), env, self._workdir())
         conn.on_notification = self._on_notification
         conn.on_request = self._on_request
@@ -316,7 +366,6 @@ class AcpDriver:
             self.session_tools_reply = res.text
             extra = self._tool_check(res.text or "") if not res.error else None
             if extra != []:
-                self.close()
                 what = "unreadable" if extra is None else f"{len(extra)} extra, e.g. {', '.join(extra[:4])}"
                 raise AcpError(f"call session not restricted to the call tools ({what})")
 
@@ -330,14 +379,16 @@ class AcpDriver:
 
     def _workdir(self) -> str:
         """The session's working directory. The plugin passes none, so each call gets a fresh, empty, owner-only
-        (0700) directory under the system temp dir, made at ``start`` and removed by ``close`` (the ask session
-        shares it). Never the process's own: Hermes loads a session cwd's context files (AGENTS.md and the like) and
-        project markers, and a stranger partly drives the session (Nous review of d92bc1fb). An explicit ``cwd``
-        (the trial harness's run directory) is used as given."""
+        (0700) directory under ``clean_temp_root()`` (no ``.git`` or project marker at or above it), made at
+        ``start`` and removed by ``close`` (the ask session shares it). Never the process's own: Hermes loads a
+        session cwd's context files (AGENTS.md and the like) and, from a cwd inside a git repository or project, a
+        workspace block with its root, branch, status and recent commit subjects, and a stranger partly drives the
+        session (Nous review of d92bc1fb; S7 delta review R1). An explicit ``cwd`` (the trial harness's run
+        directory) is used as given."""
         if self._cwd:
             return self._cwd
         if self._own_cwd is None:
-            self._own_cwd = tempfile.mkdtemp(prefix="hermes-line-call-", dir=tempfile.gettempdir())
+            self._own_cwd = tempfile.mkdtemp(prefix="hermes-line-call-", dir=clean_temp_root())
         return self._own_cwd
 
     # -- protocol callbacks (reader thread) --------------------------------------

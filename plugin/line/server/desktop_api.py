@@ -43,6 +43,8 @@ def call_view(store: Store, call, *, transcript_limit: int = 200) -> dict:
         "id": call.id,
         "task_id": call.task_id,
         "task_title": task.title if task else "Incoming call",
+        # Readiness RC-4: the goal the call session gets, in the snapshot a task POST takes its revision from.
+        "task_goal": task.goal if task else None,
         "direction": call.direction.value,
         "counterpart_masked": call.counterpart_masked,
         "state": call.state.value,

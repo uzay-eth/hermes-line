@@ -38,7 +38,9 @@ Adds `plugin-catalog/hermes-line.yaml` (source copy in the plugin repo: `docs/re
   `transform_llm_output`, used to replace a released code with `[CODE]` in later tool results and replies),
   `ctx.register_command` (`/line`), `ctx.register_skill` (bundled `hermes-line` skill), `ctx.get_config`,
   `ctx.on_unload`, `ctx.ask_choice` (code approval, with a `/line confirm-code` fallback).
-- `ctx.post_message` / `ctx.inject_message` to deliver the call summary to the originating chat.
+- `ctx.post_message` for the approval request and the call summary (into the originating chat's stored session,
+  bound with `gateway.session_context.scoped_session_key` when the service thread has none); `ctx.inject_message`
+  for one engine-built sentence (task id, title, status) to the requesting session, never the summary text.
 - Secrets: `agent.secret_scope.get_secret` for the names in `requires_env` / `optional_env`.
 - Desktop: one `panes` contribution in `desktop/plugin.js` (imports only `@hermes/plugin-sdk` and `react`),
   `ctx.rest`, `ctx.onEvent`; backend REST in `dashboard/plugin_api.py`; events through
@@ -48,6 +50,12 @@ Adds `plugin-catalog/hermes-line.yaml` (source copy in the plugin repo: `docs/re
   owner in, and a new-call request that works only after the owner's PIN) reach that session as a session-scoped MCP server on loopback, passed in ACP `session/new` `mcpServers`.
 - Missing hook we would ask for: ACP `session/new` cannot carry a toolset selection to the gateway's
   `session.create` `toolsets`, so the plugin bounds the call session's tools with a dedicated profile instead.
+- Private imports, each guarded (a missing one refuses the call or skips the post, never crashes):
+  `hermes_cli.profiles.get_profile_dir` and `hermes_cli.default_soul` (`DEFAULT_SOUL_MD`,
+  `is_legacy_template_soul`) for the call-profile check, and `gateway.session_context.scoped_session_key` to post
+  the summary into the stored session that asked for the call from the service's own thread. Seams we would ask
+  for: a profile-directory lookup, the stock-SOUL check, and `post_message` to a stored session of the plugin's
+  own profile.
 
 ## Disclosures (rule 13)
 
@@ -58,8 +66,9 @@ Adds `plugin-catalog/hermes-line.yaml` (source copy in the plugin repo: `docs/re
   provider as a normal Hermes session.
 - **Reads outside its own data:** the SMS inbox of a USB-attached Android phone via `adb shell content query`
   (read-only), when `sms_source: adb` (default; the phone is optional). Before each call, the call profile's
-  `config.yaml` and `SOUL.md` (and the size of its memory files), then the call session's tool list through
-  `hermes acp`.
+  `config.yaml` and `SOUL.md`, the variable names in its `.env`, the lists of its `plugins` and `hooks` folders
+  (and the size of its memory files), whether the temp directory or a folder above it holds a `.git` or a project
+  file, then the call session's tool list through `hermes acp`.
 - **Processes it starts:** `adb`, with only `PATH`, `HOME`, `LANG` and `ANDROID_*`/`ADB_*` from the environment; one
   `hermes acp` process per call, which starts the call profile's Hermes gateway (idle-exit) if it is not running.
 - **Background service:** with `enabled: true` (default `false`), a call service in the Hermes process listening on
@@ -82,22 +91,34 @@ Adds `plugin-catalog/hermes-line.yaml` (source copy in the plugin repo: `docs/re
   files, memory or preloaded skills. At approval, at inbound admission and before the session starts, the plugin
   refuses a profile with memory or the user profile on, a memory provider, `display.personality`,
   `agent.system_prompt`, `personalities`, `agent.personalities`, `prefill_messages_file`,
-  `agent.prefill_messages_file`, `agent.environment_hint`, `platform_hints`, `hooks`, `mcp_servers`, enabled
-  plugins, a non-empty `MEMORY.md` or `USER.md` (size only, never read) or a `SOUL.md` other than empty or Hermes's
-  stock or earlier auto-seeded text. A refused profile dials nobody (the approval reply names each problem and the
-  fix), admits no inbound caller on either voice path, and is said once in the user's chat at service start. The
-  session runs in a fresh owner-only temp directory per call, removed after it. The `hermes acp` child gets an
-  exact environment allow-list (`PATH`, `HOME`, `USER`, `LOGNAME`, `LANG`, `LC_ALL`, `LC_CTYPE`, `LC_MESSAGES`,
-  `TMPDIR`, `HERMES_HOME`, `XDG_*_HOME`, `XDG_RUNTIME_DIR`, `SYSTEMROOT`, CA-bundle and proxy variables), so no
-  prompt variable (`HERMES_EPHEMERAL_SYSTEM_PROMPT` and the like) or secret of the user's process reaches it when it
-  starts the call gateway. Stated limits in the plugin README: Hermes's runtime block (host OS, home and working
-  directory paths, profile name, time zone), callbacks matched by spoofable caller ID (that task's title and goal),
-  a call gateway that is already running keeps its own environment, and what the check does not read (`.env`,
-  skills, unlisted keys).
-- **Goal at approval.** The approval message shows the goal the call session will get; the other party may hear
-  any of it.
-- **Call summaries.** The summary quotes the other party, so it is only posted to the user's chat, marked as
-  untrusted text from the call. The requesting Hermes session is told only that the call ended and its task status.
+  `agent.prefill_messages_file`, `agent.environment_hint`, `agent.coding_instructions`, `platform_hints`, `hooks`,
+  `mcp_servers`, a hook directory in `hooks/`, enabled plugins, a `.env` that assigns a launch flag
+  (`HERMES_IGNORE_RULES` and the four others) or a prompt variable (`HERMES_EPHEMERAL_SYSTEM_PROMPT`,
+  `HERMES_PREFILL_MESSAGES_FILE`, `HERMES_ENVIRONMENT_HINT`, `HERMES_ENABLE_PROJECT_PLUGINS`, `HERMES_TUI_SKILLS`;
+  names only, values never read), a non-empty `MEMORY.md` or `USER.md` (size only, never read) or a `SOUL.md` other
+  than empty or Hermes's stock or earlier auto-seeded text. This is a fixed list, not a check of everything Hermes
+  loads. A refused profile dials nobody (the approval reply names each problem and the fix) and admits no inbound
+  caller on either voice path; at service start the plugin posts it once into the chat of the latest task that came
+  from a chat, or answers the next `/line` command or Hermes Line tool call with it. The session runs in a fresh
+  owner-only directory per call, removed after it (also after a failed start), under the first of `TMPDIR`, `/tmp`
+  and `/var/tmp` with no `.git` or project file in it or above it; with none, no session starts. The `hermes acp`
+  child gets an exact environment allow-list by name (`PATH`, `HOME`, `USER`, `LOGNAME`, `LANG`, `LC_ALL`,
+  `LC_CTYPE`, `LC_MESSAGES`, `TMPDIR`, `HERMES_HOME`, `XDG_*_HOME`, `XDG_RUNTIME_DIR`, `SYSTEMROOT`, CA-bundle and
+  proxy variables), so no prompt variable (`HERMES_EPHEMERAL_SYSTEM_PROMPT` and the like) and no other variable of
+  the user's process reaches it when it starts the call gateway; the proxy variables pass as set. Stated limits in
+  the plugin README: Hermes's runtime block (host OS, home and working directory paths, profile name, time zone),
+  callbacks matched by spoofable caller ID (that task's title and goal), a call gateway that is already running
+  keeps its own environment (prompt variables included), a managed configuration layer is not read, `.env` values
+  and skills and unlisted keys are not read, the owner's own agent can use `hermes_line_say` without a per-sentence
+  approval, and a relay chat with a limit under 1,500 characters can cut an approval part.
+- **Goal at approval.** The approval message shows the whole goal the call session will get, in numbered parts of
+  at most 1,500 characters when it is long (Hermes clamps a post to the chat's limit and does not split it; Discord
+  allows 2,000, SMS 1,600), then the approval command. If a part cannot be posted, the task is withdrawn. The
+  Desktop REST snapshot carries the goal as `task_goal`. The other party may hear any of it.
+- **Call summaries.** The summary quotes the other party, so it is only posted to the chat that asked for the
+  call (that stored session, also after a restart or a failed edit), marked as untrusted text from the call. The
+  requesting Hermes session is told only that the call ended and its task status. A task the user asked for on the
+  phone has no chat; its summary is in the Desktop pane and the call status.
 - **Phone safety defaults:** AI disclosure line on every outbound call (on by default); the plugin always sends
   `Record=false` to Twilio and has no recording feature; dialing only to an allowlist the user writes; every call
   needs the user's approval, which the model, tools and phone audio cannot give, also when the user turns the
@@ -120,13 +141,17 @@ Adds `plugin-catalog/hermes-line.yaml` (source copy in the plugin repo: `docs/re
 
 ## Validation
 
-`hermes plugins validate --install-deps` (cold, throwaway `HERMES_HOME`): "Validation passed. Exit status: 0", no
-plugin warning; every check from manifest to desktop surface is ✓. The opened PR carries the output of this check
-run on a fresh checkout at the pinned commit.
+`hermes plugins validate --install-deps` (cold, throwaway `HERMES_HOME`): "Validation passed. Exit status: 0"; every
+check from manifest to desktop surface is ✓, with one warning (⚠ private core imports, catalog rule 9: the four
+imports listed under "Hermes surfaces used") and the in-process isolation note for `ctx.post_message`. The opened PR
+carries the output of this check run on a fresh checkout at the pinned commit.
 
-Last cold run: see `tests/l1/evidence/validate.txt`. Offline tests on the release tree (2026-11-10): L1 584, L2 145,
-L4 355 (2 skipped), L5 88 and L6 122 pass; L3 75 of 76 (the remaining test needs a local Hermes Desktop build). 15 of
-them (`tests/l1/test_s7_call_profile.py`, `tests/l4/test_s7_adb_env.py`) cover the catalog review of `d92bc1fb`.
+Last cold run: see `tests/l1/evidence/validate.txt`. Offline tests on the release tree (2026-11-10): L1 601, L2 145,
+L4 359 (with `HERMES_AGENT_DIR` pointing at a Hermes checkout; without one 6 skip), L5 88 and L6 122 pass; L3 75 of
+76 (the remaining test needs a local Hermes Desktop build). 15 of them (`tests/l1/test_s7_call_profile.py`,
+`tests/l4/test_s7_adb_env.py`) cover the catalog review of `d92bc1fb`; 21 more (`tests/l1/test_s7_fix_round.py`,
+`tests/l4/test_s7_hermes_contracts.py`, the latter on Hermes's own prompt builder, dotenv loader and message
+posting) cover the review of that fix.
 
 ## Tested live
 

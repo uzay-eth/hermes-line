@@ -34,7 +34,7 @@ Python >= the version Hermes v0.22.5 ships. Standard library first; any third-pa
 
 ## Desktop REST and events (L1 serves, L3 renders)
 - `GET /api/plugins/hermes-line/calls` -> `{revision: int, calls: [Call]}`.
-- `Call = {id, task_title, direction: "outbound"|"inbound", counterpart_masked, state, started_at, duration_s,
+- `Call = {id, task_title, task_goal: str|null, direction: "outbound"|"inbound", counterpart_masked, state, started_at, duration_s,
   mode: "agent"|"owner", transcript: [{seq, speaker: "hermes"|"business"|"owner"|"system", text, ts}], summary: str|null}`.
   Transcript text is already masked (OTP, card-like runs).
 - `state` in `awaiting_approval | dialing | ivr | on_hold | human_detected | ringing_owner | owner_connected |

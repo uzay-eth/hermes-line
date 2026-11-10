@@ -5,7 +5,8 @@ owner's memory, user profile, persona or project context.
   temp dir per call (removed after it), never the gateway's working directory.
 - A call profile that carries the owner's memory, user profile, memory provider, persona or prompt keys, MCP servers,
   hooks or enabled plugins is refused at approval (task blocked, reply names each problem and the fix), at inbound
-  admission (both voice paths) and when the driver starts, and is said once in the owner's chat at service start.
+  admission (both voice paths) and when the driver starts, and is said once in the owner's chat at service start
+  (the latest task's stored chat; see test_s7_fix_round.py for the no-bound-session contract).
 - The summary that quotes the caller is only posted (marked untrusted); the owner's session gets an engine sentence.
 - The approval message shows the goal the call session will get.
 Offline: temporary profiles with SYNTHETIC content, a fake ACP connection, the L1 fake Twilio. No real profile is read.
@@ -178,7 +179,9 @@ class GlueTests(unittest.TestCase):
 
         host, svc = self.host(make_profile(self.tmp, cloned=True),
                               Ctx({"sms_source": "none", "call_profile": "hermes-line-calls"}))
-        ready = SimpleNamespace(status="ready", profile_check=svc.profile_check)
+        asked = SimpleNamespace(origin=SimpleNamespace(session_key="sk-owner"))  # the chat that last asked for a call
+        ready = SimpleNamespace(status="ready", profile_check=svc.profile_check,
+                                store=SimpleNamespace(list_tasks=lambda **kw: [asked]))
         host._profile_notice(ready)
         host._profile_notice(ready)  # a later start (lease retry) does not repeat it
         self.assertEqual(len(posted), 1)
