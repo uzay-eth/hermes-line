@@ -4,10 +4,10 @@ The S7 delta review's four cases, each with Hermes's own functions rather than a
   * R1  with Python's temp dir inside a synthetic git project, the call cwd the plugin picks gets no workspace block
         (the commit-subject canary is absent) while the project itself would (control);
   * R2  agent.coding_instructions reaches Hermes's prompt inputs and is refused, and a hooks/ directory Hermes would
-        load is refused; round 2 (STEER-9): a .env HERMES_IGNORE_RULES=0 and HERMES_ENVIRONMENT_HINT, quoted
-        ('NAME'=...) or plain, undo --ignore-rules or reach the prompt in Hermes, in the order `hermes acp` loads
-        them (control), and the plugin's check, which runs Hermes's own loader in a separate process, refuses each
-        without this process opening the .env; a provider key alone passes;
+        load is refused; the .env is a stated limit (STEER-10, catalog rule 11): a .env HERMES_IGNORE_RULES=0 or
+        HERMES_ENVIRONMENT_HINT, quoted ('NAME'=...) or plain, undoes --ignore-rules or reaches the prompt in Hermes,
+        in the order `hermes acp` loads it (why the setup keeps only the provider key there), and the plugin's check
+        does not inspect it: it opens no .env, starts no process and refuses none of them;
   * R3  with no conversation bound (the service's own thread), Hermes's post_message refuses, and the summary and the
         start-up notice still reach the stored originating chat; no caller words are injected;
   * R4  a 1,960-character goal under Discord's 2,000 limit: the old single message is clamped (canary lost), the new
@@ -57,21 +57,20 @@ class RealHermesS7(unittest.TestCase):
         self.assertTrue(o["hermes_hooks_dir_is_the_profiles"])
         self.assertEqual(o["guard_hooks"], ["hooks/ not empty"])
 
-    def test_S9_R2_hermes_loaded_dotenv_is_refused_without_the_plugin_reading_it(self):
+    def test_S10_the_dotenv_is_a_stated_limit_hermes_loads_it_and_the_plugin_never_touches_it(self):
         o = self.out["r2"]
         self.assertNotIn("error", o)
-        off, hint = [".env load turns HERMES_IGNORE_RULES off"], [".env load sets HERMES_ENVIRONMENT_HINT"]
         for form in ("quoted", "plain"):
             with self.subTest(form=form):
-                # Control: Hermes's reload after the plugin's HERMES_IGNORE_RULES=1 (also --ignore-rules) undoes it.
+                # Hermes's reload after the plugin's HERMES_IGNORE_RULES=1 (also --ignore-rules) undoes it, and the
+                # hint reaches the prompt: the README's reason to keep only the provider key in that file.
                 self.assertEqual(o["hermes"][f"flag_{form}"]["flags"], [])
                 self.assertTrue(o["hermes"][f"hint_{form}"]["hint_has_canary"])
-                self.assertEqual(o["guard"][f"flag_{form}"], off)  # on 1e6a2cb, quoted: []
-                self.assertEqual(o["guard"][f"hint_{form}"], hint)  # on 1e6a2cb, quoted: []
         self.assertEqual(o["hermes"]["key_only"], {"flags": ["ignore_rules"], "hint_has_canary": False})
-        self.assertEqual(o["guard"]["key_only"], [])
-        self.assertEqual(o["plugin_opened_dotenv"], {name: [] for name in o["guard"]}, "the plugin read the .env")
-        self.assertNotIn("CANARY", json.dumps(o["guard"]))
+        names = list(o["guard"])
+        self.assertEqual(o["guard"], {name: [] for name in names})  # not inspected (README Limits)
+        self.assertEqual(o["plugin_opened_dotenv"], {name: [] for name in names}, "the plugin read the .env")
+        self.assertEqual(o["plugin_started_process"], {name: [] for name in names}, "the check started a process")
 
     def test_S7F_R3_summary_and_start_notice_reach_the_stored_chat_without_a_bound_session(self):
         o = self.out["r3"]

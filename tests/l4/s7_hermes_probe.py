@@ -7,10 +7,10 @@ What runs as Hermes ships it:
   R1  agent.coding_context (coding_system_prompt_parts, _git_root, _marker_root, _PROJECT_MARKERS) on the call cwd
       the plugin picks while Python's temp dir sits inside a synthetic git project (as Hermes's cache/scratch can).
   R2  agent.coding_context.resolve_runtime_mode (operator instructions), gateway.hooks._resolve_hooks_dir;
-      round 2 (STEER-9): hermes_cli.env_loader.load_hermes_dotenv + hermes_cli.gateway_chat.env_launch_flags +
-      agent.prompt_builder._embedder_environment_hint on quoted and plain .env names (the control: the order
-      `hermes acp` runs), and the plugin's real check (call_profile.loaded_env_problems, a Hermes process running
-      env_probe.py), with every file this process opens recorded.
+      the .env limit (STEER-10): hermes_cli.env_loader.load_hermes_dotenv + hermes_cli.gateway_chat.env_launch_flags
+      + agent.prompt_builder._embedder_environment_hint on quoted and plain .env names, in the order `hermes acp`
+      runs (Hermes loads the .env over --ignore-rules), and the plugin's real check on the same profiles, with every
+      file this process opens and every process it starts recorded (the plugin touches no .env).
   R3  hermes_cli.plugin_messages.post / PluginMessage, gateway.session_context.scoped_session_key and
       gateway.plugin_messages.post/_fit; only the gateway runner and the session lookup are stand-ins.
   R4  gateway.plugin_messages._fit with Discord's adapter limit (2,000).
@@ -52,10 +52,17 @@ OPENED: list = []
 RECORDING: list = []
 
 
+PROCESSES: list = []
+
+
 def _audit(event, args):
-    """Every file this process opens while RECORDING (builtins/io/os open, pathlib reads)."""
-    if event == "open" and RECORDING and isinstance(args[0], (str, bytes, os.PathLike)):
+    """While RECORDING: every file this process opens (builtins/io/os open, pathlib reads), every process it starts."""
+    if not RECORDING:
+        return
+    if event == "open" and isinstance(args[0], (str, bytes, os.PathLike)):
         OPENED.append(os.fsdecode(args[0]))
+    elif event in ("subprocess.Popen", "os.posix_spawn", "os.exec", "os.system", "os.spawn"):
+        PROCESSES.append(event)
 
 
 sys.addaudithook(_audit)
@@ -138,13 +145,14 @@ def r2():
     res["guard_hooks"] = call_profile.problems(prof, [])
     shutil.rmtree(prof / "hooks")
 
-    # Round 2 (STEER-9): the profile's .env, in the forms Hermes's parser accepts (the S7 recheck's quoted names).
+    # The .env (STEER-10, a stated limit): Hermes loads it, in the forms its parser accepts (the S7 recheck's quoted
+    # names); the plugin's check neither opens it nor starts anything that does.
     from agent.prompt_builder import _embedder_environment_hint
     hermes_glue._profile_dir = lambda name: prof  # the glue's lookup; everything after it is the plugin's own path
     fixtures = {"flag_quoted": "'HERMES_IGNORE_RULES'=0\n", "hint_quoted": f"'HERMES_ENVIRONMENT_HINT'={CANARY}\n",
                 "flag_plain": "HERMES_IGNORE_RULES=0\n", "hint_plain": f"HERMES_ENVIRONMENT_HINT={CANARY}\n",
                 "key_only": "OPENROUTER_API_KEY=SYNTHETIC-not-a-key\n"}
-    res["hermes"], res["guard"], res["plugin_opened_dotenv"] = {}, {}, {}
+    res["hermes"], res["guard"], res["plugin_opened_dotenv"], res["plugin_started_process"] = {}, {}, {}, {}
     for name, text in fixtures.items():
         (prof / ".env").write_text(text, encoding="utf-8")
         # Control, Hermes's own effect in this process, in the order `hermes acp` runs: HERMES_IGNORE_RULES=1 (from
@@ -157,12 +165,14 @@ def r2():
         os.environ.clear()
         os.environ.update(saved)
         OPENED.clear()
+        PROCESSES.clear()
         RECORDING.append(True)
         try:
             res["guard"][name] = hermes_glue.call_profile_problems("calls")
         finally:
             RECORDING.clear()
         res["plugin_opened_dotenv"][name] = [p for p in OPENED if os.path.basename(p) == ".env"]
+        res["plugin_started_process"][name] = list(PROCESSES)
     (prof / ".env").unlink()
     return res
 

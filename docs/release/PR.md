@@ -54,15 +54,12 @@ Adds `plugin-catalog/hermes-line.yaml` (source copy in the plugin repo: `docs/re
   `session.create` `toolsets`, so the plugin bounds the call session's tools with a dedicated profile instead.
 - Private imports, each guarded (a missing one refuses the call or skips the post, never crashes):
   `hermes_cli.profiles.get_profile_dir` and `hermes_cli.default_soul` (`DEFAULT_SOUL_MD`,
-  `is_legacy_template_soul`) for the call-profile check, `gateway.session_context.scoped_session_key` to post
-  the summary into the stored session that asked for the call from the service's own thread, and, in
-  `plugin/line/engine/env_probe.py` (a separate Hermes process the plugin starts; the plugin never imports it),
-  `hermes_cli.env_loader.load_hermes_dotenv` and `hermes_cli.gateway_chat.env_launch_flags`: Hermes's own loader
-  reads the call profile's `.env` there, as for the call agent, and only flag and variable names come back (the
-  plugin never opens a dotenv file, rule 11). Seams we would ask for: a profile-directory lookup, the stock-SOUL
-  check, `post_message` to a stored session of the plugin's own profile, and `hermes acp` launch flags that hold
-  after its dotenv load (`acp_adapter/entry.py` `_load_env` reloads the profile's `.env` with override after
-  `--ignore-rules` is set, so a `.env` `HERMES_IGNORE_RULES=0` undoes it).
+  `is_legacy_template_soul`) for the call-profile check, and `gateway.session_context.scoped_session_key` to post
+  the summary into the stored session that asked for the call from the service's own thread. Seams we would ask
+  for: a profile-directory lookup, the stock-SOUL check, `post_message` to a stored session of the plugin's own
+  profile, and `hermes acp` launch flags that hold after its own dotenv load (`acp_adapter/entry.py` `_load_env`
+  reloads the profile's `.env` with override after `--ignore-rules` is set, so a `HERMES_IGNORE_RULES=0` in the
+  call profile's `.env` undoes it; the plugin does not inspect that file, rule 11).
 
 ## Disclosures (rule 13)
 
@@ -74,13 +71,10 @@ Adds `plugin-catalog/hermes-line.yaml` (source copy in the plugin repo: `docs/re
 - **Reads outside its own data:** the SMS inbox of a USB-attached Android phone via `adb shell content query`
   (read-only), when `sms_source: adb` (default; the phone is optional). Before each call, the call profile's
   `config.yaml` and `SOUL.md`, the lists of its `plugins` and `hooks` folders (and the size of its memory files),
-  never its `.env`; whether the temp directory or a folder above it holds a `.git` or a project file; then the call
+  not its `.env`; whether the temp directory or a folder above it holds a `.git` or a project file; then the call
   session's tool list through `hermes acp`.
-- **Processes it starts:** `adb`, with only `PATH`, `HOME`, `LANG` and `ANDROID_*`/`ADB_*` from the environment; at
-  each call-profile check, a short Hermes process for the call profile (`env_probe.py`, Hermes's own interpreter,
-  the call agent's environment) in which Hermes's loader reads the profile's `.env` and which prints only
-  launch-flag and variable names; one `hermes acp` process per call, which starts the call profile's Hermes gateway
-  (idle-exit) if it is not running.
+- **Processes it starts:** `adb`, with only `PATH`, `HOME`, `LANG` and `ANDROID_*`/`ADB_*` from the environment; one
+  `hermes acp` process per call, which starts the call profile's Hermes gateway (idle-exit) if it is not running.
 - **Background service:** with `enabled: true` (default `false`), a call service in the Hermes process listening on
   `127.0.0.1:8788` (exposed by the user's tunnel) and on a loopback-only port for the in-call tools (per-call
   256-bit bearer token).
@@ -103,16 +97,10 @@ Adds `plugin-catalog/hermes-line.yaml` (source copy in the plugin repo: `docs/re
   `agent.system_prompt`, `personalities`, `agent.personalities`, `prefill_messages_file`,
   `agent.prefill_messages_file`, `agent.environment_hint`, `agent.coding_instructions`, `platform_hints`, `hooks`,
   `mcp_servers`, a hook directory in `hooks/`, enabled plugins, a non-empty `MEMORY.md` or `USER.md` (size only,
-  never read), a `SOUL.md` other than empty or Hermes's stock or earlier auto-seeded text, or a `.env` that, once
-  Hermes has loaded it, leaves `--ignore-rules` off, turns another launch flag on (`HERMES_YOLO_MODE`,
-  `HERMES_SAFE_MODE`, `HERMES_IGNORE_USER_CONFIG`, `HERMES_ACCEPT_HOOKS`) or sets a prompt variable
-  (`HERMES_EPHEMERAL_SYSTEM_PROMPT`, `HERMES_PREFILL_MESSAGES_FILE`, `HERMES_ENVIRONMENT_HINT`,
-  `HERMES_ENABLE_PROJECT_PLUGINS`, `HERMES_TUI_SKILLS`). The plugin never opens the `.env`: it starts a short Hermes
-  process for the call profile with the call agent's environment, where Hermes's own loader reads it (with a
-  managed `.env` and external secret sources, as for the call), and that process reports only those flag and
-  variable names; no answer refuses the call. The setup says the call profile's `.env` holds provider keys only,
-  because Hermes loads every variable in it into the call agent. This is a fixed list, not a check of everything
-  Hermes loads. A refused profile dials nobody (the approval reply names each problem and the fix) and admits no
+  never read) or a `SOUL.md` other than empty or Hermes's stock or earlier auto-seeded text. The plugin does not
+  inspect the call profile's `.env` (rule 11): the setup creates the profile fresh, so that file holds only the
+  provider key the setup writes, and Hermes itself loads it into the call agent. An old `--clone` call profile must
+  be recreated; the `/line approve` reply says so. This is a fixed list, not a check of everything Hermes loads. A refused profile dials nobody (the approval reply names each problem and the fix) and admits no
   inbound caller on either voice path; at service start the plugin posts it once into the chat of the latest task
   (of the last 50) that came from a chat, or answers the next `/line` command or `hermes_line_request_call` with
   it. The session runs in a fresh
@@ -124,9 +112,9 @@ Adds `plugin-catalog/hermes-line.yaml` (source copy in the plugin repo: `docs/re
   the user's process reaches it when it starts the call gateway; the proxy variables pass as set. Stated limits in
   the plugin README: Hermes's runtime block (host OS, home and working directory paths, profile name, time zone),
   callbacks matched by spoofable caller ID (that task's title and goal), a call gateway that is already running
-  keeps its own environment (prompt variables included), a managed `config.yaml` layer is not read, of the `.env`
-  only the listed flags and prompt variables are judged (every other variable reaches the call agent as set),
-  skills and unlisted keys are not read, the owner's own agent can use `hermes_line_say` without a per-sentence
+  keeps its own environment (prompt variables included), a managed configuration layer is not read, the call
+  profile's `.env` is not inspected (Hermes loads it into the call agent; anything besides the provider key there,
+  such as `HERMES_IGNORE_RULES=0`, reaches the call session), skills and unlisted keys are not read, the owner's own agent can use `hermes_line_say` without a per-sentence
   approval, and a relay chat with a limit under 1,500 characters can cut an approval part.
 - **Goal at approval.** The approval message shows the whole goal the call session will get, in numbered parts of
   at most 1,500 characters when it is long (Hermes clamps a post to the chat's limit and does not split it; Discord
@@ -160,16 +148,17 @@ Adds `plugin-catalog/hermes-line.yaml` (source copy in the plugin repo: `docs/re
 ## Validation
 
 `hermes plugins validate --install-deps` (cold, throwaway `HERMES_HOME`): "Validation passed. Exit status: 0"; every
-check from manifest to desktop surface is ✓, with one warning (⚠ private core imports, catalog rule 9: the six
+check from manifest to desktop surface is ✓, with one warning (⚠ private core imports, catalog rule 9: the four
 imports listed under "Hermes surfaces used") and the in-process isolation note for `ctx.post_message`. The opened PR
 carries the output of this check run on a fresh checkout at the pinned commit.
 
-Last cold run: see `tests/l1/evidence/validate.txt`. Offline tests on the release tree (2026-11-10): L1 603, L2 145,
+Last cold run: see `tests/l1/evidence/validate.txt`. Offline tests on the release tree (2026-11-10): L1 602, L2 145,
 L4 360 (with `HERMES_AGENT_DIR` pointing at a Hermes checkout; without one 7 skip), L5 88 and L6 122 pass; L3 75 of
 76 (the remaining test needs a local Hermes Desktop build). 15 of them (`tests/l1/test_s7_call_profile.py`,
-`tests/l4/test_s7_adb_env.py`) cover the catalog review of `d92bc1fb`; 24 more (`tests/l1/test_s7_fix_round.py`,
+`tests/l4/test_s7_adb_env.py`) cover the catalog review of `d92bc1fb`; 23 more (`tests/l1/test_s7_fix_round.py`,
 `tests/l4/test_s7_hermes_contracts.py`, the latter on Hermes's own prompt builder, dotenv loader and message
-posting) cover two reviews of that fix, 4 of them the dotenv check through Hermes's own loader.
+posting) cover the reviews of that fix, 3 of them that no plugin code opens, loads or inspects the call profile's
+`.env`.
 
 ## Tested live
 

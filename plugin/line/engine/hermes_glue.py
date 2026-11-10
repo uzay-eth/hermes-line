@@ -122,8 +122,7 @@ def _is_stock_soul(text: str) -> bool:
 def call_profile_problems(name: str) -> list[str]:
     """Nous review of d92bc1fb: the call profile may hold none of the owner's memory, user profile, persona, prompt
     keys or plugins (``call_profile.py``). Checked before every call session, so a profile cloned before this check
-    existed is refused, not trusted. Its dotenv layers are judged by what Hermes's own loader leaves in the call
-    agent's environment (``call_profile.loaded_env_problems``); the plugin never opens them (S7 recheck R2)."""
+    existed is refused, not trusted. The profile's ``.env`` is not inspected (catalog rule 11; README Limits)."""
     from . import call_profile
     if not name:
         return ["call_profile not set (README, setup step 4)"]
@@ -131,7 +130,7 @@ def call_profile_problems(name: str) -> list[str]:
         profile_dir = _profile_dir(name)
     except Exception:
         return ["profile not found"]
-    return call_profile.problems(profile_dir, _neutral_souls(), _is_stock_soul, call_profile.loaded_env_problems)
+    return call_profile.problems(profile_dir, _neutral_souls(), _is_stock_soul)
 
 
 class _Host:
@@ -228,7 +227,8 @@ class _Host:
         the fix, instead of only at the next call (an owner who set it up with --clone before this check). The start
         thread has no conversation, so the notice goes to the chat of the latest task that has one, of the last 50
         (Hermes's ``scoped_session_key``); without one it waits for the owner's next ``/line`` command or
-        ``hermes_line_request_call`` (``post_due_notice``; no other tool posts it). It counts as said only when Hermes accepted the post (readiness RC-2)."""
+        ``hermes_line_request_call`` (``post_due_notice``; no other tool posts it). It counts as said only when Hermes
+        accepted the post (readiness RC-2)."""
         if self.profile_notice_sent or svc.status != "ready":
             return
         try:
@@ -306,10 +306,10 @@ class _Host:
         """The masked summary quotes the other party, so it is only posted to the owner's chat (marked as untrusted
         text from the call), never injected into the owner's tooled session. That session is offered only a sentence
         the engine builds from its own fields (Nous review of d92bc1fb; STEER-8 D1), best effort: Hermes refuses the
-        injection unless ``allow_gateway_injection`` is on for the plugin, and the summary does not depend on it. Route: edit the approval message
-        (its handle lives only in this process), else post into the task's stored originating session (works after
-        a restart or a failed edit: S7 delta review R3). A task with no chat session (asked for by phone) gets a
-        post only when this runs in a call bound to a conversation."""
+        injection unless ``allow_gateway_injection`` is on for the plugin, and the summary does not depend on it.
+        Route: edit the approval message (its handle lives only in this process), else post into the task's stored
+        originating session (works after a restart or a failed edit: S7 delta review R3). A task with no chat
+        session (asked for by phone) gets a post only when this runs in a call bound to a conversation."""
         text = f"{SUMMARY_MARK} {row['text']}"
         posted = False
         handle = self.handles.get(task.id) if task is not None else None

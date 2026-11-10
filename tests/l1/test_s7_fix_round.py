@@ -3,9 +3,9 @@
 - R1/RC-5: the call session's temp dir is never under a git repository or project marker, even with TMPDIR inside
   one; with no clean temp root the session does not start.
 - R2: a profile with agent.coding_instructions or a hooks/ directory is refused.
-- R2 round 2 (STEER-9, S7 recheck; catalog rule 11): the plugin never opens the profile's .env; what Hermes's own
-  loader leaves in the call agent's environment (ignore_rules off, another launch flag on, a prompt name set) is read
-  back from a separate process, names only, and refused; a probe that cannot answer refuses too.
+- Catalog rule 11 (STEER-10, owner decision): no plugin code touches the call profile's .env in any form. The
+  profile check opens no .env and starts no process, and no plugin module references dotenv loading; the .env is a
+  stated limit (README: the setup creates the profile fresh, so it holds only the provider key; Hermes loads it).
 - R3/RC-2/RC-3: with no bound conversation (the service's own thread), the summary and the start-up notice are posted
   into the stored originating session (Hermes's scoped_session_key); the notice counts only when the post is accepted.
 - R4/RC-4: the approval request fits each message within the smallest built-in chat limit and carries the whole goal;
@@ -156,134 +156,68 @@ class ProfileKeyTests(unittest.TestCase):
         self.assertEqual(self.problems(), ["hooks/ not empty"])
 
 
-_OPENED: list = []
+_EVENTS: list = []
 _RECORDING = threading.Event()
 
 
 def _audit(event, args):
-    """Every file this process opens while recording (``open`` audit event: builtins/io/os open, pathlib reads)."""
-    if event == "open" and _RECORDING.is_set() and isinstance(args[0], (str, bytes, os.PathLike)):
-        _OPENED.append(os.fsdecode(args[0]))
+    """While recording: every file this process opens (``open``: builtins/io/os open, pathlib reads) and every
+    process it starts (``subprocess.Popen``, ``os.posix_spawn``, ``os.exec``, ``os.system``)."""
+    if not _RECORDING.is_set():
+        return
+    if event == "open" and isinstance(args[0], (str, bytes, os.PathLike)):
+        _EVENTS.append(("open", os.fsdecode(args[0])))
+    elif event in ("subprocess.Popen", "os.posix_spawn", "os.exec", "os.system", "os.spawn"):
+        _EVENTS.append(("process", event))
 
 
 sys.addaudithook(_audit)
-VERDICT = "  .env load turns HERMES_IGNORE_RULES off"
 
 
-class LoadedEnvTests(unittest.TestCase):
-    """R2 round 2 (STEER-9): the profile's dotenv layers are judged by Hermes's own loader in a separate process."""
+class DotenvUntouchedTests(unittest.TestCase):
+    """Catalog rule 11 (STEER-10): no plugin code opens, reads, parses or loads a dotenv file, in any process."""
 
-    def setUp(self):
-        self.tmp = Path(tempfile.mkdtemp(prefix="hl-s9-"))
-        self.prof = make_profile(self.tmp, cloned=False)
-        # Valid for Hermes's parser, missed by the earlier name regex (S7 recheck R2); the canary stands for a key.
-        (self.prof / ".env").write_text(f"OPENROUTER_API_KEY={CANARY}\n'HERMES_IGNORE_RULES'=0\n"
-                                        f"'HERMES_ENVIRONMENT_HINT'={CANARY}\n", encoding="utf-8")
-
-    def fake_hermes(self, report: str, code: int = 0, sleep: int = 0) -> str:
-        """A stand-in for Hermes's interpreter: records its arguments, environment names and the two values the
-        plugin sets, prints some noise and ``report``."""
-        out = self.tmp / "seen"
-        script = self.tmp / f"fake-hermes-python-{len(list(self.tmp.glob('fake-hermes-python-*')))}"
-        script.write_text(f"#!/bin/sh\nprintf '%s\\n' \"$@\" > '{out}.argv'\nenv | cut -d= -f1 > '{out}.names'\n"
-                          f"printf '%s\\n' \"$HERMES_HOME\" \"$HERMES_IGNORE_RULES\" \"$PWD\" > '{out}.values'\n"
-                          f"sleep {sleep}\necho 'hermes-line-env-like noise'\nprintf '%s\\n' '{report}'\nexit {code}\n",
-                          encoding="utf-8")
-        script.chmod(0o700)
-        return str(script)
-
-    def test_S9_R2_the_plugin_never_opens_the_call_profiles_dotenv(self):
-        calls = []
-
-        def loaded_env(profile_dir):
-            calls.append(Path(profile_dir))
-            return [VERDICT.strip()]
-
-        with mock.patch.object(hermes_glue, "_profile_dir", create=True, return_value=self.prof), \
-                mock.patch.object(hermes_glue, "_neutral_souls", create=True, return_value=[STOCK_SOUL]), \
-                mock.patch.object(call_profile, "loaded_env_problems", loaded_env, create=True):
-            _OPENED.clear()
+    def test_S10_the_profile_check_opens_no_dotenv_and_starts_no_process(self):
+        prof = make_profile(Path(tempfile.mkdtemp(prefix="hl-s10-")), cloned=False)
+        # A provider key (the canary) and names Hermes would load over --ignore-rules: not inspected (stated limit).
+        (prof / ".env").write_text(f"OPENROUTER_API_KEY={CANARY}\n'HERMES_IGNORE_RULES'=0\n"
+                                   f"HERMES_ENVIRONMENT_HINT={CANARY}\n", encoding="utf-8")
+        with mock.patch.object(hermes_glue, "_profile_dir", create=True, return_value=prof), \
+                mock.patch.object(hermes_glue, "_neutral_souls", create=True, return_value=[STOCK_SOUL]):
+            _EVENTS.clear()
             _RECORDING.set()
             try:
                 found = hermes_glue.call_profile_problems("hermes-line-calls")
             finally:
                 _RECORDING.clear()
-        self.assertTrue(any(p.endswith("config.yaml") for p in _OPENED), _OPENED)  # the recorder sees reads
-        self.assertEqual([p for p in _OPENED if os.path.basename(p) == ".env"], [], "the plugin read the .env")
-        self.assertEqual(calls, [self.prof])  # the glue hands the profile to the Hermes-loader check
-        self.assertEqual(found, [VERDICT.strip()])  # on 1e6a2cb: [] (quoted names pass the regex)
+        opened = [path for kind, path in _EVENTS if kind == "open"]
+        self.assertTrue(any(path.endswith("config.yaml") for path in opened), _EVENTS)  # the recorder sees reads
+        self.assertEqual([path for path in opened if os.path.basename(path) == ".env"], [], "the plugin read .env")
+        self.assertEqual([e for e in _EVENTS if e[0] == "process"], [], "the check started a process")  # 32187f2: 1
+        self.assertEqual(found, [])  # the .env is not part of the check (README Limits)
         self.assertNotIn(CANARY, " ".join(found))
-        # Source: no plugin module names a dotenv path except env_probe.py, which only hands it to Hermes's loader
-        # and opens nothing itself; no plugin module imports a dotenv parser.
+
+    def test_S10_no_plugin_module_references_dotenv_loading(self):
+        """Grep-style, over every plugin source file, no exemption: no dotenv module or Hermes env loader imported, no
+        name that mentions dotenv (load_dotenv, dotenv_values, load_hermes_dotenv, ...), no `.env` path literal."""
         import ast
-        for path in sorted((ROOT / "plugin").rglob("*.py")):
+        sources = sorted((ROOT / "plugin").rglob("*.py"))
+        self.assertGreater(len(sources), 20)
+        for path in sources:
             tree = ast.parse(path.read_text(encoding="utf-8"))
-            literals = [n.value for n in ast.walk(tree) if isinstance(n, ast.Constant) and n.value == ".env"]
-            imports = [a.name for n in ast.walk(tree) if isinstance(n, ast.Import) for a in n.names] + \
-                      [n.module or "" for n in ast.walk(tree) if isinstance(n, ast.ImportFrom)]
+            modules = [a.name for n in ast.walk(tree) if isinstance(n, ast.Import) for a in n.names]
+            modules += [n.module or "" for n in ast.walk(tree) if isinstance(n, ast.ImportFrom)]
+            names = [a.name for n in ast.walk(tree) if isinstance(n, ast.ImportFrom) for a in n.names]
+            names += [n.id for n in ast.walk(tree) if isinstance(n, ast.Name)]
+            names += [n.attr for n in ast.walk(tree) if isinstance(n, ast.Attribute)]
+            names += [n.name for n in ast.walk(tree) if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef))]
+            paths = [n.value for n in ast.walk(tree) if isinstance(n, ast.Constant) and isinstance(n.value, str)
+                     and (n.value == ".env" or n.value.endswith(("/.env", "\\.env")))]
             with self.subTest(module=str(path.relative_to(ROOT))):
-                self.assertFalse(any(m.split(".")[0] == "dotenv" for m in imports))
-                if path.name == "env_probe.py":
-                    calls_ = {getattr(n.func, "attr", getattr(n.func, "id", "")) for n in ast.walk(tree)
-                              if isinstance(n, ast.Call)}
-                    self.assertFalse(calls_ & {"open", "read_text", "read_bytes", "load_dotenv", "dotenv_values"})
-                else:
-                    self.assertEqual(literals, [])
-
-    def test_S9_R2_hermes_loader_verdicts_are_refused_and_names_only_come_back(self):
-        root = str(self.tmp / "hermes-src")
-        cases = (
-            ('hermes-line-env {"flags": ["ignore_rules"], "prompt": []}', 0, []),
-            ('hermes-line-env {"flags": [], "prompt": ["HERMES_ENVIRONMENT_HINT"]}', 0,
-             [".env load turns HERMES_IGNORE_RULES off", ".env load sets HERMES_ENVIRONMENT_HINT"]),
-            ('hermes-line-env {"flags": ["accept_hooks", "ignore_rules", "yolo"], "prompt": ["HERMES_TUI_SKILLS", '
-             '"HERMES_EPHEMERAL_SYSTEM_PROMPT"]}', 0,
-             [".env load turns HERMES_YOLO_MODE on", ".env load turns HERMES_ACCEPT_HOOKS on",
-              ".env load sets HERMES_EPHEMERAL_SYSTEM_PROMPT", ".env load sets HERMES_TUI_SKILLS"]),
-            # fail closed: a failed load, no answer, a name it should not know, a malformed answer
-            ('hermes-line-env {"flags": ["ignore_rules"], "prompt": []}', 1, [".env load unverified"]),
-            ("nothing", 0, [".env load unverified"]),
-            ('hermes-line-env {"flags": ["ignore_rules"], "prompt": ["OPENROUTER_API_KEY"]}', 0,
-             [".env load unverified"]),
-            ('hermes-line-env {"flags": "ignore_rules", "prompt": []}', 0, [".env load unverified"]),
-            ('hermes-line-env {"flags": [["x"]], "prompt": []}', 0, [".env load unverified"]),
-        )
-        planted = {"PATH": "/usr/bin:/bin", "HOME": str(self.tmp), "HERMES_HOME": "/elsewhere/.hermes",
-                   "OPENROUTER_API_KEY": "SYNTHETIC-not-a-key", "HERMES_ENVIRONMENT_HINT": "SYNTHETIC",
-                   "HERMES_YOLO_MODE": "1", "PYTHONPATH": "/x"}
-        for report, code, want in cases:
-            with self.subTest(report=report, code=code), mock.patch.dict(os.environ, planted, clear=True):
-                found = call_profile.loaded_env_problems(self.prof, python=self.fake_hermes(report, code),
-                                                         hermes_root=root)
-                self.assertEqual(found, want)
-        argv = (self.tmp / "seen.argv").read_text(encoding="utf-8").split("\n")[:-1]
-        self.assertEqual(argv, ["-I", "-B", str(call_profile.ENV_PROBE), root, *acp_driver.PROMPT_ENV])
-        # The environment the `hermes acp` child gets: the allow-list, --ignore-rules set, HERMES_HOME the profile.
-        names = set((self.tmp / "seen.names").read_text(encoding="utf-8").split())
-        self.assertFalse(names & {"OPENROUTER_API_KEY", "HERMES_ENVIRONMENT_HINT", "HERMES_YOLO_MODE", "PYTHONPATH"})
-        self.assertEqual((self.tmp / "seen.values").read_text(encoding="utf-8").split("\n")[:3],
-                         [str(self.prof), "1", str(self.prof.resolve())])
-        with mock.patch.object(call_profile, "_hermes_root", return_value=None):
-            self.assertEqual(call_profile.loaded_env_problems(self.prof, python=self.fake_hermes("x")),
-                             [".env load unverified"])  # no Hermes to ask
-        self.assertEqual(call_profile.loaded_env_problems(self.prof, python=str(self.tmp / "missing"),
-                                                          hermes_root=root), [".env load unverified"])
-        slow = self.fake_hermes('hermes-line-env {"flags": ["ignore_rules"], "prompt": []}', sleep=5)
-        self.assertEqual(call_profile.loaded_env_problems(self.prof, python=slow, hermes_root=root, timeout_s=0.5),
-                         [".env load unverified"])
-
-    def test_S9_R2_a_loaded_env_problem_refuses_the_call_before_any_process_starts(self):
-        from test_s7_call_profile import GlueTests
-        glue = GlueTests("test_S7_cloned_call_profile_is_refused_before_any_process_starts")
-        glue.setUp()
-        self.addCleanup(glue.doCleanups)
-        _, svc = glue.host(self.prof, loaded_env=[".env load sets HERMES_ENVIRONMENT_HINT"])
-        with self.assertRaises(AcpError) as caught:
-            svc.driver_factory("s1").start("briefing")
-        self.assertEqual(svc.profile_check(), str(caught.exception))  # the approval and admission check
-        self.assertTrue(str(caught.exception).startswith(
-            "call profile not neutral: .env load sets HERMES_ENVIRONMENT_HINT. Fix:"))
-        self.assertEqual(FakeConn.made, [])  # no `hermes acp` child
+                self.assertEqual([m for m in modules if "dotenv" in m or m.startswith("hermes_cli.env_loader")], [])
+                self.assertEqual([n for n in names if "dotenv" in n.lower()], [])
+                self.assertEqual(paths, [])
+        self.assertFalse((ROOT / "plugin" / "line" / "engine" / "env_probe.py").exists())
 
 
 class NoBoundSessionCtx:
