@@ -32,7 +32,7 @@ This is a hackathon release. Every claim below names its evidence in this reposi
 | Grok Voice path (optional xAI key) | **Live, once.** Call 4 (64 s, `owner call 4`, to the owner's phone): Grok spoke for Hermes and used three tools (one question to Hermes, the outcome report, the hang-up); the conversation session connected in 1214 ms once the person was detected, and `voice_first_audio` logged 490 ms; Grok was connected 53 s and hold-path speech-to-text 12.8 s; harness estimate $0.096 of xAI time (not an invoice). Seen on that call and fixed offline in L5 round 6: the disclosure recorded twice in the transcript (spoken once) and repeated copies of the caller's words. No barge-in happened, so barge-in is still unproven live. Key tones on this path are untested. | `evidence/trial/call_374a992b53c044f9/trial.json` (`grok_evidence`), `docs/lanes/L5.md` section 7 |
 | Owner line mode (call your line, key a PIN, have Hermes call a business) | **Experimental, off by default** (off unless `HERMES_LINE_OWNER_PIN` is set). Offline tests only; no live call has used the PIN yet (calls 3 and 5 had no PIN step). Security review R1b delta 35: YES for one attended, keypad-only trial in which the owner asks Hermes to call his own other line; not cleared for business calls or a broader allowlist. Two Medium limits remain (see setup step 8). | `docs/lanes/L1.md` sections 22-26, `evidence/reviews/R1-DELTA35.md` |
 | Desktop pane | **Runs inside a real Hermes Desktop** (v0.22.5, isolated sandbox install, real REST API) with sample data, matching the offline harness renders. Replayed in real time with the recorded data of Delta run 2: the pane went from "Dialing" straight to the owner ring, because "A person answered" lasted 1.2 s and the pane polls every 5 s; the ended headline showed the summary's status line; the time strip was wrong for real data (backlog B7-B9, B12; fixes briefed). Not yet captured during a live call. | `docs/lanes/L3.md` rounds 5 and 6, `tools/pane-preview/screenshots/desktop/`, `tools/pane-preview/screenshots/live/replay-call_2243b7f205194ab5/`, `docs/BACKLOG.md` |
-| `hermes plugins validate --install-deps` | Passed, exit 0 (cold run). No plugin warnings up to L1 round 15; since the call-profile check (2026-11-10) one warning, private core imports, for the four guarded imports listed in `docs/release/PR.md`. | `tests/l1/evidence/validate.txt` (round 15) |
+| `hermes plugins validate --install-deps` | Passed, exit 0 (cold run). No plugin warnings up to L1 round 15; since the call-profile check (2026-11-10) one warning, private core imports, for the six imports listed in `docs/release/PR.md`. | `tests/l1/evidence/validate.txt` (round 15) |
 | Offline test suites | 1247 tests pass (L1 535, L2 130, L3 66, L4 317, L5 88, L6 111), no network. | `docs/release/test-run.txt` |
 
 ## How a call goes
@@ -159,10 +159,11 @@ plugins:
 Leave these unset or empty: `memory.provider`, `display.personality` (or a neutral name: `none`, `default`,
 `neutral`), `agent.system_prompt`, `personalities`, `agent.personalities`, `prefill_messages_file`,
 `agent.prefill_messages_file`, `agent.environment_hint`, `agent.coding_instructions`, `platform_hints`, `hooks` and
-`mcp_servers`. The profile's `.env` holds the provider key; it must not assign `HERMES_IGNORE_RULES`,
-`HERMES_YOLO_MODE`, `HERMES_SAFE_MODE`, `HERMES_IGNORE_USER_CONFIG`, `HERMES_ACCEPT_HOOKS`,
+`mcp_servers`. The profile's `.env` must hold provider keys only (what `hermes --profile hermes-line-calls model`
+writes there): Hermes loads every variable in it into the call agent. In particular it must not set
+`HERMES_IGNORE_RULES`, `HERMES_YOLO_MODE`, `HERMES_SAFE_MODE`, `HERMES_IGNORE_USER_CONFIG`, `HERMES_ACCEPT_HOOKS`,
 `HERMES_EPHEMERAL_SYSTEM_PROMPT`, `HERMES_PREFILL_MESSAGES_FILE`, `HERMES_ENVIRONMENT_HINT`,
-`HERMES_ENABLE_PROJECT_PLUGINS` or `HERMES_TUI_SKILLS`, and the profile's `hooks/` folder must have no hook
+`HERMES_ENABLE_PROJECT_PLUGINS` or `HERMES_TUI_SKILLS`. The profile's `hooks/` folder must have no hook
 directories. Keep the `SOUL.md` Hermes wrote into the new profile (its stock text), or empty it. Then set
 `call_profile: hermes-line-calls` in the plugin settings. The plugin does not need to be installed in that
 profile.
@@ -171,22 +172,27 @@ What the plugin does with that profile:
 
 - Every call session starts with Hermes's own `--ignore-rules` (`HERMES_IGNORE_RULES=1` for `hermes acp`): Hermes
   loads no `SOUL.md`, no project context file (`AGENTS.md`, `.cursorrules` and the like), no memory and no preloaded
-  skills into it. Hermes loads the profile's `.env` over the environment the plugin gives it, so the check below
-  refuses a `.env` that assigns that variable.
+  skills into it. Hermes loads the profile's `.env` over the environment the plugin gives it, and `hermes acp`
+  loads it again after its command-line flags, so neither can hold against a `.env` that turns it off; the check
+  below refuses such a profile.
 - The plugin checks the profile when you approve a call, when an inbound call arrives, and again just before the
   session starts. It refuses the profile if memory or the user profile is on, a memory provider or any key listed
-  above is set, its `.env` assigns one of the names listed above, its `hooks/` folder has a hook directory, a plugin
-  is enabled (or one is installed while `plugins.enabled` is unset), `memories/MEMORY.md` or `memories/USER.md` is
-  not empty, or `SOUL.md` is neither empty nor Hermes's stock or earlier auto-seeded text. It reads `config.yaml`
-  and `SOUL.md`, reads only the variable names (not the values) in `.env`, and lists the `plugins` and `hooks`
-  folders; the memory files are only checked for size. It is a fixed list, not a check of everything Hermes loads
-  (Limits).
+  above is set, its `hooks/` folder has a hook directory, a plugin is enabled (or one is installed while
+  `plugins.enabled` is unset), `memories/MEMORY.md` or `memories/USER.md` is not empty, `SOUL.md` is neither empty
+  nor Hermes's stock or earlier auto-seeded text, or, once Hermes has loaded the profile's `.env`, `--ignore-rules`
+  is off, another of the launch flags listed above is on, or one of the prompt variables listed above is set. It
+  reads `config.yaml` and `SOUL.md` and lists the `plugins` and `hooks` folders; the memory files are only checked
+  for size. It never opens the `.env`: it starts a short Hermes process for the call profile, with the environment
+  the call agent gets, in which Hermes's own loader reads the `.env` (and a managed `.env` or an external secret
+  source, as for the call), and that process tells the plugin only which launch flags are on and which of the
+  listed prompt variables are set, never a value. If that process gives no answer, the call is refused. It is a
+  fixed list, not a check of everything Hermes loads (Limits).
 - With a refused profile, nothing is dialled. The `/line approve` reply names each problem and the fix, and the task
   is marked failed with the outcome `blocked: call profile not neutral: ...`; ask Hermes for the call again after the
   fix. An inbound caller hears "Sorry, this line cannot take calls right now. Goodbye." and the call ends, on both
   voice paths. When the service starts with a refused profile, the plugin says so once: in the chat of the latest
-  task that came from a chat, or, when there is none, in reply to your next `/line` command or Hermes Line tool
-  call.
+  task that came from a chat (it looks at the last 50 tasks), or, when none did, in reply to your next `/line`
+  command or `hermes_line_request_call`.
 - **If you made this profile earlier with `--clone`, delete and recreate it:** `hermes profile delete
   hermes-line-calls`, `hermes profile create hermes-line-calls`, `hermes --profile hermes-line-calls model`, then the
   config lines above. Editing the clone until it passes is not enough: it keeps your `.env` values (provider keys,
@@ -332,12 +338,14 @@ heard, and a PIN spoken slowly in fragments can reach Hermes before it is scrubb
   - **A running call gateway.** The environment allow-list applies when `hermes acp` starts the call profile's
     gateway. A gateway that already serves the call profile (started by you, or a multiplexed gateway that serves
     all your profiles) keeps the environment it was started with, and the call session runs there.
-  - **What the check does not read.** Of the call profile's `.env` it reads only the variable names and refuses the
-    ones listed in setup step 4; every other variable there is loaded into the call profile's gateway as set. It
-    does not read the skills, or keys of `config.yaml` that are not listed in setup step 4. Recreate a cloned profile
-    instead of editing it.
-  - **Managed configuration.** The check reads the profile's own `config.yaml`. A managed (administrator) layer that
-    Hermes applies on top of it, including a managed `.env`, is not read, and could set a listed key.
+  - **What the check does not judge.** Of what Hermes loads from the call profile's `.env`, the check learns only
+    the launch flags and prompt variables listed in setup step 4. Every other variable there (provider routing,
+    proxies, tool settings and the rest) is loaded into the call agent and its gateway as set, so keep only provider
+    keys in that file. The check does not read the skills, or keys of `config.yaml` that are not listed in setup
+    step 4. Recreate a cloned profile instead of editing it.
+  - **Managed configuration.** The check reads the profile's own `config.yaml`. A managed (administrator)
+    `config.yaml` layer that Hermes applies on top of it is not read, and could set a listed key. A managed `.env`
+    is loaded by Hermes in the `.env` check above.
   - **Prompt text in a running gateway.** A call gateway that is already running keeps the environment it was
     started with; prompt variables set there (`HERMES_EPHEMERAL_SYSTEM_PROMPT`, `HERMES_ENVIRONMENT_HINT` and the
     like) reach the call session's prompt. The plugin cannot see that environment.
@@ -353,9 +361,12 @@ heard, and a PIN spoken slowly in fragments can reach Hermes before it is scrubb
     `task_goal`; the pane has no approve button.
   - **Text from the call in your chat.** The summary posted to your chat, and what `hermes_line_call_status` returns
     to your Hermes (masked transcript tail and summary), contain the other party's words. The posted summary is
-    marked as untrusted; your Hermes is told only that the call ended and its task status.
+    marked as untrusted. The plugin also tries to tell your Hermes session that the call ended and its task status
+    (one sentence, no words from the call); Hermes refuses that unless `allow_gateway_injection: true` is set for
+    the plugin (`plugins.entries.hermes-line`), and the posted summary does not depend on it.
   - **The check is a snapshot.** It runs at approval, at admission and before the session starts; a change to the
-    profile in between is not seen until the next check. Only you can write the profile.
+    profile (its `.env` included) in between or during a call is not seen until the next check. Only you can write
+    the profile.
 - Owner line mode works on ConversationRelay calls; the Grok Voice path has no PIN step yet.
 - Your PIN's key tones pass through Twilio like any keypad input.
 
@@ -450,23 +461,29 @@ What you should know before installing:
 - **The call's Hermes session gets none of your memory, user profile or persona.** It starts with Hermes's
   `--ignore-rules`, and the plugin refuses a call profile that has memory, a user profile, a memory provider, one of
   the persona or prompt keys listed in setup step 4, MCP servers, hooks (in `config.yaml` or the `hooks/` folder),
-  enabled plugins, a listed name in its `.env`, non-empty memory files or a `SOUL.md` other than Hermes's stock text
-  (setup step 4). It reads the profile's `config.yaml` and `SOUL.md` and the variable names in its `.env` for this,
-  and lists its `plugins` and `hooks` folders; the memory files are only checked for size. The session runs in an
+  enabled plugins, non-empty memory files, a `SOUL.md` other than Hermes's stock text, or a `.env` that, once Hermes
+  loads it, turns `--ignore-rules` off, turns a launch flag on or sets a listed prompt variable (setup step 4). It
+  reads the profile's `config.yaml` and `SOUL.md` for this and lists its `plugins` and `hooks` folders; the memory
+  files are only checked for size. It never opens the `.env`: a short Hermes process for the call profile loads it
+  with Hermes's own loader and reports only flag and variable names. The session runs in an
   empty temporary directory outside any git repository or project, and its `hermes acp` process gets an exact
   environment allow-list (setup step 4). Of what you asked for, it gets the task's title and goal, which the
   approval message shows you in full, and your configured name. See Limits for what is not closed.
 - **Call summaries.** The summary quotes the other party. It is posted to the chat that asked for the call (into
   that stored session, also after a restart), marked as untrusted text from the call; it is not injected into your
-  Hermes session, which is told only that the call ended and its task status.
+  Hermes session. The plugin tries to tell that session only that the call ended and its task status; Hermes
+  refuses it unless `allow_gateway_injection` is on for the plugin (Limits).
 - **Reads outside the plugin's own data:** the SMS inbox of the attached Android phone (through `adb`), when
   `sms_source: adb`. At approval, at inbound admission and before each call session: the call profile's
-  `config.yaml` and `SOUL.md`, the variable names in its `.env`, the lists of its `plugins` and `hooks` folders and
-  the size of its memory files; then the call session's tool list (from `hermes acp`). Before each call session:
+  `config.yaml` and `SOUL.md`, the lists of its `plugins` and `hooks` folders and the size of its memory files
+  (never its `.env`); then the call session's tool list (from `hermes acp`). Before each call session:
   whether a `.git` or a project file is in the temp directory or a folder above it.
 - **Programs it starts:** `adb` (read-only queries; it gets only `PATH`, `HOME`, `LANG` and `ANDROID_*`/`ADB_*`
-  from the environment), and one `hermes acp` process per call, which starts the call profile's Hermes gateway
-  (idle-exit) if it is not already running.
+  from the environment); at each call-profile check, a short Hermes process for the call profile
+  (`plugin/line/engine/env_probe.py`, run with Hermes's own interpreter and the call agent's environment), in which
+  Hermes's own loader reads the profile's `.env` and which prints only launch-flag and variable names; and one
+  `hermes acp` process per call, which starts the call profile's Hermes gateway (idle-exit) if it is not already
+  running.
 - **Background service:** with `enabled: true`, a call service runs inside the Hermes process. It listens on
   `127.0.0.1:8788` for Twilio (through your tunnel) and on a second, loopback-only port that serves the four in-call
   tools to the call's Hermes session with a per-call token.

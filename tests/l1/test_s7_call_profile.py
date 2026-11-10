@@ -90,10 +90,12 @@ class GlueTests(unittest.TestCase):
         self.data.mkdir(parents=True)
         FakeConn.made = []
 
-    def host(self, profile_dir: Path, ctx=None):
+    def host(self, profile_dir: Path, ctx=None, loaded_env=()):
+        """``loaded_env``: what the Hermes-loader check of the profile's dotenv layers answers (a separate Hermes
+        process in production, ``call_profile.loaded_env_problems``; tests/l4 runs the real one)."""
         from test_otp_and_plugin import FakeCtx
         import plugin
-        from plugin.line.engine import hermes_glue
+        from plugin.line.engine import call_profile, hermes_glue
         ctx = ctx or FakeCtx({"sms_source": "none", "call_profile": "hermes-line-calls"})
         plugin.register(ctx)
         host = ctx.unloads[0].__self__
@@ -103,6 +105,7 @@ class GlueTests(unittest.TestCase):
             mock.patch.object(hermes_glue, "_profile_dir", create=True, return_value=profile_dir),
             mock.patch.object(hermes_glue, "_neutral_souls", create=True, return_value=[STOCK_SOUL]),
             mock.patch.object(hermes_glue, "_is_stock_soul", create=True, side_effect=lambda t: t == LEGACY_SOUL),
+            mock.patch.object(call_profile, "loaded_env_problems", create=True, return_value=list(loaded_env)),
             mock.patch.object(acp_driver.shutil, "which", lambda name: "/bin/hermes" if name == "hermes" else None),
             mock.patch.object(acp_driver, "_Connection", FakeConn),
         ]

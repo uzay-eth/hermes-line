@@ -227,7 +227,7 @@ class DriverSelectionTests(unittest.TestCase):
         from test_otp_and_plugin import FakeCtx
         from test_s7_call_profile import STOCK_SOUL, make_profile
         import plugin
-        from plugin.line.engine import acp_driver, hermes_glue
+        from plugin.line.engine import acp_driver, call_profile, hermes_glue
         from plugin.line.engine.acp_driver import AcpDriver, AcpError
         for profile in ("hermes-line-calls", ""):
             ctx = FakeCtx({"sms_source": "none", "call_profile": profile})
@@ -239,6 +239,7 @@ class DriverSelectionTests(unittest.TestCase):
                     mock.patch("plugin.line.store.Store", return_value=fake_store), \
                     mock.patch.object(hermes_glue, "_profile_dir", return_value=neutral), \
                     mock.patch.object(hermes_glue, "_neutral_souls", return_value=[STOCK_SOUL]), \
+                    mock.patch.object(call_profile, "loaded_env_problems", create=True, return_value=[]), \
                     mock.patch.object(acp_driver.shutil, "which", lambda n: "/bin/hermes" if n == "hermes" else None):
                 data_dir.return_value = Path(tempfile.mkdtemp(prefix="hl-glue-"))
                 svc = host.get()
