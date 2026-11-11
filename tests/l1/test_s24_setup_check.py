@@ -80,7 +80,7 @@ class Rig:
         self.secrets = dict(SECRETS)
         self.net = FakeNet()
         self.version = "0.23.0"
-        self.gateway = True
+        self.gateway = "alive"
         self.listening = True
         self.profile = []
 
@@ -96,7 +96,7 @@ class Rig:
     def probes(self):
         from plugin.line.engine import deps
         return sc.Probes(
-            hermes_version=lambda: self.version, gateway_running=lambda: self.gateway, get_secret=self.secret,
+            hermes_version=lambda: self.version, gateway_state=lambda: self.gateway, get_secret=self.secret,
             http_get=self.net, port_open=lambda host, port, timeout: self.listening,
             profile_problems=lambda name: list(self.profile) if name else [
                 "call_profile not set (README, setup step 4)"],
@@ -118,7 +118,7 @@ class SetupCheckTests(unittest.TestCase):
         rig = Rig()
         items, text, code = rig.run()
         self.assertEqual(code, 0, text)
-        self.assertEqual(list(items), ["Hermes version", "Hermes gateway process", "Settings", "Twilio credentials",
+        self.assertEqual(list(items), ["Hermes version", "Hermes gateway", "Settings", "Twilio credentials",
                                        "Twilio accepts the credentials", "Line number on the account", "Caller ID",
                                        "Owner phone", "Call profile", "Tunnel", "Local port"])
         lines = text.splitlines()
@@ -191,16 +191,41 @@ class SetupCheckTests(unittest.TestCase):
         with mock.patch("subprocess.run", side_effect=OSError("no")), mock.patch("shutil.which", lambda n: None):
             self.assertEqual(sc.hermes_version(), "")
 
-    def test_gateway_not_running(self):
-        rig = Rig()
-        rig.gateway = False
-        items, _, code = rig.run()
-        self.assertFalse(items["Hermes gateway process"].ok)
-        self.assertIn("hermes gateway start", items["Hermes gateway process"].text)
-        rig = Rig()
-        items, _, _ = rig.run()
-        self.assertIn("not tested", items["Hermes gateway process"].text)  # a process record, not a reachability probe
-        self.assertEqual(code, 1)
+    def test_gateway_states(self):
+        for state, ok, expect in (("alive", True, "answered Hermes's liveness probe"),
+                                  ("wedged", False, "does not answer"),
+                                  ("unknown", False, "could not confirm"),
+                                  ("absent", False, "update Hermes"),
+                                  ("not running", False, "hermes gateway start"),
+                                  ("", False, "could not confirm")):
+            with self.subTest(state=state):
+                rig = Rig()
+                rig.gateway = state
+                items, _, code = rig.run()
+                self.assertEqual(items["Hermes gateway"].ok, ok)
+                self.assertIn(expect, items["Hermes gateway"].text)
+                self.assertEqual(code == 0, ok)
+
+    def test_real_gateway_probe(self):
+        import sys
+        import types
+        status = types.ModuleType("gateway.status")
+        liveness = types.ModuleType("hermes_cli.gateway")
+        calls = []
+        status.get_running_pid = lambda cleanup_stale=True: calls.append(("pid", cleanup_stale)) or 4242
+        for verdict in ("alive", "wedged", "unknown"):
+            with self.subTest(verdict=verdict):
+                liveness.probe_gateway_loop_liveness = lambda pid, verdict=verdict: calls.append(("probe", pid)) \
+                    or verdict
+                with mock.patch.dict(sys.modules, {"gateway.status": status, "hermes_cli.gateway": liveness}):
+                    self.assertEqual(sc.gateway_state(), verdict)
+        self.assertIn(("pid", False), calls)
+        self.assertIn(("probe", 4242), calls)
+        with mock.patch.dict(sys.modules, {"gateway.status": status, "hermes_cli.gateway": None}):
+            self.assertEqual(sc.gateway_state(), "absent")  # a Hermes without the probe: never OK from a PID
+        status.get_running_pid = lambda cleanup_stale=True: None
+        with mock.patch.dict(sys.modules, {"gateway.status": status, "hermes_cli.gateway": liveness}):
+            self.assertEqual(sc.gateway_state(), "not running")
 
     def test_settings(self):
         rig = Rig()
@@ -341,6 +366,8 @@ class SetupCheckTests(unittest.TestCase):
                 self.assertFalse(items["Tunnel"].ok)
                 self.assertIn(expect, items["Tunnel"].text)
                 self.assertEqual(code, 1)
+        items, _, _ = Rig().run()
+        self.assertEqual(items["Tunnel"].text, "public_base_url answers over HTTPS and /health returns ok")
 
     def test_local_port(self):
         rig = Rig()
@@ -514,6 +541,39 @@ class PrivacyAndShapeTests(unittest.TestCase):
         items, _, _ = rig.run()
         self.assertIn("from_number must be canonical E.164", items["Settings"].text)  # allowlisted, shown
 
+    def test_formatted_number_in_listen_host_is_redacted(self):
+        for host in ("(775) 555-0199", "775.555.0199", "+1 775 555 0199"):
+            with self.subTest(host=host):
+                rig = Rig()
+                rig.settings["listen_host"] = host
+                rig.listening = False
+                items, text, code = rig.run()
+                self.assertFalse(items["Local port"].ok)
+                self.assertIn("ending in 99", text)
+                self.assertNotIn("555", text)
+                self.assertEqual(code, 1)
+
+    def test_secret_shaped_profile_name_is_not_printed_on_success(self):
+        for name, shown in (("a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6", False), ("hermes-line-calls", True),
+                            ("calls-0123456789abcdef", False)):
+            with self.subTest(name=name):
+                rig = Rig()
+                rig.settings["call_profile"] = name
+                items, text, code = rig.run()
+                self.assertEqual(code, 0, text)
+                self.assertTrue(items["Call profile"].ok)
+                self.assertEqual(name in text, shown)
+
+    def test_render_boundary_redaction(self):
+        self.assertEqual(sc.redact("x AC" + "a" * 32 + " y"), "x [SID hidden] y")
+        self.assertEqual(sc.redact("+1 (775) 555-0100"), "[number ending in 00]")
+        self.assertEqual(sc.redact("key " + "aB3" * 10), "key [hidden]")
+        for kept in ("0.23.0 (needs 0.22.5 or newer)", "127.0.0.1:8788", "HERMES_LINE_TWILIO_API_KEY_SECRET",
+                     "HTTP 401", "3 of 11 checks", "plugins.entries.hermes-line.settings"):
+            self.assertEqual(sc.redact(kept), kept)
+        text = sc.report([sc.Item("Tunnel", False, f"oops {LINE} {ACCOUNT} {SECRET}x1Y")])
+        self.assertClean(text)
+
     def test_probe_exceptions_with_secrets_inside_show_only_class_names(self):
         rig = Rig()
         leak = f"{sc.TWILIO_API}/Accounts/{ACCOUNT} {LINE} {SECRET} {KEY}"
@@ -523,7 +583,7 @@ class PrivacyAndShapeTests(unittest.TestCase):
         probes = rig.probes()
         probes.http_get = get
         probes.hermes_version = lambda: f"0.23.0 {leak}"
-        probes.gateway_running = lambda: (_ for _ in ()).throw(RuntimeError(leak))
+        probes.gateway_state = lambda: (_ for _ in ()).throw(RuntimeError(leak))
         probes.port_open = lambda *a: (_ for _ in ()).throw(RuntimeError(leak))
         probes.destination_allowed = lambda *a: (_ for _ in ()).throw(RuntimeError(leak))
         items = sc.run(rig.config, probes)
@@ -642,13 +702,9 @@ class SetupCheckCommandTests(unittest.TestCase):
             handler(parser.parse_args([]))
         self.assertEqual(stop.exception.code, 2)
 
-    def test_cli_process_with_enabled_true_never_builds_or_starts_the_service(self):
-        """S24 review finding 1: registering in `hermes hermes-line check` with `enabled: true` must create no
-        service, store, start thread or provider request, even when the start thread would run at once."""
-        import plugin
+    def _forbidding(self, events, argv):
         from plugin.line.engine import service as service_mod, telephony
         from plugin.line import store as store_mod
-        events = []
 
         def forbid(name):
             def f(*a, **kw):
@@ -663,54 +719,71 @@ class SetupCheckCommandTests(unittest.TestCase):
             def start(self):
                 events.append("thread")
                 self.target()
-        ctx, rig = self._ctx()
-        ctx.config["enabled"] = True
-        patches = [mock.patch.object(hermes_glue.threading, "Thread", EagerThread),
-                   mock.patch.object(hermes_glue._Host, "get", forbid("service_build")),
-                   mock.patch.object(hermes_glue._Host, "start", forbid("service_start")),
-                   mock.patch.object(service_mod.CallService, "__init__", forbid("CallService")),
-                   mock.patch.object(service_mod.CallService, "start", forbid("CallService.start")),
-                   mock.patch.object(service_mod.CallService, "stop", forbid("CallService.stop")),
-                   mock.patch.object(store_mod.Store, "__init__", forbid("Store")),
-                   mock.patch.object(telephony.TwilioRestAdapter, "_post", forbid("provider")),
-                   mock.patch.object(hermes_glue.sys if hasattr(hermes_glue, "sys") else __import__("sys"), "argv",
-                                     ["hermes", "hermes-line", "check"]),
-                   self._patched(rig)]
-        for p in patches:
-            p.start()
-            self.addCleanup(p.stop)
-        plugin.register(ctx)
+        return [mock.patch.object(hermes_glue.threading, "Thread", EagerThread),
+                mock.patch.object(hermes_glue._Host, "get", forbid("service_build")),
+                mock.patch.object(hermes_glue._Host, "start", forbid("service_start")),
+                mock.patch.object(service_mod.CallService, "__init__", forbid("CallService")),
+                mock.patch.object(service_mod.CallService, "start", forbid("CallService.start")),
+                mock.patch.object(service_mod.CallService, "stop", forbid("CallService.stop")),
+                mock.patch.object(store_mod.Store, "__init__", forbid("Store")),
+                mock.patch.object(telephony.TwilioRestAdapter, "_post", forbid("provider")),
+                mock.patch("sys.argv", argv)]
+
+    def test_cli_process_with_enabled_true_never_builds_or_starts_the_service(self):
+        """S24 review findings 1 and re-review 1: in any process whose arguments hold `hermes-line` (the check, its
+        help, a missing or wrong subcommand, global flags first), registering with `enabled: true` creates no
+        service, store, start thread or provider request, even when the start thread would run at once."""
         import argparse
-        setup_fn, handler = ctx.cli["hermes-line"]
-        parser = argparse.ArgumentParser()
-        setup_fn(parser)
-        with redirect_stdout(io.StringIO()) as out, self.assertRaises(SystemExit) as stop:
-            handler(parser.parse_args(["check"]))
-        self.assertEqual(stop.exception.code, 0, out.getvalue())
-        self.assertEqual(events, [])
-        self.assertIsNone(ctx.unloads[0].__self__.service)
-
-    def test_gateway_process_with_enabled_true_still_starts_the_service(self):
         import plugin
-        started = []
+        for argv in (["hermes", "hermes-line", "check"], ["hermes", "--model", "x", "hermes-line", "--help"],
+                     ["hermes", "hermes-line"], ["hermes", "-p", "p", "hermes-line", "check"],
+                     ["hermes", "hermes-line", "bogus"], ["hermes", "--resume", "hermes-line"]):
+            with self.subTest(argv=argv):
+                events = []
+                ctx, rig = self._ctx()
+                ctx.config["enabled"] = True
+                patches = self._forbidding(events, argv) + [self._patched(rig)]
+                for p in patches:
+                    p.start()
+                try:
+                    plugin.register(ctx)
+                    if argv[-1] == "check":
+                        setup_fn, handler = ctx.cli["hermes-line"]
+                        parser = argparse.ArgumentParser()
+                        setup_fn(parser)
+                        with redirect_stdout(io.StringIO()) as out, self.assertRaises(SystemExit) as stop:
+                            handler(parser.parse_args(["check"]))
+                        self.assertEqual(stop.exception.code, 0, out.getvalue())
+                finally:
+                    for p in reversed(patches):
+                        p.stop()
+                self.assertEqual(events, [])
+                self.assertIsNone(ctx.unloads[0].__self__.service)
 
-        class RecordingThread:
-            def __init__(self, target=None, **kw):
-                self.target = target
+    def test_other_processes_with_enabled_true_still_start_the_service(self):
+        import plugin
+        for argv in (["hermes", "gateway", "run"], ["hermes", "chat", "-q", "hello"], ["hermes"]):
+            with self.subTest(argv=argv):
+                started = []
 
-            def start(self):
-                started.append(getattr(self.target, "__name__", ""))
-        ctx, _ = self._ctx()
-        ctx.config["enabled"] = True
-        with mock.patch.object(hermes_glue.threading, "Thread", RecordingThread), \
-                mock.patch("sys.argv", ["hermes", "-p", "hermes-line", "gateway", "run"]):
-            plugin.register(ctx)
-        self.assertEqual(started, ["start"])
+                class RecordingThread:
+                    def __init__(self, target=None, **kw):
+                        self.target = target
+
+                    def start(self):
+                        started.append(getattr(self.target, "__name__", ""))
+                ctx, _ = self._ctx()
+                ctx.config["enabled"] = True
+                with mock.patch.object(hermes_glue.threading, "Thread", RecordingThread), \
+                        mock.patch("sys.argv", argv):
+                    plugin.register(ctx)
+                self.assertEqual(started, ["start"])
 
     def test_cli_invocation(self):
         for argv, expect in ((["hermes-line", "check"], True), (["-p", "work", "hermes-line", "check"], True),
-                             (["--profile", "hermes-line", "gateway", "run"], False), (["gateway", "run"], False),
-                             (["hermes-line"], True), (["chat", "-q", "hermes-line"], False), ([], False)):
+                             (["--model", "x", "hermes-line", "--help"], True), (["hermes-line"], True),
+                             (["--resume", "hermes-line"], True), (["gateway", "run"], False),
+                             (["chat", "-q", "hermes line"], False), ([], False)):
             with self.subTest(argv=argv):
                 self.assertEqual(hermes_glue.cli_invocation(argv), expect)
 

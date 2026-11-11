@@ -45,7 +45,7 @@ class Item:
 class Probes:
     """What the check reads, each a plain function (the plugin's loaders in Hermes, fakes in tests)."""
     hermes_version: Callable[[], str]                  # "0.23.0"
-    gateway_running: Callable[[], bool]                # a gateway process for this Hermes home is running
+    gateway_state: Callable[[], str]                   # "alive" | "wedged" | "unknown" | "absent" | "not running"
     get_secret: Callable[[str], Optional[str]]         # None when unset; raises when it cannot be read
     http_get: Callable[[str, dict, float], tuple]      # (url, headers, timeout) -> (status, body bytes); raises
     port_open: Callable[[str, int, float], bool]
@@ -185,14 +185,21 @@ def run(load_config: Callable[[], object], probes: Probes) -> list[Item]:
     else:
         add("Hermes version", True, f"{'.'.join(map(str, found))} (needs {want} or newer)")
 
-    # 2. Gateway process. Only its process record is read (Hermes's PID and lock files); whether it answers chats
-    # is not probed, so the item says "process".
+    # 2. Gateway: OK only when Hermes's own bounded loop-liveness probe says the gateway's event loop answers.
     try:
-        running = bool(probes.gateway_running())
+        state = str(probes.gateway_state() or "")
     except Exception:
-        running = False
-    add("Hermes gateway process", running, "running (process found; whether it answers chats is not tested)"
-        if running else "not running; start it with `hermes gateway start` (or `hermes gateway run` in a terminal)")
+        state = "unknown"
+    gateway_text = {
+        "alive": "running, and its event loop answered Hermes's liveness probe",
+        "wedged": "a gateway process runs but its event loop does not answer; restart it (`hermes gateway restart`)",
+        "absent": "cannot confirm the gateway responds on this Hermes version (no liveness probe); update Hermes "
+                  "(`hermes update`)",
+        "not running": "not running; start it with `hermes gateway start` (or `hermes gateway run` in a terminal)",
+    }
+    add("Hermes gateway", state == "alive", gateway_text.get(state, (
+        "a gateway process runs, but Hermes's liveness probe could not confirm it answers; restart it "
+        "(`hermes gateway restart`) and check again")))
 
     # 3. Settings
     cfg = None
@@ -346,7 +353,10 @@ def run(load_config: Callable[[], object], probes: Probes) -> list[Item]:
             text = "; ".join(p if _safe(p) else "a problem the check could not show safely" for p in problems)
             add("Call profile", False, text if "setup step" in text else f"{text} (README, setup step 4)")
         else:
-            add("Call profile", True, f"{cfg.call_profile} passes the neutral-profile check")
+            name = str(cfg.call_profile)
+            shown = (name if re.fullmatch(r"[a-z0-9][a-z0-9_-]{0,23}", name) and not re.search(r"[A-Za-z0-9]{16}", name)
+                     else "the configured profile")
+            add("Call profile", True, f"{shown} passes the neutral-profile check")
 
     # 10. Tunnel (no redirect is followed: the answer must come from public_base_url itself, over HTTPS)
     base = getattr(cfg, "public_base_url", "") if cfg is not None else ""
@@ -371,7 +381,7 @@ def run(load_config: Callable[[], object], probes: Probes) -> list[Item]:
                     "redirects: point the tunnel straight at listen_host:listen_port")
             elif status == 200 and isinstance(data, dict) and "ok" in data:
                 if data.get("ok") is True:
-                    add("Tunnel", True, "public_base_url answers over HTTPS and reaches the ready call service")
+                    add("Tunnel", True, "public_base_url answers over HTTPS and /health returns ok")
                 else:
                     add("Tunnel", False, "public_base_url reaches the plugin, but its call service is not ready; "
                         "run `/line service start` and see `/line service status`")
@@ -401,12 +411,34 @@ def run(load_config: Callable[[], object], probes: Probes) -> list[Item]:
     return items
 
 
+_DIGITISH = re.compile(r"[+(]?\d[\d .()+-]*\d\)?")
+_SID = re.compile(r"(?<![A-Za-z0-9])[A-Za-z]{2}[0-9a-fA-F]{32}(?![0-9a-fA-F])")
+_LONG = re.compile(r"[A-Za-z0-9_+/=-]{24,}")
+
+
+def redact(text: str) -> str:
+    """The final rendering boundary: whatever reached a line, a run of 7+ digits (spaces, dots, dashes,
+    parentheses and plus signs dropped) keeps only its last two digits, a SID-shaped token (2 letters + 32 hex)
+    and a long secret-shaped token (24+ characters with a digit or mixed case) are hidden."""
+    def digits(m: re.Match) -> str:
+        d = re.sub(r"\D", "", m.group())
+        return f"[number ending in {d[-2:]}]" if len(d) >= 7 else m.group()
+
+    def long(m: re.Match) -> str:
+        t = m.group()
+        secretish = any(c.isdigit() for c in t) or (any(c.islower() for c in t) and any(c.isupper() for c in t))
+        return "[hidden]" if secretish else t
+    text = _SID.sub("[SID hidden]", str(text))
+    text = _LONG.sub(long, text)
+    return _DIGITISH.sub(digits, text)
+
+
 def report(items: list[Item]) -> str:
     passed = sum(1 for i in items if i.ok)
     tail = ("All checks passed. No call was made." if passed == len(items) else
             f"{len(items) - passed} of {len(items)} checks need a fix. No call was made.")
-    return "\n".join(["Hermes Line setup check (read-only: no call, no text, nothing bought)"]
-                     + [i.line() for i in items] + [tail])
+    return "\n".join(redact(line) for line in (["Hermes Line setup check (read-only: no call, no text, nothing "
+                                                 "bought)"] + [i.line() for i in items] + [tail]))
 
 
 def exit_code(items: list[Item]) -> int:
@@ -480,11 +512,20 @@ def hermes_version() -> str:
     return ""
 
 
-def gateway_running() -> bool:
-    """Hermes's own process check for this home's gateway (PID and lock records). It does not test whether the
-    gateway answers; Hermes offers no read-only responsiveness probe for plugins."""
+def gateway_state() -> str:
+    """This home's gateway: its process record (``gateway.status.get_running_pid``), then Hermes's own bounded,
+    read-only loop-liveness probe (``hermes_cli.gateway.probe_gateway_loop_liveness``: reads the heartbeat file
+    and pings the gateway loop's tick socket for one byte, about 1 s per try). Returns its verdict ("alive",
+    "wedged", "unknown"), "not running", or "absent" on a Hermes without the probe."""
     from gateway.status import get_running_pid
-    return get_running_pid(cleanup_stale=False) is not None
+    pid = get_running_pid(cleanup_stale=False)
+    if pid is None:
+        return "not running"
+    try:
+        from hermes_cli.gateway import probe_gateway_loop_liveness
+    except ImportError:
+        return "absent"
+    return str(probe_gateway_loop_liveness(int(pid)))
 
 
 def destination_allowed(e164: str, policy: dict) -> bool:

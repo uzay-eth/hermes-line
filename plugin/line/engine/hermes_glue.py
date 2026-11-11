@@ -137,7 +137,7 @@ def setup_probes(host: "_Host"):
     """The real probes for the no-cost setup check (``setup_check.py``): secrets through Hermes, the same
     call-profile check the plugin runs before every call, read-only GETs."""
     from . import setup_check as sc
-    return sc.Probes(hermes_version=sc.hermes_version, gateway_running=sc.gateway_running,
+    return sc.Probes(hermes_version=sc.hermes_version, gateway_state=sc.gateway_state,
                      get_secret=host.get_secret, http_get=sc.http_get, port_open=sc.port_open,
                      profile_problems=call_profile_problems, destination_allowed=sc.destination_allowed)
 
@@ -523,22 +523,13 @@ CLI_COMMAND = "hermes-line"
 
 
 def cli_invocation(argv: Optional[list] = None) -> bool:
-    """True in a process started as ``hermes hermes-line ...``: the first positional argument (skipping flags and
-    the value of ``-p``/``--profile``) is the CLI command's name, or ``hermes-line check`` appears anywhere. Such a
-    process only runs the setup check; ``register()`` then starts no call service."""
+    """True when the token ``hermes-line`` appears anywhere in the process's arguments after the program name
+    (``hermes hermes-line check``, its help, a missing or wrong subcommand, any global flags). Such a process starts
+    no call service. Deliberately conservative: a false positive (``--resume hermes-line``) only means a CLI
+    process without the call engine (S24 re-review finding 1)."""
     import sys
-    args = [str(a) for a in (sys.argv[1:] if argv is None else list(argv))]
-    if any(a == CLI_COMMAND and b == "check" for a, b in zip(args, args[1:])):
-        return True
-    skip = False
-    for arg in args:
-        if skip:
-            skip = False
-        elif arg in ("-p", "--profile"):
-            skip = True
-        elif not arg.startswith("-"):
-            return arg == CLI_COMMAND
-    return False
+    args = sys.argv[1:] if argv is None else list(argv)
+    return CLI_COMMAND in (str(a) for a in args)
 
 
 def _register_cli(ctx: Any, host: _Host) -> None:
