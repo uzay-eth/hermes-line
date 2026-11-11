@@ -533,8 +533,9 @@ What you should know before installing:
   whether a `.git` or a project file is in the temp directory or a folder above it.
 - **Programs it starts:** `adb` (read-only queries; it gets only `PATH`, `HOME`, `LANG` and `ANDROID_*`/`ADB_*`
   from the environment), and one `hermes acp` process per call, which starts the call profile's Hermes gateway
-  (idle-exit) if it is not already running. The setup check (`/line check`) runs `hermes --version` once, with only
-  `PATH`, `HOME`, `HERMES_HOME`, `LANG` and `TMPDIR`.
+  (idle-exit) if it is not already running. The setup check (`/line check`) runs `hermes --version` (the `hermes` next to
+  its Python, then the one on `PATH` if the first gives no version), with only `PATH`, `HOME`, `HERMES_HOME`, `LANG`
+  and `TMPDIR`, and pings the gateway's own loop-tick socket for one byte.
 - **Background service:** with `enabled: true`, a call service runs inside the Hermes process. It listens on
   `127.0.0.1:8788` for Twilio (through your tunnel) and on a second, loopback-only port that serves the four in-call
   tools to the call's Hermes session with a per-call token.

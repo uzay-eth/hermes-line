@@ -80,7 +80,7 @@ class Rig:
         self.secrets = dict(SECRETS)
         self.net = FakeNet()
         self.version = "0.23.0"
-        self.gateway = "alive"
+        self.gateway = "answered"
         self.listening = True
         self.profile = []
 
@@ -192,9 +192,10 @@ class SetupCheckTests(unittest.TestCase):
             self.assertEqual(sc.hermes_version(), "")
 
     def test_gateway_states(self):
-        for state, ok, expect in (("alive", True, "answered Hermes's liveness probe"),
-                                  ("wedged", False, "does not answer"),
-                                  ("unknown", False, "could not confirm"),
+        for state, ok, expect in (("answered", True, "answered the loop-tick socket"),
+                                  ("silent", False, "did not answer"),
+                                  ("no witness", False, "could not confirm the gateway loop answers"),
+                                  ("alive", False, "could not confirm the gateway loop answers"),
                                   ("absent", False, "update Hermes"),
                                   ("not running", False, "hermes gateway start"),
                                   ("", False, "could not confirm")):
@@ -206,26 +207,70 @@ class SetupCheckTests(unittest.TestCase):
                 self.assertIn(expect, items["Hermes gateway"].text)
                 self.assertEqual(code == 0, ok)
 
-    def test_real_gateway_probe(self):
-        import sys
+    def _fake_gateway_modules(self, witness_result, pid=4242):
         import types
         status = types.ModuleType("gateway.status")
-        liveness = types.ModuleType("hermes_cli.gateway")
+        gw = types.ModuleType("hermes_cli.gateway")
         calls = []
-        status.get_running_pid = lambda cleanup_stale=True: calls.append(("pid", cleanup_stale)) or 4242
-        for verdict in ("alive", "wedged", "unknown"):
-            with self.subTest(verdict=verdict):
-                liveness.probe_gateway_loop_liveness = lambda pid, verdict=verdict: calls.append(("probe", pid)) \
-                    or verdict
-                with mock.patch.dict(sys.modules, {"gateway.status": status, "hermes_cli.gateway": liveness}):
-                    self.assertEqual(sc.gateway_state(), verdict)
-        self.assertIn(("pid", False), calls)
-        self.assertIn(("probe", 4242), calls)
+        status.get_running_pid = lambda cleanup_stale=True: calls.append(("pid", cleanup_stale)) or pid
+
+        def witness(p, home, *, timeout, strikes, gap_s, tcp_port=None):
+            calls.append(("witness", p, timeout, strikes, gap_s, tcp_port))
+            return witness_result
+        gw._probe_loop_tick_socket_sustained = witness
+        gw.probe_gateway_loop_liveness = lambda *a, **k: calls.append(("liveness",)) or "alive"
+        return status, gw, calls
+
+    def test_real_gateway_probe_needs_a_loop_answer(self):
+        import sys
+        for result, expect in ((True, "answered"), (False, "silent"), (None, "no witness")):
+            with self.subTest(result=result):
+                status, gw, calls = self._fake_gateway_modules(result)
+                with mock.patch.dict(sys.modules, {"gateway.status": status, "hermes_cli.gateway": gw,
+                                                   "gateway.shutdown_watchdog": None}):
+                    self.assertEqual(sc.gateway_state(), expect)
+                self.assertIn(("pid", False), calls)
+                self.assertIn(("witness", 4242, 1.0, 3, 0.2, None), calls)
+                self.assertNotIn(("liveness",), calls)  # the heartbeat-based verdict is never used
+        status, gw, _ = self._fake_gateway_modules(True)
         with mock.patch.dict(sys.modules, {"gateway.status": status, "hermes_cli.gateway": None}):
-            self.assertEqual(sc.gateway_state(), "absent")  # a Hermes without the probe: never OK from a PID
-        status.get_running_pid = lambda cleanup_stale=True: None
-        with mock.patch.dict(sys.modules, {"gateway.status": status, "hermes_cli.gateway": liveness}):
+            self.assertEqual(sc.gateway_state(), "absent")  # a Hermes without the witness: never OK from a PID
+        status, gw, _ = self._fake_gateway_modules(True, pid=None)
+        with mock.patch.dict(sys.modules, {"gateway.status": status, "hermes_cli.gateway": gw}):
             self.assertEqual(sc.gateway_state(), "not running")
+
+    def test_fresh_heartbeat_without_a_loop_witness_is_a_fix_with_hermes_real_functions(self):
+        """S24 re-review 3: Hermes's own liveness helper says "alive" for a fresh heartbeat with no tick socket.
+        With the installed Hermes functions (a fake heartbeat file, no socket node), the check says FIX."""
+        import json as _json
+        import sys
+        import tempfile
+        import time
+        from pathlib import Path
+        import os
+        root = os.environ.get("HERMES_AGENT_DIR")  # the Hermes checkout, as harness.py uses it
+        if root and root not in sys.path:
+            sys.path.append(root)
+        try:
+            import hermes_cli.gateway as hg
+            import gateway.shutdown_watchdog as wd
+        except Exception:
+            self.skipTest("Hermes is not importable here (set HERMES_AGENT_DIR to a Hermes checkout)")
+        with tempfile.TemporaryDirectory() as tmp:
+            beat = Path(tmp) / "gateway.heartbeat"
+            beat.write_text(_json.dumps({"pid": 4242, "at": time.time()}))
+            status, _, _ = self._fake_gateway_modules(True)
+            with mock.patch.object(wd, "get_loop_heartbeat_path", lambda home=None: beat), \
+                    mock.patch.object(wd, "get_loop_tick_socket_path", lambda home=None, pid=None: Path(tmp) / "none.sock"), \
+                    mock.patch.dict(sys.modules, {"gateway.status": status}):
+                self.assertEqual(hg.probe_gateway_loop_liveness(4242), "alive")  # Hermes's heartbeat verdict
+                self.assertEqual(sc.gateway_state(), "no witness")
+                rig = Rig()
+                probes = rig.probes()
+                probes.gateway_state = sc.gateway_state
+                items = {i.name: i for i in sc.run(rig.config, probes)}
+        self.assertFalse(items["Hermes gateway"].ok)
+        self.assertIn("could not confirm the gateway loop answers", items["Hermes gateway"].text)
 
     def test_settings(self):
         rig = Rig()
@@ -374,7 +419,8 @@ class SetupCheckTests(unittest.TestCase):
         rig.listening = False
         items, _, code = rig.run()
         self.assertFalse(items["Local port"].ok)
-        self.assertIn("127.0.0.1:8788", items["Local port"].text)
+        self.assertIn("port 8788 of listen_host", items["Local port"].text)
+        self.assertNotIn("127.0.0.1", items["Local port"].text)
         self.assertEqual(code, 1)
         seen = []
         rig = Rig()
@@ -549,9 +595,35 @@ class PrivacyAndShapeTests(unittest.TestCase):
                 rig.listening = False
                 items, text, code = rig.run()
                 self.assertFalse(items["Local port"].ok)
-                self.assertIn("ending in 99", text)
+                self.assertNotIn("ending in 99", items["Local port"].text)  # the host is never printed
+                self.assertIn("listen_host", items["Local port"].text)
                 self.assertNotIn("555", text)
                 self.assertEqual(code, 1)
+
+    def test_unicode_formatted_numbers_never_reach_the_output(self):
+        national = "775\u00a0555\u20110199"   # no-break space, non-breaking hyphen (sample owner number)
+        variants = (national, "(775)\u2009555\u20130199", "\uff17\uff17\uff15\uff15\uff15\uff15\uff10\uff11\uff19\uff19",
+                    "+1\u00a0775\u00a0555\u00a00199", "775\u200b555\u200b0199")
+        for value in variants:
+            with self.subTest(value=ascii(value)):
+                rig = Rig()
+                rig.settings["listen_host"] = value
+                rig.listening = False
+                items, text, _ = rig.run()
+                self.assertNotIn(value, text)
+                self.assertNotIn("555", text)
+                self.assertNotIn("listen_host" + value, text)
+                # other echoed fields: an allowlisted settings message, profile problems, a probe error kind
+                probes = rig.probes()
+                probes.profile_problems = lambda name, v=value: [f"memory {v} on"]
+
+                def boom(v=value):
+                    raise ValueError(f"from_number {v} must be canonical E.164")
+                text = sc.report(sc.run(boom, probes)) + sc.report(sc.run(rig.config, probes))
+                text += sc.report([sc.Item("Tunnel", False, f"x {value} y")])
+                self.assertNotIn(value, text)
+                self.assertNotIn("555", text)
+                self.assertNotIn("\uff15", text)
 
     def test_secret_shaped_profile_name_is_not_printed_on_success(self):
         for name, shown in (("a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6", False), ("hermes-line-calls", True),
@@ -567,8 +639,9 @@ class PrivacyAndShapeTests(unittest.TestCase):
     def test_render_boundary_redaction(self):
         self.assertEqual(sc.redact("x AC" + "a" * 32 + " y"), "x [SID hidden] y")
         self.assertEqual(sc.redact("+1 (775) 555-0100"), "[number ending in 00]")
+        self.assertEqual(sc.redact("call 775\u00a0555\u20110100 now"), "call [number ending in 00] now")
         self.assertEqual(sc.redact("key " + "aB3" * 10), "key [hidden]")
-        for kept in ("0.23.0 (needs 0.22.5 or newer)", "127.0.0.1:8788", "HERMES_LINE_TWILIO_API_KEY_SECRET",
+        for kept in ("0.23.0 (needs 0.22.5 or newer)", "port 8788 of listen_host", "HERMES_LINE_TWILIO_API_KEY_SECRET",
                      "HTTP 401", "3 of 11 checks", "plugins.entries.hermes-line.settings"):
             self.assertEqual(sc.redact(kept), kept)
         text = sc.report([sc.Item("Tunnel", False, f"oops {LINE} {ACCOUNT} {SECRET}x1Y")])

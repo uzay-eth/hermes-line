@@ -15,6 +15,7 @@ import http.client
 import json
 import re
 import socket
+import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -45,7 +46,7 @@ class Item:
 class Probes:
     """What the check reads, each a plain function (the plugin's loaders in Hermes, fakes in tests)."""
     hermes_version: Callable[[], str]                  # "0.23.0"
-    gateway_state: Callable[[], str]                   # "alive" | "wedged" | "unknown" | "absent" | "not running"
+    gateway_state: Callable[[], str]                   # "answered" | "silent" | "no witness" | "absent" | "not running"
     get_secret: Callable[[str], Optional[str]]         # None when unset; raises when it cannot be read
     http_get: Callable[[str, dict, float], tuple]      # (url, headers, timeout) -> (status, body bytes); raises
     port_open: Callable[[str, int, float], bool]
@@ -185,21 +186,22 @@ def run(load_config: Callable[[], object], probes: Probes) -> list[Item]:
     else:
         add("Hermes version", True, f"{'.'.join(map(str, found))} (needs {want} or newer)")
 
-    # 2. Gateway: OK only when Hermes's own bounded loop-liveness probe says the gateway's event loop answers.
+    # 2. Gateway: OK only when the gateway's own event loop answered its loop-tick witness socket. A fresh
+    # heartbeat file alone is not accepted (it can be written off the loop).
     try:
         state = str(probes.gateway_state() or "")
     except Exception:
-        state = "unknown"
+        state = "error"
     gateway_text = {
-        "alive": "running, and its event loop answered Hermes's liveness probe",
-        "wedged": "a gateway process runs but its event loop does not answer; restart it (`hermes gateway restart`)",
-        "absent": "cannot confirm the gateway responds on this Hermes version (no liveness probe); update Hermes "
+        "answered": "running, and its event loop answered the loop-tick socket",
+        "silent": "a gateway process runs but its event loop did not answer; restart it (`hermes gateway restart`)",
+        "absent": "cannot confirm the gateway responds on this Hermes version (no loop-tick probe); update Hermes "
                   "(`hermes update`)",
         "not running": "not running; start it with `hermes gateway start` (or `hermes gateway run` in a terminal)",
     }
-    add("Hermes gateway", state == "alive", gateway_text.get(state, (
-        "a gateway process runs, but Hermes's liveness probe could not confirm it answers; restart it "
-        "(`hermes gateway restart`) and check again")))
+    add("Hermes gateway", state == "answered", gateway_text.get(state, (
+        "a gateway process runs, but the check could not confirm the gateway loop answers (no loop-tick socket); "
+        "restart it (`hermes gateway restart`) and check again")))
 
     # 3. Settings
     cfg = None
@@ -395,7 +397,6 @@ def run(load_config: Callable[[], object], probes: Probes) -> list[Item]:
         port = int(getattr(cfg, "listen_port", 8788) if cfg is not None else 8788)
     except (TypeError, ValueError):
         port = 0
-    shown = host if _safe(host) else "listen_host"
     if not 1 <= port <= 65535:
         add("Local port", False, "listen_port is not a fixed port (0 or unset in these settings), so nothing can be "
             "checked; set listen_port (default 8788) and point the tunnel at it")
@@ -405,32 +406,58 @@ def run(load_config: Callable[[], object], probes: Probes) -> list[Item]:
         listening = bool(probes.port_open(probe_host, port, 2.0))
     except Exception:
         listening = False
-    add("Local port", listening, f"{shown}:{port} is listening" if listening else
-        f"nothing listens on {shown}:{port}; the call service runs in the Hermes gateway when `enabled: true` "
-        "(start the gateway, then `/line service status`)")
+    # The listen_host value is never printed (a pasted contact could sit there); the setting is named instead.
+    add("Local port", listening, f"port {port} on listen_host is listening" if listening else
+        f"nothing listens on port {port} of listen_host; the call service runs in the Hermes gateway when "
+        "`enabled: true` (start the gateway, then `/line service status`)")
     return items
 
 
-_DIGITISH = re.compile(r"[+(]?\d[\d .()+-]*\d\)?")
 _SID = re.compile(r"(?<![A-Za-z0-9])[A-Za-z]{2}[0-9a-fA-F]{32}(?![0-9a-fA-F])")
 _LONG = re.compile(r"[A-Za-z0-9_+/=-]{24,}")
 
 
 def redact(text: str) -> str:
-    """The final rendering boundary: whatever reached a line, a run of 7+ digits (spaces, dots, dashes,
-    parentheses and plus signs dropped) keeps only its last two digits, a SID-shaped token (2 letters + 32 hex)
-    and a long secret-shaped token (24+ characters with a digit or mixed case) are hidden."""
-    def digits(m: re.Match) -> str:
-        d = re.sub(r"\D", "", m.group())
-        return f"[number ending in {d[-2:]}]" if len(d) >= 7 else m.group()
-
+    """The final rendering boundary, after Unicode NFKC normalisation: digits joined only by Unicode spaces,
+    punctuation (any dash, dot, parenthesis) or plus signs form one number, and one of 7+ digits keeps only its
+    last two; a SID-shaped token (2 letters + 32 hex) and a long secret-shaped token (24+ characters with a digit
+    or mixed case) are hidden."""
     def long(m: re.Match) -> str:
         t = m.group()
         secretish = any(c.isdigit() for c in t) or (any(c.islower() for c in t) and any(c.isupper() for c in t))
         return "[hidden]" if secretish else t
-    text = _SID.sub("[SID hidden]", str(text))
+    text = unicodedata.normalize("NFKC", str(text))
+    text = _SID.sub("[SID hidden]", text)
     text = _LONG.sub(long, text)
-    return _DIGITISH.sub(digits, text)
+    return _mask_digit_runs(text)
+
+
+def _separator(c: str) -> bool:
+    """Between digits: any Unicode space, punctuation (dashes, dots, parentheses, no-break hyphens) or ``+``."""
+    return c.isspace() or c == "+" or unicodedata.category(c)[0] in ("Z", "P") or unicodedata.category(c) == "Cf"
+
+
+def _mask_digit_runs(text: str) -> str:
+    """Digits joined only by separators count as one number; one with 7+ digits keeps its last two."""
+    out, i, n = [], 0, len(text)
+    while i < n:
+        if not text[i].isdigit():
+            out.append(text[i])
+            i += 1
+            continue
+        j, last_digit, digits = i, i, []
+        while j < n and (text[j].isdigit() or _separator(text[j])):
+            if text[j].isdigit():
+                digits.append(text[j])
+                last_digit = j
+            j += 1
+        span = text[i:last_digit + 1]
+        start = i
+        if start > 0 and text[start - 1] in "+(" and len(digits) >= 7:
+            out.pop()  # a leading "+" or "(" belongs to the number
+        out.append(f"[number ending in {''.join(digits)[-2:]}]" if len(digits) >= 7 else span)
+        i = last_digit + 1
+    return "".join(out)
 
 
 def report(items: list[Item]) -> str:
@@ -513,19 +540,29 @@ def hermes_version() -> str:
 
 
 def gateway_state() -> str:
-    """This home's gateway: its process record (``gateway.status.get_running_pid``), then Hermes's own bounded,
-    read-only loop-liveness probe (``hermes_cli.gateway.probe_gateway_loop_liveness``: reads the heartbeat file
-    and pings the gateway loop's tick socket for one byte, about 1 s per try). Returns its verdict ("alive",
-    "wedged", "unknown"), "not running", or "absent" on a Hermes without the probe."""
+    """This home's gateway, read-only and bounded: its process record (``gateway.status.get_running_pid``), then a
+    ping of the gateway loop's own tick socket for one byte (Hermes's witness, ``hermes_cli.gateway.
+    _probe_loop_tick_socket_sustained``: about 1 s per try, at most 3 tries). Only a reply from the loop counts;
+    a fresh heartbeat file is not used. Returns "answered", "silent" (the socket exists but the loop did not
+    answer), "no witness" (no socket to ask), "not running", or "absent" on a Hermes without the witness."""
     from gateway.status import get_running_pid
     pid = get_running_pid(cleanup_stale=False)
     if pid is None:
         return "not running"
     try:
-        from hermes_cli.gateway import probe_gateway_loop_liveness
+        from hermes_cli.gateway import _probe_loop_tick_socket_sustained as witness
     except ImportError:
         return "absent"
-    return str(probe_gateway_loop_liveness(int(pid)))
+    tcp_port = None
+    try:  # Windows gateways publish a loopback TCP witness port in the heartbeat payload instead of a socket file
+        from gateway.shutdown_watchdog import get_loop_heartbeat_path
+        payload = json.loads(get_loop_heartbeat_path(None).read_text(encoding="utf-8-sig"))
+        port = payload.get("loop_tick_tcp_port") if int(payload.get("pid", 0)) == int(pid) else None
+        tcp_port = int(port) if port is not None and 0 < int(port) <= 65535 else None
+    except Exception:
+        tcp_port = None
+    result = witness(int(pid), None, timeout=1.0, strikes=3, gap_s=0.2, tcp_port=tcp_port)
+    return {True: "answered", False: "silent"}.get(result, "no witness")
 
 
 def destination_allowed(e164: str, policy: dict) -> bool:
