@@ -107,8 +107,10 @@ def settings_message(exc: BaseException) -> str:
     if not isinstance(exc, ValueError):
         return fixed
     text = str(exc)
+    if text.startswith("unknown hermes-line settings"):  # the key itself is never echoed (it can be anything)
+        return "unknown setting in the hermes-line config: check spelling against the README Settings table"
     head = re.match(r"([a-z_]+)", text)
-    known = (text.startswith(("policy: ", "setting ", "unknown hermes-line settings: "))
+    known = (text.startswith(("policy: ", "setting "))
              or bool(head and head.group(1) in _setting_names()))
     return f"{text} (plugins.entries.hermes-line.settings)" if known and _safe(text) else fixed
 
@@ -418,23 +420,32 @@ _LONG = re.compile(r"[A-Za-z0-9_+/=-]{24,}")
 
 
 def redact(text: str) -> str:
-    """The final rendering boundary, after Unicode NFKC normalisation: digits joined only by Unicode spaces,
-    punctuation (any dash, dot, parenthesis) or plus signs form one number, and one of 7+ digits keeps only its
-    last two; a SID-shaped token (2 letters + 32 hex) and a long secret-shaped token (24+ characters with a digit
-    or mixed case) are hidden."""
+    """The final rendering boundary, before and after Unicode NFKC normalisation: digits joined only by characters
+    that are neither letters nor digits (any other Unicode category) form one number, and one of 7+ digits keeps
+    only its last two; a SID-shaped token (2 letters + 32 hex) and a long secret-shaped token (24+ characters with
+    a digit or mixed case) are hidden."""
     def long(m: re.Match) -> str:
         t = m.group()
         secretish = any(c.isdigit() for c in t) or (any(c.islower() for c in t) and any(c.isupper() for c in t))
         return "[hidden]" if secretish else t
-    text = unicodedata.normalize("NFKC", str(text))
+    text = _mask_digit_runs(str(text))  # before NFKC too: a symbol NFKC turns into letters still separates
+    text = unicodedata.normalize("NFKC", text)
     text = _SID.sub("[SID hidden]", text)
     text = _LONG.sub(long, text)
     return _mask_digit_runs(text)
 
 
 def _separator(c: str) -> bool:
-    """Between digits: any Unicode space, punctuation (dashes, dots, parentheses, no-break hyphens) or ``+``."""
-    return c.isspace() or c == "+" or unicodedata.category(c)[0] in ("Z", "P") or unicodedata.category(c) == "Cf"
+    """Between digits: any character that is not a letter or a digit (any Unicode category outside L* and N*:
+    spaces, punctuation, symbols such as U+2212 MINUS SIGN, controls, format characters, unassigned)."""
+    return unicodedata.category(c)[0] not in ("L", "N")
+
+
+def _digit(c: str) -> str:
+    try:
+        return str(unicodedata.digit(c))
+    except (TypeError, ValueError):
+        return c
 
 
 def _mask_digit_runs(text: str) -> str:
@@ -455,7 +466,7 @@ def _mask_digit_runs(text: str) -> str:
         start = i
         if start > 0 and text[start - 1] in "+(" and len(digits) >= 7:
             out.pop()  # a leading "+" or "(" belongs to the number
-        out.append(f"[number ending in {''.join(digits)[-2:]}]" if len(digits) >= 7 else span)
+        out.append(f"[number ending in {''.join(_digit(d) for d in digits[-2:])}]" if len(digits) >= 7 else span)
         i = last_digit + 1
     return "".join(out)
 

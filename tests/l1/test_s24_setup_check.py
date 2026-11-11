@@ -574,7 +574,7 @@ class PrivacyAndShapeTests(unittest.TestCase):
         self.assertClean(text)
         self.assertEqual(code, 1)
         for exc in (RuntimeError(f"provider failed for {ACCOUNT} {SECRET}"), ValueError(f"from_number {OWNER} bad"),
-                    ValueError(f"unknown hermes-line settings: {LINE[1:]}"), KeyError(LINE),
+                    KeyError(LINE),
                     ValueError("public_base_url https://user:" + SECRET + "@x.example")):
             with self.subTest(exc=type(exc).__name__):
                 def boom():
@@ -624,6 +624,42 @@ class PrivacyAndShapeTests(unittest.TestCase):
                 self.assertNotIn(value, text)
                 self.assertNotIn("555", text)
                 self.assertNotIn("\uff15", text)
+
+    def test_unknown_setting_keys_are_never_echoed(self):
+        """S24 review 4: the real loader names an unknown key in its error; the check never repeats it."""
+        national = OWNER[2:]
+        for key in (national[:3] + "\u2212" + national[3:6] + "\u2212" + national[6:], "mistyped_setting_name",
+                    "+" + OWNER[1:]):
+            with self.subTest(key=ascii(key)):
+                rig = Rig()
+                rig.settings[key] = "mistyped setting"
+                items, text, code = rig.run()
+                self.assertFalse(items["Settings"].ok)
+                self.assertIn("unknown setting in the hermes-line config", items["Settings"].text)
+                self.assertNotIn(key, text)
+                self.assertNotIn(national[6:], text)
+                self.assertEqual(code, 1)
+
+    def test_minus_sign_and_every_non_letter_non_digit_separator_is_masked(self):
+        """S24 review 4: any character outside Unicode L* and N* between digit groups is a separator. Every code
+        point in categories Z*, P*, S* and C* (surrogates excluded) is tried between the groups of a sample number
+        and rendered through report(); the number never appears."""
+        import unicodedata
+        national = OWNER[2:]
+        self.assertEqual(sc.redact(national[:3] + "\u2212" + national[3:6] + "\u2212" + national[6:]),
+                         "[number ending in 99]")
+        cps = [c for c in range(0x110000)
+               if unicodedata.category(chr(c))[0] in "ZPSC" and unicodedata.category(chr(c)) != "Cs"]
+        self.assertGreater(len(cps), 900000)
+        batch = 2000
+        for k in range(0, len(cps), batch):
+            chunk = cps[k:k + batch]
+            text = " x ".join(national[:3] + chr(c) + national[3:6] + chr(c) + national[6:] for c in chunk)
+            out = sc.report([sc.Item("Tunnel", False, text)])
+            if out.count("[number ending in 99]") != len(chunk) or national[6:] in out or national[3:6] in out:
+                bad = [hex(c) for c in chunk if national[6:] in sc.redact(
+                    national[:3] + chr(c) + national[3:6] + chr(c) + national[6:])]
+                self.fail(f"separators not masked: {bad[:20]}")
 
     def test_secret_shaped_profile_name_is_not_printed_on_success(self):
         for name, shown in (("a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6", False), ("hermes-line-calls", True),
