@@ -1,0 +1,653 @@
+{
+  "call": {
+    "id": "call_5cce66d5964c476b",
+    "task_id": "task_a9504c3e9dcc42b7",
+    "task_title": "Book a table for 20 people tomorrow evening for Can; if they need a person to confirm, connect Can",
+    "task_goal": "RESTAURANT TRIAL TASK GUIDANCE (MIT-018 route A) \u2014 load into the approved call task before dialing.\nThese are instructions for this one attended trial, not facts about any restaurant.\n\nMode: owner. Task: Can would like a table for 20 people tomorrow evening. If they\nneed a person to confirm, connect Can. The restaurant's phone may first be\nanswered by an automated AI assistant; the engine answers it only with its fixed\nstaff request. Wait for a staff member, then ring and bridge the approved owner.\nDo not confirm, change or cancel a reservation yourself, pay, give card or deposit\ndetails, or accept terms. Never invent a name, phone number, time, date or any\ndetail. Disclose that you are an AI assistant.\n\nCallback is NOT authorized. Do not accept a callback, a text message or a link, and\ndo not give any phone number. While on hold or during a transfer, stay silent.\nRing only the separately approved owner destination. Wait for private owner\nacceptance before bridging. If the owner declines or does not answer, or the\nrestaurant hangs up, follow the approved one-question fallback and then end; no\nautomatic retry. Respect the trial's global 10-minute deadline and balance stop.\n\nApproved decision A overrides the older no-fallback instruction: after the owner timeout, ask only the engine-enforced fallback question, then end. Restrictions: no callback, no payment, no booking, change or cancellation; never invent identity or booking.\nApproval restrictions: confirm, change or cancel a reservation, payment, deposit or card details, invent identity or details, accept callback",
+    "direction": "outbound",
+    "counterpart_masked": "[Bora Mediterranean public line]",
+    "state": "ended",
+    "started_at": "2026-11-11T03:22:07.235+00:00",
+    "state_since": "2026-11-11T03:24:18.438+00:00",
+    "duration_s": 131,
+    "mode": "owner",
+    "transcript": [
+      {
+        "seq": 1,
+        "speaker": "hermes",
+        "text": "Hi, this is Hermes, an AI assistant calling on behalf of Can. This call is being recorded.",
+        "ts": "2026-11-11T03:22:07.765+00:00"
+      },
+      {
+        "seq": 2,
+        "speaker": "business",
+        "text": "This call may be recorded for quality assurance purposes.",
+        "ts": "2026-11-11T03:22:11.087+00:00"
+      },
+      {
+        "seq": 3,
+        "speaker": "business",
+        "text": "Thanks for calling Bora. How can I assist you today?",
+        "ts": "2026-11-11T03:22:15.693+00:00"
+      },
+      {
+        "seq": 4,
+        "speaker": "hermes",
+        "text": "Hi, this is Hermes, an AI assistant calling for Can. Am I speaking with a live person?",
+        "ts": "2026-11-11T03:22:16.926+00:00"
+      },
+      {
+        "seq": 5,
+        "speaker": "business",
+        "text": "You're speaking with Bora Mediterranean's virtual assistant.",
+        "ts": "2026-11-11T03:22:28.335+00:00"
+      },
+      {
+        "seq": 6,
+        "speaker": "hermes",
+        "text": "Staff, please. Table for 20 tomorrow evening.",
+        "ts": "2026-11-11T03:22:29.885+00:00"
+      },
+      {
+        "seq": 7,
+        "speaker": "business",
+        "text": "Here to help with anything you need from the restaurant. What can I take care of for you today?",
+        "ts": "2026-11-11T03:22:32.439+00:00"
+      },
+      {
+        "seq": 8,
+        "speaker": "business",
+        "text": "No rush. Just making sure you're still there. Can you hear me?",
+        "ts": "2026-11-11T03:22:46.086+00:00"
+      },
+      {
+        "seq": 9,
+        "speaker": "hermes",
+        "text": "Staff, please. Table for 20 tomorrow evening.",
+        "ts": "2026-11-11T03:22:46.611+00:00"
+      },
+      {
+        "seq": 10,
+        "speaker": "business",
+        "text": "Let me connect you with a team member in store who can help with your reservation request.",
+        "ts": "2026-11-11T03:22:55.274+00:00"
+      },
+      {
+        "seq": 11,
+        "speaker": "business",
+        "text": "Hello. For Arino. How can I help you?",
+        "ts": "2026-11-11T03:23:09.242+00:00"
+      },
+      {
+        "seq": 12,
+        "speaker": "hermes",
+        "text": "Hi, this is Hermes, an AI assistant calling for Can. Am I speaking with a live person?",
+        "ts": "2026-11-11T03:23:10.489+00:00"
+      },
+      {
+        "seq": 13,
+        "speaker": "business",
+        "text": "Yes.",
+        "ts": "2026-11-11T03:23:17.059+00:00"
+      },
+      {
+        "seq": 14,
+        "speaker": "hermes",
+        "text": "Thank you. I'm an AI assistant calling for Can, who would like a table for 20 people tomorrow evening. Please hold one moment while I connect Can.",
+        "ts": "2026-11-11T03:23:18.305+00:00"
+      },
+      {
+        "seq": 15,
+        "speaker": "system",
+        "text": "Ringing Can",
+        "ts": "2026-11-11T03:23:19.180+00:00"
+      },
+      {
+        "seq": 16,
+        "speaker": "business",
+        "text": "Mhmm.",
+        "ts": "2026-11-11T03:23:23.140+00:00"
+      },
+      {
+        "seq": 17,
+        "speaker": "hermes",
+        "text": "Thank you for your patience, I'm connecting Can now.",
+        "ts": "2026-11-11T03:23:24.379+00:00"
+      },
+      {
+        "seq": 18,
+        "speaker": "business",
+        "text": "Alright. Alright.",
+        "ts": "2026-11-11T03:23:27.085+00:00"
+      },
+      {
+        "seq": 19,
+        "speaker": "business",
+        "text": "Okay. Thank you.",
+        "ts": "2026-11-11T03:23:28.714+00:00"
+      },
+      {
+        "seq": 20,
+        "speaker": "system",
+        "text": "Can took over the call",
+        "ts": "2026-11-11T03:23:28.754+00:00"
+      }
+    ],
+    "summary": "A person answered and Can was connected; the call ended after 2 min 11 s. Hermes Line: Can took over and finished the call ([Bora Mediterranean public line], \"Book a table for 20 people tomorrow evening for Can; if they need a person to confirm, connect Can\", 2m11s). On the call: They: \"Here to help with anything you need from the restaurant. What can I take care of for you today?\" / They: \"No rush. Just making sure you're still there. Can you hear me?\" / Hermes: \"Staff, please. Table for 20 tomorrow evening.\" / They: \"Let me connect you with a team member in store who can help with your reservation request.\" / They: \"Hello. For Arino. How can I help you?\" / Hermes: \"Hi, this is Hermes, an AI assistant calling for Can. Am I speaking with a live person?\" / They: \"Yes.\" / Hermes: \"Thank you. I'm an AI assistant calling for Can, who would like a table for 20 people tomorrow evening. Please hold one moment while I connect Can.\" / They: \"Mhmm.\" / Hermes: \"Thank you for your patience, I'm connecting Can now.\" / They: \"Alright. Alright.\" / They: \"Okay. Thank you.\".",
+    "end_reason": "owner_finished",
+    "revision": 38,
+    "control_revision": 36,
+    "phases": [
+      {
+        "phase": "dialing",
+        "since": "2026-11-11T03:22:02.552+00:00"
+      },
+      {
+        "phase": "hold",
+        "since": "2026-11-11T03:22:11.093+00:00"
+      },
+      {
+        "phase": "assistant",
+        "since": "2026-11-11T03:22:28.336+00:00"
+      },
+      {
+        "phase": "hold",
+        "since": "2026-11-11T03:22:55.276+00:00"
+      },
+      {
+        "phase": "person",
+        "since": "2026-11-11T03:23:17.062+00:00"
+      },
+      {
+        "phase": "owner_ringing",
+        "since": "2026-11-11T03:23:19.179+00:00"
+      },
+      {
+        "phase": "bridged",
+        "since": "2026-11-11T03:23:28.751+00:00"
+      },
+      {
+        "phase": "ended",
+        "since": "2026-11-11T03:24:18.438+00:00"
+      }
+    ]
+  },
+  "CallSID": "[Bora take 7 business leg CA id]",
+  "events": [
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "task_options",
+      "data": {
+        "owner_ring_timeout_s": 120,
+        "fallback_question": "Could you note a request for a table for twenty people tomorrow evening for Can?",
+        "ivr_category": "reservations"
+      },
+      "ts": 1794367322.549133
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "dialing",
+      "data": {
+        "to": "[Bora Mediterranean public line]"
+      },
+      "ts": 1794367326.504731
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "relay_connected",
+      "data": {
+        "reconnects": 0
+      },
+      "ts": 1794367327.5543182
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794367328.841644
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high"
+      },
+      "ts": 1794367331.092108
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "assistant_phrases_paused",
+      "data": {
+        "why": "hold"
+      },
+      "ts": 1794367331.09299
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "state",
+      "data": {
+        "frm": "dialing",
+        "to": "on_hold",
+        "why": "hold message"
+      },
+      "ts": 1794367331.093623
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "detect",
+      "data": {
+        "label": "unknown",
+        "confidence": "low"
+      },
+      "ts": 1794367335.6966999
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "live_person_question_sent",
+      "data": {
+        "count": 1
+      },
+      "ts": 1794367336.92727
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "new_party_question",
+      "data": {
+        "count": 1
+      },
+      "ts": 1794367336.927723
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "detect",
+      "data": {
+        "label": "automated_assistant",
+        "confidence": "high",
+        "bora": "self-identified bot"
+      },
+      "ts": 1794367348.335777
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "bora_bot_declared",
+      "data": {
+        "by": "self-identification",
+        "detector": "automated_assistant"
+      },
+      "ts": 1794367348.335954
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "state",
+      "data": {
+        "frm": "on_hold",
+        "to": "ivr",
+        "why": "automated assistant"
+      },
+      "ts": 1794367348.336297
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "ivr_action",
+      "data": {
+        "state": "automated_assistant",
+        "phrase_id": "staff_table",
+        "bora": "bot_mode"
+      },
+      "ts": 1794367349.886106
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794367349.9984
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "medium",
+        "bora": "bot mode"
+      },
+      "ts": 1794367352.443905
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "bora_bot_line",
+      "data": {
+        "what": "ignored"
+      },
+      "ts": 1794367352.445052
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "detect",
+      "data": {
+        "label": "unknown",
+        "confidence": "low",
+        "bora": "bot mode"
+      },
+      "ts": 1794367366.088557
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "bora_bot_line",
+      "data": {
+        "what": "staff line repeated once: the bot asked what we need"
+      },
+      "ts": 1794367366.089375
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "ivr_action",
+      "data": {
+        "state": "automated_assistant",
+        "phrase_id": "staff_table",
+        "bora": "bot_mode"
+      },
+      "ts": 1794367366.612304
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "detect",
+      "data": {
+        "label": "hold_message",
+        "confidence": "high",
+        "bora": "bot mode"
+      },
+      "ts": 1794367375.2759051
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "bora_transfer",
+      "data": {
+        "what": "the bot transferred us; the next new voice is a new party"
+      },
+      "ts": 1794367375.276481
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "assistant_phrases_paused",
+      "data": {
+        "why": "hold"
+      },
+      "ts": 1794367375.276732
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "state",
+      "data": {
+        "frm": "ivr",
+        "to": "on_hold",
+        "why": "bora: transfer"
+      },
+      "ts": 1794367375.277496
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "detect",
+      "data": {
+        "label": "unknown",
+        "confidence": "low",
+        "bora": "new party after transfer"
+      },
+      "ts": 1794367389.244118
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "bora_new_party",
+      "data": {},
+      "ts": 1794367389.2443829
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "live_person_question_sent",
+      "data": {
+        "count": 2
+      },
+      "ts": 1794367390.490377
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "new_party_question",
+      "data": {
+        "count": 2
+      },
+      "ts": 1794367390.490721
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "detect",
+      "data": {
+        "label": "human",
+        "confidence": "high"
+      },
+      "ts": 1794367397.061884
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "live_person_confirmed_by_reply",
+      "data": {
+        "label": "human"
+      },
+      "ts": 1794367397.062426
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "state",
+      "data": {
+        "frm": "on_hold",
+        "to": "human_detected",
+        "why": "live person confirmed"
+      },
+      "ts": 1794367397.063076
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "state",
+      "data": {
+        "frm": "human_detected",
+        "to": "ringing_owner",
+        "why": "human_detected"
+      },
+      "ts": 1794367399.1798909
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794367403.13985
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "barge_in",
+      "data": {},
+      "ts": 1794367406.62796
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "state",
+      "data": {
+        "frm": "ringing_owner",
+        "to": "owner_connected",
+        "why": "owner accepted"
+      },
+      "ts": 1794367408.7521439
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "conference",
+      "data": {
+        "what": "participant-join"
+      },
+      "ts": 1794367410.098421
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "conference",
+      "data": {
+        "what": "participant-join"
+      },
+      "ts": 1794367410.1298182
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "conference",
+      "data": {
+        "what": "conference-start"
+      },
+      "ts": 1794367410.13301
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "conference",
+      "data": {
+        "what": "participant-leave"
+      },
+      "ts": 1794367457.490816
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "conference",
+      "data": {
+        "what": "participant-leave"
+      },
+      "ts": 1794367457.492589
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "conference",
+      "data": {
+        "what": "conference-end"
+      },
+      "ts": 1794367458.348592
+    },
+    {
+      "call_id": "call_5cce66d5964c476b",
+      "task_id": "task_a9504c3e9dcc42b7",
+      "kind": "ended",
+      "data": {
+        "state": "ended",
+        "reason": "owner_finished"
+      },
+      "ts": 1794367458.439565
+    }
+  ],
+  "provider": {
+    "sid": "[Bora take 7 business leg CA id]",
+    "duration": "130",
+    "status": "completed",
+    "price": "-0.04200",
+    "price_unit": "USD",
+    "read_at": 1794367461.696836
+  },
+  "balance_before": {
+    "usd": "18.43406",
+    "at": 1794367315.9125178
+  },
+  "balance_after": null,
+  "provider_legs": [
+    {
+      "sid": "[Bora take 7 business leg CA id]",
+      "duration": "130",
+      "status": "completed",
+      "price": "-0.04200",
+      "price_unit": "USD",
+      "read_at": 1794367461.696836
+    },
+    {
+      "sid": "[Bora take 7 owner leg CA id]",
+      "duration": "53",
+      "status": "completed",
+      "price": "-0.01400",
+      "price_unit": "USD",
+      "read_at": 1794367462.1333802
+    }
+  ],
+  "hold_report": {
+    "dry": false,
+    "outcome": "owner_finished",
+    "call_outcome": "owner_finished",
+    "cleanup_failures": [],
+    "rates": {
+      "business": "0.0210",
+      "relay": "0.1050",
+      "owner": "0.0210",
+      "conference": "0.00270",
+      "recording": "0.00375"
+    },
+    "rate_basis": "Voice number Pricing API x1.5 (business); S2 x1.5 (owner/Relay/conference)",
+    "balance_reads": [
+      {
+        "at": 1794367315.9124532,
+        "usd": "18.43406"
+      },
+      {
+        "at": 1794367326.023992,
+        "usd": "18.43406"
+      },
+      {
+        "at": 1794367386.879595,
+        "usd": "18.43406"
+      },
+      {
+        "at": 1794367398.65166,
+        "usd": "18.43406"
+      }
+    ],
+    "conservative_cost_usd": "0.47970",
+    "cost_basis": "conservative estimate, separate from Twilio billing",
+    "metrics": {
+      "menu_s": 0,
+      "hold_s": 65.96945309638977,
+      "transcript_to_human_s": 0.0037899017333984375,
+      "bridge_s": 11.689067840576172,
+      "false_human_count": null,
+      "false_human_basis": "requires independent operator annotation",
+      "human_assumed_count": 0
+    }
+  }
+}
