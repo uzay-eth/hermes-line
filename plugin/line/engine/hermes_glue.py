@@ -511,8 +511,34 @@ def register(ctx: Any) -> None:
         enabled = ctx.get_config("enabled", False) is True
     except Exception:
         enabled = False
-    if enabled:
+    if cli_invocation():
+        # `hermes hermes-line ...` (the setup check): this process never builds the service, its store or its
+        # start thread, so it cannot take the line, recover calls or dial (S24 review finding 1).
+        host.stopped = True
+    elif enabled:
         threading.Thread(target=host.start, name="hermes-line-start", daemon=True).start()
+
+
+CLI_COMMAND = "hermes-line"
+
+
+def cli_invocation(argv: Optional[list] = None) -> bool:
+    """True in a process started as ``hermes hermes-line ...``: the first positional argument (skipping flags and
+    the value of ``-p``/``--profile``) is the CLI command's name, or ``hermes-line check`` appears anywhere. Such a
+    process only runs the setup check; ``register()`` then starts no call service."""
+    import sys
+    args = [str(a) for a in (sys.argv[1:] if argv is None else list(argv))]
+    if any(a == CLI_COMMAND and b == "check" for a, b in zip(args, args[1:])):
+        return True
+    skip = False
+    for arg in args:
+        if skip:
+            skip = False
+        elif arg in ("-p", "--profile"):
+            skip = True
+        elif not arg.startswith("-"):
+            return arg == CLI_COMMAND
+    return False
 
 
 def _register_cli(ctx: Any, host: _Host) -> None:
@@ -530,13 +556,13 @@ def _register_cli(ctx: Any, host: _Host) -> None:
         if getattr(args, "line_command", None) != "check":
             print("Usage: hermes hermes-line check")
             raise SystemExit(2)
-        host.stop()  # this short-lived process must not take the line, or the port, while it checks
+        host.stopped = True  # also set at register(); the check itself never builds the service
         text, code = setup_check_text(host)
         print(text)
         raise SystemExit(code)
 
     try:
-        register_cli(name="hermes-line", help="Hermes Line: setup check", setup_fn=setup, handler_fn=handler,
+        register_cli(name=CLI_COMMAND, help="Hermes Line: setup check", setup_fn=setup, handler_fn=handler,
                      description="hermes hermes-line check: check the Hermes Line setup without placing a call.")
     except Exception:
         pass

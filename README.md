@@ -13,12 +13,14 @@ Version 0.1.0. Requires Hermes 0.22.5 or newer. License: MIT (`LICENSE`), copyri
 
 ## Quick start (about 5 minutes)
 
-You need Hermes 0.22.5 or newer and a Twilio account. Nothing below places a call until step 7. Each step is
-explained in full under Setup.
+You need Hermes 0.22.5 or newer and a Twilio account. The plugin places no call before step 7; only Twilio's own
+caller-ID verification in step 1, if you choose it, rings the phone you verify. Each step is explained in full
+under Setup.
 
 1. **Twilio.** In the Twilio console, buy a US local number with voice (the **line number**) and create an API key
    (its SID starts with `SK`; keep the secret). A Twilio trial account can call only numbers you have verified in
-   Twilio. To show your own mobile number to businesses, verify it under Verified Caller IDs (optional).
+   Twilio. To show your own mobile number to businesses, verify it under Verified Caller IDs (optional; Twilio
+   calls that phone and you type the code it shows).
 2. **Install.** `hermes plugins install uzay-eth/hermes-line/plugin --enable`. Hermes asks for
    `HERMES_LINE_TWILIO_ACCOUNT_SID` (`AC...`), `HERMES_LINE_TWILIO_API_KEY_SID` (`SK...`) and
    `HERMES_LINE_TWILIO_API_KEY_SECRET`.

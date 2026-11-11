@@ -3,10 +3,14 @@
 No network: Twilio, the tunnel, the gateway and the port are fakes. The checks below also prove the output
 never carries a credential, a SID or a whole phone number, and that every Twilio request is a GET.
 """
+import email.message
+import http.client
 import io
 import json
 import unittest
 import urllib.error
+import urllib.request
+import urllib.response
 from contextlib import redirect_stdout
 from unittest import mock
 
@@ -114,7 +118,7 @@ class SetupCheckTests(unittest.TestCase):
         rig = Rig()
         items, text, code = rig.run()
         self.assertEqual(code, 0, text)
-        self.assertEqual(list(items), ["Hermes version", "Hermes gateway", "Settings", "Twilio credentials",
+        self.assertEqual(list(items), ["Hermes version", "Hermes gateway process", "Settings", "Twilio credentials",
                                        "Twilio accepts the credentials", "Line number on the account", "Caller ID",
                                        "Owner phone", "Call profile", "Tunnel", "Local port"])
         lines = text.splitlines()
@@ -142,36 +146,19 @@ class SetupCheckTests(unittest.TestCase):
 
     def test_real_http_get_sends_a_get_without_a_body(self):
         seen = []
+        handlers = lambda routes: (FakeHTTPS(routes, seen), FakeHTTP(seen))  # noqa: E731
+        self.assertEqual(sc.http_get(f"{BASE}/health", {}, 3.0, _handlers=handlers(lambda u: (200, {}, b"{}"))),
+                         (200, b"{}"))
+        self.assertEqual(seen, [(f"{BASE}/health", "GET", None, None)])
+        status, _ = sc.http_get(f"{BASE}/health", {}, 3.0,
+                                _handlers=handlers(lambda u: (401, {}, b'{"code": 20003}')))
+        self.assertEqual(status, 401)
 
-        class Resp:
-            status = 200
-
-            def read(self, n=-1):
-                return b"{}"
-
-            def __enter__(self):
-                return self
-
-            def __exit__(self, *a):
-                return False
-
-        def opener(req, timeout):
-            seen.append((req.get_method(), req.data, timeout))
-            return Resp()
-        with mock.patch.object(sc.urllib.request, "urlopen", opener):
-            self.assertEqual(sc.http_get(f"{BASE}/health", {}, 3.0), (200, b"{}"))
-        self.assertEqual(seen, [("GET", None, 3.0)])
-
-        def http_error(req, timeout):
-            raise urllib.error.HTTPError(req.full_url, 401, "no", {}, io.BytesIO(b'{"code": 20003}'))
-        with mock.patch.object(sc.urllib.request, "urlopen", http_error):
-            self.assertEqual(sc.http_get(f"{BASE}/health", {}, 3.0)[0], 401)
-
-        def unreachable(req, timeout):
-            raise urllib.error.URLError(ConnectionRefusedError("refused"))
-        with mock.patch.object(sc.urllib.request, "urlopen", unreachable):
-            with self.assertRaises(OSError):
-                sc.http_get(f"{BASE}/health", {}, 3.0)
+        class Down(urllib.request.HTTPSHandler):
+            def https_open(self, req):
+                raise urllib.error.URLError(ConnectionRefusedError("refused"))
+        with self.assertRaises(OSError):
+            sc.http_get(f"{BASE}/health", {}, 3.0, _handlers=(Down(),))
 
     def test_hermes_version(self):
         for version, ok in (("0.22.5", True), ("0.23.0", True), ("0.22.4", False), ("0.9.9", False),
@@ -208,8 +195,11 @@ class SetupCheckTests(unittest.TestCase):
         rig = Rig()
         rig.gateway = False
         items, _, code = rig.run()
-        self.assertFalse(items["Hermes gateway"].ok)
-        self.assertIn("hermes gateway start", items["Hermes gateway"].text)
+        self.assertFalse(items["Hermes gateway process"].ok)
+        self.assertIn("hermes gateway start", items["Hermes gateway process"].text)
+        rig = Rig()
+        items, _, _ = rig.run()
+        self.assertIn("not tested", items["Hermes gateway process"].text)  # a process record, not a reachability probe
         self.assertEqual(code, 1)
 
     def test_settings(self):
@@ -270,7 +260,7 @@ class SetupCheckTests(unittest.TestCase):
         rig = Rig()
         rig.net.down.add("twilio")
         items, _, code = rig.run()
-        self.assertIn("could not be reached", items["Twilio accepts the credentials"].text)
+        self.assertIn("no usable answer (ConnectionRefusedError)", items["Twilio accepts the credentials"].text)
         self.assertEqual(code, 1)
         rig = Rig()
         rig.net.auth_status = 404
@@ -367,14 +357,238 @@ class SetupCheckTests(unittest.TestCase):
         sc.run(rig.config, probes)
         self.assertEqual(seen, [("127.0.0.1", 8788)])
 
-    def test_real_port_probe(self):
-        import socket
-        with socket.socket() as srv:
-            srv.bind(("127.0.0.1", 0))
-            srv.listen(1)
-            port = srv.getsockname()[1]
-            self.assertTrue(sc.port_open("127.0.0.1", port, 1.0))
-        self.assertFalse(sc.port_open("127.0.0.1", port, 1.0))
+    def test_port_zero_is_said_plainly(self):
+        rig = Rig()
+        rig.settings["listen_port"] = 0
+        items, _, code = rig.run()
+        self.assertFalse(items["Local port"].ok)
+        self.assertIn("not a fixed port", items["Local port"].text)
+        self.assertNotIn(":0", items["Local port"].text)
+        self.assertEqual(code, 1)
+
+    def test_real_port_probe_with_a_fake_socket(self):
+        seen = []
+
+        class Conn:
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *a):
+                return False
+
+        def connect(addr, timeout):
+            seen.append((addr, timeout))
+            if addr[1] == 8788:
+                return Conn()
+            raise ConnectionRefusedError("refused")
+        with mock.patch.object(sc.socket, "create_connection", connect):
+            self.assertTrue(sc.port_open("127.0.0.1", 8788, 1.0))
+            self.assertFalse(sc.port_open("127.0.0.1", 8789, 1.0))
+        self.assertEqual(seen, [(("127.0.0.1", 8788), 1.0), (("127.0.0.1", 8789), 1.0)])
+
+
+class FakeHTTPS(urllib.request.HTTPSHandler):
+    """Serves https requests from ``routes(url) -> (status, headers, body or exception)``; no socket."""
+
+    def __init__(self, routes, seen):
+        super().__init__()
+        self.routes, self.seen = routes, seen
+
+    def https_open(self, req):
+        self.seen.append((req.full_url, req.get_method(), req.get_header("Authorization"), req.data))
+        status, headers, body = self.routes(req.full_url)
+        msg = email.message.Message()
+        for k, v in headers.items():
+            msg[k] = v
+        fp = body if hasattr(body, "read") else io.BytesIO(body)
+        resp = urllib.response.addinfourl(fp, msg, req.full_url, status)
+        resp.msg = "fake"
+        return resp
+
+
+class FakeHTTP(urllib.request.HTTPHandler):
+    def __init__(self, seen):
+        super().__init__()
+        self.seen = seen
+
+    def http_open(self, req):
+        self.seen.append((req.full_url, "plain http", req.get_header("Authorization"), None))
+        raise AssertionError("plain http must never be requested")
+
+
+class Truncated(io.BytesIO):
+    def read(self, *a):
+        raise http.client.IncompleteRead(b'{"incoming_phone')
+
+
+class HttpHelperTests(unittest.TestCase):
+    """The real ``http_get`` with fake urllib handlers: redirects, downgrades, truncation, error privacy."""
+
+    def _get(self, routes, url, headers=None):
+        seen = []
+        handlers = (FakeHTTPS(routes, seen), FakeHTTP(seen))
+        try:
+            return sc.http_get(url, headers or {}, 3.0, _handlers=handlers), seen
+        except sc.ProbeError as exc:
+            return exc, seen
+
+    def test_redirects_are_not_followed_and_authorization_never_moves(self):
+        auth = {"Authorization": "Basic " + "Q" * 40}
+        for target in ("http://evil.example/health", "https://other.example/x", f"{BASE}/elsewhere"):
+            with self.subTest(target=target):
+                out, seen = self._get(lambda url: (302, {"Location": target}, b'{"ok": true}'),
+                                      f"{sc.TWILIO_API}/Accounts/{ACCOUNT}/IncomingPhoneNumbers.json", auth)
+                self.assertEqual(out[0], 302)
+                self.assertEqual(len(seen), 1)  # the redirect target was never requested
+                self.assertTrue(seen[0][0].startswith(sc.TWILIO_API))
+
+    def test_tunnel_redirect_to_http_is_a_fix_not_a_pass(self):
+        rig = Rig()
+        seen = []
+
+        def routes(url):
+            if url == f"{BASE}/health":
+                return 301, {"Location": "http://plain.example/health"}, b""
+            return rig.net(url, {}, 3.0)[0], {}, rig.net(url, {}, 3.0)[1]
+        probes = rig.probes()
+        probes.http_get = lambda url, headers, timeout: (
+            rig.net(url, headers, timeout) if url.startswith(sc.TWILIO_API)
+            else sc.http_get(url, headers, timeout, _handlers=(FakeHTTPS(routes, seen), FakeHTTP(seen))))
+        items = {i.name: i for i in sc.run(rig.config, probes)}
+        self.assertFalse(items["Tunnel"].ok)
+        self.assertIn("redirected (HTTP 301)", items["Tunnel"].text)
+        self.assertEqual([u for u, *_ in seen], [f"{BASE}/health"])
+
+    def test_plain_http_url_is_refused_before_any_request(self):
+        out, seen = self._get(lambda url: (200, {}, b"{}"), "http://line.example.com/health")
+        self.assertIsInstance(out, sc.ProbeError)
+        self.assertEqual(seen, [])
+
+    def test_truncated_body_becomes_a_probe_error(self):
+        out, _ = self._get(lambda url: (200, {}, Truncated()), f"{BASE}/health")
+        self.assertIsInstance(out, sc.ProbeError)
+        self.assertEqual(str(out), "IncompleteRead")
+
+    def test_unreachable_errors_keep_no_message(self):
+        secret_url = f"{sc.TWILIO_API}/Accounts/{ACCOUNT}/IncomingPhoneNumbers.json?PhoneNumber={LINE}"
+
+        class Down(urllib.request.HTTPSHandler):
+            def https_open(self, req):
+                raise urllib.error.URLError(ConnectionRefusedError(f"refused {secret_url} {SECRET}"))
+        with self.assertRaises(sc.ProbeError) as ctx:
+            sc.http_get(secret_url, {}, 3.0, _handlers=(Down(),))
+        for text in (str(ctx.exception), repr(ctx.exception), str(ctx.exception.args)):
+            for value in (ACCOUNT, LINE, LINE[2:], SECRET):
+                self.assertNotIn(value, text)
+        self.assertEqual(ctx.exception.kind, "ConnectionRefusedError")
+        self.assertIsNone(ctx.exception.__cause__)
+        self.assertTrue(ctx.exception.__suppress_context__)
+
+
+class PrivacyAndShapeTests(unittest.TestCase):
+    MARKERS = (ACCOUNT, KEY, SECRET, LINE, OWNER, LINE[2:], OWNER[2:], "CA" + "c" * 32)
+
+    def assertClean(self, text):
+        for value in self.MARKERS:
+            self.assertNotIn(value, text)
+
+    def test_settings_errors_show_only_allowlisted_messages(self):
+        rig = Rig()
+        rig.settings["public_base_url"] = "https://" + OWNER + "\uff20example.invalid"
+        items, text, code = rig.run()
+        self.assertFalse(items["Settings"].ok)
+        self.assertIn("do not load", items["Settings"].text)
+        self.assertClean(text)
+        self.assertEqual(code, 1)
+        for exc in (RuntimeError(f"provider failed for {ACCOUNT} {SECRET}"), ValueError(f"from_number {OWNER} bad"),
+                    ValueError(f"unknown hermes-line settings: {LINE[1:]}"), KeyError(LINE),
+                    ValueError("public_base_url https://user:" + SECRET + "@x.example")):
+            with self.subTest(exc=type(exc).__name__):
+                def boom():
+                    raise exc
+                items = {i.name: i for i in sc.run(boom, rig.probes())}
+                self.assertIn("do not load", items["Settings"].text)
+                self.assertClean(sc.report(list(items.values())))
+        rig = Rig()
+        rig.settings["from_number"] = "7755550100"
+        items, _, _ = rig.run()
+        self.assertIn("from_number must be canonical E.164", items["Settings"].text)  # allowlisted, shown
+
+    def test_probe_exceptions_with_secrets_inside_show_only_class_names(self):
+        rig = Rig()
+        leak = f"{sc.TWILIO_API}/Accounts/{ACCOUNT} {LINE} {SECRET} {KEY}"
+
+        def get(url, headers, timeout):
+            raise RuntimeError(leak)
+        probes = rig.probes()
+        probes.http_get = get
+        probes.hermes_version = lambda: f"0.23.0 {leak}"
+        probes.gateway_running = lambda: (_ for _ in ()).throw(RuntimeError(leak))
+        probes.port_open = lambda *a: (_ for _ in ()).throw(RuntimeError(leak))
+        probes.destination_allowed = lambda *a: (_ for _ in ()).throw(RuntimeError(leak))
+        items = sc.run(rig.config, probes)
+        text = sc.report(items)
+        self.assertClean(text)
+        self.assertIn("(RuntimeError)", text)
+        self.assertIn("0.23.0 (needs", text)
+        probes.profile_problems = lambda name: [f"profile at {leak}"]
+        text = sc.report(sc.run(rig.config, probes))
+        self.assertIn("could not show safely", text)
+        self.assertClean(text)
+
+    def test_truncated_and_malformed_twilio_answers_are_fix_lines(self):
+        cases = {
+            "truncated": lambda url: (_ for _ in ()).throw(http.client.IncompleteRead(b"x")),
+            "not json": lambda url: (200, b"<html>"),
+            "json list": lambda url: (200, b"[]"),
+            "rows as object": lambda url: (200, json.dumps({"incoming_phone_numbers": {"a": 1},
+                                                            "outgoing_caller_ids": {}}).encode()),
+            "row not object": lambda url: (200, json.dumps({"incoming_phone_numbers": [LINE]}).encode()),
+            "capabilities not object": lambda url: (200, json.dumps({"incoming_phone_numbers": [
+                {"phone_number": LINE, "capabilities": [True]}]}).encode()),
+            "status not int": lambda url: ("200", b"{}"),
+        }
+        for name, answer in cases.items():
+            with self.subTest(case=name):
+                rig = Rig()
+                probes = rig.probes()
+                first = []
+
+                def get(url, headers, timeout, answer=answer):
+                    if url.startswith(sc.TWILIO_API) and "PageSize" in url and not first:
+                        first.append(url)
+                        if name in ("truncated", "not json", "json list", "status not int"):
+                            return answer(url)
+                        return 200, b'{"incoming_phone_numbers": []}'
+                    if url.startswith(sc.TWILIO_API):
+                        return answer(url)
+                    return rig.net(url, headers, timeout)
+                probes.http_get = get
+                items = {i.name: i for i in sc.run(rig.config, probes)}
+                self.assertEqual(len(items), 11)
+                twilio = [items[n] for n in ("Twilio accepts the credentials", "Line number on the account",
+                                             "Caller ID")]
+                self.assertFalse(all(i.ok for i in twilio))
+                self.assertTrue(any("no usable answer" in i.text for i in twilio), [i.text for i in twilio])
+                self.assertClean(sc.report(list(items.values())))
+
+    def test_tunnel_truncated_or_odd_answers(self):
+        for answer, expect in (((200, b"[1, 2]"), "not from Hermes Line"), ((200, b"\xff\xfe"), "not from Hermes Line"),
+                               (http.client.IncompleteRead(b"{"), "IncompleteRead")):
+            with self.subTest(answer=repr(answer)[:30]):
+                rig = Rig()
+                probes = rig.probes()
+
+                def get(url, headers, timeout, answer=answer):
+                    if url.endswith("/health"):
+                        if isinstance(answer, Exception):
+                            raise answer
+                        return answer
+                    return rig.net(url, headers, timeout)
+                probes.http_get = get
+                items = {i.name: i for i in sc.run(rig.config, probes)}
+                self.assertFalse(items["Tunnel"].ok)
+                self.assertIn(expect, items["Tunnel"].text)
 
 
 class SetupCheckCommandTests(unittest.TestCase):
@@ -427,6 +641,78 @@ class SetupCheckCommandTests(unittest.TestCase):
         with redirect_stdout(io.StringIO()), self.assertRaises(SystemExit) as stop:
             handler(parser.parse_args([]))
         self.assertEqual(stop.exception.code, 2)
+
+    def test_cli_process_with_enabled_true_never_builds_or_starts_the_service(self):
+        """S24 review finding 1: registering in `hermes hermes-line check` with `enabled: true` must create no
+        service, store, start thread or provider request, even when the start thread would run at once."""
+        import plugin
+        from plugin.line.engine import service as service_mod, telephony
+        from plugin.line import store as store_mod
+        events = []
+
+        def forbid(name):
+            def f(*a, **kw):
+                events.append(name)
+                raise AssertionError(name)
+            return f
+
+        class EagerThread:
+            def __init__(self, target=None, **kw):
+                self.target = target
+
+            def start(self):
+                events.append("thread")
+                self.target()
+        ctx, rig = self._ctx()
+        ctx.config["enabled"] = True
+        patches = [mock.patch.object(hermes_glue.threading, "Thread", EagerThread),
+                   mock.patch.object(hermes_glue._Host, "get", forbid("service_build")),
+                   mock.patch.object(hermes_glue._Host, "start", forbid("service_start")),
+                   mock.patch.object(service_mod.CallService, "__init__", forbid("CallService")),
+                   mock.patch.object(service_mod.CallService, "start", forbid("CallService.start")),
+                   mock.patch.object(service_mod.CallService, "stop", forbid("CallService.stop")),
+                   mock.patch.object(store_mod.Store, "__init__", forbid("Store")),
+                   mock.patch.object(telephony.TwilioRestAdapter, "_post", forbid("provider")),
+                   mock.patch.object(hermes_glue.sys if hasattr(hermes_glue, "sys") else __import__("sys"), "argv",
+                                     ["hermes", "hermes-line", "check"]),
+                   self._patched(rig)]
+        for p in patches:
+            p.start()
+            self.addCleanup(p.stop)
+        plugin.register(ctx)
+        import argparse
+        setup_fn, handler = ctx.cli["hermes-line"]
+        parser = argparse.ArgumentParser()
+        setup_fn(parser)
+        with redirect_stdout(io.StringIO()) as out, self.assertRaises(SystemExit) as stop:
+            handler(parser.parse_args(["check"]))
+        self.assertEqual(stop.exception.code, 0, out.getvalue())
+        self.assertEqual(events, [])
+        self.assertIsNone(ctx.unloads[0].__self__.service)
+
+    def test_gateway_process_with_enabled_true_still_starts_the_service(self):
+        import plugin
+        started = []
+
+        class RecordingThread:
+            def __init__(self, target=None, **kw):
+                self.target = target
+
+            def start(self):
+                started.append(getattr(self.target, "__name__", ""))
+        ctx, _ = self._ctx()
+        ctx.config["enabled"] = True
+        with mock.patch.object(hermes_glue.threading, "Thread", RecordingThread), \
+                mock.patch("sys.argv", ["hermes", "-p", "hermes-line", "gateway", "run"]):
+            plugin.register(ctx)
+        self.assertEqual(started, ["start"])
+
+    def test_cli_invocation(self):
+        for argv, expect in ((["hermes-line", "check"], True), (["-p", "work", "hermes-line", "check"], True),
+                             (["--profile", "hermes-line", "gateway", "run"], False), (["gateway", "run"], False),
+                             (["hermes-line"], True), (["chat", "-q", "hermes-line"], False), ([], False)):
+            with self.subTest(argv=argv):
+                self.assertEqual(hermes_glue.cli_invocation(argv), expect)
 
     def test_older_hermes_without_cli_commands(self):
         import plugin
