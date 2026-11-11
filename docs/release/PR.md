@@ -54,9 +54,11 @@ Adds `plugin-catalog/hermes-line.yaml` (source copy in the plugin repo: `docs/re
   `session.create` `toolsets`, so the plugin bounds the call session's tools with a dedicated profile instead.
 - Private imports, each guarded (a missing one refuses the call or skips the post, never crashes):
   `hermes_cli.profiles.get_profile_dir` and `hermes_cli.default_soul` (`DEFAULT_SOUL_MD`,
-  `is_legacy_template_soul`) for the call-profile check, and `gateway.session_context.scoped_session_key` to post
-  the summary into the stored session that asked for the call from the service's own thread. Seams we would ask
-  for: a profile-directory lookup, the stock-SOUL check, `post_message` to a stored session of the plugin's own
+  `is_legacy_template_soul`) for the call-profile check, `hermes_yaml.safe_load` to read the call profile's
+  `config.yaml` as Hermes reads it (PyYAML is neither a Hermes nor a plugin dependency), and
+  `gateway.session_context.scoped_session_key` to post the summary into the stored session that asked for the call
+  from the service's own thread. Seams we would ask for: a profile-directory lookup, the stock-SOUL check, a
+  documented YAML reader, `post_message` to a stored session of the plugin's own
   profile, and `hermes acp` launch flags that hold after its own dotenv load (`acp_adapter/entry.py` `_load_env`
   reloads the profile's `.env` with override after `--ignore-rules` is set, so a `HERMES_IGNORE_RULES=0` in the
   call profile's `.env` undoes it; the plugin does not inspect that file, rule 11).
@@ -148,17 +150,19 @@ Adds `plugin-catalog/hermes-line.yaml` (source copy in the plugin repo: `docs/re
 ## Validation
 
 `hermes plugins validate --install-deps` (cold, throwaway `HERMES_HOME`): "Validation passed. Exit status: 0"; every
-check from manifest to desktop surface is ✓, with one warning (⚠ private core imports, catalog rule 9: the four
+check from manifest to desktop surface is ✓, with one warning (⚠ private core imports, catalog rule 9: the five
 imports listed under "Hermes surfaces used") and the in-process isolation note for `ctx.post_message`. The opened PR
 carries the output of this check run on a fresh checkout at the pinned commit.
 
-Last cold run: see `tests/l1/evidence/validate.txt`. Offline tests on the release tree (2026-11-10): L1 602, L2 145,
-L4 360 (with `HERMES_AGENT_DIR` pointing at a Hermes checkout; without one 7 skip), L5 88 and L6 122 pass; L3 75 of
-76 (the remaining test needs a local Hermes Desktop build). 15 of them (`tests/l1/test_s7_call_profile.py`,
+Last cold run: see `tests/l1/evidence/validate.txt`. Offline tests on the release tree (2026-11-10): L1 605 (1 is skipped
+where PyYAML is installed), L2 145, L4 360 (with `HERMES_AGENT_DIR` pointing at a Hermes checkout; without one 7
+skip), L5 88 and L6 122 pass; L3 75 of 76 (the remaining test needs a local Hermes Desktop build). 15 of them (`tests/l1/test_s7_call_profile.py`,
 `tests/l4/test_s7_adb_env.py`) cover the catalog review of `d92bc1fb`; 23 more (`tests/l1/test_s7_fix_round.py`,
 `tests/l4/test_s7_hermes_contracts.py`, the latter on Hermes's own prompt builder, dotenv loader and message
 posting) cover the reviews of that fix, 3 of them that no plugin code opens, loads or inspects the call profile's
-`.env`.
+`.env`. 3 more (`tests/l1/test_s19_no_pyyaml.py`) cover the review of `115faa3d`: a fresh neutral call profile passes
+the check where PyYAML is not installed, and every third-party import in the plugin is declared in `plugin.yaml` or
+ships with Hermes.
 
 ## Tested live
 

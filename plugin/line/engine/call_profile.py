@@ -105,8 +105,8 @@ def problems(profile_dir: Path, neutral_souls: Iterable[str] = (),
     if not profile_dir.is_dir():
         return ["profile not found"]
     try:
-        import yaml
-        config = yaml.safe_load((profile_dir / "config.yaml").read_text(encoding="utf-8")) or {}
+        from hermes_yaml import safe_load  # Hermes's own config reader (core); PyYAML is not a Hermes dependency
+        config = safe_load((profile_dir / "config.yaml").read_text(encoding="utf-8")) or {}
     except FileNotFoundError:
         config = {}
     except Exception:

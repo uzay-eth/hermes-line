@@ -10,6 +10,30 @@ from pathlib import Path as _P
 
 sys.path.insert(0, str(_P(__file__).resolve().parents[2]))  # repo root: import the plugin as ``plugin``
 
+
+def _hermes_yaml() -> None:
+    """The plugin reads config.yaml with Hermes's ``hermes_yaml`` (a root module of the Hermes checkout). Every Hermes
+    process has that root on sys.path (``hermes_bootstrap.harden_import_path``); a bare interpreter whose editable
+    install predates the module does not map it. Load that one module from the checkout, nothing else (the checkout's
+    other root names, ``tools`` among them, would shadow this repo's)."""
+    import importlib.util
+    import os
+    if importlib.util.find_spec("hermes_yaml") is not None:
+        return
+    root = os.environ.get("HERMES_AGENT_DIR")
+    if not root:
+        cli = importlib.util.find_spec("hermes_cli")
+        root = str(_P(cli.origin).resolve().parents[1]) if cli and cli.origin else ""
+    path = _P(root) / "hermes_yaml.py" if root else None
+    if path and path.is_file():
+        spec = importlib.util.spec_from_file_location("hermes_yaml", path)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        sys.modules["hermes_yaml"] = module
+
+
+_hermes_yaml()
+
 import json
 import re
 import secrets
