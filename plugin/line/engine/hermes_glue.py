@@ -133,6 +133,21 @@ def call_profile_problems(name: str) -> list[str]:
     return call_profile.problems(profile_dir, _neutral_souls(), _is_stock_soul)
 
 
+def setup_probes(host: "_Host"):
+    """The real probes for the no-cost setup check (``setup_check.py``): secrets through Hermes, the same
+    call-profile check the plugin runs before every call, read-only GETs."""
+    from . import setup_check as sc
+    return sc.Probes(hermes_version=sc.hermes_version, gateway_running=sc.gateway_running,
+                     get_secret=host.get_secret, http_get=sc.http_get, port_open=sc.port_open,
+                     profile_problems=call_profile_problems, destination_allowed=sc.destination_allowed)
+
+
+def setup_check_text(host: "_Host") -> tuple[str, int]:
+    from . import setup_check as sc
+    items = sc.run(host.config, setup_probes(host))
+    return sc.report(items), sc.exit_code(items)
+
+
 class _Host:
     """Per-process holder for the store and service."""
 
@@ -487,7 +502,8 @@ def register(ctx: Any) -> None:
         return _line(host, raw_args or "")
 
     ctx.register_command("line", handler=line_command, description="Hermes Line: approve, status, hang up, take over",
-                         args_hint="[approve|deny|takeover|hangup|say|allow-code|unlock-owner|service] ...")
+                         args_hint="[approve|deny|takeover|hangup|say|allow-code|unlock-owner|service|check] ...")
+    _register_cli(ctx, host)
     ctx.on_unload(host.stop)
     atexit.register(host.stop)
 
@@ -497,6 +513,33 @@ def register(ctx: Any) -> None:
         enabled = False
     if enabled:
         threading.Thread(target=host.start, name="hermes-line-start", daemon=True).start()
+
+
+def _register_cli(ctx: Any, host: _Host) -> None:
+    """``hermes hermes-line check``: the setup check from a shell, with an exit status (0 only when every item passes).
+    Older Hermes builds without ``register_cli_command`` keep ``/line check``."""
+    register_cli = getattr(ctx, "register_cli_command", None)
+    if not callable(register_cli):
+        return
+
+    def setup(parser) -> None:
+        sub = parser.add_subparsers(dest="line_command")
+        sub.add_parser("check", help="No-cost setup check: no call, read-only Twilio requests")
+
+    def handler(args) -> None:
+        if getattr(args, "line_command", None) != "check":
+            print("Usage: hermes hermes-line check")
+            raise SystemExit(2)
+        host.stop()  # this short-lived process must not take the line, or the port, while it checks
+        text, code = setup_check_text(host)
+        print(text)
+        raise SystemExit(code)
+
+    try:
+        register_cli(name="hermes-line", help="Hermes Line: setup check", setup_fn=setup, handler_fn=handler,
+                     description="hermes hermes-line check: check the Hermes Line setup without placing a call.")
+    except Exception:
+        pass
 
 
 class _LazyReleased:
@@ -586,6 +629,8 @@ def _line(host: _Host, raw: str) -> str:
         parts = ["status"]
     verb = parts[0].lower()
     arg = parts[1] if len(parts) > 1 else ""
+    if verb == "check":  # before host.get(): the check also runs with settings that do not load
+        return setup_check_text(host)[0]
     try:
         svc = host.get()
     except Exception as exc:
@@ -619,7 +664,7 @@ def _line(host: _Host, raw: str) -> str:
                "hangup": ("hang_up", "call"), "takeover": ("take_over", "call"), "say": ("say", "call")}
     if verb not in mapping or not arg:
         return ("Usage: /line [status] | approve <task> | deny <task> | takeover <call> | hangup <call> | "
-                "say <call> <text> | allow-code <task> <sender> call | unlock-owner | service start|stop|status")
+                "say <call> <text> | allow-code <task> <sender> call | unlock-owner | service start|stop|status | check")
     action, kind = mapping[verb]
     payload = {"text": parts[2]} if verb == "say" and len(parts) > 2 else None
     if kind == "task":

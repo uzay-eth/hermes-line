@@ -11,6 +11,59 @@ your Android phone can be sent into a call, but only after you approve exactly w
 
 Version 0.1.0. Requires Hermes 0.22.5 or newer. License: MIT (`LICENSE`), copyright Can Uzay.
 
+## Quick start (about 5 minutes)
+
+You need Hermes 0.22.5 or newer and a Twilio account. Nothing below places a call until step 7. Each step is
+explained in full under Setup.
+
+1. **Twilio.** In the Twilio console, buy a US local number with voice (the **line number**) and create an API key
+   (its SID starts with `SK`; keep the secret). A Twilio trial account can call only numbers you have verified in
+   Twilio. To show your own mobile number to businesses, verify it under Verified Caller IDs (optional).
+2. **Install.** `hermes plugins install uzay-eth/hermes-line/plugin --enable`. Hermes asks for
+   `HERMES_LINE_TWILIO_ACCOUNT_SID` (`AC...`), `HERMES_LINE_TWILIO_API_KEY_SID` (`SK...`) and
+   `HERMES_LINE_TWILIO_API_KEY_SECRET`.
+3. **Tunnel.** With `cloudflared` installed, run `cloudflared tunnel --url http://127.0.0.1:8788` and leave it
+   running. It prints an `https://...trycloudflare.com` address: that is your `public_base_url` (a new one on every
+   run).
+4. **Call profile.** `hermes profile create hermes-line-calls`, then `hermes --profile hermes-line-calls model`
+   (no `--clone`). Add to `~/.hermes/profiles/hermes-line-calls/config.yaml`:
+   ```yaml
+   platform_toolsets:
+     acp: []
+   memory:
+     memory_enabled: false
+     user_profile_enabled: false
+   plugins:
+     enabled: []
+   ```
+5. **Settings.** In your Hermes `config.yaml` (numbers in E.164, `+1` and ten digits), then restart the gateway
+   (`hermes gateway restart`, or `hermes gateway run` in a terminal):
+   ```yaml
+   plugins:
+     entries:
+       hermes-line:
+         settings:
+           enabled: true
+           public_base_url: "https://<your-tunnel>.trycloudflare.com"
+           from_number: "<your Twilio number, or your verified mobile>"
+           line_number: "<your Twilio number>"
+           owner_number: "<your mobile>"
+           owner_name: "<your first name>"
+           call_profile: hermes-line-calls
+           policy:
+             owner_timezone: "America/Denver"        # yours
+             allowed_destinations:
+               - "<your mobile>"                     # add each business later
+   ```
+6. **Check the setup.** `hermes hermes-line check` in a shell, or `/line check` in a Hermes chat. It places no call
+   and costs nothing: it asks Twilio only read-only questions (are the credentials accepted, is the line number on
+   the account with voice, is the caller ID yours) and prints one line per item, `OK` or what to fix. The shell
+   command exits 0 only when every item passes.
+7. **First call, to your own phone.** Outside quiet hours (21:00 to 08:00 in `owner_timezone` by default), ask
+   Hermes in a chat: "Use Hermes Line to call <your mobile> and tell me the line works." Hermes posts an approval
+   request; reply `/line approve <task_id>`. Your phone rings and Hermes speaks the AI disclosure first. Then add a
+   business number to `allowed_destinations`, restart the gateway and ask for a real call.
+
 ## Status: what has been shown, and how
 
 This is a hackathon release. Every claim below names its evidence in this repository.
@@ -213,6 +266,8 @@ it off and on without a reload did not load the pane (`docs/lanes/L3.md` round 5
 
 Then check the service with `/line service status`. It reports whether the
 service is running and whether webhooks are checked by signature or by the fallback.
+To check the whole setup without placing a call, run `hermes hermes-line check` (or `/line check`; Quick start,
+step 6).
 
 ### 5. Grok Voice (optional)
 
@@ -380,6 +435,7 @@ chat that is every admitted member, so run the plugin on a gateway that admits o
 /line allow-code <task_id> <sender> call  then  /line confirm-code <nonce>
 /line unlock-owner              (after a PIN lockout, step 8)
 /line service start|stop|status
+/line check                     (setup check: no call, read-only Twilio requests)
 ```
 
 Tools the agent gets: `hermes_line_request_call`, `hermes_line_call_status`, `hermes_line_list_tasks`,
@@ -442,7 +498,8 @@ What you should know before installing:
   you approved, to the one live call you approved, once.
 - **Third-party services and what they receive:**
   - Twilio (`api.twilio.com`): call control, and all call audio passes through Twilio. On the ConversationRelay
-    path Twilio also transcribes the call and speaks Hermes's text.
+    path Twilio also transcribes the call and speaks Hermes's text. The setup check (`/line check`) sends only
+    read-only GET requests: your account's numbers filtered to the configured ones, and its verified caller IDs.
   - xAI (`api.x.ai`), only with `XAI_API_KEY`: hold and menu audio goes to xAI speech-to-text, and the
     conversation audio goes to Grok Voice. xAI's retention was not checked.
   - Your tunnel provider: carries Twilio's webhooks and audio streams to your machine. Webhook URLs contain a
@@ -476,7 +533,8 @@ What you should know before installing:
   whether a `.git` or a project file is in the temp directory or a folder above it.
 - **Programs it starts:** `adb` (read-only queries; it gets only `PATH`, `HOME`, `LANG` and `ANDROID_*`/`ADB_*`
   from the environment), and one `hermes acp` process per call, which starts the call profile's Hermes gateway
-  (idle-exit) if it is not already running.
+  (idle-exit) if it is not already running. The setup check (`/line check`) runs `hermes --version` once, with only
+  `PATH`, `HOME`, `HERMES_HOME`, `LANG` and `TMPDIR`.
 - **Background service:** with `enabled: true`, a call service runs inside the Hermes process. It listens on
   `127.0.0.1:8788` for Twilio (through your tunnel) and on a second, loopback-only port that serves the four in-call
   tools to the call's Hermes session with a per-call token.
